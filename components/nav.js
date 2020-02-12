@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 function Nav(){
   return(
-  <>
+  <section id="nav-section">
   <Link href="/">
-    Modern Shed
+      <img className="wordmark" src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" />
   </Link>
 
    <ul>
@@ -35,7 +35,7 @@ function Nav(){
 
 
     </ul>
-  </>
+  </section>
   );
 }
 
