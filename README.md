@@ -26,8 +26,7 @@
 
 ---
 ### Bug logging
-- Log bugs under issues tab
-  Please include 
+Log bugs under issues tab.  Please include 
   * Bug type tag
   * Screen shot of bug
   * Device and browser type
