@@ -5,7 +5,7 @@
 - Clone the repository
 - Navigate to the root of the project directory
 - Run `npm i` to install the package dependencies
-  - If you don't have node installed, you will need to begin by installing Node. 
+  - You will need to begin with installing Node if you don't already have it. 
 
 
 ### Run locally
