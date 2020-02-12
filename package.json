@@ -1,0 +1,27 @@
+{
+  "name": "modernshed",
+  "version": "1.0.0",
+  "description": "Modern Shed's website designed and built by Design By Parker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designbyparker/ModernShed.git"
+  },
+  "author": "Design By Parker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designbyparker/ModernShed/issues"
+  },
+  "homepage": "https://github.com/designbyparker/ModernShed#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.2.1",
+    "next-fonts": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
