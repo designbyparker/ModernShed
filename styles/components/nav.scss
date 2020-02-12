@@ -1,11 +1,27 @@
 #nav-section{
+  width: 100vw;
   display: flex;
+  #wordmark-container{
+    width: 70%;
+  }
   .wordmark{
-    width: 10%;
+    width: 20%;
     height: auto;
+
   }
   ul{
+    width: 30%;
     display: flex;
+    justify-content: space-between;
+    li a{
+     text-decoration: none; 
+    a:visited{
+      color: black;
+    }
+    a:active{
+      color: black;
+    }
+  }
   }
 
 }

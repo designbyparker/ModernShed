@@ -3,11 +3,13 @@ import Link from 'next/link';
 function Nav(){
   return(
   <section id="nav-section">
-  <Link href="/">
-      <img className="wordmark" src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" />
-  </Link>
+    <div id="wordmark-container">
+      <Link href="/">
+          <img className="wordmark" id="nav-left" src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" />
+      </Link>
+    </div>
 
-   <ul>
+   <ul id="nav-right">
 
      <li>
         <Link href="/sheds">
