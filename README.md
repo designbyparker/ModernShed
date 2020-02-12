@@ -19,6 +19,16 @@
 
 ---
 
-#### Please do not push to master until your PR has been reviewed. Master will be treated as the production build brach
-#### Staging is our staging branch 
-#### Create as many development branch as is needed, when done with it please delete it. 
+#### Master is the production branch. Please do not push to master until your pull request has been reviewed. 
+#### Staging is the staging branch 
+#### Create as many development branches as are needed. Please delete branches if you are no longer using them.
+
+
+---
+### Bug logging
+- Log bugs under issues tab
+  Please include 
+  * Bug type tag
+  * Screen shot of bug
+  * Device and browser type
+  * If its a responsive bug please also include pixel breakpoint
