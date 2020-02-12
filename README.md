@@ -25,6 +25,12 @@
 
 
 ---
+
+### Styling
+
+This site uses SCSS, the SCSS files are imported into theme.scss. The theme file is preprocessed and minified into a theme.css file. The webpack is configured to for CSS notSCSS. This means that you must run the theme.scss file through a preprocessor like Gulp or Prepos during development.   
+
+---
 ### Bug logging
 Log bugs under issues tab.  Please include 
   * Bug type tag
