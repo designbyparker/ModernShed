@@ -6,7 +6,6 @@ function Index(){
   return(
     <div>
       <Nav/>
-      <p>Hello Shed World</p>
     </div>
   );
 }

@@ -1,0 +1,37 @@
+// Brand Colors
+$cloud : #e3e1da;
+$midnight : #222329;
+$sun : #efb546;
+$sky : #8cbdbf;
+
+
+
+// Type Colors
+$black: $midnight;
+$white: #fff;
+
+
+
+// Type Sizes
+$type_1 : calc(48px + (78 - 26) * ((100vw - 368px) / 1500));
+$line_1: calc(48px + (78 - 26) * ((100vw - 368px) / 1500));
+$type_2: calc(36px + (40 - 26) * ((100vw - 368px) / 1500));
+$line_2: calc((36px + (40 - 26) * ((100vw - 368px) / 1500))*1.2);
+$type_3: calc(20px + (24 - 16) * ((100vw - 368px) / 1500));
+$line_3: calc((20px + (24 - 16) * ((100vw - 368px) / 1500))*1.4);
+$line_4: calc((18px + (20 - 16) * ((100vw - 368px) / 1500))*1.4);
+$type_5: calc(16px + (16 - 14) * ((100vw - 368px) / 1500));
+$line_5: calc((16px + (16 - 14) * ((100vw - 368px) / 1500))*1.4);
+
+
+
+// Units
+$xl_unit: 12rem;
+$l_unit: 6rem;
+$m_unit: 4rem;
+$s_unit: 2.4rem;
+$xs_unit: 1rem;
+
+
+// Margins
+$small : 2%;
