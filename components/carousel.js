@@ -22,15 +22,13 @@ function Carousel(){
       setIndex(index + 1);
       setImage(imageSet[index]);
      }
-
-    
     }
 
   return(
-    <>
+    <section id="carousel">
       <img src={image.src} alt={image.alt} className="carousel-image" onClick={handleClick}/>
-    </>
+    </section>
   )
 }
 
-export default Carousel;
+export default Carousel; 
