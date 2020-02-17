@@ -2,12 +2,14 @@ import Link from 'next/link';
 
 function Nav(){
   return(
-  <>
-  <Link href="/">
-    Modern Shed
-  </Link>
+  <section id="nav-section">
+    <div id="wordmark-container">
+      <Link href="/">
+          <img className="wordmark" id="nav-left" src="/branding/small-wordmark-white.svg" alt="Modern Shed Wordmark" />
+      </Link>
+    </div>
 
-   <ul>
+   <ul id="nav-right">
 
      <li>
         <Link href="/sheds">
@@ -35,7 +37,7 @@ function Nav(){
 
 
     </ul>
-  </>
+  </section>
   );
 }
 
