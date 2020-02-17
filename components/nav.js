@@ -5,7 +5,7 @@ function Nav(){
   <section id="nav-section">
     <div id="wordmark-container">
       <Link href="/">
-          <img className="wordmark" id="nav-left" src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" />
+          <img className="wordmark" id="nav-left" src="/branding/small-wordmark-white.svg" alt="Modern Shed Wordmark" />
       </Link>
     </div>
 
