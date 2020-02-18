@@ -1,9 +1,17 @@
+.left{
+  cursor: url(/images/cursors/MS_Arrow_Left.png), auto;
+}
+.right{
+  cursor: url(/images/cursors/MS_Arrow_Right.png), auto;
+}
+
 #carousel{
   height: 100vh;
   width: 100vw;
   position: relative;
   top: 0px;
   left:0px;
+
   .carousel-image{
     width: 100%;
     height: auto;
