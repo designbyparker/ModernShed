@@ -4,7 +4,7 @@ function Story(){
   return(
     <>
       <Nav />
-      <p>Our Story</p>
+      <p>Our Story 😎</p>
     </>
   )
 }
