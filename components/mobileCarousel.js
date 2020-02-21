@@ -15,6 +15,14 @@ function MobileCarousel(){
 
   const [image, setImage] = useState(imageSet[0]);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      imageIndex = (imageIndex - 1 + imageSet.length) % imageSet.length;
+      setImage(imageSet[imageIndex]);
+    }, 5000);
+    return () => clearInterval(timer);
+  },[]);
+
   function handleRightSwipe (e){
     imageIndex = (imageIndex + 1) % imageSet.length;
     return setImage(imageSet[imageIndex]);

@@ -7,8 +7,8 @@ import '../styles/theme.css';
 function Index(){
   return(
     <div>
-      {/* <Nav/>
-      <Carousel /> */}
+      <Nav/>
+      {/* <Carousel /> */}
       <MobileCarousel/>
     </div>
   );
