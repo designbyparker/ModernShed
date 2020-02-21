@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import imageData from '../public/images/carousel/imageData';
 
+var ind = 0;
 
 function Carousel(){
 
@@ -12,8 +13,7 @@ function Carousel(){
     imageSet.push(display);
   });
 
-  const [image, setImage] = useState(imageSet[0]);
-  const [index, setIndex] = useState(0);
+  const [image, setImage] = useState(imageSet[0]);  
   const [cursor, setCursor] = useState('left');
   const [leftBound, setLeftBound] = useState();
   const [rightBound, setRightBound] = useState();
@@ -21,7 +21,6 @@ function Carousel(){
   useEffect(() => {
     let curs = document.querySelector('#carousel');
     let offset = curs.offsetWidth
-    
     setBounds(offset)
   }, []);
 
@@ -43,32 +42,17 @@ function Carousel(){
 
   function handleClick(e){
      e.preventDefault();
-     console.log(cursor);
+     console.log(ind);
      if(cursor === 'right'){
-
-      if(index === imageSet.length -1){
-        setIndex(0);
-        setImage(imageSet[index]);
-        console.log(index);
-      }else{
-       setIndex(index + 1);
-       setImage(imageSet[index]);
-       console.log(index);
-      }
-
+      ind = (ind + 1) % imageSet.length;
+      console.log(ind);
+      return setImage(imageSet[ind]);
      }else if(cursor === 'left'){
-       if(index > 0){
-        setIndex(index - 1);
-        setImage(imageSet[index]);
-        console.log(index);
-       }else if(index === 0){
-         setIndex(imageSet.length - 1);
-         setImage(imageSet[index]);
-         console.log(index);
-
-       }
+      ind = (ind - 1 + imageSet.length) % imageSet.length;
+      return setImage(imageSet[ind]);
      }
     }
+
 
 
 
