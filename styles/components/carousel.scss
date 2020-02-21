@@ -5,13 +5,16 @@
   cursor: url(/images/cursors/MS_Arrow_Right.png), auto;
 }
 
-.carousel{
+#carousel{
+  display: none; 
   height: 100vh;
   width: 100vw;
   position: relative;
   top: 0px;
   left:0px;
-
+  @media all and (min-width: 768px ){
+    display: block;
+  }
   .carousel-image{
     width: 100%;
     height: auto;
@@ -19,11 +22,15 @@
 }
 
 #mobile-carousel{
+  display:block ;
   width: 100vw;
   height: 100vh;
   object-fit: contain;
   .mobile-carousel-image{ 
   width: 100vw;
   height: auto;
+  }
+  @media(min-width:768px){
+    display: none;
   }
 }
