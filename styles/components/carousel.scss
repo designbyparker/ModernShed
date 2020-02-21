@@ -5,7 +5,7 @@
   cursor: url(/images/cursors/MS_Arrow_Right.png), auto;
 }
 
-#carousel{
+.carousel{
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -15,5 +15,15 @@
   .carousel-image{
     width: 100%;
     height: auto;
+  }
+}
+
+#mobile-carousel{
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  .mobile-carousel-image{ 
+  width: 100vw;
+  height: auto;
   }
 }
