@@ -34,3 +34,34 @@
     display: none;
   }
 }
+
+#photo-data{
+  font-family: 'Lausanne';
+  color:$white;
+  font-size: 18px;
+  line-height: 24px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin-bottom: $medium;
+  margin-left: $medium; 
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'use neighborhood'
+                       'unitsize city';
+                      
+}
+
+#use{
+  grid-area: use;
+}
+#neighborhood{
+  grid-area: neighborhood;
+}
+#size{
+  grid-area: unitsize;
+}
+#city{
+  grid-area: city;
+}
