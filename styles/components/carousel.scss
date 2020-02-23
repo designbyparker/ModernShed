@@ -6,9 +6,10 @@
 }
 
 #carousel{
+  background-color: $sky;
   display: none; 
-  height: 100vh;
   width: 100vw;
+  height: auto;
   position: relative;
   top: 0px;
   left:0px;
@@ -50,7 +51,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'use neighborhood'
                        'unitsize city';
-                      
+  z-index: 100;           
 }
 
 #use{
