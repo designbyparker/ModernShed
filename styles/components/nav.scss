@@ -1,27 +1,27 @@
 #nav-section{
-  width: 100vw;
-  display: flex;
+  width: 98vw;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 65% auto;
   position: absolute;
   z-index: 5;
-  #wordmark-container{
-    width: 70%;
+  margin-top: $small;
+  margin-left: $small;
+  margin-right: $small;
+  .wordmark{
     margin-top: $small;
     margin-left: $small;
-  }
-  .wordmark{
-    width: 20%;
-    height: auto;
-
+    height: 75px; 
   }
   ul{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
     margin-top: $small;
     margin-right: $small;
     font-family: 'Lausanne';
     font-size: 18px;
     line-height: $line_4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
     li a{
     text-decoration: none;
     color: $white;
