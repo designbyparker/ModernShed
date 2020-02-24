@@ -1,6 +1,6 @@
 import Nav from '../components/nav';
 
-function Story(){
+const Story = () => {
   return(
     <>
       <Nav />

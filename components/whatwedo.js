@@ -1,4 +1,6 @@
-function WhatWeDo(){
+
+
+const WhatWeDo = () => {
   return (
     <section id="index-2">
       <div className="right-border" id="index-2-image-container">

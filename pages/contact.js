@@ -1,7 +1,7 @@
 import Nav from '../components/nav';
 
 
-function Contact(){
+const Contact = () => {
   return(
     <>
       <Nav/>

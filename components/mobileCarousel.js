@@ -4,7 +4,7 @@ import {useSwipeable, Swipeable} from 'react-swipeable';
 
 var imageIndex = 0;
 
-function MobileCarousel(){
+const MobileCarousel = () => {
   let imageSet = [];
   imageData.forEach(img => {
     let display = {};
@@ -23,18 +23,18 @@ function MobileCarousel(){
     return () => clearInterval(timer);
   },[]);
 
-  function handleRightSwipe (e){
+  const handleRightSwipe = (e) => {
     imageIndex = (imageIndex + 1) % imageSet.length;
     return setImage(imageSet[imageIndex]);
   }
 
-  function handleLeftSwipe(e){
+  const handleLeftSwipe = (e) => {
     imageIndex = (imageIndex - 1 + imageSet.length) % imageSet.length;
     return setImage(imageSet[imageIndex]);
   }
 
   return(
-  <section class="carousel" id="mobile-carousel">
+  <section className="carousel" id="mobile-carousel">
     <Swipeable onSwipedLeft={handleLeftSwipe} onSwipedRight={handleRightSwipe} >
       <img src={image.mobile} alt={image.alt} className="mobile-carousel-image" draggable="false"/>
     </Swipeable>

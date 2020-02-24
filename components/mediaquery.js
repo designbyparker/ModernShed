@@ -1,4 +1,5 @@
 const [width, setWidth] = useState();
+
 useEffect(() => {
   setWidth(window.innerWidth);
   window.addEventListener('resize', updateWindowSize);

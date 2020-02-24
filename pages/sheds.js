@@ -1,6 +1,6 @@
 import Nav from '../components/nav';
 
-function Sheds (){
+const Sheds = () => {
   return(
     <>
       <Nav/>
