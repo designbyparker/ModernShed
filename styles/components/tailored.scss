@@ -1,0 +1,21 @@
+#tailored-section{
+  font-family: 'Lausanne';
+  background-color: $white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  img{
+    width: 95%;
+    height: auto;
+    place-self: center;
+  }
+  .headline-container{
+    h2, h3{
+      font-size: 38px;
+    }
+  }
+  p{
+  }
+  a{
+  }
+}
