@@ -1,6 +1,5 @@
 #contact-cta{
   height: 100vh;
-  width: auto;
   background-color: $sun;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -13,14 +12,13 @@
   align-items: flex-end;
   justify-content: center;
   img{
-  height: 90%;
-  width: auto;
+  width: 85%;
+  height: auto;
   margin-right: $small;
   }
 }
 
 #contact-right-column{
-  margin-left: $small;
   margin-top: $large;
   margin-right: $medium;
   display: grid;
