@@ -1,0 +1,14 @@
+
+ .mobile-query{
+    display:block ;
+    @media(min-width:768px){
+      display: none;
+    }
+  }
+  
+ .desktop-query{
+    display: none; 
+    @media all and (min-width: 768px ){
+      display: block;
+    }
+  }

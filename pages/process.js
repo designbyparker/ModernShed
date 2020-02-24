@@ -1,6 +1,6 @@
 import Nav from '../components/nav';
 
-function Process(){
+const Process = () => {
   return (
     <>
       <Nav/>

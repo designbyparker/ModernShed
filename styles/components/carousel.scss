@@ -1,0 +1,68 @@
+.left{
+  cursor: url(/images/cursors/MS_Arrow_Left.png), auto;
+}
+.right{
+  cursor: url(/images/cursors/MS_Arrow_Right.png), auto;
+}
+
+#carousel{
+  background-color: $sky;
+  display: none; 
+  width: 100vw;
+  height: auto;
+  position: relative;
+  top: 0px;
+  left:0px;
+  @media all and (min-width: 768px ){
+    display: block;
+  }
+  .carousel-image{
+    width: 100vw;
+    height: auto;
+  }
+}
+
+#mobile-carousel{
+  display:block ;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  .mobile-carousel-image{ 
+  width: 100vw;
+  height: auto;
+  }
+  @media(min-width:768px){
+    display: none;
+  }
+}
+
+#photo-data{
+  font-family: 'Lausanne';
+  color:$white;
+  font-size: 18px;
+  line-height: 24px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin-bottom: $medium;
+  margin-left: $medium; 
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'use neighborhood'
+                       'unitsize city';
+  z-index: 100;           
+}
+
+#use{
+  grid-area: use;
+}
+#neighborhood{
+  grid-area: neighborhood;
+}
+#size{
+  grid-area: unitsize;
+}
+#city{
+  grid-area: city;
+}

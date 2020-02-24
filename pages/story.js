@@ -1,10 +1,10 @@
 import Nav from '../components/nav';
 
-function Story(){
+const Story = () => {
   return(
     <>
       <Nav />
-      <p>Story</p>
+      <p>Our Story 😎</p>
     </>
   )
 }

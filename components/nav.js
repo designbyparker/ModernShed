@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-function Nav(){
+const Nav = () => {
   return(
   <section id="nav-section">
     <div id="wordmark-container">

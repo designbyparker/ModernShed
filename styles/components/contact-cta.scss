@@ -1,0 +1,44 @@
+#contact-cta{
+  height: 100vh;
+  background-color: $sun;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: 'Lausanne';
+}
+
+#contact-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  img{
+  width: 85%;
+  height: auto;
+  margin-right: $small;
+  }
+}
+
+#contact-right-column{
+  margin-top: $large;
+  margin-right: $medium;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  h2{
+    font-size: 38px;
+    line-height: 48px;
+    
+  }
+  h3{
+    font-size: 38px;
+    opacity: 0.4;
+  }
+
+  a{
+    text-decoration: none;
+    color: $black;
+    font-size: 38px;
+    align-self: end;
+    margin-bottom: $large;
+  }
+}
