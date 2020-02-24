@@ -9,13 +9,38 @@
     height: auto;
     place-self: center;
   }
+  #tailored-right-column{
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr; 
+   .button-container{
+     align-self: end;
+     margin-bottom: $large;
+   }
+  }
+
   .headline-container{
-    h2, h3{
+    h2:first-of-type{
+      margin-top: $large;
+    }
+    h2{
       font-size: 38px;
     }
   }
   p{
+    margin-top: $large;
+    margin-right: $medium;
   }
   a{
+    text-decoration: none;
+    color: $black;
+    font-size: 38px;
+    a:visited{
+      color: $black;
+    }
+    a:active{
+      color: $black;
+    }
   }
+
 }
