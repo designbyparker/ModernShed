@@ -1,10 +1,12 @@
 import ProcessCard from '../components/process-card';
 import ContactCTA from '../components/contact-cta';
+import ProcessHero from '../components/process-hero';
 import '../styles/theme.css';
 
 const Process = () => {
   return (
     <>
+      <ProcessHero/>
       <ProcessCard
         step="Step 01"
         subheader="Introduction"
