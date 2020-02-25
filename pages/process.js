@@ -5,8 +5,9 @@ import '../styles/theme.css';
 
 const Process = () => {
   return (
-    <>
+    <section >
       <ProcessHero/>
+      <section id="process-layout">
       <ProcessCard
         step="Step 01"
         subheader="Introduction"
@@ -38,9 +39,9 @@ const Process = () => {
        timeframe="1 to 2 Weeks"
        copy="Either one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame depends on several factors."
       />  
-
+      </section>
       <ContactCTA/>
-    </>
+    </section>
   );
 }
 
