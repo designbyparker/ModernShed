@@ -4,7 +4,9 @@ import DesktopCarousel from '../components/carousel';
 import MobileCarousel from '../components/mobileCarousel';
 import WhatWeDo from '../components/whatwedo';
 import Tailored from '../components/tailored';
+import TheDifference from '../components/thedifference';
 import ContactCTA from '../components/contact-cta';
+
 import '../styles/theme.css';
 
 const Index = () => {
@@ -16,6 +18,7 @@ const Index = () => {
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
       <Tailored/>
+      <TheDifference/>
       <ContactCTA buttontext="Inquire"/>
     </div>
   );
