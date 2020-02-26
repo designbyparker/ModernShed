@@ -1,5 +1,5 @@
 .hero{
-  height: 50vh;
+  height: 60vh;
 }
 #process-hero{
   background-color: $sky;
@@ -57,6 +57,8 @@
     grid-area: copy;
     padding-right: $medium;
     padding-left: $small;
+    font-size: $type_2;
+    line-height: $type_2;
   }
 }
 
@@ -94,7 +96,8 @@
     justify-self: start;
     padding-right: $medium;
     padding-left: $small;
-
+    font-size: $type_2;
+    line-height: $type_2;
   }
 }
 

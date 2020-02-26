@@ -7,31 +7,24 @@
 }
 
 #contact-left-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  height: 100vh;
+  width: auto;
+  display: grid;
+  place-items: center;
+
   img{
-  width: 85%;
-  height: auto;
-  margin-right: $small;
+  height: 96vh;
+  width: auto;
+  object-fit: contain;
   }
 }
 
 #contact-right-column{
-  margin-top: $large;
-  margin-right: $medium;
   display: grid;
   grid-template-rows: 1fr 1fr;
 
-  h2{
-    font-size: 3.25em;
-    line-height: 3.5em;
-    
-  }
-  h3{
-    font-size: 3.25em;
-    opacity: 3.5em;
+  div{
+    margin-top: $medium;
   }
 
   a{
@@ -39,6 +32,6 @@
     color: $black;
     font-size: 3.25em;
     align-self: end;
-    margin-bottom: $large;
+    margin-bottom: $medium;
   }
 }
