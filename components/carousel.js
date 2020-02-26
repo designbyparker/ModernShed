@@ -59,6 +59,12 @@ function Carousel(){
   return(
     <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
       <img src={image.src} alt={image.alt} className="carousel-image" onClick={handleClick} draggable="false"/>
+      <div id="photo-data">
+        <p id="use">Home Office</p>
+        <p id="size">142 Feet Squared</p>
+        <p id="neighborhood">Laurelhurst Neighborhood</p>
+        <p id="city">Seattle, Washington</p>
+      </div>
     </section>
   )
 }

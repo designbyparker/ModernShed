@@ -34,4 +34,19 @@ $xs_unit: 1rem;
 
 
 // Margins
-$small : 2%;
+$small : 2vh;
+$medium : 4vh;
+$large: 8vh;
+
+// Borders
+.right-border{
+  margin-top: $small;
+  border-right: 1px solid $midnight;
+  margin-bottom: $small;
+}
+
+.left-border{
+  margin-top: $small;
+  border-left: 1px solid $midnight;
+  margin-bottom: $small;
+}

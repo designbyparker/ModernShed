@@ -1,0 +1,61 @@
+.hero{
+  height: 50vh;
+}
+#process-hero{
+  background-color: $sky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  h2{
+    width: 50vw;
+    margin-right: $medium;
+  }
+}
+
+
+.process-card{
+  height: 70vh;
+  display: grid;
+  padding-top: $medium;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+}
+
+#withTimeFrame{
+  grid-template-areas: 'step pic timeframe copy';
+
+  #process-left-column{
+    margin-left: $medium;
+    grid-area: step;
+    padding-right: $small;
+  }
+  img{
+    grid-area: pic;
+    justify-self: center stretch;
+  };
+  #timeframe{
+    grid-area: timeframe;
+  }
+  #process-copy{
+    grid-area: copy;
+    padding-right: $medium;
+  }
+}
+
+#withoutTimeFrame{
+  display: grid;
+  grid-template-areas: 'step pic pic copy';
+  #process-left-column{
+    margin-left: $medium;
+    grid-area: step;
+  }
+  img{
+    grid-area: pic;
+    justify-self: center stretch;
+  }
+  #process-copy{
+    grid-area: copy;
+    margin-right: $medium;
+    justify-self: start;
+    padding-right: $medium;
+  }
+}

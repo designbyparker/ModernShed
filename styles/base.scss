@@ -1,4 +1,5 @@
 
+
  .mobile-query{
     display:block ;
     @media(min-width:768px){
@@ -11,4 +12,21 @@
     @media all and (min-width: 768px ){
       display: block;
     }
+  }
+
+  h2{
+    font-size: 38px;
+    color: $black;
+    font-family: 'Lausanne';
+  }
+
+  h3{
+    font-size: 38px;
+    color: $black;
+    opacity: 0.4;
+    font-family: 'Lausanne';
+  }
+
+  p{
+    font-family: 'Lausanne';
   }
