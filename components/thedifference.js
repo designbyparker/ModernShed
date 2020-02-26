@@ -9,12 +9,17 @@ const TheDifference = () => {
        </div>
 
       <div id="col-2">
-        <h5>(A)</h5>
-        <img src="https://via.placeholder.com/375x375" alt="some text about image"/>
+      
+        <div className="diff-image-container">
+          <h5>(A)</h5>
+          <img src="https://via.placeholder.com/375x375" alt="some text about image"/>
+        </div>
       </div>
 
       <div id="col-3">
-        <img src="https://via.placeholder.com/375x375" alt="some text about image" />
+        <div className="diff-image-container">
+          <img src="https://via.placeholder.com/375x375" alt="some text about image" />
+        </div>
         <h5>(B)</h5>
       </div>
 
