@@ -1,14 +1,14 @@
 #index-2{
   font-family: 'Lausanne';
   display: grid;
-  height: 100vh;
+  height: 120vh;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
   background-color: $sky;
 
   div{
     width: 100%;
-    height: 94vh;
+    height: 116vh;
   }
 }
 
@@ -16,7 +16,7 @@
   display: grid;
   align-items: end;
   div{
-    height: 50%;
+    height: 55%;
     width: auto;
     overflow: hidden;
     margin-left: $medium;
@@ -24,7 +24,6 @@
 
   img{
     object-fit:contain;
-
   }
   }
 }
@@ -34,20 +33,17 @@
   height: 100%;
 
   div:first-of-type{
-    height: 50%;
+    height: 40%;
     h2{
-    font-size: 38px;
-    line-height: 48px;
+    font-size: $type_1;
+    margin-top: $medium;
     margin-left: $small;
-    margin-top: $large;
   }
   
   h3{
-    margin-top: 1vh;
-    font-size: 38px;
+    font-size: $type_1;
     opacity: 0.4;
     margin-left: $small;
-    margin-top: 1vh;
   }
 }
   .whatwedo-desc{
@@ -62,13 +58,14 @@
     height: auto;
 
     // MEDIA QUERIES
-    @media(max-width: 1150px) {
+    @media(max-width: 1350px) {
       grid-template-columns:repeat(2, 1fr);
     }
     p{
       margin-right: $small;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: $type_2;
+      line-height: 1.4em;
+
     }
   }
 

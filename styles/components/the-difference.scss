@@ -4,11 +4,47 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
+h5{
+  font-size: $type_2;
+  line-height: $line_2;
+  color: $black;
+  font-family: 'Lausanne';
+}
 
 #col-1{
   grid-column: 1/2;
   grid-row: 1/2;
   height: 100vh;
+  margin-left: $medium;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  p{
+    color: #999999;
+    line-height: 1.4em;
+    font-size: $type_2;
+    b{
+      color: $black;
+      font-weight: bold;
+    }
+  } 
+
+
+  .button-container{
+    align-self: end;
+    margin-bottom: $large;
+    a{
+      font-family: 'Lausanne';
+      color: $black;
+      font-size: $type_1;
+      text-decoration: none;
+    }
+    a:visited{
+      color: $black;
+    }
+    a:active{
+      color: $black;
+    }
+  }
 }
 
 #col-2{
@@ -19,20 +55,25 @@
   border-right: 1px solid $black;
   display: grid;
   align-items: end;
+  div{
+    margin-bottom: $large;
+  }
 }
 
 #col-3{
   grid-column: 3/4;
   grid-row: 1/2;
   height: 100vh;
+  margin-right: $small;
 }
 
 .diff-image-container{
+  margin-left:$small;
+  margin-right: $small; 
   img{
-    width: 95%;
+    width: 100%;
     height: auto;
     object-fit: contain;
-    margin-left:$small;
-    margin-right: $small; 
+
   }
 }
