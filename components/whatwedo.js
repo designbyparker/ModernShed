@@ -4,7 +4,9 @@ const WhatWeDo = () => {
   return (
     <section id="index-2">
       <div className="right-border" id="index-2-image-container">
-        <img src="/images/index-images/whatwedo.jpeg" alt="some text about image"/>
+        <div>
+          <img src="/images/index-images/whatwedo.jpeg" alt="some text about image"/>
+        </div>
       </div>
       <div id="index-2-text-container">
           <div>
