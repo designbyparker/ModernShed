@@ -5,7 +5,7 @@ const TheDifference = () => {
        <div id="col-1">
           <h2>The Difference.</h2>
           <p>(A) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. (B) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna </p>
-          <div className="button-container"><a href='/process'>Process</a></div>
+          <div className="button-container"><a href='/process'>Process→</a></div>
        </div>
 
       <div id="col-2">

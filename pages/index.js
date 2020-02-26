@@ -19,7 +19,7 @@ const Index = () => {
       <WhatWeDo/>
       <Tailored/>
       <TheDifference/>
-      <ContactCTA buttontext="Inquire"/>
+      <ContactCTA buttontext="Inquire →"/>
     </div>
   );
 }
