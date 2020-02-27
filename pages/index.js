@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../components/nav';
 import DesktopCarousel from '../components/carousel';
 import MobileCarousel from '../components/mobile-carousel';
-import WhatWeDo from '../components/whatwedo';
+import WhatWeDo from '../components/what-we-do';
 import Tailored from '../components/tailored';
 import TheDifference from '../components/thedifference';
 import ContactCTA from '../components/contact-cta';
