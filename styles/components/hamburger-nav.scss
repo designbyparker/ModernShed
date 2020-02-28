@@ -1,0 +1,105 @@
+// ***** Toggle Classes ***** //
+
+.openMenu{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+  width: 75vw;
+  background-color: $sun;
+  color: $black;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  a{
+    color: $black;
+  }
+  a:visited{
+    color: $black;
+  }
+  #wordmark{
+    width: 10em;
+    height: auto;
+  }
+
+
+
+  #menu-col-1{
+      padding-left: $small;
+      padding-top: $medium;
+      height: 92vh;
+      display: grid;
+      p{
+        align-self: end;
+        padding-right: $medium;
+        line-height: $type_2;
+        font-size: $type_2;
+      }
+  }
+
+  #menu-col-2{ 
+    margin-top: $medium; 
+    padding-left: $small;  
+    height: 92vh;
+    display: grid;
+    border-left: 0.08em solid $black; 
+    border-right: 0.08em solid $black; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    div{
+      display: flex;
+      flex-direction: column;
+    }
+    #primary-page-links{
+      font-size: $type_1;
+    }
+    #secondary-page-links{
+      align-self: flex-end;
+      font-size: 2em;
+    }
+  }
+
+  #menu-col-3{
+    margin-top: $medium; 
+    padding-left: $small; 
+    height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    img{
+      justify-self: end;
+      padding-right: $medium;
+      width: 3em;
+      height: auto;
+    }
+    #social-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-size: 2em;
+    }
+  }
+}
+
+
+.closeMenu{
+  display: none;
+}
+
+
+
+// ***** Nav Bar Styling ***** //
+#hamburger-nav-bar{
+  padding: $medium $medium 0px $medium;
+  height: 15vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  img{
+    width: 3em;
+    height: auto;
+  }
+  img:last-of-type{
+    justify-self: end;
+  }
+}
+
