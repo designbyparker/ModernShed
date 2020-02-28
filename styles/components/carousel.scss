@@ -39,18 +39,17 @@
 #photo-data{
   font-family: 'Lausanne';
   color:$white;
-  font-size: 1.5em;
-  line-height: 1.8em;
+  font-size: $type_2;
+  line-height: $type_2;
   position: absolute;
   bottom: 0px;
   left: 0px;
   margin-bottom: $medium;
   margin-left: $medium; 
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1f ;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'use neighborhood'
-                       'unitsize city';
+  grid-template-areas: 'use location';
   z-index: 100;           
 }
 
