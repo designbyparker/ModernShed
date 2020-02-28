@@ -1,0 +1,39 @@
+#footer{
+  color: $white;
+  background-color: $midnight;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.footer-col-1{
+  height: 100%;
+  img{
+    height: 5em;
+    width: auto;
+  }  
+}
+
+.small-footer-col{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-left: 0.08em solid $white;
+  justify-content: space-between;
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+  }
+}
+
+a{
+  color: $white;
+  text-decoration: none;
+  font-family: 'Lausanne';
+  font-size: $type_2;
+  line-height: $type_2;
+}
+a:visited{
+  color: $white;
+}

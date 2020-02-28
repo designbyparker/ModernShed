@@ -7,6 +7,7 @@ import Tailored from '../components/tailored';
 import TheDifference from '../components/thedifference';
 import ContactCTA from '../components/contact-cta';
 import Newsletter from '../components/newsletter';
+import Footer from '../components/footer';
 import '../styles/theme.css';
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
       <Newsletter/>
+      <Footer/>
     </div>
   );
 }
