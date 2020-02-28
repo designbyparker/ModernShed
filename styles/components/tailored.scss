@@ -1,0 +1,57 @@
+#tailored-section{
+  font-family: 'Lausanne';
+  background-color: $white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  #tailored-image-container{
+  grid-column: 1/2;
+  width: 95%;
+  margin-left: $medium;
+  margin-top: $large;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  #tailored-right-column{
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr; 
+   .button-container{
+     align-self: end;
+     margin-bottom: $large;
+   }
+  }
+
+  .headline-container{
+    h2:first-of-type{
+      margin-top: $large;
+    }
+    h2{
+      font-size: $type_1;
+    }
+  }
+  p{
+    margin-top: $large;
+    margin-right: $medium;
+    font-size: $type_2;
+    line-height: 1.4em;
+    color: #999999;
+  }
+  a{
+    text-decoration: none;
+    color: $black;
+    font-size: $type_1;
+    a:visited{
+      color: $black;
+    }
+    a:active{
+      color: $black;
+    }
+  }
+
+}

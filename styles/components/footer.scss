@@ -1,0 +1,60 @@
+#footer{
+  color: $white;
+  background-color: $midnight;
+  height: 55vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.footer-col-1{
+  height: 100%;
+  padding-left: $medium;
+  display: grid;
+  img{
+    margin-top: $medium;
+    height: 5em;
+    width: auto;
+  }  
+  p{
+    color: #999999;
+    font-size: 1em;
+    line-height: 1.2em;
+    align-self: end;
+    margin-bottom: $medium;
+  }
+}
+
+.small-footer-col{
+  height: 88%;
+  margin-top: $medium;
+  margin-bottom: $medium;
+  display: flex;
+  flex-direction: column;
+  border-left: 0.08em solid #999999;
+  justify-content: space-between;
+  padding-left: $small;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+  }
+}
+.section-header{
+  font-size: 1em;
+  color: #999999;
+}
+
+a{
+  color: $white;
+  text-decoration: none;
+  font-family: 'Lausanne';
+  font-size: $type_2;
+  line-height: $type_2;
+}
+a:visited{
+  color: $white;
+}
+a:active{
+  color: $white;
+}

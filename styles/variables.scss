@@ -13,40 +13,28 @@ $white: #fff;
 
 
 // Type Sizes
-$type_1 : calc(48px + (78 - 26) * ((100vw - 368px) / 1500));
-$line_1: calc(48px + (78 - 26) * ((100vw - 368px) / 1500));
-$type_2: calc(36px + (40 - 26) * ((100vw - 368px) / 1500));
-$line_2: calc((36px + (40 - 26) * ((100vw - 368px) / 1500))*1.2);
-$type_3: calc(20px + (24 - 16) * ((100vw - 368px) / 1500));
-$line_3: calc((20px + (24 - 16) * ((100vw - 368px) / 1500))*1.4);
-$line_4: calc((18px + (20 - 16) * ((100vw - 368px) / 1500))*1.4);
-$type_5: calc(16px + (16 - 14) * ((100vw - 368px) / 1500));
-$line_5: calc((16px + (16 - 14) * ((100vw - 368px) / 1500))*1.4);
+$type_1 : 3.12em;
+$line_1: 3.2em;
+$type_2: 1.2em;
+$line_2: 1.45;
 
 
-
-// Units
-$xl_unit: 12rem;
-$l_unit: 6rem;
-$m_unit: 4rem;
-$s_unit: 2.4rem;
-$xs_unit: 1rem;
 
 
 // Margins
 $small : 2vh;
 $medium : 4vh;
-$large: 6vh;
+$large: 8vh;
 
 // Borders
 .right-border{
   margin-top: $small;
-  border-right: 1px solid $midnight;
+  border-right: 0.08em solid $midnight;
   margin-bottom: $small;
 }
 
 .left-border{
   margin-top: $small;
-  border-left: 1px solid $midnight;
+  border-left: 0.08em solid $midnight;
   margin-bottom: $small;
 }
