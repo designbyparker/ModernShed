@@ -1,0 +1,55 @@
+#newsletter{
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px $medium $medium $medium;
+  background-color: $cloud;
+}
+
+#newsletter-copy{
+  height: 50vh;
+  margin-top: $small;
+  padding-right: 13em;
+  border-right: 0.08em solid $black;
+  h2{
+    margin-top: $small;
+  }
+  p{
+    margin-top: $large;
+    font-size: $type_2;
+    line-height: $type_2;
+    color: #999999;
+  }
+}
+
+#newsletter-form{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr; 
+  align-items: start;
+  padding: $medium 0px 0px $small;
+  form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20%;
+    input{
+      font-size: $type_1;
+      font-family: 'Lausanne';
+      background-color: $cloud;
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom: 2px solid #999999;
+    }
+    input:focus{
+      outline:none;
+    }
+    button{
+      font-size: $type_1;
+      height: 104px;
+      background-color: $sky;
+
+    }
+  }
+}

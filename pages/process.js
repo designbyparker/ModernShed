@@ -40,7 +40,7 @@ const Process = () => {
        copy="Either one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame depends on several factors."
       />  
       </section>
-      <ContactCTA buttontext="Inquire"/>
+      <ContactCTA buttontext="Inquire →"/>
     </section>
   );
 }
