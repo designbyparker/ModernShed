@@ -1,13 +1,16 @@
+import HamburgerNav from '../components/hamburger-nav';
 import ProcessCard from '../components/process-card';
 import ContactCTA from '../components/contact-cta';
-import ProcessHero from '../components/process-hero';
+import ProcessHero from '../components/page-hero';
 import Footer from '../components/footer';
 import '../styles/theme.css';
 
 const Process = () => {
   return (
     <section >
-      <ProcessHero/>
+      {/* <HamburgerNav/> */}
+      <ProcessHero id="process-hero" page="PROCESS" copy="We understand every customer has their own use for our Sheds. Each Shed is tailored specifically to our customers’ unique needs."/>
+
       <section id="process-layout">
         <ProcessCard
           step="Step 01"

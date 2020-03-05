@@ -36,7 +36,7 @@ const HamburgerNav = (props) => {
         <div id="secondary-page-links">
            <a href="https://modernshedblog.com" target="_blank"> Blog </a>   
            <a href="/legal"> Legal </a>    
-           <a href="/faq"> Faq </a>    
+           <a href="/faq"> Faq </a> 
            <a href="/press"> Press </a> 
         </div>
       </div>
