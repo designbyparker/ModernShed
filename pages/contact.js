@@ -1,11 +1,10 @@
-import Nav from '../components/nav';
-
+import HamburgerNav from '../components/global/hamburger-nav';
+import '../styles/theme.css';
 
 const Contact = () => {
   return(
     <>
-      <Nav/>
-      <p>Contact</p>
+      <HamburgerNav/>
     </>
   )
 }

@@ -4,15 +4,19 @@
 @import './base.scss';
 
 
-// Pages
-
 // Components
+@import './components/hamburger-nav.scss';
+@import './components/page-hero.scss';
 @import './components/nav.scss';
 @import './components/carousel.scss';
 @import './components/what-we-do.scss';
 @import './components/contact-cta.scss';
 @import './components/tailored.scss';
 @import './components/the-difference.scss';
-@import './components/process.scss';
 @import './components/newsletter.scss';
 @import './components/footer.scss';
+
+
+// Pages
+@import './pages/process.scss';
+@import './pages/sheds.scss';

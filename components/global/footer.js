@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="footer-col-3 small-footer-col">
         <p className="section-header">CONTENT</p>
         <div>
-          <a href='https://modernshedblog.com/' target="_blank">Blog</a>
+          <a href='https://modernshedblog.com' target="_blank">Blog</a>
           <a href='/legal'>Legal</a>
           <a href='/faq'>Faq</a>
           <a href='/press'>Press</a>
@@ -28,10 +28,10 @@ const Footer = () => {
       <div className="footer-col-4 small-footer-col">
         <p className="section-header">FOLLOW</p>
         <div>
-          <a href="https://www.instagram.com/modern_shed/" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
           <a href="https://twitter.com/YourModernShed" target="_blank">Twitter</a>
-          <a href="https://www.facebook.com/ModernShedInc/" target="_blank">Facebook</a>
-          <a href="https://www.linkedin.com/company/modern-shed/" target="_blank">LinkedIn</a>
+          <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
+          <a href="https://www.linkedin.com/company/modern-shed" target="_blank">LinkedIn</a>
         </div>  
       </div>
 

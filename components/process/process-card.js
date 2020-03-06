@@ -21,4 +21,4 @@ const ProcessCard = (props) => {
     );
 }
 
-export default ProcessCard
+export default ProcessCard;
