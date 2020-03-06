@@ -1,0 +1,105 @@
+
+// ******** PAGE ******** //
+
+
+#process-layout{
+  margin-top: $medium;
+  margin-bottom: $medium;
+}
+
+
+
+// ******** CARD COMPONENT ******** //
+.process-card{
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#process-left-column{
+  height: 90vh;
+
+  h2{
+    margin-top: $medium;
+  }
+}
+
+#withTimeFrame{
+  grid-template-areas: 'step pic timeframe copy';
+
+  #process-left-column{
+    margin-left: $medium;
+    grid-area: step;
+    padding-right: $small;
+    border-right: 0.08em solid $black;
+  }
+  #process-image-container{
+
+    justify-items: stretch;
+    grid-area: pic;
+    padding-left: $small;
+    padding-right: $small;
+
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  };
+  #timeframe{
+    grid-area: timeframe;
+    font-size: $type_2;
+    padding-left: $small;
+  }
+  #process-copy{
+    grid-area: copy;
+    padding-right: $medium;
+    padding-left: $small;
+    font-size: $type_2;
+    line-height: $type_2;
+  }
+}
+
+#withoutTimeFrame{
+  display: grid;
+  grid-template-areas: 'step pic pic copy';
+
+  #process-left-column{
+    margin-left: $medium;
+    grid-area: step;
+    border-right: 0.08em solid $black;
+  }
+
+  #process-image-container{
+    grid-area: pic;
+    justify-items: stretch;
+    padding-left: $small;
+    padding-right: $small;
+
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  #process-copy{
+    grid-area: copy;
+    margin-right: $medium;
+    justify-self: start;
+    padding-right: $medium;
+    padding-left: $small;
+    font-size: $type_2;
+    line-height: $type_2;
+  }
+}
+
+
+.grid-div{
+  height: 90vh;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border-left: 0.08em solid $black;
+  border-right: 0.08em solid $black;
+}

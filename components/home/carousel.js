@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import imageData from '../public/images/carousel/imageData';
+import imageData from '../../public/images/carousel/imageData';
 
 var ind = 0;
 
@@ -60,10 +60,10 @@ function Carousel(){
     <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
       <img src={image.src} alt={image.alt} className="carousel-image" onClick={handleClick} draggable="false"/>
       <div id="photo-data">
-        <p id="use">Home Office</p>
-        <p id="size">142 Feet Squared</p>
-        <p id="neighborhood">Laurelhurst Neighborhood</p>
-        <p id="city">Seattle, Washington</p>
+
+          <p id="use">Home Office <br/> 142 Feet Squared</p>
+          <p id="location">Laurelhurst Neighborhood <br/> Seattle, Washington</p>
+
       </div>
     </section>
   )

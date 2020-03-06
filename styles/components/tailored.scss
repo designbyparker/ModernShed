@@ -4,11 +4,19 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  img{
-    width: 95%;
-    height: auto;
-    place-self: center;
+
+  #tailored-image-container{
+  grid-column: 1/2;
+  width: 95%;
+  margin-left: $medium;
+  margin-top: $large;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
+
   #tailored-right-column{
    display: grid;
    grid-template-rows: 1fr 1fr;
@@ -24,17 +32,20 @@
       margin-top: $large;
     }
     h2{
-      font-size: 38px;
+      font-size: $type_1;
     }
   }
   p{
     margin-top: $large;
     margin-right: $medium;
+    font-size: $type_2;
+    line-height: 1.4em;
+    color: #999999;
   }
   a{
     text-decoration: none;
     color: $black;
-    font-size: 38px;
+    font-size: $type_1;
     a:visited{
       color: $black;
     }

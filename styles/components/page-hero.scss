@@ -1,0 +1,28 @@
+
+.page-hero{
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  div {
+    width: 50%;
+    height: 100%;
+    display: grid;
+
+  }
+
+  h1{
+    font-family: 'Lausanne';
+    margin-top: $small;
+  }
+  h2{
+    margin-right: $medium;
+  }
+}
+
+#process-hero{
+  background-color: $sky;
+}
+
+#sheds-hero{
+  background-color: $sun;
+}
