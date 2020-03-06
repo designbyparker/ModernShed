@@ -1,6 +1,7 @@
 import ShedsHero from '../components/global/page-hero';
 import ContactCTA from '../components/global/contact-cta';
 import HamburgerNav from '../components/global/hamburger-nav';
+import Uses from '../components/sheds/uses';
 import '../styles/theme.css';
 
 const Sheds = () => {
@@ -8,7 +9,7 @@ const Sheds = () => {
     <section>
       <HamburgerNav />
       <ShedsHero id="sheds-hero" page="SHEDS" copy="Modern Shed provides solutions for both limited living as well as permanent dwellings. "/>
-
+      <Uses/>
       <ContactCTA buttontext="Inquire →"/>
     </section>
   )
