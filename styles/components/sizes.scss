@@ -1,0 +1,17 @@
+#size-deck{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+
+#headline{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+p{
+  width:25vw;
+}
