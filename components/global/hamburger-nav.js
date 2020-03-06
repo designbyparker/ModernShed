@@ -18,7 +18,7 @@ const HamburgerNav = (props) => {
       <img src="https://dummyimage.com/100x100/000/fff" alt="Hamburger Menu" onClick={handleMenuToggle}/>
     </section>
 
-    <section id="hamburger-menu" className={menuToggle ? "openMenu" : "closeMenu"} >
+    <section id="hamburger-menu"  className={menuToggle ? "openMenu" : "closeMenu"} >
       <div id="menu-col-1">
         <img src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" id="wordmark"/>
         <p>(c) Modern Shed, LLC All Rights Reserved. Privacy Policy. Terms of Use.</p>

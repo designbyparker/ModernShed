@@ -1,17 +1,38 @@
 // ***** Toggle Classes ***** //
+@keyframes slideOut {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+
 
 .openMenu{
+  animation: 0.6s slideOut ease-out;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh;
   width: 75vw;
   background-color: $sun;
   color: $black;
-  position: absolute;
-  right: 0px;
+  position: fixed;
   top: 0px;
-  // transform: translate3d(100vw, 0, 0);
-
+  right:0px;
+  z-index: 20;
   a{
     color: $black;
   }
@@ -84,18 +105,25 @@
 }
 
 
+
 .closeMenu{
-  display: none;
-}
+display: none;
+  }
 
 
 
 // ***** Nav Bar Styling ***** //
 #hamburger-nav-bar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 96vw;
   padding: $medium $medium 0px $medium;
-  height: 15vh;
+  height: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
+
   img{
     width: 3em;
     height: auto;

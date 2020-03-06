@@ -1,14 +1,14 @@
-import HamburgerNav from '../components/hamburger-nav';
-import ProcessCard from '../components/process-card';
-import ContactCTA from '../components/contact-cta';
-import ProcessHero from '../components/page-hero';
-import Footer from '../components/footer';
+import HamburgerNav from '../components/global/hamburger-nav';
+import ProcessCard from '../components/process/process-card';
+import ContactCTA from '../components/global/contact-cta';
+import ProcessHero from '../components/global/page-hero';
+import Footer from '../components/global/footer';
 import '../styles/theme.css';
 
 const Process = () => {
   return (
     <section >
-      {/* <HamburgerNav/> */}
+      <HamburgerNav/>
       <ProcessHero id="process-hero" page="PROCESS" copy="We understand every customer has their own use for our Sheds. Each Shed is tailored specifically to our customers’ unique needs."/>
 
       <section id="process-layout">

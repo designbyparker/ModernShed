@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import imageData from '../public/images/carousel/imageData';
+import imageData from '../../public/images/carousel/imageData';
 import {useSwipeable, Swipeable} from 'react-swipeable';
 
 var imageIndex = 0;
