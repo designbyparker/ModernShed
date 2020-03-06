@@ -1,17 +1,32 @@
 const Uses = () => {
   return(
-    <section>
-      <div>
-        <img src="https://dummyimage.com/900x600/000/fff" alt="Placeholder Alt Text"/>
+    <section >
+      <div id="uses-section">
+        <div className="uses-card " id="uses-img" >
+          <img src="https://dummyimage.com/750x550/000/fff" alt="Placeholder Alt Text"/>
+        </div>
+
+        <div  className="uses-card" id="uses-list">
+          <div>
+            <img src="https://dummyimage.com/300x400/000/fff" alt="Placeholder Alt Text"/>
+          </div>
+          <a href="/contact">Inquire →</a>
+        </div>
       </div>
 
-      <div>
-        <div id="uses-card">
-          <img src="https://dummyimage.com/200x400/000/fff" alt="Placeholder Alt Text"/>
+      <div id="sheds-tailored-section">
+        <div id="tailored-left-col">
+          <p id="tailored-h2">Tailored... <br/> not Configured.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
         </div>
-        <a href="/contact">Inquire →</a>
+        <div id="tailored-right-col">
+          <img src="https://dummyimage.com/400x400/000/fff" alt="Placeholder Alt Text"/>
+        </div>
       </div>
+
+
     </section>
+
   );
 }
 
