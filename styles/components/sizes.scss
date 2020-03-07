@@ -1,17 +1,61 @@
+#section-headline{
+  margin-top: $medium;
+  margin-left: $medium;
+  margin-bottom: 25vh;
+}
+
 #size-deck{
-  width: 100vw;
+  margin-left: $medium;
+  margin-right: $medium;
+  width: 96vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 
+#size-card{
+  padding-left: $small;
+  max-height: 125vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  div #gif-1:hover{
+    content: url('https://dummyimage.com/375x500/fff/000')
+  }
+  div #gif-2:hover{
+    content: url('https://dummyimage.com/375x500/fff/000')
+  }
+  div #gif-3:hover{
+    content: url('https://dummyimage.com/375x500/fff/000')
+  }
+  #headline{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: $small;
+  }
 
 
-#headline{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  li{
+    border-left: 0.08em solid $grey;
+    padding-left: $small;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    color: $grey;
+    font-family:'Lausanne';
+  }
+  a{
+    color: $black;
+    margin-bottom: $medium;
+    align-self: flex-start;
+    justify-self: flex-end;
+  }
 }
 
 p{
+  margin-top: $small;
   width:25vw;
+  color: $grey;
+  font-size: $type_2;
+  line-height: $line_2;
+  margin-bottom: 15vh;
 }

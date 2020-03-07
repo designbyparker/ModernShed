@@ -5,13 +5,12 @@ const SizeCard = (props) => {
         <h2>{props.size}</h2>
         <ul>
           {props.uses.map(item => {
-            console.log(item);
             return <li>{item}</li>
           })}
         </ul>
       </div>
       <div>
-        <img src={props.image.src} alt={props.image.alt}/>
+        <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
       </div>
       <div>
         <p>{props.desc}</p>
@@ -24,20 +23,23 @@ const SizeCard = (props) => {
 const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
-                  alt: "Placeholder Text" 
+                  alt: "Placeholder Text",
+                  key: "gif-1"
                 };
 
 
 const mUses = ["Home Offices", "Guest Space", "Gym"];                
 const mImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
-                  alt: "Placeholder Text" 
+                  alt: "Placeholder Text",
+                  key: "gif-2"
                 };
 
 const lUses = ["Rental Unit", "Guest Space", "Dwelling"];        
 const lImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
-                  alt: "Placeholder Text" 
+                  alt: "Placeholder Text",
+                  key: "gif-3"
                 };
 
 
@@ -48,7 +50,7 @@ const lImages = {
 const Sizes = () => {
   return(
     <section id="shed-size-section">
-      <h2>Sizes</h2>  
+      <h2 id="section-headline">Sizes</h2>  
 
       <div id="size-deck">
         <SizeCard
