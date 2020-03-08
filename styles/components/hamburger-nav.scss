@@ -58,6 +58,8 @@
         padding-right: $medium;
         line-height: $type_2;
         font-size: $type_2;
+        color: $black;
+        justify-self: end;
       }
   }
 
@@ -88,8 +90,8 @@
   }
 
   #menu-col-3{
-    margin-top: $medium; 
-    padding-left: $small; 
+    padding-top: $medium;
+    padding-right: $medium;
     height: 92vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -98,6 +100,7 @@
     img{
       justify-self: end;
       padding-right: $medium;
+      padding-top: $medium;
       width: 3em;
       height: auto;
     }
@@ -121,8 +124,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 96vw;
-  padding: $medium $medium 0px $medium;
+  width: 100vw;
   height: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,9 +133,13 @@
   img{
     width: 3em;
     height: auto;
+    padding-top: $medium;
+    padding-left: $medium;
   }
   img:last-of-type{
     justify-self: end;
+    padding-top: $medium;
+    padding-right: $medium;
   }
 }
 

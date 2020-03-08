@@ -5,12 +5,11 @@
 }
 
 #size-deck{
-  margin-left: $medium;
-  margin-right: $medium;
+  margin-left: 2vw;
+  margin-right: 2vw;
   width: 96vw;
   display: flex;
   justify-content: space-between;
-
 }
 
 #size-card{
@@ -34,7 +33,10 @@
     margin-bottom: $small;
   }
 
-
+  .middle-card{
+    border-left: 0.08em solid $black;
+    border-right: 0.08em solid $black;
+  }
   li{
     border-left: 0.08em solid $grey;
     padding-left: $small;
