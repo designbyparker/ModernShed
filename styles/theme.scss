@@ -1,22 +1,28 @@
+// Base styling
 @import './reset.scss';
 @import './fonts.scss';
 @import './variables.scss';
 @import './base.scss';
 
-
-// Components
+// Global Component styling
 @import './components/hamburger-nav.scss';
 @import './components/page-hero.scss';
 @import './components/nav.scss';
-@import './components/carousel.scss';
-@import './components/what-we-do.scss';
 @import './components/contact-cta.scss';
-@import './components/tailored.scss';
-@import './components/the-difference.scss';
 @import './components/newsletter.scss';
 @import './components/footer.scss';
 
+// Index Component styling
+@import './components/carousel.scss';
+@import './components/what-we-do.scss';
+@import './components/tailored.scss';
+@import './components/the-difference.scss';
 
-// Pages
+// Sheds Component styling
+@import './components/uses.scss';
+@import './components/sizes.scss';
+
+
+// Page styling
 @import './pages/process.scss';
 @import './pages/sheds.scss';

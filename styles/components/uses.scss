@@ -1,0 +1,84 @@
+#uses-section{
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  color: $black;
+  background-color: $cloud;
+  
+  .uses-card{
+    margin-top: $small;
+  }
+
+  #uses-img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding-left: $medium;
+    padding-right: $small;
+    border-right: 0.08em solid $midnight;
+    
+    img{
+      object-fit: contain;
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+      justify-self: flex-start;
+    }
+  }
+
+  #uses-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div{
+      padding-left: $small;
+    }
+    a{
+      padding-left: $small;
+      padding-bottom: $small;
+      color: $black;
+      font-size: $type_1;
+    }
+  } 
+
+
+}
+
+#sheds-tailored-section{
+  width: 100vw;
+  height: auto;
+  background-color: $cloud;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  #tailored-left-col{
+    border-right: 0.08em solid $midnight;
+    padding-left: $medium;
+    padding-top: $medium;
+    margin-bottom: $medium;
+    #tailored-h2{
+      margin-top: $medium;
+      font-size: $type_1;
+      color: $black;
+      font-family: 'Lausanne';
+    }
+    p:last-of-type{
+      width: 500px;
+      margin-top: $medium;
+      color: $grey;
+      font-size: $type_2;
+      line-height: $line_2;
+    }
+  }
+  #tailored-right-col{
+
+    padding-left: $small;
+    margin-bottom: $medium;
+    padding-top: $small;
+  }
+
+}

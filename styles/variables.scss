@@ -9,7 +9,7 @@ $sky : #8cbdbf;
 // Type Colors
 $black: $midnight;
 $white: #fff;
-
+$grey: #999999;
 
 
 // Type Sizes
@@ -22,10 +22,18 @@ $line_2: 1.45;
 
 
 // Margins
-$small : 2vh;
-$medium : 4vh;
-$large: 8vh;
+$small-y : 2%;
+$medium-y : 4%;
+$large-y: 8%;
 
+$small-x : 2%;
+$medium-x : 4%;
+$large-x: 8%;
+
+
+$small : 2%;
+$medium : 4%;
+$large: 8%;
 // Borders
 .right-border{
   margin-top: $small;
