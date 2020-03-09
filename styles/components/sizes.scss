@@ -51,13 +51,13 @@
     align-self: flex-start;
     justify-self: flex-end;
   }
+  p{
+    margin-top: $small;
+    width:25vw;
+    // color: $grey;
+    font-size: $type_2;
+    line-height: $line_2;
+    margin-bottom: 15vh;
+  }
 }
 
-p{
-  margin-top: $small;
-  width:25vw;
-  color: $grey;
-  font-size: $type_2;
-  line-height: $line_2;
-  margin-bottom: 15vh;
-}

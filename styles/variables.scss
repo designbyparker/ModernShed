@@ -15,25 +15,14 @@ $grey: #999999;
 // Type Sizes
 $type_1 : 3.12em;
 $line_1: 3.2em;
-$type_2: 1.2em;
+$type_2: 1.17em;
 $line_2: 1.45;
 
 
 
-
-// Margins
-$small-y : 2%;
-$medium-y : 4%;
-$large-y: 8%;
-
-$small-x : 2%;
-$medium-x : 4%;
-$large-x: 8%;
-
-
-$small : 2%;
-$medium : 4%;
-$large: 8%;
+$small : 25px;
+$medium : 40px;
+$large: 80px;
 // Borders
 .right-border{
   margin-top: $small;
