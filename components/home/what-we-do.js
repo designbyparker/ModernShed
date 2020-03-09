@@ -2,7 +2,8 @@
 
 const WhatWeDo = () => {
   return (
-    <section id="index-2">
+
+    <section id="index-2" >
 
 
       <div  id="index-2-image-container">
@@ -27,6 +28,7 @@ const WhatWeDo = () => {
           </div>
       </div> 
     </section>
+
   )
 }
 

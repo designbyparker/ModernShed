@@ -1,10 +1,11 @@
+
 #index-2{
   font-family: 'Lausanne';
   display: grid;
-  height: 140vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   background-color: $sky;
+  min-height: 100vh;
 }
 
 #index-2-image-container{
@@ -18,7 +19,7 @@
   img{
     width: 100%; 
     height:auto;
-    padding-bottom: $small;
+    margin-bottom: $small;
     margin-right: 15px;
     object-fit:contain;
   }
@@ -32,7 +33,6 @@
   border-left: 0.08em solid $midnight;
 
   div:first-of-type{
-    height: 55vh;
     h2{
     font-size: $type_1;
     margin-top: $medium;
@@ -55,7 +55,6 @@
       -moz-column-count: 3;
       column-count: 3;
       column-fill: auto;
-      height: 70vh;
     }
     
     padding-left: 15px;
