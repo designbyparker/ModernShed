@@ -1,5 +1,5 @@
 #contact-cta{
-  height: 100vh;
+  height: 75vh;
   background-color: $sun;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -7,16 +7,16 @@
 }
 
 #contact-left-column {
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 100%;
   display: grid;
   place-items: center;
-
   img{
-  height: 96vh;
-  width: auto;
-  object-fit: contain;
+    width: 92%;
+    height: 90%;
+    object-fit: cover;
   }
+
 }
 
 #contact-right-column{
