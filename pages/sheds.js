@@ -4,6 +4,7 @@ import HamburgerNav from '../components/global/hamburger-nav';
 import Uses from '../components/sheds/uses';
 import Sizes from '../components/sheds/sizes';
 import Materials from '../components/sheds/materials';
+import Doors from '../components/sheds/doors';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 import '../styles/theme.css';
@@ -17,6 +18,7 @@ const Sheds = () => {
       <Sizes />
       <ContactCTA buttontext="Inquire →"/>
       <Materials/>
+      <Doors/>
       <Newsletter/>
       <Footer/>
     </section>
