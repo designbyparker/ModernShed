@@ -7,13 +7,16 @@
 }
 
 #contact-left-column {
+  // margin-top: $medium;
+  // margin-bottom: $medium;
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
   img{
-    width: 92%;
-    height: 90%;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    // height: calc(100% - $medium - $medium);
     object-fit: cover;
   }
 

@@ -1,7 +1,7 @@
 #section-headline{
   margin-top: $medium;
   margin-left: $medium;
-  margin-bottom: 25vh;
+  margin-bottom: 20vh;
 }
 
 #size-deck{
@@ -16,7 +16,7 @@
   width: 31.5%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.3fr 2fr 1fr;
+  grid-template-rows: 0.3fr 2fr 0.9fr;
   #size-img{
     grid-row: 2/3;
     img{
@@ -62,6 +62,8 @@
     font-size: $type_2;
     line-height: $line_2;
     margin-bottom: 15vh;
+    color: $grey;
+
   }
 }
 
