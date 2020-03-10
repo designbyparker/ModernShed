@@ -1,6 +1,7 @@
 
 const TheDifference = () => {
   return(
+    <section className="wrapper">
      <section id="the-difference-section">
        <div id="col-1">
           <h2>The Difference.</h2>
@@ -24,6 +25,7 @@ const TheDifference = () => {
       </div>
 
      </section>
+   </section>
   )
 }
 

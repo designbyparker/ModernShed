@@ -1,0 +1,69 @@
+#section-headline{
+  margin-top: $medium;
+  margin-left: $medium;
+  margin-bottom: 20vh;
+}
+
+#size-deck{
+  margin-left: $medium;
+  margin-right: $medium;
+  display: flex;
+  justify-content: space-between;
+}
+
+#size-card{
+  min-height: 100vh;
+  width: 31.5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 2fr 0.9fr;
+  #size-img{
+    grid-row: 2/3;
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
+
+
+    #gif-1:hover{
+      content: url('https://dummyimage.com/375x500/fff/000')
+    }
+    #gif-2:hover{
+      content: url('https://dummyimage.com/375x500/fff/000')
+    }
+    #gif-3:hover{
+      content: url('https://dummyimage.com/375x500/fff/000')
+    }
+  } 
+  #headline{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: $small;
+  }
+
+  li{
+    border-left: 0.08em solid $grey;
+    padding-left: $small;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    color: $grey;
+    font-family:'Lausanne';
+  }
+  a{
+    color: $black;
+    margin-bottom: $medium;
+    align-self: start;
+
+  }
+  p{
+    margin-top: $small;
+    width:25vw;
+    font-size: $type_2;
+    line-height: $line_2;
+    margin-bottom: 15vh;
+    color: $grey;
+
+  }
+}
+

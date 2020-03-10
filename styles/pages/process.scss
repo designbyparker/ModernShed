@@ -1,27 +1,24 @@
-.hero{
-  height: 60vh;
-}
-#process-hero{
-  background-color: $sky;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  h2{
-    width: 50vw;
-    margin-right: $medium;
-  }
+
+// ******** PAGE ******** //
+
+
+#process-layout{
+  margin-top: $medium;
+  margin-bottom: $medium;
 }
 
 
+
+// ******** CARD COMPONENT ******** //
 .process-card{
-  height: 100vh;
+  max-height: 90vh;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
 #process-left-column{
-  height: 100vh;
+  height: 90vh;
 
   h2{
     margin-top: $medium;
@@ -38,12 +35,12 @@
     border-right: 0.08em solid $black;
   }
   #process-image-container{
-    margin-top: $small;
+
     justify-items: stretch;
     grid-area: pic;
     padding-left: $small;
     padding-right: $small;
-    padding-top: $small;
+
     img{
       width: 100%;
       height: auto;
@@ -52,6 +49,8 @@
   };
   #timeframe{
     grid-area: timeframe;
+    font-size: $type_2;
+    padding-left: $small;
   }
   #process-copy{
     grid-area: copy;
@@ -61,9 +60,6 @@
     line-height: $type_2;
   }
 }
-
-
-
 
 #withoutTimeFrame{
   display: grid;
@@ -80,17 +76,15 @@
     justify-items: stretch;
     padding-left: $small;
     padding-right: $small;
-    padding-top: $small;
+
     img{
       width: 100%;
       height: auto;
       object-fit: contain;
-
     }
   }
 
   #process-copy{
-    margin-top: $medium;
     grid-area: copy;
     margin-right: $medium;
     justify-self: start;
@@ -103,10 +97,9 @@
 
 
 .grid-div{
-  height: 100vh;
+  height: 90vh;
   grid-column: 3/4;
   grid-row: 1/2;
   border-left: 0.08em solid $black;
   border-right: 0.08em solid $black;
-
 }

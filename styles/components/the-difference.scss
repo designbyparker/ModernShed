@@ -1,8 +1,9 @@
 #the-difference-section{
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  margin-bottom: $large;
+  margin-top: $medium;
 }
 h5{
   font-size: $type_2;
@@ -12,16 +13,17 @@ h5{
 }
 
 #col-1{
+
+  padding-left: $medium;
   grid-column: 1/2;
   grid-row: 1/2;
-  height: 100vh;
-  margin-left: $medium;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
   p{
     color: #999999;
     line-height: 1.4em;
     font-size: $type_2;
+    padding-right: 10px;
     b{
       color: $black;
       font-weight: bold;
@@ -48,22 +50,20 @@ h5{
 }
 
 #col-2{
+
   grid-column: 2/3;
   grid-row: 1/2;
-  height: 100vh;
   border-left: 0.08em solid $black;
   border-right: 0.08em solid $black;
   display: grid;
   align-items: end;
-  div{
-    margin-bottom: $large;
-  }
+
 }
 
 #col-3{
+
   grid-column: 3/4;
   grid-row: 1/2;
-  height: 100vh;
   margin-right: $small;
 }
 
@@ -74,6 +74,5 @@ h5{
     width: 100%;
     height: auto;
     object-fit: contain;
-
   }
 }
