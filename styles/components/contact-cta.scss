@@ -7,8 +7,6 @@
 }
 
 #contact-left-column {
-  // margin-top: $medium;
-  // margin-bottom: $medium;
   height: 100%;
   width: 100%;
   display: grid;
@@ -16,7 +14,6 @@
   img{
     width: calc(100% - 80px);
     height: calc(100% - 80px);
-    // height: calc(100% - $medium - $medium);
     object-fit: cover;
   }
 
