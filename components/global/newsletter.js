@@ -1,4 +1,28 @@
+import superagent from 'superagent';
+import {useState, useEffect} from 'react';
+
+
 const Newsletter = () => {
+  const [zip, setZip] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = async (e) => {
+    console.log('in submit');
+    e.preventDefault();
+    setZip(e.target.zip.value);
+    setEmail(e.target.email.value);
+    
+    let url = 'http://localhost:8000';
+    let payload = {
+      zip: zip,
+      email: email
+    }
+
+    let data = await superagent.get(`${url}/newsletter`).query(payload);
+    console.log(data.body);
+
+  }
+
 
   return(
   <section id="newsletter">
@@ -9,9 +33,9 @@ const Newsletter = () => {
 
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
-      <form>
-        <input placeholder="Name@EmailAddress.com"/>
-        <input placeholder="Zip Code"/>
+      <form onSubmit={handleSubmit}>
+        <input placeholder="Name@EmailAddress.com" name="email" id="email"/>
+        <input placeholder="Zip Code" name="zip" id="zip"/>
         <button type="submit">Sign Up →</button>
       </form>
     </div>
