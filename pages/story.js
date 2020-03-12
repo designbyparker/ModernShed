@@ -1,9 +1,9 @@
-import Nav from '../components/nav';
+import HamburgerNav from '../components/global/hamburger-nav';
 
 const Story = () => {
   return(
     <>
-      <Nav />
+      <HamburgerNav />
       <p>Our Story 😎</p>
     </>
   )
