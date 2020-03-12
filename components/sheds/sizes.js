@@ -9,7 +9,7 @@ const SizeCard = (props) => {
           })}
         </ul>
       </div>
-      <div>
+      <div id="size-img">
         <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
       </div>
       <div>
@@ -77,4 +77,3 @@ const Sizes = () => {
 }
 
 export default Sizes;
-

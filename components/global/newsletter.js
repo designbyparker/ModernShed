@@ -11,6 +11,7 @@ const Newsletter = () => {
       <h5>SIGN UP</h5>
       <form>
         <input placeholder="Name@EmailAddress.com"/>
+        <input placeholder="Zip Code"/>
         <button type="submit">Sign Up →</button>
       </form>
     </div>

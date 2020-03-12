@@ -45,23 +45,18 @@
   bottom: 0px;
   left: 0px;
   margin-bottom: $medium;
-  margin-left: $medium; 
+  padding-left: $medium; 
   display: grid;
   grid-template-rows: 1f ;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'use location';
-  z-index: 100;           
-}
-
-#use{
-  grid-area: use;
-}
-#neighborhood{
-  grid-area: neighborhood;
-}
-#size{
-  grid-area: unitsize;
-}
-#city{
-  grid-area: city;
+  z-index: 100;     
+  
+  #shed-use{
+    grid-area: use;
+  }
+  #shed-location{
+    grid-area: location;
+  }
+      
 }

@@ -1,5 +1,5 @@
 #newsletter{
-  height: 50vh;
+  min-height: 55vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0px $medium $medium $medium;
@@ -7,7 +7,7 @@
 }
 
 #newsletter-copy{
-  height: 50vh;
+  height: 100%;
   margin-top: $small;
   padding-right: 13em;
   border-right: 0.08em solid $black;
