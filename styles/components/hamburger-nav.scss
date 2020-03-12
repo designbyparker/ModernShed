@@ -8,8 +8,6 @@
   }
 }
 
-
-
 .closeMenu{
   transition: all 0.4s;
   position: fixed;
@@ -90,8 +88,6 @@
   }
 
   #menu-col-3{
-    padding-top: $medium;
-    padding-right: $medium;
     height: 92vh;
     display: grid;
     grid-template-columns: 1fr;
