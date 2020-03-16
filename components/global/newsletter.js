@@ -34,9 +34,9 @@ const Newsletter = () => {
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Name@EmailAddress.com" name="email" id="email"/>
+        <input placeholder="Email Address" name="email" id="email"/>
         <input placeholder="Zip Code" name="zip" id="zip"/>
-        <button type="submit">Sign Up →</button>
+        <button type="submit" className="primary-button">Sign Up →</button>
       </form>
     </div>
   </section>
