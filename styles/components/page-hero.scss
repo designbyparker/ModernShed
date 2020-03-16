@@ -1,13 +1,12 @@
 
 .page-hero{
   height: 65vh;
-  display: flex;
-  flex-direction: row;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   div {
-    width: 50%;
     height: 100%;
     display: grid;
-
   }
 
   h1{
@@ -30,4 +29,8 @@
 
 #sheds-hero{
   background-color: $sun;
+}
+
+#contact-hero{
+  background-color: $cloud;
 }

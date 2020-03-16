@@ -1,8 +1,7 @@
-#contact-hero{
-  background-color: $cloud;
-}
+
 
 #contact-page{
+  max-width: 100vw;
   background-color: $cloud;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,10 +14,14 @@
 
 #contact-right-col{
   border-left: 0.08em solid $black;
+  margin-bottom: $medium;
+
 }
 #contact-left-col{
   display: grid;
-  grid-template-columns: 1fr 2fr;;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: $medium;
+
   div:first-of-type{
     border-right: 1px solid $midnight;
   }
@@ -54,7 +57,7 @@
 }
 
 #gen-head{
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 #contact-form{
@@ -101,11 +104,26 @@
   button{
     margin-top: 150px;
   }
+  #label-margin{
+    margin-top: 10px;
+  }
+  
+  #pdf-button{
+    margin-top: $small;
+  }
 }
 
-#contact-details{
-  margin-top: $medium;
+#details-head{
+  margin-top: 120px;
+  margin-left: 0px;
+}
 
+#contact-details-container{
+  border-top: 1px solid $midnight;
+}
+
+
+#contact-details{
   div{
     margin-top: 0px;
   }
@@ -120,40 +138,68 @@
       width: 0px;
     }
 
-    input[type="radio"]:checked + label{
+    input[type="radio"]:checked + .radio-box{
       background-color: $sun;
     }
 
     .radio-box{
         height: $type_1;
         background-color: $cloud;
-        border-top: 1px solid $black;
-        border-left: 1px solid $black;
-        border-bottom: 1px solid $black;
+        border-top: 1px solid $grey;
+        border-left: 1px solid $grey;
+        border-bottom: 1px solid $grey;
         font-size: 2em;
         line-height: $type_1;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-
+        justify-content: start;
+        padding-left: $xsmall;
      }
 
-     .border-none{
+     .border-bottom{
        border-bottom: 0px;
      }
 
-     .border-right{
-       border-right: 1px solid $black;
+     .border-left{
+       border-left: 0px;
      }
 
+     .border-right{
+       border-right: 1px solid $grey;
+     }
+
+     .border-top{
+       border-top: 0px;
+     }
+ 
   }
 
-  #detail-row-3{
-    height: 10vh;
+  #details-row-3{
+    margin-top: 10px;
+  }
+}
+
+#details-row-3{
+
+  select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    max-width: 100%;
+    border-radius: 0px;
+    font-size: $type_1;
+    background-color: $cloud;
+    appearance: none;
+    box-sizing: border-box;
+    padding-left: $xsmall;
+    padding-top: $xsmall;
+    padding-bottom: $xsmall;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  select:focus{
+    outline:none;
   }
 
 }
-
 
 

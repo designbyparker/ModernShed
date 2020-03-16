@@ -1,6 +1,7 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
+import Footer from '../components/global/footer';
 
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
@@ -18,6 +19,10 @@ const Contact = (props) => {
     let int = e.target.value;
     int === "not interested" ? setConnect(false) : setConnect(true);
     return setInterest(int);
+  }
+
+  const handlePdfDownload = (e) => {
+    console.log('click')
   }
 
 console.log(interest);
@@ -52,7 +57,7 @@ console.log(interest);
   } 
 
 
-  const options = ["Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
+  const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
   return(
 <>
@@ -90,51 +95,56 @@ console.log(interest);
 
           <p className="form-headline" id="gen-head">GENERAL INFORMATION</p>
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
-            <div>
+            <div id="label-margin">
               <label>FIRST NAME</label>
               <input type="text" id="FirstName" required="true" />
             </div>
 
-            <div>
+            <div id="label-margin">
               <label>LAST NAME</label>
               <input type="text" id="LastName" />
             </div>
 
-            <div>
+            <div id="label-margin">
               <label>EMAIL ADDRESS</label>
             <input type="text" id="Email" required="true" />
             </div>
 
-            <div>
+            <div id="label-margin">
               <label>ZIP CODE</label>
               <input type="text" id="ZipCode" />
             </div>
 
-            <div>
-              <label>PHONE NUMBER</label>
+
+            <p className="form-headline" id="details-head">DETAILS</p>
+           <section id="contact-details-container"> 
+
+            <div id="label-margin">
+              <label>PHONE NUMBER (OPTIONAL)</label>
               <input type="text" id="Phone" />
             </div>
 
 
-          <When condition={connect}>
+          {/* <When condition={connect}> */}
+
             <section id="contact-details">
 
 
               <div className="radio-btn-container" >
 
-                <div className="radio-box border-none">
-                  <label>Small</label>
+                <div className="radio-box border-bottom border-left border-top">
                   <input type="radio" id="small" name="shed-size"  />
+                  <label>Small</label>
                 </div>
 
-                <div className="radio-box border-none">
-                  <label>Medium</label>
+                <div className="radio-box border-bottom border-top">
                   <input type="radio" id="medium" name="shed-size" />
+                  <label>Medium</label>
                 </div>
 
-                <div className="radio-box border-none border-right">
-                  <label>Large</label>
+                <div className="radio-box border-bottom border-top">
                   <input type="radio" id="large" name="shed-size" />
+                  <label>Large</label>
                 </div>
               
               </div>
@@ -142,48 +152,56 @@ console.log(interest);
 
 
 
-            <div className="radio-btn-container">
-              
-              <div className="radio-box">
-                <label> 1-3 </label>
-                <input type="radio" id="short" name="comp-date" />
+              <div className="radio-btn-container">
+                
+                <div className="radio-box border-left">
+                  <input type="radio" id="short" name="comp-date" />
+                  <label> 1-3 </label>
+                </div>
+
+                <div className="radio-box">
+                  <input type="radio" id="med" name="comp-date" />
+                  <label>3-6</label>
+                </div>
+
+                <div className="radio-box " >
+                  <input type="radio" id="large" name="comp-date" />
+                  <label> 6-12 </label>
+                </div>
+
               </div>
 
-              <div className="radio-box">
-                <label>3-6</label>
-                <input type="radio" id="med" name="comp-date" />
+
+
+              <div id="details-row-3">
+
+                <label>HOW DID YOU HEAR ABOUT US?</label>
+                <select>
+                  {options.map(item => {
+                    return <option value={item}>{item}</option>
+                  })}             
+                </select>
+
               </div>
 
-              <div className="radio-box border-right" >
-                <label> 6-12 </label>
-                <input type="radio" id="large" name="comp-date" />
-              </div>
-            </div>
-
-
-
-            <div id="details-row-3">
-              <label>HOW DID YOU HEAR ABOUT US?</label>
-              <select>
-                {options.map(item => {
-                  return <option value={item}>{item}</option>
-                })}             
-              </select>
-            </div>
 
           </section>
-          </When>
+          {/* </When> */}
+          </section>
 
 
-          <div>
+          <div id="label-margin">
             <label>ADDITIONAL COMMENTS (OPTIONAL) </label>
             <textarea id="AddComm"></textarea>
           </div>
             
           <button type="submit" className="primary-button">Get In Contact →</button>
+          <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF</button>
+
           </form>
         </section>
     </section>
+    <Footer/>
     </>
   )
 }
