@@ -48,7 +48,6 @@ const HamburgerNav = (props) => {
          <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
          <a href="https://twitter.com/YourModernShed" target="_blank">Twitter</a>
          <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
-         <a href="https://www.linkedin.com/company/modern-shed" target="_blank">LinkedIn</a>
         </div>
       </div>  
 

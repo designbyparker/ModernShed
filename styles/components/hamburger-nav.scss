@@ -88,11 +88,11 @@
   }
 
   #menu-col-3{
-    height: 92vh;
+    height: 97vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-
+    padding-left: $small;
     img{
       justify-self: end;
       padding-right: $medium;
