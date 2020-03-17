@@ -29,6 +29,7 @@
 
 .form-headline{
   margin-left: $xsmall;
+  padding-bottom: 5px;
 }
 
 #interest-form{
@@ -179,15 +180,14 @@
 }
 
 #details-row-3{
-
   select{
+    min-width: 100%;
     -moz-appearance: none;
     -webkit-appearance: none;
-    max-width: 100%;
+    appearance: none;
     border-radius: 0px;
     font-size: $type_1;
     background-color: $cloud;
-    appearance: none;
     box-sizing: border-box;
     padding-left: $xsmall;
     padding-top: $xsmall;
@@ -195,6 +195,9 @@
     border-left: none;
     border-right: none;
     border-top: none;
+    option{
+      min-width: 100%;
+    }
   }
   select:focus{
     outline:none;

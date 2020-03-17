@@ -125,12 +125,12 @@ console.log(interest);
             </div>
 
 
-          {/* <When condition={connect}> */}
+          <When condition={connect}>
 
             <section id="contact-details">
+ 
 
-
-              <div className="radio-btn-container" >
+               <div className="radio-btn-container" >
 
                 <div className="radio-box border-bottom border-left border-top">
                   <input type="radio" id="small" name="shed-size"  />
@@ -172,7 +172,6 @@ console.log(interest);
               </div>
 
 
-
               <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
@@ -182,11 +181,11 @@ console.log(interest);
                   })}             
                 </select>
 
-              </div>
+              </div> 
 
 
           </section>
-          {/* </When> */}
+          </When>
           </section>
 
 
