@@ -22,6 +22,7 @@
 #contact-right-column{
   display: grid;
   grid-template-rows: 1fr 1fr;
+  padding-right: $medium;
 
   div{
     margin-top: $medium;

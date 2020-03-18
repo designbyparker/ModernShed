@@ -3,9 +3,13 @@ import ProcessCard from '../components/process/process-card';
 import ContactCTA from '../components/global/contact-cta';
 import ProcessHero from '../components/global/page-hero';
 import Footer from '../components/global/footer';
+import FeaturedShedsCarousel from '../components/process/featured-sheds-carousel';
 import '../styles/theme.css';
 
-const Process = () => {
+import fetch from 'isomorphic-unfetch';
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+
+const Process = (props) => {
   return (
     <section >
       <HamburgerNav/>
@@ -44,10 +48,22 @@ const Process = () => {
         copy="Either one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame depends on several factors."
         />  
       </section>
+      <FeaturedShedsCarousel featured={props.sheds} />
       <ContactCTA buttontext="Inquire →"/>
       <Footer/>
     </section>
   );
+}
+
+
+
+Process.getInitialProps = async function(){
+  const res = await fetch('https://modern-shed.com/services/shedfeatured');
+  const sheds = await res.json();
+
+  return{
+    sheds: sheds
+  }
 }
 
 export default Process;

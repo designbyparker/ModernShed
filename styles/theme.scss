@@ -15,8 +15,10 @@
 // Index Component styling
 @import './components/carousel.scss';
 @import './components/what-we-do.scss';
+@import './components/featured-home.scss';
 @import './components/tailored.scss';
 @import './components/the-difference.scss';
+
 
 // Sheds Component styling
 @import './components/uses.scss';
@@ -24,7 +26,11 @@
 @import './components/materials.scss';
 @import './components/doors.scss';
 
+// Process Component styling
+@import './components/featured-sheds-carousel.scss';
+
 // Page styling
 @import './pages/process.scss';
 @import './pages/sheds.scss';
 @import './pages/contact.scss';
+@import './pages/aux-pages.scss';

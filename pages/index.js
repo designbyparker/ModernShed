@@ -4,6 +4,7 @@ import HamburgerNav from '../components/global/hamburger-nav';
 import DesktopCarousel from '../components/home/carousel';
 import MobileCarousel from '../components/home/mobile-carousel';
 import WhatWeDo from '../components/home/what-we-do';
+import FeaturedHome from '../components/home/featured-home';
 import Tailored from '../components/home/tailored';
 import TheDifference from '../components/home/thedifference';
 import ContactCTA from '../components/global/contact-cta';
@@ -11,7 +12,9 @@ import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 import '../styles/theme.css';
 
-const Index = () => {
+import fetch from 'isomorphic-unfetch';
+
+const Index = (props) => {
 
   return(
     <div>
@@ -20,6 +23,7 @@ const Index = () => {
       <DesktopCarousel className="desktop-query"/>
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
+      <FeaturedHome featured={props.sheds}/>
       <Tailored/>
       <TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
@@ -28,5 +32,16 @@ const Index = () => {
     </div>
   );
 }
+
+
+Index.getInitialProps = async function() {
+  const res = await fetch('https://modern-shed.com/services/homefeatured');
+  const sheds = await res.json();
+
+  return {
+    sheds: sheds
+  }
+}
+
 
 export default Index;
