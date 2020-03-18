@@ -1,0 +1,33 @@
+.aux-page{
+  background-color: $cloud;
+  h1{
+    font-family: "Lausanne";
+    text-align: center;
+    padding-top: $small;
+  }
+}
+
+.aux-section{
+  background-color:$cloud;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 150px;
+}
+
+.aux-deck{
+  div{
+    h4{
+      color: $black;
+      font-size: $type_2;
+      font-family: 'Lausanne';
+      margin-bottom: $medium;
+    }
+    p{
+      color: $grey;
+      line-height: $line_2;
+      margin-bottom: $large;
+      font-size: $type_2;
+    }
+  }
+
+}
