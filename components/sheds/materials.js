@@ -11,16 +11,16 @@ const Materials = () => {
 
       <div id="materials-col-2">
         <div>
-          <img src="https://via.placeholder.com/375x151" alt="Some Placeholder Text"/>
+          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
         </div>
         <div>
-          <img src="https://via.placeholder.com/375x151" alt="Some Placeholder Text"/>
+          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
         </div>
         <div>
-          <img src="https://via.placeholder.com/375x151" alt="Some Placeholder Text"/>
+          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
         </div>
         <div>
-          <img src="https://via.placeholder.com/375x151" alt="Some Placeholder Text"/>
+          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
         </div>
 
       </div>

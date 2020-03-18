@@ -9,11 +9,11 @@ const Doors = () => {
 
       <div id="doors-col-2">
         <div>
-          <img src="https://via.placeholder.com/375x317"/>
+          <img src="https://dummyimage.com/375x317/000/fff"/>
         </div>
 
         <div>
-          <img src="https://via.placeholder.com/375x317"/>
+          <img src="https://dummyimage.com/375x317/000/fff"/>
         </div>
       </div>
 

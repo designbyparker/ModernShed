@@ -3,7 +3,7 @@ const Tailored = () => {
     <section id="tailored-section" >
 
       <div id="tailored-image-container">
-        <img src="https://via.placeholder.com/762x531" alt="Tailored not configured"/>
+        <img src="https://dummyimage.com/762x531/000/fff" alt="Tailored not configured"/>
       </div>
 
       <div id="tailored-right-column">

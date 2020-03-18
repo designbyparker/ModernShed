@@ -5,7 +5,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   background-color: $sky;
-  min-height: 100vh;
+  min-height: 120vh;
 }
 
 #index-2-image-container{
@@ -27,15 +27,13 @@
 }
 
 #index-2-text-container{
+  padding-top: $medium;
   display: grid;
-  margin-top: $small;
-  margin-bottom: $small;
   border-left: 0.08em solid $midnight;
-
+  margin-bottom: $small;
   div:first-of-type{
     h2{
     font-size: $type_1;
-    margin-top: $medium;
     margin-left: $small;
   }
   

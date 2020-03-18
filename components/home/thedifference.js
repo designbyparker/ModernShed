@@ -13,13 +13,13 @@ const TheDifference = () => {
       
         <div className="diff-image-container">
           <h5>(A)</h5>
-          <img src="https://via.placeholder.com/375x375" alt="some text about image"/>
+          <img src="https://dummyimage.com/375x375/000/fff" alt="some text about image"/>
         </div>
       </div>
 
       <div id="col-3">
         <div className="diff-image-container">
-          <img src="https://via.placeholder.com/375x375" alt="some text about image" />
+          <img src="https://dummyimage.com/375x375/000/fff" alt="some text about image" />
           <h5>(B)</h5>
         </div>
       </div>
