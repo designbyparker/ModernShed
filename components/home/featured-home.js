@@ -1,7 +1,6 @@
 
 
 const FeaturedHome = (props) => {
-  console.log('props', props.featured);
 
   return(
     <section id="featured-home-section">
