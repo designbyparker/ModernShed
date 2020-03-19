@@ -13,6 +13,9 @@ const Contact = (props) => {
   const [interest, setInterest] = useState();
   const [connect, setConnect] = useState(null);
   const [fields, setFields] = useState({});
+  const [size, setSize] = useState(null);
+  const [time, setTime] = useState(null);
+  const [heard, setHeard] = useState(null);
 
 
   const handleInterestChange = (e) => {
@@ -21,46 +24,77 @@ const Contact = (props) => {
     return setInterest(int);
   }
 
+  const handleSizeChange = (e) => {
+    let size = e.target.value;
+    return setSize(size);
+  }
+
+  const handleTimeChange = (e) => {
+    let time = e.target.value;
+    return setTime(time);
+  }
+
   const handlePdfDownload = (e) => {
     console.log('click')
   }
 
-console.log(interest);
+  const handleHeard = (e) => {
+    setHeard(e.target.value);
+  }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let url = 'http://localhost:8000';
 
-    setFields(
-      {
+    let url = 'https://modern-shed.com/contactus/contact';
+
+    const fields = {
+        Interest: interest,
         FirstName: e.target.FirstName.value,
         LastName: e.target.LastName.value || null,
         Email: e.target.Email.value,
         ZipCode: e.target.ZipCode.value || null,
         PhoneNumber: e.target.Phone.value || null,
-        AdditionalComments: e.target.AddComm.value || null
+        AdditionalComments: e.target.AddComm.value || null,
+        HeardAboutUs: heard,
+        ProjectSize: size,
+        Timeframe: time,
+        ContactID: null,
+        ContactByEmail: null,
+        ContactByPhone: null,
+        StartContactTime: null,
+        EndContactTime: null,
+        TimeStamp: null,
+        Outcome: null,
+        Dealer: null,
+        Country: "US",
+        County:"King",
+        City: "Seattle",
+        State: "WA"
+
       }
-    );
 
-    let reqData = JSON.stringify(fields);
-    console.log('request data',reqData)
-    let data = await superagent.get(`${url}/contact`).query(reqData);
-    console.log(data);
+
+    let c = JSON.stringify(fields);
+    console.log(c)
+    let data = await superagent.post(url)
+    .set('Access-Control-Allow-Origin', '*')
+    .send(c)
+    .then(result => {
+      console.log(result);
+    })
+    .catch(err => {
+      console.error(err);
+    })
   }
-
-  const handleSizeButton = (e) => {
-    e.preventDefault();
-  }
-
-  const handleCompButton = (e) => {
-    e.preventDefault();
-  } 
-
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
+  let cnt=0;
+
   return(
-<>
+    <>
       <HamburgerNav/>
       <PageHero page="CONTACT" copy="Let’s get connected." copy2="Whether you’re ready for a shed now, or interested in more details" id="contact-hero"/>
       <section id="contact-page">
@@ -97,22 +131,22 @@ console.log(interest);
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
             <div id="label-margin">
               <label>FIRST NAME</label>
-              <input type="text" id="FirstName" required="true" />
+              <input placeholder="First Name" type="text" id="FirstName" required="true" />
             </div>
 
             <div id="label-margin">
               <label>LAST NAME</label>
-              <input type="text" id="LastName" />
+              <input placeholder="Last Name" type="text" id="LastName" />
             </div>
 
             <div id="label-margin">
               <label>EMAIL ADDRESS</label>
-            <input type="text" id="Email" required="true" />
+            <input placeholder="Email" type="text" id="Email" required="true" />
             </div>
 
             <div id="label-margin">
               <label>ZIP CODE</label>
-              <input type="text" id="ZipCode" />
+              <input placeholder="00000" type="text" id="ZipCode" />
             </div>
 
 
@@ -121,7 +155,7 @@ console.log(interest);
 
             <div id="label-margin">
               <label>PHONE NUMBER (OPTIONAL)</label>
-              <input type="text" id="Phone" />
+              <input placeholder="000 000-0000" type="text" id="Phone" />
             </div>
 
 
@@ -133,17 +167,17 @@ console.log(interest);
                <div className="radio-btn-container" >
 
                 <div className="radio-box border-bottom border-left border-top">
-                  <input type="radio" id="small" name="shed-size"  />
+                  <input type="radio" id="small" name="shed-size" onChange={handleSizeChange} />
                   <label>Small</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top">
-                  <input type="radio" id="medium" name="shed-size" />
+                  <input type="radio" id="medium" name="shed-size" onChange={handleSizeChange}/>
                   <label>Medium</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top">
-                  <input type="radio" id="large" name="shed-size" />
+                  <input type="radio" id="large" name="shed-size" onChange={handleSizeChange}/>
                   <label>Large</label>
                 </div>
               
@@ -155,7 +189,7 @@ console.log(interest);
               <div className="radio-btn-container">
                 
                 <div className="radio-box border-left">
-                  <input type="radio" id="short" name="comp-date" />
+                  <input type="radio" id="short" name="comp-date" onChange={handleTimeChange}/>
                   <label> 1-3 </label>
                 </div>
 
@@ -175,9 +209,12 @@ console.log(interest);
               <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
-                <select>
+                <select name="hear-about-us" id="hearAboutUs" onChange={handleHeard}>
                   {options.map(item => {
-                    return <option key={item} value={item}>{item}</option>
+                    cnt = cnt+1;
+                    return (
+                    <option key={cnt} value={item}>{item}</option>
+                    )
                   })}             
                 </select>
 
@@ -185,17 +222,19 @@ console.log(interest);
 
 
           </section>
+
           </When>
+
           </section>
 
 
           <div id="label-margin">
-            <label>ADDITIONAL COMMENTS (OPTIONAL) </label>
-            <textarea id="AddComm"></textarea>
+            <label >ADDITIONAL COMMENTS (OPTIONAL) </label>
+            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
             
-          <button type="submit" className="primary-button">Get In Contact →</button>
-          <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF</button>
+          <button type="submit" className="primary-button" >Get In Contact →</button>
+          <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF ↓ </button>
 
           </form>
         </section>
