@@ -18,29 +18,46 @@ const Contact = (props) => {
   const [heard, setHeard] = useState(null);
 
 
+
+
+  const addBackgroundColor = (e, type) => {
+    let boxes = document.getElementsByClassName(`${type}-radio`);
+    for(let i = 0; i < 3; i++){
+      boxes[i].classList.add('check-off');
+    }
+
+    let ele = document.getElementById(`radio-${e.target.id}`);
+    ele.classList.remove('check-off');
+    ele.classList.add('check-on');
+    return
+  }
+
   const handleInterestChange = (e) => {
     let images = document.getElementsByClassName('interest-radio');
     for(let i = 0; i <3; i++){
       images[i].src = './graphics/MS_Radio_Off.svg';
     }
 
-
-    console.log(typeof images);
     let int = e.target.value;
     let imageid = `radio-${e.target.id}`;
     let image = document.getElementById(imageid);
     image.src = './graphics/MS_Radio_On.svg';
-      int === "not interested" ? setConnect(false) : setConnect(true);
+    
+    int === "not interested" ? setConnect(false) : setConnect(true);
+    
     return setInterest(int);
+
   }
 
   const handleSizeChange = (e) => {
+    addBackgroundColor(e, 'size');
     let size = e.target.value;
-    console.log(size);
     return setSize(size);
   }
 
+
   const handleTimeChange = (e) => {
+    addBackgroundColor(e, 'length');
     let time = e.target.value;
     return setTime(time);
   }
@@ -147,22 +164,22 @@ const Contact = (props) => {
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
             <div id="label-margin">
               <label>FIRST NAME</label>
-              <input placeholder="First Name" type="text" id="FirstName" required="true" />
+              <input placeholder="First Name" type="text" id="FirstName" required={true} />
             </div>
 
             <div id="label-margin">
-              <label>LAST NAME</label>
+              <label>LAST NAME (OPTIONAL)</label>
               <input placeholder="Last Name" type="text" id="LastName" />
             </div>
 
             <div id="label-margin">
               <label>EMAIL ADDRESS</label>
-            <input placeholder="Email" type="text" id="Email" required="true" />
+            <input placeholder="Email" type="text" id="Email" required={true} />
             </div>
 
             <div id="label-margin">
               <label>ZIP CODE</label>
-              <input placeholder="00000" type="text" id="ZipCode" />
+              <input placeholder="00000" type="text" id="ZipCode" required={true}/>
             </div>
 
 
@@ -175,26 +192,26 @@ const Contact = (props) => {
             </div>
 
 
-          {/* <When condition={connect}> */}
+      <When condition={connect}> 
 
             <section id="contact-details">
  
 
                <div className="radio-btn-container" >
 
-                <div className="radio-box border-bottom border-left border-top">
+                <div className="radio-box border-bottom border-left border-top size-radio" id="radio-small">
                   <input type="radio" id="small" name="shed-size" onChange={handleSizeChange} />
-                  <label>Small</label>
+                  <label for="small">Small</label>
                 </div>
 
-                <div className="radio-box border-bottom border-top">
+                <div className="radio-box border-bottom border-top size-radio" id="radio-medium">
                   <input type="radio" id="medium" name="shed-size" onChange={handleSizeChange}/>
-                  <label>Medium</label>
+                  <label for="medium">Medium</label>
                 </div>
 
-                <div className="radio-box border-bottom border-top">
+                <div className="radio-box border-bottom border-top size-radio" id="radio-large" >
                   <input type="radio" id="large" name="shed-size" onChange={handleSizeChange}/>
-                  <label>Large</label>
+                  <label for="large">Large</label>
                 </div>
               
               </div>
@@ -204,19 +221,19 @@ const Contact = (props) => {
 
               <div className="radio-btn-container">
                 
-                <div className="radio-box border-left">
-                  <input type="radio" id="short" name="comp-date" onChange={handleTimeChange}/>
-                  <label> 1-3 </label>
+                <div className="radio-box border-left length-radio" id="radio-short">
+                  <input type="radio" id="short" name="comp-date" onChange={handleTimeChange} />
+                  <label for="short"> 1-3 </label>
                 </div>
 
-                <div className="radio-box">
-                  <input type="radio" id="med" name="comp-date" />
-                  <label>3-6</label>
+                <div className="radio-box length-radio" id="radio-med">
+                  <input type="radio" id="med" name="comp-date" onChange={handleTimeChange}/>
+                  <label for="med">3-6</label>
                 </div>
 
-                <div className="radio-box " >
-                  <input type="radio" id="large" name="comp-date" />
-                  <label> 6-12 </label>
+                <div className="radio-box length-radio" id="radio-long" >
+                  <input type="radio" id="long" name="comp-date" onChange={handleTimeChange}/>
+                  <label for="long"> 6-12 </label>
                 </div>
 
               </div>
@@ -239,7 +256,7 @@ const Contact = (props) => {
 
           </section>
 
-          {/* </When> */}
+       </When> 
 
           </section>
 
