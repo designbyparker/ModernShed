@@ -15,7 +15,7 @@ const HamburgerNav = (props) => {
    <> 
     <section id="hamburger-nav-bar" >
       <a href="/index" id="brandmark"><img src="/branding/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
-      <img src="https://dummyimage.com/100x100/000/fff" alt="Hamburger Menu" onClick={handleMenuToggle}/>
+      <img src="./graphics/MS_Menu_Black.svg" alt="Hamburger Menu" onClick={handleMenuToggle}/>
     </section>
 
     <section id="hamburger-menu"  className={menuToggle ? "openMenu" : "closeMenu"} >
@@ -42,7 +42,7 @@ const HamburgerNav = (props) => {
       </div>
 
       <div id="menu-col-3">
-        <img src="https://dummyimage.com/100x100/000/fff" alt="Menu Exit" onClick={handleMenuToggle}/>
+        <img src="./graphics/MS_X_Black.svg" alt="Menu Exit" onClick={handleMenuToggle}/>
 
         <div id="social-links">
          <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
