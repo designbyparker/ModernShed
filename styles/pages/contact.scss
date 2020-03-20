@@ -229,15 +229,23 @@
  
   }
 
-
-
   #details-row-3{
     margin-top: 10px;
   }
 }
 
 #details-row-3{
+  margin-top: 10px;
+  #drop-down-icon{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 90%;
+    top: 90%;
+  }
   select{
+    // background: $cloud url("../public/graphics/MS_Dropdown.svg") no-repeat 90% 50%;
+    height: 50px;
     min-width: 100%;
     -moz-appearance: none;
     -webkit-appearance: none;

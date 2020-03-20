@@ -192,7 +192,7 @@ const Contact = (props) => {
             </div>
 
 
-      {/* <When condition={connect}>  */}
+      <When condition={connect}> 
 
             <section id="contact-details">
  
@@ -255,7 +255,7 @@ const Contact = (props) => {
 
           </section>
 
-       {/* </When>  */}
+       </When> 
 
           </section>
 
