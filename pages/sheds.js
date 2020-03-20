@@ -7,11 +7,15 @@ import Materials from '../components/sheds/materials';
 import Doors from '../components/sheds/doors';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
+import Head from 'next/head'
 import '../styles/theme.css';
 
 const Sheds = () => {
   return(
     <section>
+      <Head>
+        <title>Modern Shed | Sheds</title>
+      </Head>
       <HamburgerNav />
       <ShedsHero id="sheds-hero" page="SHEDS" copy="Modern Shed provides solutions for both limited living as well as permanent dwellings. "/>
       <Uses/>

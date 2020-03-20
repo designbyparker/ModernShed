@@ -1,10 +1,14 @@
 import copy from '../copy/faq.json';
 import Footer from '../components/global/footer';
 import Nav from '../components/global/hamburger-nav';
+import Head from 'next/head';
 import '../styles/theme.css';
 
 const Faq = () => {
   return (
+  <Head>
+    <title>Modern Shed | FAQ</title>
+  </Head>
     <section id="faq-page" className="aux-page">
       <h1>FAQ</h1>
       <Nav/>

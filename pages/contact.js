@@ -2,7 +2,7 @@ import HamburgerNav from '../components/global/hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import Footer from '../components/global/footer';
-
+import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
 import '../styles/theme.css';
@@ -95,6 +95,9 @@ const Contact = (props) => {
 
   return(
     <>
+      <Head>
+        <title>Modern Shed | Contact Us</title>
+      </Head>
       <HamburgerNav/>
       <PageHero page="CONTACT" copy="Let’s get connected." copy2="Whether you’re ready for a shed now, or interested in more details" id="contact-hero"/>
       <section id="contact-page">

@@ -12,6 +12,9 @@ import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 const Process = (props) => {
   return (
     <section >
+      <Head>
+        <title>Modern Shed | Process</title>
+      </Head>
       <HamburgerNav/>
       <ProcessHero id="process-hero" page="PROCESS" copy="We understand every customer has their own use for our Sheds. Each Shed is tailored specifically to our customers’ unique needs."/>
 
