@@ -7,18 +7,20 @@ import '../styles/theme.css';
 
 const Press = () => {
   return(
-    <section id="press-page" className="aux-page">
+   <> 
     <Head>
-        <title>Modern Shed | Press</title>
-    </Head>
+      <title>Modern Shed | Press</title>
+    </Head> 
+    <section id="press-page" className="aux-page">
     <h1>LEGAL</h1>
     <Nav/>
     <section className="aux-page">
       <div className="aux-deck">
       </div>
     </section>
-  <Footer/>
-  </section>
+    <Footer/>
+    </section>
+  </> 
   );
 }
 

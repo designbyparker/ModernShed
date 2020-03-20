@@ -7,6 +7,7 @@ import '../styles/theme.css';
 
 const Legal = () => {
   return(
+  <>
     <Head>
       <title>Modern Shed | Legal</title>
     </Head>
@@ -19,6 +20,7 @@ const Legal = () => {
     </section>
   <Footer/>
   </section>
+</>
   );
 }
 

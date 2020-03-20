@@ -6,9 +6,10 @@ import '../styles/theme.css';
 
 const Faq = () => {
   return (
-  <Head>
-    <title>Modern Shed | FAQ</title>
-  </Head>
+  <>
+    <Head>
+      <title>Modern Shed | FAQ</title>
+    </Head>
     <section id="faq-page" className="aux-page">
       <h1>FAQ</h1>
       <Nav/>
@@ -27,6 +28,7 @@ const Faq = () => {
       </section>
     <Footer/>
     </section>
+  </>
   )
 }
 
