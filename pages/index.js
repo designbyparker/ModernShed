@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Nav from '../components/home/nav';
 import HamburgerNav from '../components/global/hamburger-nav';
 import DesktopCarousel from '../components/home/carousel';
@@ -10,7 +11,6 @@ import TheDifference from '../components/home/thedifference';
 import ContactCTA from '../components/global/contact-cta';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
-import '../styles/theme.css';
 
 import fetch from 'isomorphic-unfetch';
 
@@ -18,6 +18,9 @@ const Index = (props) => {
 
   return(
     <div>
+      <Head>
+        <title>Modern Shed</title>
+      </Head>
       <Nav className="desktop-query"/>
       <HamburgerNav className="mobile-query"/>
       <DesktopCarousel className="desktop-query"/>

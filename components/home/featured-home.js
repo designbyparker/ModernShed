@@ -9,7 +9,7 @@ const FeaturedHome = (props) => {
       <section id="featured-home-deck">
         {props.featured.map(shed => {
           return(
-            <div className="shed-card" id="shed.content_id">
+            <div key={shed.content_id} className="shed-card" id="shed.content_id">
               <div className="image-container">
                 <img src={shed.photos[0].url} alt={shed.photos[0].alt}/>
               </div>  
