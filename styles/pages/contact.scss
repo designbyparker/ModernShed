@@ -39,7 +39,11 @@
   border-top: 0.08em solid $midnight;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-
+  .interest-box{
+    height: $line_1;
+    border-bottom: 1px solid $grey;
+    padding-top: $small;
+  }
 
   div{
     height: $line_1;
@@ -150,9 +154,15 @@
   border-top: 1px solid $midnight;
 }
 
-
 #contact-details{
 
+  .details-radio-label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $grey;
+  }
+  
+  
   div{
     margin-top: 0px;
   }
@@ -162,7 +172,6 @@
   .radio-btn-container{
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
 
     .check-on{
       background-color: $sun;
@@ -171,7 +180,12 @@
     .check-off{
       background-color: $cloud;
     }
+    .radio-box:hover{
+      background-color: $sun;
+    }
+
     .radio-box{
+      width: 100%;
       height: $type_1;
       border-top: 1px solid $grey;
       border-left: 1px solid $grey;
@@ -179,9 +193,8 @@
       font-size: 2em;
       line-height: $type_1;
       display: flex;
-      justify-content: start;
-      padding-left: $xsmall;
-
+      justify-content: flex-start ;
+ 
     input[type=radio]{
       opacity: 0;
     }
@@ -198,7 +211,7 @@
 
 
      .border-bottom{
-       border-bottom: 0px;
+       border-bottom: 1px solid $grey;
      }
 
      .border-left{
@@ -210,7 +223,7 @@
      }
 
      .border-top{
-       border-top: 0px;
+       border-top: 1px solid $grey;
      }
     
  

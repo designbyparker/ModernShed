@@ -138,22 +138,22 @@ const Contact = (props) => {
         <section id="contact-right-col">
         <p className="form-headline">INTEREST LEVEL</p>
         <form className="form" id="interest-form">
-             <div>
+             <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label for="not"> Not yet interested.</label>
+                  <label htmlFor="not"> Not yet interested.</label>
                   <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
              </div>
 
-            <div>  
+            <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label for="maybe">I'm considering a Shed.</label>
+                <label htmlFor="maybe">I'm considering a Shed.</label>
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
-            <div>
+            <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label for="yes">I'm ready for a Shed.</label>
+                <label htmlFor="yes">I'm ready for a Shed.</label>
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
 
             </div>
@@ -188,52 +188,51 @@ const Contact = (props) => {
 
             <div id="label-margin">
               <label>PHONE NUMBER (OPTIONAL)</label>
-              <input placeholder="000 000-0000" type="text" id="Phone" />
+              <input placeholder="(206) 663-7433" type="text" id="Phone" />
             </div>
 
 
-      <When condition={connect}> 
+      {/* <When condition={connect}>  */}
 
             <section id="contact-details">
  
-
+               <p className="details-radio-label">EST. SHED SIZE</p>
                <div className="radio-btn-container" >
-
                 <div className="radio-box border-bottom border-left border-top size-radio" id="radio-small">
                   <input type="radio" id="small" name="shed-size" onChange={handleSizeChange} />
-                  <label for="small">Small</label>
+                  <label htmlFor="small">Small</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-medium">
                   <input type="radio" id="medium" name="shed-size" onChange={handleSizeChange}/>
-                  <label for="medium">Medium</label>
+                  <label htmlFor="medium">Medium</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-large" >
                   <input type="radio" id="large" name="shed-size" onChange={handleSizeChange}/>
-                  <label for="large">Large</label>
+                  <label htmlFor="large">Large</label>
                 </div>
               
               </div>
 
 
 
-
+              <p className="details-radio-label">APPROX. COMPLETION DATE</p>
               <div className="radio-btn-container">
                 
                 <div className="radio-box border-left length-radio" id="radio-short">
                   <input type="radio" id="short" name="comp-date" onChange={handleTimeChange} />
-                  <label for="short"> 1-3 </label>
+                  <label htmlFor="short"> 1-3 </label>
                 </div>
 
                 <div className="radio-box length-radio" id="radio-med">
                   <input type="radio" id="med" name="comp-date" onChange={handleTimeChange}/>
-                  <label for="med">3-6</label>
+                  <label htmlFor="med">3-6</label>
                 </div>
 
                 <div className="radio-box length-radio" id="radio-long" >
                   <input type="radio" id="long" name="comp-date" onChange={handleTimeChange}/>
-                  <label for="long"> 6-12 </label>
+                  <label htmlFor="long"> 6-12 </label>
                 </div>
 
               </div>
@@ -256,7 +255,7 @@ const Contact = (props) => {
 
           </section>
 
-       </When> 
+       {/* </When>  */}
 
           </section>
 
