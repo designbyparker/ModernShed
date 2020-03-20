@@ -19,13 +19,24 @@ const Contact = (props) => {
 
 
   const handleInterestChange = (e) => {
+    let images = document.getElementsByClassName('interest-radio');
+    for(let i = 0; i <3; i++){
+      images[i].src = './graphics/MS_Radio_Off.svg';
+    }
+
+
+    console.log(typeof images);
     let int = e.target.value;
-    int === "not interested" ? setConnect(false) : setConnect(true);
+    let imageid = `radio-${e.target.id}`;
+    let image = document.getElementById(imageid);
+    image.src = './graphics/MS_Radio_On.svg';
+      int === "not interested" ? setConnect(false) : setConnect(true);
     return setInterest(int);
   }
 
   const handleSizeChange = (e) => {
     let size = e.target.value;
+    console.log(size);
     return setSize(size);
   }
 
@@ -111,21 +122,23 @@ const Contact = (props) => {
         <p className="form-headline">INTEREST LEVEL</p>
         <form className="form" id="interest-form">
              <div>
-               <label htmlFor="not"> Not yet interested.
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                </label>
+                  <label for="not"> Not yet interested.</label>
+                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
              </div>
 
-            <div>
-              <label htmlFor="maybe">I'm considering a Shed.
+            <div>  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-              </label>
+                <label for="maybe">I'm considering a Shed.</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
+
             </div>
 
             <div>
-              <label htmlFor="yes">I'm ready for a Shed.
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-              </label>
+                <label for="yes">I'm ready for a Shed.</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
+
             </div>
           </form>
 
@@ -162,7 +175,7 @@ const Contact = (props) => {
             </div>
 
 
-          <When condition={connect}>
+          {/* <When condition={connect}> */}
 
             <section id="contact-details">
  
@@ -226,7 +239,7 @@ const Contact = (props) => {
 
           </section>
 
-          </When>
+          {/* </When> */}
 
           </section>
 
