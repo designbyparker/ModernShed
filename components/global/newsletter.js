@@ -28,7 +28,7 @@ const Newsletter = () => {
   <section id="newsletter">
     <div id="newsletter-copy">
       <h2>Newsletter</h2>
-      <p>Sign up for our Quartly Newsletter and keep up to date with all things related to Modern Shed.</p>
+      <p>Sign up for our Quarterly Newsletter and keep up to date with all things Modern-Shed.</p>
     </div>
 
     <div id="newsletter-form">

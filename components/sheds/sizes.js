@@ -28,7 +28,7 @@ const sImages = {
                 };
 
 
-const mUses = ["Home Offices", "Guest Space", "Gym"];                
+const mUses = ["Home Office", "Guest Space", "Gym"];                
 const mImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
                   alt: "Placeholder Text",
@@ -57,19 +57,19 @@ const Sizes = () => {
           size="S"
           uses={sUses}
           image={sImages}
-          desc="Sheds made to serve a storage or small use-case. Generally popular for home offices, or storage units."
+          desc="Sheds made to serve as storage or other small but mighty uses. This option is popular for home offices, art studios, or playrooms."
         />
         <SizeCard
           size="M"
           uses={mUses}
           image={mImages}
-          desc="Sheds made for spending time in. We typically see these used for secondary guest spaces, workout spaces, and home offices to be used frequently. "
+          desc="A shed to spend some quality time in. We suggest this layout for secondary guestrooms, workout spaces, or as your primary, often-frequented office."
         />
         <SizeCard
           size="L*"
           uses={lUses}
           image={lImages}
-          desc="Sheds made to serve a storage or small use-case. Generally popular for home offices, or storage units.  * May require local permitting *"
+          desc="Living large requires a bit more stretching room--here's the shed full of opportunity. The sky's the limit: a music studio, multi-person office, home gym, recreation room, or a spacious guest studio."
         />
       </div>
     </section>

@@ -15,7 +15,7 @@ const Process = (props) => {
         <title>Modern Shed | Process</title>
       </Head>
       <HamburgerNav/>
-      <ProcessHero id="process-hero" page="PROCESS" copy="We understand every customer has their own use for our Sheds. Each Shed is tailored specifically to our customers’ unique needs."/>
+      <ProcessHero id="process-hero" page="PROCESS" copy="We understand you have a plan, and we’re here to turn potential into reality. Each shed is crafted intentionally to give your imagination a little room."/>
 
       <section id="process-layout">
         <ProcessCard
@@ -23,7 +23,7 @@ const Process = (props) => {
           subheader="Introduction"
           image="https://dummyimage.com/570x458/000/fff"
           alt="Lorem Ipsum"
-          copy="Contact one of our design professionals who will listen and design all the elements you desire into your Modern Shed. Permit plans and engineering are available for projects requring a building permit."
+          copy="Let’s chat. Our design professionals are at your service—eager to hear your story and come up with a course of action. Permit plans and engineering are available for projects that require a building permit."
         /> 
 
         <ProcessCard
@@ -32,14 +32,14 @@ const Process = (props) => {
         image="https://dummyimage.com/375x457/000/fff"
         alt="Lorem Ipsum"
         timeframe="4 to 6 Weeks"
-        copy="Once you have approved the design your shed will be scheduled for production."/>   
+        copy="Once you’ve approved the design and we’ve fit it perfectly to your needs, your shed will be scheduled for production. Here we go!"/>   
         
         <ProcessCard
         step="Step 03"
         subheader="Fulfillment"
         image="https://dummyimage.com/570x458/000/fff"
         alt="Lorem Ipsum"
-        copy="The components are either loaded into one  of our enclosed trailers for delivery up and down the west coast, or forklifted onto a commercial truck/trailer for shipment"/>   
+        copy="The components for your shed are either loaded into one of our enclosed trailers for west coast delivery, or forklifted onto a commercial truck for shipment."/>   
 
         <ProcessCard
         step="Step 04"
@@ -47,7 +47,7 @@ const Process = (props) => {
         image="https://dummyimage.com/375x457/000/fff"
         alt="Lorem Ipsum"
         timeframe="1 to 2 Weeks"
-        copy="Either one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame depends on several factors."
+        copy="It’s really up to you: one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame is reliant on several factors we’ll be able to communicate depending on your specific vision."
         />  
       </section>
       <FeaturedShedsCarousel featured={props.sheds} />

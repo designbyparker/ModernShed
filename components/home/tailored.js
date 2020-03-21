@@ -8,10 +8,11 @@ const Tailored = () => {
 
       <div id="tailored-right-column">
         <div className="headline-container">
-          <h2>Tailored...</h2>
-          <h2>not Configured.</h2>
+          <h2>Tailored to Your Rhythm</h2>
     
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+          <p>
+          By using the highest quality materials, units constructed easily and efficiently in tight spaces for quick assembly, Modern-Shed has become a leader in innovative, sustainable, prefabricated home structures. We are big advocates for intelligent design, effective and potent architecture, and living well and fully in an environment that calls us to home—whether that be work, movement, creativity, or rest.
+          </p>
         </div>  
 
         <div className="button-container">

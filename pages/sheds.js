@@ -17,7 +17,7 @@ const Sheds = () => {
         <title>Modern Shed | Sheds</title>
       </Head>
       <HamburgerNav />
-      <ShedsHero id="sheds-hero" page="SHEDS" copy="Modern Shed provides solutions for both limited living as well as permanent dwellings. "/>
+      <ShedsHero id="sheds-hero" page="SHEDS" copy="Let’s revise your living space with abundance in mind. "/>
       <Uses/>
       <Sizes />
       <ContactCTA buttontext="Inquire →"/>
