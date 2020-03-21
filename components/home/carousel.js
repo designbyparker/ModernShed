@@ -11,12 +11,12 @@ function Carousel(){
       mobile: '/images/carousel/mobile1.jpeg'
     },
     {
-      src: '/images/carousel/sd-studio.jpg',
+      src: '/images/carousel/car2.jpg',
       alt: 'San Diego Studio',
       mobile: '/images/carousel/mobile2.jpeg'
     },
     {
-      src: '/images/carousel/home-office.jpg',
+      src: '/images/carousel/car3.jpg',
       alt: 'Home Office',
       mobile: '/images/carousel/mobile3.jpeg'
     }

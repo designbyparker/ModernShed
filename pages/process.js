@@ -4,10 +4,8 @@ import ContactCTA from '../components/global/contact-cta';
 import ProcessHero from '../components/global/page-hero';
 import Footer from '../components/global/footer';
 import FeaturedShedsCarousel from '../components/process/featured-sheds-carousel';
-import '../styles/theme.css';
-
 import fetch from 'isomorphic-unfetch';
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+import '../styles/theme.css';
 
 const Process = (props) => {
   return (
