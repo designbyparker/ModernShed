@@ -6,17 +6,17 @@ function Carousel(){
 
   const imageData = [
     {
-      src: '/images/carousel/sf-studio.jpg',
+      src: '/images/carousel/car1.jpg',
       alt: 'San Fransico Studio',
       mobile: '/images/carousel/mobile1.jpeg'
     },
     {
-      src: '/images/carousel/sd-studio.jpg',
+      src: '/images/carousel/car2.jpg',
       alt: 'San Diego Studio',
       mobile: '/images/carousel/mobile2.jpeg'
     },
     {
-      src: '/images/carousel/home-office.jpg',
+      src: '/images/carousel/car3.jpg',
       alt: 'Home Office',
       mobile: '/images/carousel/mobile3.jpeg'
     }
@@ -77,7 +77,9 @@ function Carousel(){
 
   return(
     <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
-      <img src={image.src} alt={image.alt} className="carousel-image" onClick={handleClick} draggable="false"/>
+      <div className="carousel-image">
+        <img src={image.src} alt={image.alt}  onClick={handleClick} draggable="false"/>
+      </div> 
       <div id="photo-data">
 
           <p id="shed-use">Home Office <br/> 142 Feet Squared</p>

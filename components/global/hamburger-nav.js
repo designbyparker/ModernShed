@@ -14,13 +14,13 @@ const HamburgerNav = (props) => {
   return(
    <> 
     <section id="hamburger-nav-bar" >
-      <a href="/index" id="brandmark"><img src="/branding/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
+      <a href="/index" id="brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
       <img src="./graphics/MS_Menu_Black.svg" alt="Hamburger Menu" onClick={handleMenuToggle}/>
     </section>
 
     <section id="hamburger-menu"  className={menuToggle ? "openMenu" : "closeMenu"} >
       <div id="menu-col-1">
-       <a id="wordmark" href="/index"> <img src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" /></a>
+       <a id="wordmark" href="/index"> <img src="/graphics/small-wordmark.svg" alt="Modern Shed Wordmark" /></a>
         <p>(c) Modern Shed, LLC All Rights Reserved. Privacy Policy. Terms of Use.</p>
       </div>
 

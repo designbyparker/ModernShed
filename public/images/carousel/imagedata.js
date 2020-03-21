@@ -1,6 +1,6 @@
 const imageData = [
   {
-    src: '/images/carousel/sf-studio.jpg',
+    src: '/images/carousel/car1.jpeg',
     alt: 'San Fransico Studio',
     mobile: '/images/carousel/mobile1.jpeg'
   },
