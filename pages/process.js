@@ -3,13 +3,14 @@ import ProcessCard from '../components/process/process-card';
 import ContactCTA from '../components/global/contact-cta';
 import ProcessHero from '../components/global/page-hero';
 import Footer from '../components/global/footer';
+import Head from 'next/head'
 import FeaturedShedsCarousel from '../components/process/featured-sheds-carousel';
 import fetch from 'isomorphic-unfetch';
 import '../styles/theme.css';
 
 const Process = (props) => {
   return (
-    <section >
+    <section>
       <Head>
         <title>Modern Shed | Process</title>
       </Head>
