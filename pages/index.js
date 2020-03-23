@@ -28,8 +28,8 @@ const Index = (props) => {
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
       <WhatWeDoMobile/>
-      {/* <FeaturedHome featured={props.sheds}/>
-      <Tailored/>
+      <FeaturedHome featured={props.sheds}/>
+       {/*<Tailored/>
       <TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
       <Newsletter/> 
