@@ -45,3 +45,20 @@
     width: 100%;
     background-color: $sun;
   }
+
+  .mobile-button-container{
+    margin-top: $medium;
+    margin-left: $small;
+    width: calc(100vw - 50px);
+    height: 75px;
+    border: 1px solid $midnight;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    .mobile-button-anchor{
+      font-size: $mobile_type1;
+      color: $black;
+      font-size: $mobile_type1;
+    }
+  }
+

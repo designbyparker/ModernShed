@@ -12,7 +12,7 @@ const TailoredMobile = () => {
           By using the highest quality materials, units constructed easily and efficiently in tight spaces for quick assembly, Modern-Shed has become a leader in innovative, sustainable, prefabricated home structures. We are big advocates for intelligent design, effective and potent architecture, and living well and fully in an environment that calls us to home—whether that be work, movement, creativity, or rest.
       </p>
 
-      <a href="/sheds">Sheds →</a>
+      <div className="mobile-button-container"><a className="mobile-button-anchor" href="/sheds">More Sheds →</a></div>
   
       
     </section>

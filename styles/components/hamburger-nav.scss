@@ -127,6 +127,8 @@
     padding-top: $medium;
     padding-left: $medium;
     @media(max-width: 800px){
+      width: 30px;
+      hieght: auto;
       padding-left: $small;
       padding-top: $small;
     }
@@ -136,6 +138,8 @@
     padding-top: $medium;
     padding-right: $medium;
     @media(max-width: 800px){
+      width: 30px;
+      hieght: auto;
       padding-right: $small;
       padding-top: $small;
     }

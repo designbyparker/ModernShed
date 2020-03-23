@@ -83,7 +83,7 @@
   }
 
   #index-2-image-container{
-    width: 90vw;
+    width: calc(100vw - 50px);
     height: auto;
     place-items: center;
     margin: auto;
@@ -94,7 +94,7 @@
     }
   }
   p{
-    padding: $medium 65px $medium 65px;
+    padding: $medium $mobile_p $medium $mobile_p;
     font-size: $mobile_type2;
     line-height: $mobile_line2;
   }
