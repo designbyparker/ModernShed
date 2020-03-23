@@ -38,8 +38,8 @@ const Index = (props) => {
       <TheDifferenceMobile/>
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
-      {/* <Newsletter/> 
-      <Footer/> */}
+      <Newsletter/> 
+      {/* <Footer/>  */}
     </div> 
   );
 }
