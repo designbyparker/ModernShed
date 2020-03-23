@@ -8,6 +8,7 @@ import WhatWeDo from '../components/home/what-we-do';
 import WhatWeDoMobile from '../components/home/what-we-do-mobile';
 import FeaturedHome from '../components/home/featured-home';
 import Tailored from '../components/home/tailored';
+import TailoredMobile from '../components/home/tailored-mobile';
 import TheDifference from '../components/home/thedifference';
 import ContactCTA from '../components/global/contact-cta';
 import Newsletter from '../components/global/newsletter';
@@ -29,8 +30,9 @@ const Index = (props) => {
       <WhatWeDo/>
       <WhatWeDoMobile/>
       <FeaturedHome featured={props.sheds}/>
-       {/*<Tailored/>
-      <TheDifference/>
+      <Tailored/>
+      <TailoredMobile/>
+       {/*<TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
       <Newsletter/> 
       <Footer/> */}

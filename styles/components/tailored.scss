@@ -49,6 +49,40 @@
     a:active{
       color: $black;
     }
+}
+
+@media(max-width: 800px){
+  display: none;
+  }
+}
+
+#tailored-mobile-section{
+  @media(min-width: 800px){
+    display: none;
+  }
+  width: 100vw;
+  padding: $medium $small $small $small;
+
+  h2{
+    margin-bottom: $medium;
+  }
+  #tailored-mobile-image-container{
+    width: calc(100vw - 50px);
+    height: auto;
+    place-items: center;
+    margin-bottom: $medium;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  p{
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+    padding-left: $medium;
+    padding-right: $large;
   }
 
 }
