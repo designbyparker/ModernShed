@@ -30,7 +30,7 @@ const Index = (props) => {
       <Tailored/>
       <TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
-      <Newsletter/>
+      {/* <Newsletter/> */}
       <Footer/>
     </div>
   );
