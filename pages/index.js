@@ -12,6 +12,7 @@ import TailoredMobile from '../components/home/tailored-mobile';
 import TheDifference from '../components/home/thedifference';
 import TheDifferenceMobile from '../components/home/thedifference-mobile';
 import ContactCTA from '../components/global/contact-cta';
+import MobileContactCTA from '../components/global/mobile-contact-cta';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 
@@ -35,8 +36,9 @@ const Index = (props) => {
       <TailoredMobile/>
       <TheDifference/>
       <TheDifferenceMobile/>
-     {/* <ContactCTA buttontext="Inquire →"/>
-      <Newsletter/> 
+      <ContactCTA buttontext="Inquire →"/>
+      <MobileContactCTA buttontext="Inquire →"/>
+      {/* <Newsletter/> 
       <Footer/> */}
     </div> 
   );
