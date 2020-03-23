@@ -15,6 +15,7 @@ import ContactCTA from '../components/global/contact-cta';
 import MobileContactCTA from '../components/global/mobile-contact-cta';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
+import MobileFooter from '../components/global/mobile-footer';
 
 import fetch from 'isomorphic-unfetch';
 
@@ -39,7 +40,8 @@ const Index = (props) => {
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
       <Newsletter/> 
-      {/* <Footer/>  */}
+      <Footer/>  
+      <MobileFooter/>
     </div> 
   );
 }
