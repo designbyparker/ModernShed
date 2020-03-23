@@ -5,6 +5,7 @@ import HamburgerNav from '../components/global/hamburger-nav';
 import DesktopCarousel from '../components/home/carousel';
 import MobileCarousel from '../components/home/mobile-carousel';
 import WhatWeDo from '../components/home/what-we-do';
+import WhatWeDoMobile from '../components/home/what-we-do-mobile';
 import FeaturedHome from '../components/home/featured-home';
 import Tailored from '../components/home/tailored';
 import TheDifference from '../components/home/thedifference';
@@ -26,12 +27,13 @@ const Index = (props) => {
       <DesktopCarousel className="desktop-query"/>
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
-      <FeaturedHome featured={props.sheds}/>
+      <WhatWeDoMobile/>
+      {/* <FeaturedHome featured={props.sheds}/>
       <Tailored/>
       <TheDifference/>
       <ContactCTA buttontext="Inquire →"/>
-      {/* <Newsletter/> */}
-      <Footer/>
+      <Newsletter/> 
+      <Footer/> */}
     </div>
   );
 }

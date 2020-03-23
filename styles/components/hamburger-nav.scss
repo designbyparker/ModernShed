@@ -109,11 +109,6 @@
   }
 
 
-
-
-
-
-
 // ***** Nav Bar Styling ***** //
 #hamburger-nav-bar{
   display: none;
@@ -131,11 +126,19 @@
     height: auto;
     padding-top: $medium;
     padding-left: $medium;
+    @media(max-width: 800px){
+      padding-left: $small;
+      padding-top: $small;
+    }
   }
   img:last-of-type{
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
+    @media(max-width: 800px){
+      padding-right: $small;
+      padding-top: $small;
+    }
   }
 }
 

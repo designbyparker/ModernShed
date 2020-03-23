@@ -1,12 +1,13 @@
 
 #index-2{
+
   font-family: 'Lausanne';
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   background-color: $sky;
   min-height: 120vh;
-}
+
 
 #index-2-image-container{
   display: grid;
@@ -56,5 +57,45 @@
     }
     
     padding-left: 15px;
+    }
   }
+
+      
+  @media(max-width: 800px){
+    display: none;
   }
+}
+
+#index-2-mobile{
+  @media(min-width: 800px){
+    display: none;
+  }
+  width: 100%;
+  background-color: $sky;
+
+  h2, h3{
+    font-size: $mobile_type1;
+    padding:0px $small $medium $small;
+  }
+
+  h2{
+    padding-top: $medium;
+  }
+
+  #index-2-image-container{
+    width: 90vw;
+    height: auto;
+    place-items: center;
+    margin: auto;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  p{
+    padding: $medium;
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+  }
+}
