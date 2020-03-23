@@ -24,7 +24,9 @@ const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
                   alt: "Placeholder Text",
-                  key: "gif-1"
+                  key: "gif-1",
+                  gif_src: "./images/sheds/medium.gif",
+                  gif_alt: "Placeholder Text"
                 };
 
 
@@ -32,14 +34,18 @@ const mUses = ["Home Office", "Guest Space", "Gym"];
 const mImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
                   alt: "Placeholder Text",
-                  key: "gif-2"
+                  key: "gif-2",
+                  gif_src:"./images/sheds/medium.gif",
+                  gif_alt: "Placeholder Text"
                 };
 
 const lUses = ["Rental Unit", "Guest Space", "Dwelling"];        
 const lImages = {
                   src: "https://dummyimage.com/375x500/000/fff",
                   alt: "Placeholder Text",
-                  key: "gif-3"
+                  key: "gif-3",
+                  gif_src: "./images/sheds/large.gif",
+                  gif_alt: "Placeholder Text",
                 };
 
 
@@ -58,6 +64,7 @@ const Sizes = () => {
           uses={sUses}
           image={sImages}
           desc="Sheds made to serve as storage or other small but mighty uses. This option is popular for home offices, art studios, or playrooms."
+          
         />
         <SizeCard
           size="M"
