@@ -1,30 +1,31 @@
+
 #featured-shed-carousel{
   background-color: $cloud;
   padding: $medium 0px 0px $medium;
   h2{
     margin-bottom: $xlarge;
   }
-}
 
-#featured-carousel{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: $small;
-  min-height: 50vh;
-  div{
-    justify-items: stretch;
-    overflow: hidden;
-
+  .slide{
+    height: 100%; 
+    width: 100%;
+    place-items: center;
     img{
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-    #image-cut{
+      width: 95%;
       height: 100%;
-      width: auto;
+      object-fit: cover;
     }
-
   }
+
+  button{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    right: -89vw;
+    top: -38vh;
+  }
+  button:focus{
+    outline: none;
+  }
+
 }
