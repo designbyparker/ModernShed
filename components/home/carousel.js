@@ -62,7 +62,7 @@ function Carousel(){
   function handleClick(e){
      e.preventDefault();
      console.log(ind);
-     if(cursor === 'right'){
+     if(cursor === 'right'){ 
       ind = (ind + 1) % imageSet.length;
       console.log(ind);
       return setImage(imageSet[ind]);

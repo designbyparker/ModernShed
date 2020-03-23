@@ -24,6 +24,7 @@
     "next": "^9.2.1",
     "next-fonts": "^1.0.3",
     "node-sass": "^4.13.1",
+    "pure-react-carousel": "^1.26.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-swipeable": "^5.5.1",

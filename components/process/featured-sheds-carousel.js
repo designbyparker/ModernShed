@@ -1,32 +1,35 @@
+import {CarouselProvider, Slider, Slide, ButtonNext} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 const FeaturedShedsCarousel = (props) => {
-  let sheds = [];
-  props.featured.forEach(shed=> {
-    sheds.push({url: shed.photos[0].url, alt: shed.photos[0].alt});
-  });
 
-  const handleClick = (e) => {
-    console.log('click');
-  }
-
-  console.log(sheds);
-  
   return(
     <section id="featured-shed-carousel">
-
       <h2>Featured Sheds</h2>
 
-      <section id="featured-carousel">
-        <div>
-          <img  src={sheds[0].url} alt={sheds[0].alt} />
-        </div>  
+      <section id="featured-carousel" >
+        <CarouselProvider
+          naturalSlideWidth={300}
+          naturalSlideHeight={200}
+          totalSlides={props.featured.length}
+          touchEnabled={true}
+          visibleSlides={1.75}
+          infinite={true}
+          >
+            <Slider>
+              {
+                props.featured.map((shed, ind) => {
+                  return(
+                      <Slide className="slide" index={ind}><img src={shed.photos[0].url} alt={shed.photos[0].alt}/></Slide>
+                  )
+                })
+              }
+            </Slider>
+            <ButtonNext className="next-button"><img src={'./images/cursors/MS_Arrow_Right.png'}/></ButtonNext>
 
-        <div>
-          <img id="image-cut" src={sheds[1].url} alt={sheds[1].alt}/>
-        </div>
-      </section>  
-    <img onClick={handleClick} src="./images/cursors/MS_Arrow_Right.png"/>
+        </CarouselProvider>
+      </section>
 
     </section>
 
