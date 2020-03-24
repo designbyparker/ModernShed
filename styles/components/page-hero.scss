@@ -21,6 +21,35 @@
     align-self: start;
     margin-right: $medium;
   }
+
+
+  @media(max-width: 800px){
+    height: 80vh;
+    display: block;
+    h1{
+      display: none;
+    }
+    h2, h3{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+      margin-right: 0px;
+    }
+
+    #hero-text{
+      display: block;
+      padding-left: $small;
+      padding-right: $small;
+      padding-top: $large;
+      padding-bottom: $medium;
+    }
+    #empty-div{
+      display: none;
+
+    }
+  }
+
+
+
 }
 
 #process-hero{
