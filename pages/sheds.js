@@ -23,10 +23,10 @@ const Sheds = () => {
       <ShedsHero id="sheds-hero" page="SHEDS" copy="Let’s revise your living space with abundance in mind. "/>
       <Uses/>
       <MobileUses/>
-      {/* <Sizes />
+      <Sizes />
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
-      <Materials/>
+     {/*  <Materials/>
       <Doors/>
       <Newsletter/>
       <MobileFooter/>

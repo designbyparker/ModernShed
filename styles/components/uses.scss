@@ -71,8 +71,9 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   #tailored-left-col{
+    
     padding-left: $medium;
-    padding-top: $medium;
+    margin-top: $medium;
     margin-bottom: $medium;
     #tailored-h2{
       margin-top: $medium;
@@ -89,6 +90,7 @@
     }
   }
   #tailored-right-col{
+  padding-left: 1px solid $black;
    margin-right: $medium;
    margin-bottom: $medium;
    padding-top: $small;
