@@ -1,5 +1,9 @@
 
 #featured-shed-carousel{
+  @media(max-width:800px){
+    display:none;
+  }
+
   background-color: $cloud;
   padding: $medium 0px 0px $medium;
   h2{

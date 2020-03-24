@@ -2,8 +2,10 @@ import HamburgerNav from '../components/global/hamburger-nav';
 import ProcessCard from '../components/process/process-card';
 import MobileProcessCard from '../components/process/mobile-process-card';
 import ContactCTA from '../components/global/contact-cta';
+import MobileContactCTA from '../components/global/mobile-contact-cta';
 import ProcessHero from '../components/global/page-hero';
 import Footer from '../components/global/footer';
+import MobileFooter from '../components/global/mobile-footer';
 import Head from 'next/head'
 import FeaturedShedsCarousel from '../components/process/featured-sheds-carousel';
 import fetch from 'isomorphic-unfetch';
@@ -91,7 +93,9 @@ const Process = (props) => {
       </section>
       <FeaturedShedsCarousel featured={props.sheds} /> 
       <ContactCTA buttontext="Inquire →"/>
+      <MobileContactCTA buttontext="Inquire →"/>
       <Footer/>
+      <MobileFooter/>
     </section>
   );
 }
