@@ -2,7 +2,7 @@ const ContactCTA = (props) => {
   return(
     <section id="contact-cta">
       <div id="contact-left-column">
-        <img src="/images/contact-cta/contact-image.jpeg"/>
+        <img src="/images/contact-cta/I_ModernShed_GetAShed.jpg"/>
       </div>
 
       <div id="contact-right-column">

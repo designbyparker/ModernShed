@@ -7,7 +7,7 @@ const WhatWeDoMobile = () => {
             <h3>You imagine, we’ll take care of the construction. We build intentionally crafted spaces for multi-functional use, by connecting the dots between form and function. Each room is tailored just for you.</h3>
  
             <div  id="index-2-image-container">
-              <img src="https://dummyimage.com/570x400/000/fff" alt="some text about image"/>
+              <img src="/images/index-images/E_Home_Shed.jpg" alt="some text about image"/>
             </div>
        
          
