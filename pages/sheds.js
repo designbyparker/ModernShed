@@ -6,6 +6,7 @@ import Uses from '../components/sheds/uses';
 import MobileUses from '../components/sheds/mobile-uses';
 import Sizes from '../components/sheds/sizes';
 import Materials from '../components/sheds/materials';
+import MobileMaterials from '../components/sheds/materials-mobile';
 import Doors from '../components/sheds/doors';
 import Newsletter from '../components/global/newsletter';
 import MobileFooter from '../components/global/mobile-footer'
@@ -26,8 +27,9 @@ const Sheds = () => {
       <Sizes />
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
-     {/*  <Materials/>
-      <Doors/>
+      <Materials/>
+      <MobileMaterials/>
+       {/* <Doors/>
       <Newsletter/>
       <MobileFooter/>
       <Footer/> */}

@@ -64,7 +64,9 @@
     color: $black;
     margin-bottom: $medium;
     align-self: start;
-
+    font-family: 'Lausanne';
+    text-decoration: none;
+    font-size: $type_2;
   }
   p{
     margin-top: $small;
@@ -83,6 +85,9 @@
 
 
 #mobile-size-card{
+  @media(min-width: 800px){
+    display: none;
+  }
   border-top: 1px solid $grey;
   padding: $small 0px;
   margin-left: $small;
