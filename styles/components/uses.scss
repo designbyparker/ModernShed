@@ -1,3 +1,17 @@
+
+
+
+// ****** Desktop Styling ******* //
+
+
+
+#desktop-uses-tailored-section{
+  @media(max-width: 800px){
+    display: none;
+  }
+}
+
+
 #uses-section{
   width: 100vw;
   height: auto;
@@ -41,6 +55,8 @@
       padding-bottom: $small;
       color: $black;
       font-size: $type_1;
+      font-family: 'Lausanne';
+      text-decoration: none;
     }
   } 
 
@@ -55,8 +71,9 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   #tailored-left-col{
+    
     padding-left: $medium;
-    padding-top: $medium;
+    margin-top: $medium;
     margin-bottom: $medium;
     #tailored-h2{
       margin-top: $medium;
@@ -73,10 +90,91 @@
     }
   }
   #tailored-right-col{
+  padding-left: 1px solid $black;
+   margin-right: $medium;
+   margin-bottom: $medium;
+   padding-top: $small;
+   width: 30vw;
+   height: auto;
+   place-items: center;
+   img{
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+   }
+    
 
-    padding-left: $small;
-    margin-bottom: $medium;
+  }
+
+}
+
+
+
+
+// ****** Mobile Styling ******* //
+
+#mobile-use-tailor-section{
+  @media(min-width: 800px){
+    display: none;
+  }
+
+  background-color: $cloud;
+  padding: $small;
+
+  #uses-img-container{
+    display: flex;
+    place-items: center;
+    width: calc(100vw - 50px);
+    height: auto;
+    .contained-image{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  #uses-img2-container{
     padding-top: $small;
+    display: flex;
+    place-items: center;
+    width: calc(100vw - 50px);
+    height: auto;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .mobile-button-container{
+    margin-left:0px;
+    margin-top: $small;
+    margin-bottom: $xlarge;
+  }
+
+  h2{
+    font-size: $mobile_type1;
+    margin-bottom: $medium;
+  }
+  p{
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+    padding-left: $medium;
+    padding-right: $small;
+    margin-bottom: $medium;
+  }
+
+  #uses-img3-container{
+    padding-bottom: $medium;
+    display: flex;
+    width: calc(100vw - 50px);
+    height: auto;
+    place-items: center;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
 }

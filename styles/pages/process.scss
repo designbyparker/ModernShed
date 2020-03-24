@@ -5,12 +5,18 @@
 #process-layout{
   margin-top: $medium;
   margin-bottom: $medium;
+  @media(max-width: 800px){
+    margin: 0px;
+  }
 }
 
 
 
 // ******** CARD COMPONENT ******** //
 .process-card{
+  @media(max-width: 800px){
+    display: none;
+  }
   max-height: 90vh;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
@@ -26,6 +32,9 @@
 }
 
 #withTimeFrame{
+  @media(max-width: 800px){
+    display: none;
+  }
   grid-template-areas: 'step pic timeframe copy';
 
   #process-left-column{
@@ -62,6 +71,9 @@
 }
 
 #withoutTimeFrame{
+  @media(max-width: 800px){
+    display: none;
+  }
   display: grid;
   grid-template-areas: 'step pic pic copy';
 
@@ -102,4 +114,55 @@
   grid-row: 1/2;
   border-left: 0.08em solid $black;
   border-right: 0.08em solid $black;
+}
+
+
+
+// ********* Mobile Styling ******* //@extend
+.mobile-process-card{
+  @media(min-width: 800px){
+    display: none;
+  }
+  padding-top: $medium;
+  padding-bottom: $medium;
+  margin-left: $small;
+  margin-right: $small;
+
+
+  #mobile-process-headline{
+    h2, h3{
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
+    margin-bottom: $small;
+  }
+
+  #mobile-process-image-container{
+    width: calc(100vw - 50px);
+    place-items: auto;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  #mobile-timeframe{
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+    padding: $small $medium;
+  }
+
+  #mobile-process-copy{
+      padding-top: $small;
+      padding-left: $medium;
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+
+  }
+
+}
+
+#border{
+  border-bottom: 1px solid $grey;
 }

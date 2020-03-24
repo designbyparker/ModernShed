@@ -7,18 +7,23 @@ function Carousel(){
   const imageData = [
     {
       src: '/images/carousel/car1.jpg',
-      alt: 'San Fransico Studio',
+      alt: 'placeholder',
       mobile: '/images/carousel/mobile1.jpeg'
     },
     {
       src: '/images/carousel/car2.jpg',
-      alt: 'San Diego Studio',
+      alt: 'placeholder',
       mobile: '/images/carousel/mobile2.jpeg'
     },
     {
       src: '/images/carousel/car3.jpg',
-      alt: 'Home Office',
+      alt: 'placeholder',
       mobile: '/images/carousel/mobile3.jpeg'
+    },
+    {
+      src: '/images/carousel/car4.jpg',
+      alt: 'placeholder',
+      mobile:'/images/carousel/car4.jpg'
     }
   ];
 

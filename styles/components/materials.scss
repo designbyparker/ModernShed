@@ -1,3 +1,5 @@
+// ******** Material Desktop Styling ********** // 
+
 #shed-materials-section{
   margin: $medium;
   display: grid;
@@ -19,6 +21,9 @@
     a{
       color: $black;
       align-self: end;
+      text-decoration: none;
+      font-family: 'Lausanne';
+      font-size: $type_1;
     }
   }
 
@@ -58,4 +63,74 @@
     line-height: $type_2;
   }
 
+  @media(max-width: 800px){
+   display: none;
+  }
+
 }
+
+
+
+// ****** Material Mobile Styling ******** //
+
+#mobile-materials-section{
+  @media(min-width: 800px){
+    display: none;
+  }
+  background-color: $cloud;
+  padding: $small;
+  h2{
+    font-size: $mobile_type1;
+    padding-bottom: $medium;
+  }
+  p{
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+    color: $grey;
+    padding-bottom: $large;
+  }
+  #mobile-materials{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+
+    #mobile-images{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    div{
+      margin-top: $small;
+      display: flex; 
+      width: calc(50vw - 25px);
+      place-items: center;
+      img{
+        width: 100%;
+        height: 100%; 
+        object-fit: contain;
+      }
+      }
+    }
+
+    #material-titles{
+      padding-left: $small;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      h4{
+        margin-top: $small;
+        font-family: 'Lausanne';
+        font-size: $mobile_type2;
+        
+      }
+
+    }
+
+  }
+  .mobile-button-container{
+    margin-left: 0px;
+    font-size: $mobile_type1;
+  }
+}
+

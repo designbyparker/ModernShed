@@ -21,12 +21,25 @@ $type_3: 1.5em;
 $line_3: 1.65em;
 $type_4: 1em;
 
+
+
+$mobile_type1: 42px;
+$mobile_line1: 40px;
+$mobile_type2: 24px;
+$mobile_line2: 26px;
+$mobile_type3: 1.5em;
+
+
+
 // margins
 $xsmall : 15px;
 $small : 25px;
 $medium : 40px;
 $large: 80px;
 $xlarge: 100px;
+
+$mobile_p: 65px;
+
 // Borders
 .right-border{
   margin-top: $small;

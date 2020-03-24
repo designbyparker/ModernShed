@@ -33,6 +33,8 @@
     color: $black;
     z-index: 20;
     a{
+      font-family: 'Lausanne';
+      text-decoration: none;
       color: $black;
     }
     a:visited{
@@ -109,11 +111,6 @@
   }
 
 
-
-
-
-
-
 // ***** Nav Bar Styling ***** //
 #hamburger-nav-bar{
   display: none;
@@ -131,11 +128,23 @@
     height: auto;
     padding-top: $medium;
     padding-left: $medium;
+    @media(max-width: 800px){
+      width: 30px;
+      hieght: auto;
+      padding-left: $small;
+      padding-top: $small;
+    }
   }
   img:last-of-type{
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
+    @media(max-width: 800px){
+      width: 30px;
+      hieght: auto;
+      padding-right: $small;
+      padding-top: $small;
+    }
   }
 }
 

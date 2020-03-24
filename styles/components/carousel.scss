@@ -32,10 +32,11 @@
   display:block ;
   width: 100vw;
   height: 100vh;
-  object-fit: contain;
+  place-items: center;
   .mobile-carousel-image{ 
+  object-fit: cover;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   }
   @media(min-width:768px){
     display: none;

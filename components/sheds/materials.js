@@ -5,22 +5,22 @@ const Materials = () => {
       <div id="materials-col-1">
         <h2>Materials</h2>
         <p>Let’s talk about our high standards—we’ve hand-selected an extensive variety of materials that are not only eco-friendly, but will stand the test of time.</p>
-        <a href="/contact">Download Catalog →</a>
+        <a href="/contact">Catalog →</a>
       </div>
 
 
       <div id="materials-col-2">
         <div>
-          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
+          <img src="./images/sheds/C_Materials_WoodGrating.jpg" alt="Wood Grating"/>
         </div>
         <div>
-          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
+          <img src="./images/sheds/D_Materials_MetalSiding.jpg" alt="Metal Siding"/>
         </div>
         <div>
-          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
+          <img src="./images/sheds/F_Materials_PanelSiding.jpg" alt="Wood Paneling"/>
         </div>
         <div>
-          <img src="https://dummyimage.com/375x151/000/fff" alt="Some Placeholder Text"/>
+          <img src="./images/sheds/E_Materials_PaintedSiding.jpg" alt="Painted Siding"/>
         </div>
 
       </div>

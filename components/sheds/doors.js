@@ -4,16 +4,16 @@ const Doors = () => {
       <div id="doors-col-1">
         <h2>Doors</h2>
         <p>Customize your entry way with more than a welcome mat. Choose between over two dozen options—from French doors to sliding, steel to fiberglass. What best serves your vision?</p>
-        <a href="/contact">Download Catalog →</a>
+        <a href="/contact">Catalog →</a>
       </div>
 
       <div id="doors-col-2">
         <div>
-          <img src="https://dummyimage.com/375x317/000/fff"/>
+          <img src="./images/sheds/G_Doors_Traditional.jpg" alt="Traditional Door"/>
         </div>
 
         <div>
-          <img src="https://dummyimage.com/375x317/000/fff"/>
+          <img src="./images/sheds/H_Doors_Sliding.jpg" alt="Sliding Door"/>
         </div>
       </div>
 
