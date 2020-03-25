@@ -263,7 +263,7 @@ const Contact = (props) => {
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
             
-          <button type="submit" className="primary-button" >Get In Contact →</button>
+          <button type="submit" className="primary-button" >Get in Contact →</button>
           <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF ↓ </button>
 
           </form>

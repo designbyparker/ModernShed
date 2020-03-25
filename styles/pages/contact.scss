@@ -35,7 +35,7 @@
   padding-bottom: 5px;
   @media(max-width: 800px){
     margin: 0px;
-    padding-left: $xsmall;
+    padding-left: $small;
   }
 }
 
@@ -47,14 +47,13 @@
 
 #interest-form{
   @media(max-width: 800px){
-    width: calc(100vw - 30px);
+    width: calc(100vw - 50px);
     margin: 0px;
     padding: 0px;
-    margin-left: $xsmall;
-    margin-right: $xsmall;
+    margin-left: $small;
+    margin-right: $small;
     width: calc(100vw-50px);
     .interest-box{
-      width: 90vw;
       .mobile-label{
         font-size: $mobile_type1;
       }
@@ -75,6 +74,12 @@
         display: none;
       }
     }
+    .mobile-label{
+      @media(min-width: 800px){
+        display: none;
+      }
+    }
+
     height: $line_1;
     border-bottom: 1px solid $grey;
     padding-top: $small;
@@ -100,6 +105,9 @@
       position: absolute;
       right: $medium;
       width: 20px;
+      @media(max-width: 800px){
+        right: $small;
+      }
     }
     input[type=radio]:focus{
       outline: $sun auto 3px;
@@ -135,6 +143,13 @@
   div{
     @media(max-width: 800px){
       padding-right: 0px;
+      grid-template-rows: 0fr;
+      
+      input{
+         width:  calc(100vw - 50px);
+         padding: 0px;
+         margin:0px;
+      }
     }
     width: 100%;
     margin-top: $small;
@@ -153,7 +168,7 @@
       border-bottom: 1px solid $grey;
       font-size: $type_1;
       @media(max-width: 800px){
-        width: calc(100vw - 30px);
+        width: calc(100vw - 50px);
         height: 65px;
         font-size: $mobile_type1;
         line-height: $mobile_line1;
@@ -175,6 +190,11 @@
       font-size: $type_1;
       @media(max-width:800px){
         height: 40vh;
+        border-radius: 0;
+        padding:0px;
+        margin:0px;
+        font-size: $mobile_type1;
+        padding-top: $small;
       }
     }
     textarea:focus{
@@ -186,7 +206,7 @@
     margin-top: 150px;
     @media(max-width: 800px){
       margin-top: $medium;
-      font-size: $mobile_type1;
+      font-size: 30px;
     }
   }
   #label-margin{
@@ -198,9 +218,9 @@
   }
 
   @media(max-width: 800px){
-    width: calc(100vw - 30px);
-    margin-left: $xsmall; 
-    margin-right: $xsmall;
+    width: calc(100vw - 50px);
+    margin-left: $small; 
+    margin-right: $small;
   }
 }
 
@@ -232,6 +252,11 @@
     display:flex;
     flex-direction: row;
 
+
+    .radio-box:hover{
+      background-color: $sun;
+    }
+
     .check-on{
       background-color: $sun;
     }
@@ -239,9 +264,7 @@
     .check-off{
       background-color: $cloud;
     }
-    .radio-box:hover{
-      background-color: $sun;
-    }
+
 
     .radio-box{
       width: 100%;
@@ -294,7 +317,7 @@
   @media(max-width: 800px){
     margin:0px;
     padding:0px;
-    width: calc(100vw - 30px);
+    width: calc(100vw - 50px);
     display: flex; 
     flex-direction: column;
   
@@ -307,7 +330,7 @@
         width: 33%;
        label{
          margin-left:0px;
-         padding:0px;
+         padding:$xsmall;
          font-size: $mobile_type2;
        }
        input{
