@@ -18,6 +18,9 @@
 
 }
 #contact-left-col{
+  @media(max-width: 800px){
+    display: none;
+  }
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: $medium;
@@ -30,9 +33,36 @@
 .form-headline{
   margin-left: $xsmall;
   padding-bottom: 5px;
+  @media(max-width: 800px){
+    margin: 0px;
+    padding-left: $xsmall;
+  }
+}
+
+#contact-right-col{
+  @media(max-width: 800px){
+  width: 100vw;
+  }
 }
 
 #interest-form{
+  @media(max-width: 800px){
+    width: calc(100vw - 30px);
+    margin: 0px;
+    padding: 0px;
+    margin-left: $xsmall;
+    margin-right: $xsmall;
+    width: calc(100vw-50px);
+    .interest-box{
+      width: 90vw;
+      .mobile-label{
+        font-size: $mobile_type1;
+      }
+    }
+  
+  }
+
+
   margin-left: $xsmall;
   padding-top: $medium;
   margin-right: $medium;
@@ -40,6 +70,11 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   .interest-box{
+    .desktop-label{
+      @media(max-width: 800px){
+        display: none;
+      }
+    }
     height: $line_1;
     border-bottom: 1px solid $grey;
     padding-top: $small;
@@ -93,10 +128,14 @@
 }
 
 #contact-form{
+
   margin-left: $xsmall;
   margin-right: $medium;
   border-top: 0.08em solid $midnight;
   div{
+    @media(max-width: 800px){
+      padding-right: 0px;
+    }
     width: 100%;
     margin-top: $small;
     display: grid;
@@ -113,6 +152,13 @@
       border-left-style: hidden;
       border-bottom: 1px solid $grey;
       font-size: $type_1;
+      @media(max-width: 800px){
+        width: calc(100vw - 30px);
+        height: 65px;
+        font-size: $mobile_type1;
+        line-height: $mobile_line1;
+        border-radius: 0;
+      }
     }
     input:focus{
       outline: none;
@@ -127,6 +173,9 @@
       resize: none;
       height: 30vh;
       font-size: $type_1;
+      @media(max-width:800px){
+        height: 40vh;
+      }
     }
     textarea:focus{
       outline: none;
@@ -135,6 +184,10 @@
   }
   button{
     margin-top: 150px;
+    @media(max-width: 800px){
+      margin-top: $medium;
+      font-size: $mobile_type1;
+    }
   }
   #label-margin{
     margin-top: 10px;
@@ -142,6 +195,12 @@
   
   #pdf-button{
     margin-top: $small;
+  }
+
+  @media(max-width: 800px){
+    width: calc(100vw - 30px);
+    margin-left: $xsmall; 
+    margin-right: $xsmall;
   }
 }
 

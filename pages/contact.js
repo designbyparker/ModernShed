@@ -96,11 +96,6 @@ const Contact = (props) => {
         TimeStamp: null,
         Outcome: null,
         Dealer: null,
-        Country: "US",
-        County:"King",
-        City: "Seattle",
-        State: "WA"
-
       }
 
 
@@ -140,20 +135,23 @@ const Contact = (props) => {
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not"> Not yet interested.</label>
+                  <label htmlFor="not" className="desktop-label"> Not yet interested.</label>
+                  <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
                   <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe">I'm considering a Shed.</label>
+                <label htmlFor="maybe" className="desktop-label">I'm considering a Shed.</label>
+                <label htmlFor="maybe" className="mobile-label">Considering.</label> 
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes">I'm ready for a Shed.</label>
+                <label htmlFor="yes" className="desktop-label">I'm ready for a Shed.</label>
+                <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
 
             </div>
