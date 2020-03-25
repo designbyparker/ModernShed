@@ -180,6 +180,7 @@
       border-bottom: 2px solid $black;
     }
     textarea{
+      font-family: 'Lausanne';
       background-color: $cloud;
       border-top-style: hidden;
       border-right-style: hidden;
@@ -195,6 +196,7 @@
         margin:0px;
         font-size: $mobile_type1;
         padding-top: $small;
+        font-family: 'Lausanne'
       }
     }
     textarea:focus{

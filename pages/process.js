@@ -1,4 +1,5 @@
 import HamburgerNav from '../components/global/hamburger-nav';
+import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import ProcessCard from '../components/process/process-card';
 import MobileProcessCard from '../components/process/mobile-process-card';
 import ContactCTA from '../components/global/contact-cta';
@@ -18,6 +19,7 @@ const Process = (props) => {
         <title>Modern Shed | Process</title>
       </Head>
       <HamburgerNav/>
+      <MobileHamburgerNav/>
       <ProcessHero id="process-hero" page="PROCESS" copy="We understand you have a plan, and we’re here to turn potential into reality. Each shed is crafted intentionally to give your imagination a little room."/>
 
       <section id="process-layout">
