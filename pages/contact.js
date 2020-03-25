@@ -1,6 +1,7 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
+import MobileFooter from '../components/global/mobile-footer';
 import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
@@ -190,7 +191,7 @@ const Contact = (props) => {
             </div>
 
 
-      {/* <When condition={connect}>  */}
+     <When condition={connect}>  
 
             <section id="contact-details">
  
@@ -253,7 +254,7 @@ const Contact = (props) => {
 
           </section>
 
-       {/* </When>  */}
+       </When>  
 
           </section>
 
@@ -270,6 +271,7 @@ const Contact = (props) => {
         </section>
     </section>
     <Footer/>
+    <MobileFooter/>
     </>
   )
 }
