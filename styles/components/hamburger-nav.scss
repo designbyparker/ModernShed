@@ -219,7 +219,7 @@
       height: calc(25vh - 30px);
       margin:$xsmall;
       margin-bottom: 0px;
-      border: 1px solid $grey;
+      border: 1.5px solid $grey;
       #mobile-wordmark{
         img{
           margin:$xsmall;
@@ -245,7 +245,7 @@
       margin: 0px $xsmall;
       padding-top: $xsmall;
       padding-left: $xsmall;
-      border: 1px solid $grey;
+      border: 1.5px solid $grey;
       border-top: 0px;
       a{
         text-decoration: none;
@@ -257,11 +257,11 @@
   }
 
     #add-mobile-links{
-      height: calc(25vh - 30px);
+      height: calc(25vh - 15px);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 0px;
-      border: 1px solid $grey;
+      border: 1.5px solid $grey;
       border-top: 0px;
       margin: 0px $xsmall;
       margin-bottom: $xsmall;
@@ -281,7 +281,7 @@
       }
       #mobile-social-links{
         padding-left: $xsmall;
-        border-left: 1px solid $grey;
+        border-left: 1.5px solid $grey;
       }
     }
   }
