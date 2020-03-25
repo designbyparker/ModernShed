@@ -1,6 +1,7 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
+import MobileFooter from '../components/global/mobile-footer';
 import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
@@ -96,11 +97,6 @@ const Contact = (props) => {
         TimeStamp: null,
         Outcome: null,
         Dealer: null,
-        Country: "US",
-        County:"King",
-        City: "Seattle",
-        State: "WA"
-
       }
 
 
@@ -140,20 +136,23 @@ const Contact = (props) => {
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not"> Not yet interested.</label>
+                  <label htmlFor="not" className="desktop-label"> Not yet interested.</label>
+                  <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
                   <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe">I'm considering a Shed.</label>
+                <label htmlFor="maybe" className="desktop-label">I'm considering a Shed.</label>
+                <label htmlFor="maybe" className="mobile-label">Considering.</label> 
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes">I'm ready for a Shed.</label>
+                <label htmlFor="yes" className="desktop-label">I'm ready for a Shed.</label>
+                <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
 
             </div>
@@ -192,7 +191,7 @@ const Contact = (props) => {
             </div>
 
 
-      <When condition={connect}> 
+     <When condition={connect}>  
 
             <section id="contact-details">
  
@@ -238,7 +237,7 @@ const Contact = (props) => {
               </div>
 
 
-              <div id="details-row-3">
+              {/* <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
                 <select name="hear-about-us" id="hearAboutUs" onChange={handleHeard}>
@@ -250,12 +249,12 @@ const Contact = (props) => {
                   })}             
                 </select>
 
-              </div> 
+              </div>  */}
 
 
           </section>
 
-       </When> 
+       </When>  
 
           </section>
 
@@ -265,13 +264,14 @@ const Contact = (props) => {
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
             
-          <button type="submit" className="primary-button" >Get In Contact →</button>
+          <button type="submit" className="primary-button" >Get in Contact →</button>
           <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF ↓ </button>
 
           </form>
         </section>
     </section>
     <Footer/>
+    <MobileFooter/>
     </>
   )
 }
