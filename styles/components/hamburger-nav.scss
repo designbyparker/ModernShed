@@ -113,7 +113,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-left: $small;
-    }
+    
     img{
       justify-self: end;
       padding-right: $medium;
@@ -128,7 +128,7 @@
       font-size: 2em;
     }
   
-
+  }
 
 
 // ***** Nav Bar Styling ***** //
@@ -143,7 +143,8 @@
   grid-template-columns: 1fr 1fr;
   
 
-  img:first-of-type{
+  img{
+    width: 3em;
     padding-top: $medium;
     padding-left: $medium;
   }
