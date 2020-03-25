@@ -190,7 +190,7 @@ const Contact = (props) => {
             </div>
 
 
-      <When condition={connect}> 
+      {/* <When condition={connect}>  */}
 
             <section id="contact-details">
  
@@ -236,7 +236,7 @@ const Contact = (props) => {
               </div>
 
 
-              <div id="details-row-3">
+              {/* <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
                 <select name="hear-about-us" id="hearAboutUs" onChange={handleHeard}>
@@ -248,12 +248,12 @@ const Contact = (props) => {
                   })}             
                 </select>
 
-              </div> 
+              </div>  */}
 
 
           </section>
 
-       </When> 
+       {/* </When>  */}
 
           </section>
 
