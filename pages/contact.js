@@ -1,4 +1,5 @@
 import HamburgerNav from '../components/global/hamburger-nav';
+import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import MobileFooter from '../components/global/mobile-footer';
@@ -123,6 +124,7 @@ const Contact = (props) => {
         <title>Modern Shed | Contact Us</title>
       </Head>
       <HamburgerNav/>
+      <MobileHamburgerNav/>
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
       <section id="contact-page">
         <section id="contact-left-col">
@@ -272,7 +274,7 @@ const Contact = (props) => {
     </section>
     <Footer/>
     <MobileFooter/>
-    </>
+   </>
   )
 }
 
