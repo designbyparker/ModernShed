@@ -14,7 +14,7 @@ const SizeCard = (props) => {
   }
 
   return(
-    <section id="size-card">
+    <section id="size-card" className={props.border_class}>
       <div id="headline">
         <h2>{props.size}</h2>
         <ul>
@@ -97,7 +97,7 @@ const Sizes = () => {
           uses={sUses}
           image={sImages}
           desc="Sheds made to serve as storage or other small but mighty uses. This option is popular for home offices, art studios, or playrooms."
-          
+          border_class="no-left"
         />
        <SizeCard
           size="M"

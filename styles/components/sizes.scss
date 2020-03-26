@@ -12,6 +12,10 @@
   margin-left: $medium;
   margin-right: $medium;
   display: flex;
+  .no-left{
+    border-left: 0px;
+  }
+
   @media(max-width: 800px){
     flex-direction: column;
     margin-left: 0px;
@@ -34,17 +38,6 @@
     img{
       object-fit: cover;
       width: 100%;
-    }
-
-
-    #gif-1:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
-    }
-    #gif-2:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
-    }
-    #gif-3:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
     }
   } 
   #headline{
@@ -85,6 +78,7 @@
   display:none;
 }
 }
+
 
 
 #mobile-size-card{
