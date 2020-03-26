@@ -1,6 +1,18 @@
 
 // Desktop Size Card Component
 const SizeCard = (props) => {
+
+  const handleMouseOver = (e) => {
+    console.log('mouse over',e.target);
+    let ele = e.target;
+    return ele.src = props.image.gif_src;
+  } 
+
+  const handleMouseLeave = (e) => {
+    let ele = e.target;
+    return ele.src = props.image.src;
+  }
+
   return(
     <section id="size-card">
       <div id="headline">
@@ -12,7 +24,7 @@ const SizeCard = (props) => {
         </ul>
       </div>
       <div id="size-img">
-        <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
+        <img src={props.image.src} alt={props.image.alt} id={props.image.key} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}/>
       </div>
       <div>
         <p>{props.desc}</p>
@@ -43,7 +55,7 @@ const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
                   src: "./images/sheds/Small-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-1",
+                  key: "0",
                   gif_src: "./images/sheds/small.gif",
                   gif_alt: "Placeholder Text"
                 };
@@ -53,7 +65,7 @@ const mUses = ["Home Office", "Guest Space", "Gym"];
 const mImages = {
                   src: "./images/sheds/Medium-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-2",
+                  key: "1",
                   gif_src:"./images/sheds/medium.gif",
                   gif_alt: "Placeholder Text",
                   mobile_uses: "Home Office, Guest Space, Gym"
@@ -63,7 +75,7 @@ const lUses = ["Rental Unit", "Guest Space", "Dwelling"];
 const lImages = {
                   src: "./images/sheds/Large-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-3",
+                  key: "2",
                   gif_src: "./images/sheds/large.gif",
                   gif_alt: "Placeholder Text",
                   mobile_uses: "Rental Unit, Guest Space, Dwelling"
