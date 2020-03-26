@@ -1,4 +1,5 @@
 import Footer from '../components/global/footer';
+import MobileFooter from '../components/global/mobile-footer';
 import Nav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import Head from 'next/head';
@@ -21,6 +22,7 @@ const Legal = () => {
       </div>
     </section>
   <Footer/>
+  <MobileFooter/>
   </section>
 </>
   );

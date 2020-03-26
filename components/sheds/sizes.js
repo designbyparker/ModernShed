@@ -29,7 +29,7 @@ const MobileSizeCard = (props) => {
       <h2>{props.size}</h2>
       <h3>{props.mobile_uses}</h3>
       <div id="mobile-size-img-container">
-        <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
+        <img src={props.image.gif_src} alt={props.image.gif_alt} id={props.image.key}/>
       </div>
       <p>{props.desc}</p>
       <p>{props.permitting}</p>
@@ -41,17 +41,17 @@ const MobileSizeCard = (props) => {
 // Car Data
 const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Small-ShedStill.jpg",
                   alt: "Placeholder Text",
                   key: "gif-1",
-                  gif_src: "./images/sheds/medium.gif",
+                  gif_src: "./images/sheds/small.gif",
                   gif_alt: "Placeholder Text"
                 };
 
 
 const mUses = ["Home Office", "Guest Space", "Gym"];                
 const mImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Medium-ShedStill.jpg",
                   alt: "Placeholder Text",
                   key: "gif-2",
                   gif_src:"./images/sheds/medium.gif",
@@ -61,7 +61,7 @@ const mImages = {
 
 const lUses = ["Rental Unit", "Guest Space", "Dwelling"];        
 const lImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Large-ShedStill.jpg",
                   alt: "Placeholder Text",
                   key: "gif-3",
                   gif_src: "./images/sheds/large.gif",
