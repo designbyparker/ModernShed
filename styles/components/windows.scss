@@ -1,3 +1,78 @@
+
+//******** Desktop Doors *********//
+#windows-section{
+  @media(max-width: 800px){
+    display: none;
+  }
+  background-color: $cloud;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  padding: $medium;
+
+  div{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #windows-col-1{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 1fr;
+    p{
+      font-size: $type_2;
+      line-height: $type_2;
+      color: $grey;
+    }
+    a{
+      color: $black;
+      align-self: end;
+      font-size: $type_2;
+      text-decoration: none;
+      font-family: 'Lausanne';
+    }
+  }
+
+  #windows-col-2{
+    border-left: 0.08em solid $midnight;
+    border-right: 0.08em solid $midnight;
+    justify-items: stretch;
+    object-fit: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  #windows-col-3{
+    border-right: 0.08em solid $midnight;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: $small;
+
+    h4{
+      font-family: 'Lausanne';
+      font-size: $type_2;
+    }
+  }
+
+  #windows-col-4{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    color: $grey;
+    font-size: $type_2;
+    line-height: $type_2;
+  }
+
+}
+
+
+
+
+// ****** Mobile Windows Styling ******//
 #mobile-windows-section{
   @media(min-width: 800px){
     display: none;

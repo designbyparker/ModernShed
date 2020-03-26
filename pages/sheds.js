@@ -8,7 +8,8 @@ import MobileUses from '../components/sheds/mobile-uses';
 import Sizes from '../components/sheds/sizes';
 import Materials from '../components/sheds/materials';
 import MobileMaterials from '../components/sheds/materials-mobile';
-import MobileWindows from '../components/sheds/windows';
+import Windows from '../components/sheds/windows';
+import MobileWindows from '../components/sheds/mobile-windows';
 import Doors from '../components/sheds/doors';
 import MobileDoors from '../components/sheds/mobile-doors';
 import Newsletter from '../components/global/newsletter';
@@ -33,6 +34,7 @@ const Sheds = () => {
       <MobileContactCTA buttontext="Inquire →"/>
       <Materials/>
       <MobileMaterials/>
+      <Windows/>
       <MobileWindows/>
       <Doors/>
       <MobileDoors/>
