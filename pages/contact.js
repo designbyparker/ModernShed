@@ -77,27 +77,19 @@ const Contact = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let url = 'https://modern-shed.com/contactus/contact';
+    let url = 'https://modern-shed.com/contactus/savecontact';
 
     const fields = {
-        Interest: interest,
+        Interest: interest || null,
         FirstName: e.target.FirstName.value,
         LastName: e.target.LastName.value || null,
         Email: e.target.Email.value,
         ZipCode: e.target.ZipCode.value || null,
-        PhoneNumber: e.target.Phone.value || null,
+        Phone: e.target.Phone.value || null,
         AdditionalComments: e.target.AddComm.value || null,
-        HeardAboutUs: heard,
-        ProjectSize: size,
-        Timeframe: time,
-        ContactID: null,
-        ContactByEmail: null,
-        ContactByPhone: null,
-        StartContactTime: null,
-        EndContactTime: null,
-        TimeStamp: null,
-        Outcome: null,
-        Dealer: null,
+        HeardAboutUs: heard || null,
+        ProjectSize: size || null,
+        Timeframe: time || null,
       }
 
 
