@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Nav from '../components/home/nav';
 import HamburgerNav from '../components/global/hamburger-nav';
+import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import DesktopCarousel from '../components/home/carousel';
 import MobileCarousel from '../components/home/mobile-carousel';
 import WhatWeDo from '../components/home/what-we-do';
@@ -28,6 +29,7 @@ const Index = (props) => {
       </Head>
       <Nav className="desktop-query"/>
       <HamburgerNav className="mobile-query"/>
+      <MobileHamburgerNav/>
       <DesktopCarousel className="desktop-query"/>
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>

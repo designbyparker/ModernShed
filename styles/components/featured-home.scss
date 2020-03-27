@@ -5,6 +5,38 @@
     margin-bottom: $xlarge;
   }
 
+  .modal{
+    z-index: 200;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .close-modal{
+      width: 30px;
+      height: 30px;
+      align-self: center;
+      padding-bottom: $xlarge;
+    }
+
+    .home-featured-carousel{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+          
+      .carousel-button{
+        background-color: transparent;
+        border: 0px;
+        outline: none;
+      }
+  
+
+  }
+}
 
   @media(max-width: 800px){
     padding: $medium $small $small $small;

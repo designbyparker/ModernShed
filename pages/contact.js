@@ -1,4 +1,5 @@
 import HamburgerNav from '../components/global/hamburger-nav';
+import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import MobileFooter from '../components/global/mobile-footer';
@@ -76,27 +77,19 @@ const Contact = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let url = 'https://modern-shed.com/contactus/contact';
+    let url = 'https://modern-shed.com/contactus/savecontact';
 
     const fields = {
-        Interest: interest,
+        Interest: interest || null,
         FirstName: e.target.FirstName.value,
         LastName: e.target.LastName.value || null,
         Email: e.target.Email.value,
         ZipCode: e.target.ZipCode.value || null,
-        PhoneNumber: e.target.Phone.value || null,
+        Phone: e.target.Phone.value || null,
         AdditionalComments: e.target.AddComm.value || null,
-        HeardAboutUs: heard,
-        ProjectSize: size,
-        Timeframe: time,
-        ContactID: null,
-        ContactByEmail: null,
-        ContactByPhone: null,
-        StartContactTime: null,
-        EndContactTime: null,
-        TimeStamp: null,
-        Outcome: null,
-        Dealer: null,
+        HeardAboutUs: heard || null,
+        ProjectSize: size || null,
+        Timeframe: time || null,
       }
 
 
@@ -123,6 +116,7 @@ const Contact = (props) => {
         <title>Modern Shed | Contact Us</title>
       </Head>
       <HamburgerNav/>
+      <MobileHamburgerNav/>
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
       <section id="contact-page">
         <section id="contact-left-col">
@@ -272,7 +266,7 @@ const Contact = (props) => {
     </section>
     <Footer/>
     <MobileFooter/>
-    </>
+   </>
   )
 }
 

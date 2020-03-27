@@ -5,7 +5,7 @@ const Materials = () => {
       <div id="materials-col-1">
         <h2>Materials</h2>
         <p>Let’s talk about our high standards—we’ve hand-selected an extensive variety of materials that are not only eco-friendly, but will stand the test of time.</p>
-        <a href="/contact">Catalog →</a>
+        <a href="/contact">Download Catalog →</a>
       </div>
 
 

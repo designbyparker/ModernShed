@@ -12,7 +12,10 @@
   margin-left: $medium;
   margin-right: $medium;
   display: flex;
-  justify-content: space-between;
+  .no-left{
+    border-left: 0px;
+  }
+
   @media(max-width: 800px){
     flex-direction: column;
     margin-left: 0px;
@@ -21,27 +24,20 @@
 }
 
 #size-card{
+  padding-left: $small;
+  padding-right: $small;
+  margin-bottom: $medium;
   min-height: 100vh;
   width: 31.5%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 2fr 0.9fr;
+  border-left: 1px solid $black;
   #size-img{
     grid-row: 2/3;
     img{
       object-fit: cover;
       width: 100%;
-    }
-
-
-    #gif-1:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
-    }
-    #gif-2:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
-    }
-    #gif-3:hover{
-      content: url('https://dummyimage.com/375x500/fff/000')
     }
   } 
   #headline{
@@ -82,6 +78,7 @@
   display:none;
 }
 }
+
 
 
 #mobile-size-card{

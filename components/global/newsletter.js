@@ -12,14 +12,19 @@ const Newsletter = () => {
     setZip(e.target.zip.value);
     setEmail(e.target.email.value);
     
-    let url = 'http://localhost:8000';
+  
     let payload = {
       zip: zip,
       email: email
     }
+    payload = JSON.stringify(payload);
 
-    let data = await superagent.get(`${url}/newsletter`).query(payload);
-    console.log(data.body);
+    let data = await superagent.post('https://modern-shed.com/ContactUs/addNewsletter')
+    .set('Access-Control-Allow-Origin', '*')
+    .send(payload)
+    .then(result => {
+      console.log(result);
+    });
 
   }
 
@@ -34,8 +39,8 @@ const Newsletter = () => {
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Email" name="email" id="email"/>
-        <input placeholder="Zip Code" name="zip" id="zip"/>
+        <input placeholder="Email" name="email" id="email" required={true}/>
+        <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
         <button type="submit" className="primary-button">Sign Up →</button>
       </form>
     </div>

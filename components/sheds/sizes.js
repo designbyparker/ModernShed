@@ -1,8 +1,20 @@
 
 // Desktop Size Card Component
 const SizeCard = (props) => {
+
+  const handleMouseOver = (e) => {
+    console.log('mouse over',e.target);
+    let ele = e.target;
+    return ele.src = props.image.gif_src;
+  } 
+
+  const handleMouseLeave = (e) => {
+    let ele = e.target;
+    return ele.src = props.image.src;
+  }
+
   return(
-    <section id="size-card">
+    <section id="size-card" className={props.border_class}>
       <div id="headline">
         <h2>{props.size}</h2>
         <ul>
@@ -12,7 +24,7 @@ const SizeCard = (props) => {
         </ul>
       </div>
       <div id="size-img">
-        <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
+        <img src={props.image.src} alt={props.image.alt} id={props.image.key} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}/>
       </div>
       <div>
         <p>{props.desc}</p>
@@ -29,7 +41,7 @@ const MobileSizeCard = (props) => {
       <h2>{props.size}</h2>
       <h3>{props.mobile_uses}</h3>
       <div id="mobile-size-img-container">
-        <img src={props.image.src} alt={props.image.alt} id={props.image.key}/>
+        <img src={props.image.gif_src} alt={props.image.gif_alt} id={props.image.key}/>
       </div>
       <p>{props.desc}</p>
       <p>{props.permitting}</p>
@@ -41,19 +53,19 @@ const MobileSizeCard = (props) => {
 // Car Data
 const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Small-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-1",
-                  gif_src: "./images/sheds/medium.gif",
+                  key: "0",
+                  gif_src: "./images/sheds/small.gif",
                   gif_alt: "Placeholder Text"
                 };
 
 
 const mUses = ["Home Office", "Guest Space", "Gym"];                
 const mImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Medium-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-2",
+                  key: "1",
                   gif_src:"./images/sheds/medium.gif",
                   gif_alt: "Placeholder Text",
                   mobile_uses: "Home Office, Guest Space, Gym"
@@ -61,9 +73,9 @@ const mImages = {
 
 const lUses = ["Rental Unit", "Guest Space", "Dwelling"];        
 const lImages = {
-                  src: "https://dummyimage.com/375x500/000/fff",
+                  src: "./images/sheds/Large-ShedStill.jpg",
                   alt: "Placeholder Text",
-                  key: "gif-3",
+                  key: "2",
                   gif_src: "./images/sheds/large.gif",
                   gif_alt: "Placeholder Text",
                   mobile_uses: "Rental Unit, Guest Space, Dwelling"
@@ -85,7 +97,7 @@ const Sizes = () => {
           uses={sUses}
           image={sImages}
           desc="Sheds made to serve as storage or other small but mighty uses. This option is popular for home offices, art studios, or playrooms."
-          
+          border_class="no-left"
         />
        <SizeCard
           size="M"

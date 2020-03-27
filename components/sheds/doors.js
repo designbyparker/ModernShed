@@ -4,7 +4,7 @@ const Doors = () => {
       <div id="doors-col-1">
         <h2>Doors</h2>
         <p>Customize your entry way with more than a welcome mat. Choose between over two dozen options—from French doors to sliding, steel to fiberglass. What best serves your vision?</p>
-        <a href="/contact">Catalog →</a>
+        <a href="/contact">Download Catalog →</a>
       </div>
 
       <div id="doors-col-2">

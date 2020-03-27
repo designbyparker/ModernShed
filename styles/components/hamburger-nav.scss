@@ -8,12 +8,19 @@
   }
 }
 
+#menu{
+  @media(max-width: 800px){
+    display: none;
+  }
+}
+
 .closeMenu{
   transition: all 0.4s;
   position: fixed;
   top: 0px;
   right:-2000px;
   overflow-x: hidden;
+
  }
 
 
@@ -22,6 +29,7 @@
   position: fixed;
   top: 0px;
   right:0px;
+
 }
 
   #hamburger-menu{
@@ -32,27 +40,17 @@
     background-color: $sun;
     color: $black;
     z-index: 20;
-    a{
-      font-family: 'Lausanne';
-      text-decoration: none;
-      color: $black;
-    }
-    a:visited{
-      color: $black;
-    }
-    #wordmark{
-      width: 10em;
-      height: auto;
-    }
-  }
 
-
-
-  #menu-col-1{
+    
+    #menu-col-1{
       padding-left: $small;
       padding-top: $medium;
       height: 92vh;
       display: grid;
+      .mobile-exit{
+        display: none;
+      }
+
       p{
         align-self: end;
         padding-right: $medium;
@@ -61,6 +59,26 @@
         color: $black;
         justify-self: end;
       }
+
+      #wordmark{
+        img{
+          padding: 0px;
+          width: 10em;
+          height: auto;
+        }
+      }
+  }
+
+
+    a{
+      font-family: 'Lausanne';
+      text-decoration: none;
+      color: $black;
+    }
+    a:visited{
+      color: $black;
+    }
+
   }
 
   #menu-col-2{ 
@@ -72,15 +90,15 @@
     border-right: 0.08em solid $black; 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+
     div{
       display: flex;
       flex-direction: column;
     }
     #primary-page-links{
       font-size: 6em;
-      line-height: 3em;
       a{
-        height: .95em;
+        height: 1em;
       }
     }
     #secondary-page-links{
@@ -95,6 +113,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-left: $small;
+    
     img{
       justify-self: end;
       padding-right: $medium;
@@ -108,6 +127,7 @@
       justify-content: flex-end;
       font-size: 2em;
     }
+  
   }
 
 
@@ -125,26 +145,147 @@
 
   img{
     width: 3em;
-    height: auto;
     padding-top: $medium;
     padding-left: $medium;
-    @media(max-width: 800px){
-      width: 30px;
-      hieght: auto;
-      padding-left: $small;
-      padding-top: $small;
-    }
   }
   img:last-of-type{
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
-    @media(max-width: 800px){
-      width: 30px;
-      hieght: auto;
-      padding-right: $small;
-      padding-top: $small;
-    }
   }
 }
 
+
+
+
+// Mobile Hamburger Menu
+.closeMobileMenu{
+  transition: all 0.4s;
+  position: fixed;
+  top: 0px;
+  right:-800px;
+  overflow-x: hidden;
+ }
+
+
+.openMobileMenu{
+  animation: 0.4s slideOut;
+  position: fixed;
+  top: 0px;
+  right:0px;
+}
+
+#mobile-menu{
+  @media(min-width: 800px){
+    display: none;
+  }
+
+  #mobile-hamburger-nav-bar{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    img{
+      width: 30px;
+      height: auto;
+      padding-top: $small;
+      padding-left: $small;
+    }
+    img:last-of-type{
+      justify-self: end;
+      padding-top: $small;
+      padding-right: $small;
+    }
+  }
+
+
+
+  #mobile-hamburger-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-color: $sun;
+    color: $black;
+    z-index: 20;
+    #mobile-menu-col-1{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: calc(25vh - 30px);
+      margin:$xsmall;
+      margin-bottom: 0px;
+      border: 1.5px solid $grey;
+      #mobile-wordmark{
+        img{
+          margin:$xsmall;
+          width: 150px;
+          padding:0px;
+          margin:0px;
+          padding-top: $xsmall;
+          padding-left: $xsmall;
+        }
+      }
+      .mobile-exit{
+        padding:0px;
+        margin:$xsmall;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    #mobile-primary-page-links{
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0px $xsmall;
+      padding-top: $xsmall;
+      padding-left: $xsmall;
+      border: 1.5px solid $grey;
+      border-top: 0px;
+      a{
+        text-decoration: none;
+        color: $black;
+        font-family: 'Lausanne';
+        font-size: 75px;
+        line-height: 68px;
+      }
+  }
+
+    #add-mobile-links{
+      height: calc(25vh - 15px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0px;
+      border: 1.5px solid $grey;
+      border-top: 0px;
+      margin: 0px $xsmall;
+      margin-bottom: $xsmall;
+      div{
+        padding-top: $xsmall;
+        display: flex;
+        flex-direction: column;
+        a{
+          font-family: 'Lausanne';
+          color: $black;
+          text-decoration: none;
+          font-size: $mobile_type2;
+        }
+      }
+      #mobile-secondary-page-links{
+        padding-left: $xsmall;
+      }
+      #mobile-social-links{
+        padding-left: $xsmall;
+        border-left: 1.5px solid $grey;
+      }
+    }
+  }
+
+
+}
