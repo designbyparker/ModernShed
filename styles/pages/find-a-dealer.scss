@@ -1,0 +1,55 @@
+#dealer-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $cloud;
+  #dealer-left-col{
+    margin-left: $medium;
+    margin-bottom: $medium;
+    grid-column: 1/2;
+    .image-container{
+      width: calc(50vw - 60px);
+      height: auto;
+      display: flex;
+      place-items: center;
+      padding-right: $xsmall;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  #dealer-right-col{
+    margin-right: $medium;
+    margin-bottom: $medium;
+    border-left: 1px solid $black;
+    grid-column: 2/3;
+    #dealer-headline{
+      border-bottom: 1px solid $black;
+    }
+    form{
+      margin-top: 5px;
+      padding-left: $xsmall;
+
+      label{
+        font-size: $type_4;
+        color: $grey;
+        font-family: 'Lausanne';
+      }
+      input{
+        background-color: $cloud;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom: 1px solid $grey;
+        font-size: $type_1;
+        width: calc(50vw - 60px);
+        margin-bottom: $medium;
+        margin-top: $xsmall;
+      }
+      input:focus{
+        outline: none;
+      }
+    }
+  }
+}
