@@ -5,7 +5,7 @@
 #process-layout{
   margin-top: $medium;
   margin-bottom: $medium;
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     margin: 0px;
   }
 }
@@ -14,7 +14,7 @@
 
 // ******** CARD COMPONENT ******** //
 .process-card{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
   max-height: 90vh;
@@ -32,7 +32,7 @@
 }
 
 #withTimeFrame{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
   grid-template-areas: 'step pic timeframe copy';
@@ -71,7 +71,7 @@
 }
 
 #withoutTimeFrame{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
   display: grid;
@@ -122,7 +122,7 @@
 
 // ********* Mobile Styling ******* //@extend
 .mobile-process-card{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   padding-top: $medium;

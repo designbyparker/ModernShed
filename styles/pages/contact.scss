@@ -18,7 +18,7 @@
 
 }
 #contact-left-col{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
   display: grid;
@@ -33,20 +33,20 @@
 .form-headline{
   margin-left: $xsmall;
   padding-bottom: 5px;
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     margin: 0px;
     padding-left: $small;
   }
 }
 
 #contact-right-col{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
   width: 100vw;
   }
 }
 
 #interest-form{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     width: calc(100vw - 50px);
     margin: 0px;
     padding: 0px;
@@ -70,12 +70,12 @@
   grid-template-rows: 1fr 1fr 1fr;
   .interest-box{
     .desktop-label{
-      @media(max-width: 800px){
+      @media(max-width: 700px){
         display: none;
       }
     }
     .mobile-label{
-      @media(min-width: 800px){
+      @media(min-width: 700px){
         display: none;
       }
     }
@@ -105,7 +105,7 @@
       position: absolute;
       right: $medium;
       width: 20px;
-      @media(max-width: 800px){
+      @media(max-width: 700px){
         right: $small;
       }
     }
@@ -141,7 +141,7 @@
   margin-right: $medium;
   border-top: 0.08em solid $midnight;
   div{
-    @media(max-width: 800px){
+    @media(max-width: 700px){
       padding-right: 0px;
       grid-template-rows: 0fr;
       
@@ -167,7 +167,7 @@
       border-left-style: hidden;
       border-bottom: 1px solid $grey;
       font-size: $type_1;
-      @media(max-width: 800px){
+      @media(max-width: 700px){
         width: calc(100vw - 50px);
         height: 65px;
         font-size: $mobile_type1;
@@ -189,7 +189,7 @@
       resize: none;
       height: 30vh;
       font-size: $type_1;
-      @media(max-width:800px){
+      @media(max-width:700px){
         height: 40vh;
         border-radius: 0;
         padding:0px;
@@ -206,7 +206,7 @@
   }
   button{
     margin-top: 150px;
-    @media(max-width: 800px){
+    @media(max-width: 700px){
       margin-top: $medium;
       font-size: 30px;
     }
@@ -219,7 +219,7 @@
     margin-top: $small;
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     width: calc(100vw - 50px);
     margin-left: $small; 
     margin-right: $small;
@@ -316,7 +316,7 @@
   #details-row-3{
     margin-top: 10px;
   }
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     margin:0px;
     padding:0px;
     width: calc(100vw - 50px);

@@ -63,7 +63,7 @@
     line-height: $type_2;
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 700px){
    display: none;
   }
 
@@ -74,7 +74,7 @@
 // ****** Material Mobile Styling ******** //
 
 #mobile-materials-section{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   background-color: $cloud;

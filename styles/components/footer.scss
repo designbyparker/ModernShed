@@ -60,7 +60,7 @@ a:active{
   color: $white;
 }
 
-@media(max-width:800px){
+@media(max-width:700px){
   display:none;
   }
 }
@@ -68,7 +68,7 @@ a:active{
 
 
 #mobile-footer{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   background-color: $midnight;

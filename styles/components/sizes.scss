@@ -74,7 +74,7 @@
 
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 700px){
   display:none;
 }
 }
@@ -82,7 +82,7 @@
 
 
 #mobile-size-card{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   border-top: 1px solid $grey;

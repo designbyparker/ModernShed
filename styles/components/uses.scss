@@ -6,7 +6,7 @@
 
 
 #desktop-uses-tailored-section{
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
 }
@@ -114,7 +114,7 @@
 // ****** Mobile Styling ******* //
 
 #mobile-use-tailor-section{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
 

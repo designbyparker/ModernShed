@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: 'Lausanne';
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     display: none;
   }
 }
@@ -44,7 +44,7 @@
 }
 
 #mobile-contact-cta{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   padding-bottom: $medium;

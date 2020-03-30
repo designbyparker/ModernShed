@@ -1,5 +1,5 @@
 .wrapper{
-@media(max-width: 800px){
+@media(max-width: 700px){
   display: none;
 }
 
@@ -88,7 +88,7 @@ h5{
 
 
 #thedifference-mobile{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   padding-bottom:$medium;
