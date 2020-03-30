@@ -77,18 +77,22 @@
   @media(max-width:700px){
     display: none;
   }
-  
+
   padding: $small;
   background-color: $cloud;
-  h2{
-    padding-bottom: $medium;
+
+  #tab-windows-desc{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+
+    p{
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+      color: $grey;
+      padding-bottom: $large;
+    }
   }
-  p{
-    font-size: $mobile_type2;
-    line-height: $mobile_line2;
-    color: $grey;
-    padding-bottom: $large;
-  }
+
   #tab-windows{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -126,16 +130,14 @@
       h4{
         font-family: 'Lausanne';
         font-size: $mobile_type2;
+        padding-bottom: $small;
       }
       p{
         font-size: $mobile_type2;
         line-height: $mobile_line2;
+        color:$grey;
       }
   }
-
-
-
-
 }
 }
 

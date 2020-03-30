@@ -12,6 +12,7 @@ import Windows from '../components/sheds/windows';
 import TabletWindows from '../components/sheds/tablet-windows';
 import MobileWindows from '../components/sheds/mobile-windows';
 import Doors from '../components/sheds/doors';
+import TabletDoors from '../components/sheds/tablet-doors';
 import MobileDoors from '../components/sheds/mobile-doors';
 import Newsletter from '../components/global/newsletter';
 import MobileFooter from '../components/global/mobile-footer'
@@ -39,6 +40,7 @@ const Sheds = () => {
       <TabletWindows/>
       <MobileWindows/>
       <Doors/>
+      <TabletDoors/>
       <MobileDoors/>
       <Newsletter/>
       <MobileFooter/>

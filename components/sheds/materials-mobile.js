@@ -1,10 +1,10 @@
 const Materials = () => {
   return(
     <section id="mobile-materials-section">
-
-        <h2>Materials</h2>
-        <p>Let’s talk about our high standards—we’ve hand-selected an extensive variety of materials that are not only eco-friendly, but will stand the test of time.</p>
-
+        <div id="mobile-materials-head">
+          <h2>Materials</h2>
+          <p>Let’s talk about our high standards—we’ve hand-selected an extensive variety of materials that are not only eco-friendly, but will stand the test of time.</p>
+        </div>
 
         <section id="mobile-materials">
          <div id="mobile-images"> 
