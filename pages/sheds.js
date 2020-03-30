@@ -9,6 +9,7 @@ import Sizes from '../components/sheds/sizes';
 import Materials from '../components/sheds/materials';
 import MobileMaterials from '../components/sheds/materials-mobile';
 import Windows from '../components/sheds/windows';
+import TabletWindows from '../components/sheds/tablet-windows';
 import MobileWindows from '../components/sheds/mobile-windows';
 import Doors from '../components/sheds/doors';
 import MobileDoors from '../components/sheds/mobile-doors';
@@ -35,6 +36,7 @@ const Sheds = () => {
       <Materials/>
       <MobileMaterials/>
       <Windows/>
+      <TabletWindows/>
       <MobileWindows/>
       <Doors/>
       <MobileDoors/>
