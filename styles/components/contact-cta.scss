@@ -4,11 +4,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: 'Lausanne';
-  @media(max-width: 700px){
-    display: none;
-  }
-}
-
 
 #contact-left-column {
   height: 100%;
@@ -41,6 +36,30 @@
     margin-bottom: $medium;
   }
 
+}
+
+@media(max-width: 1025px) and (min-width: 700px){
+  height: 500px;
+  #contact-left-column{
+    img{
+      height:calc(100% - 50px);
+      width: calc(100% - 50px);
+    }
+  }
+  #contact-right-column{
+    a{
+      font-size: $mobile_type1;
+    }
+  }
+}
+
+
+
+
+
+@media(max-width: 700px){
+  display: none;
+}
 }
 
 #mobile-contact-cta{
