@@ -4,7 +4,6 @@
   grid-template-columns: 1fr 1fr;
   padding: 0px $medium $medium $medium;
   background-color: $cloud;
-}
 
 #newsletter-copy{
   height: 100%;
@@ -46,9 +45,26 @@
       outline:none;
     }
   }
-
+}
+@media(max-width: 1025px) and (min-width: 700px){
+  min-height: 500px;
+  padding: 0px $small $small $small;
+  #newsletter-form{
+    width: calc(50vw - 50px);
+    form{
+      width: calc(50vw - 50px);
+      input{
+        width: calc(50vw - 50px);
+      }
+      button{
+        width: calc(50vw - 50px);
+        font-size: $mobile_type1;
+      }
+    }
+  }
 }
 
+}
 
 
 
