@@ -147,11 +147,17 @@
     width: 3em;
     padding-top: $medium;
     padding-left: $medium;
+    @media(max-width: 1025px){
+      padding-left: $small;
+    }
   }
   img:last-of-type{
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
+    @media(max-width: 1025px){
+      padding-right: $small;
+    }
   }
 }
 
