@@ -14,7 +14,7 @@
 
 // ******** CARD COMPONENT ******** //
 .process-card{
-  @media(max-width: 700px){
+  @media(max-width: 1025px){
     display: none;
   }
   max-height: 90vh;
@@ -32,7 +32,7 @@
 }
 
 #withTimeFrame{
-  @media(max-width: 700px){
+  @media(max-width: 1025px){
     display: none;
   }
   grid-template-areas: 'step pic timeframe copy';
@@ -71,7 +71,7 @@
 }
 
 #withoutTimeFrame{
-  @media(max-width: 700px){
+  @media(max-width: 1025px){
     display: none;
   }
   display: grid;
@@ -122,14 +122,17 @@
 
 // ********* Mobile Styling ******* //@extend
 .mobile-process-card{
-  @media(min-width: 700px){
+  @media(min-width: 1025px){
     display: none;
   }
   padding-top: $medium;
   padding-bottom: $medium;
   margin-left: $small;
   margin-right: $small;
-
+  @media(min-width: 700px) and (max-width: 1025px){
+    margin-left: $tab_large;
+    margin-right: $tab_large;
+  }
 
   #mobile-process-headline{
     h2, h3{
@@ -140,6 +143,9 @@
   }
 
   #mobile-process-image-container{
+    @media(min-width: 700px) and (max-width: 1025px){
+      width: calc(100vw - 196px);
+    }
     width: calc(100vw - 50px);
     place-items: auto;
     img{
@@ -161,6 +167,10 @@
       font-size: $mobile_type2;
       line-height: $mobile_line2;
 
+
+      @media(min-width: 700px) and (max-width: 1025px){
+        padding: 0px;
+      }
   }
 
 }
