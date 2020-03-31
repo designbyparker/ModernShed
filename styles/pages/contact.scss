@@ -253,12 +253,21 @@
     }
   }
   button{
+    cursor: pointer;
     margin-top: 150px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0px;
     @media(max-width: 1025px){
       margin-top: $medium;
-      font-size: 30px;
+      font-size: $mobile_type1;
     }
   }
+
+  button:focus{
+    outline: none;
+  }
+
   #label-margin{
     margin-top: 10px;
   }
