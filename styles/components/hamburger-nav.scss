@@ -9,7 +9,7 @@
 }
 
 #menu{
-  @media(max-width: 700px){
+  @media(max-width: 1025px){
     display: none;
   }
 }
@@ -147,7 +147,7 @@
     width: 3em;
     padding-top: $medium;
     padding-left: $medium;
-    @media(max-width: 1025px){
+    @media(max-width:700px){
       padding-left: $small;
     }
   }
@@ -155,7 +155,7 @@
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
-    @media(max-width: 1025px){
+    @media(max-width: 700px){
       padding-right: $small;
     }
   }
@@ -169,7 +169,7 @@
   transition: all 0.4s;
   position: fixed;
   top: 0px;
-  right:-800px;
+  right: -1025px;
   overflow-x: hidden;
  }
 
@@ -182,7 +182,7 @@
 }
 
 #mobile-menu{
-  @media(min-width: 700px){
+  @media(min-width: 1025px){
     display: none;
   }
 
@@ -201,11 +201,21 @@
       height: auto;
       padding-top: $small;
       padding-left: $small;
+      @media(max-width: 1025px) and (min-width: 700px){
+        width: 3em;
+        height: auto;
+        padding-top:$medium;
+        paddingleft: $medium;
+      }
     }
     img:last-of-type{
       justify-self: end;
       padding-top: $small;
       padding-right: $small;
+      @media(max-width: 1025px) and (min-width: 700px){
+        padding-top: $medium;
+        padding-right: $medium;
+      }
     }
   }
 
