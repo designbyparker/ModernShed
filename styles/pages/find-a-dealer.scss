@@ -50,6 +50,43 @@
       input:focus{
         outline: none;
       }
+      button{
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 0px;
+        margin-top: $medium;
+      }
+      button:focus{
+        outline: none;
+      }
     }
   }
+  @media(max-width: 1025px){
+    display: flex;
+    flex-direction: column;
+    .image-container{
+      img{
+        display: none;
+      }
+    }
+    #dealer-headline{
+      padding-left: 0px;
+    }
+    #dealer-right-col{
+      margin-left: $tab_large;
+      margin-right: $tab_large;
+      width: calc(100vw - 196px);
+      display: flex;
+      flex-direction: column;
+      border: 0px;
+      form{
+        padding-left: 0px;
+        input{
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
