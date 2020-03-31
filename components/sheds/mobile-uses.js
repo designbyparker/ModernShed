@@ -2,9 +2,6 @@ const MobileUses = () => {
   return(
     <section id="mobile-use-tailor-section">
   
-          <div id="uses-img-container">
-            <img className="contained-image" src="https://dummyimage.com/200x120/000/fff" alt="Placeholder Alt Text"/>
-          </div>
 
           <div id="uses-img2-container">
             <img src="./images/sheds/A_Shed_Sheds.jpg" alt="Placeholder Alt Text"/>

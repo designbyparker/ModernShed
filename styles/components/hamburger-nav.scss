@@ -9,7 +9,7 @@
 }
 
 #menu{
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     display: none;
   }
 }
@@ -147,23 +147,29 @@
     width: 3em;
     padding-top: $medium;
     padding-left: $medium;
+    @media(max-width:700px){
+      padding-left: $small;
+    }
   }
   img:last-of-type{
     justify-self: end;
     padding-top: $medium;
     padding-right: $medium;
+    @media(max-width: 700px){
+      padding-right: $small;
+    }
   }
 }
 
 
 
 
-// Mobile Hamburger Menu
+// Mobile & Tablet Hamburger Menu
 .closeMobileMenu{
   transition: all 0.4s;
   position: fixed;
   top: 0px;
-  right:-800px;
+  right: -1025px;
   overflow-x: hidden;
  }
 
@@ -176,7 +182,7 @@
 }
 
 #mobile-menu{
-  @media(min-width: 800px){
+  @media(min-width: 1025px){
     display: none;
   }
 
@@ -195,11 +201,20 @@
       height: auto;
       padding-top: $small;
       padding-left: $small;
+      @media(max-width: 1025px) and (min-width: 700px){
+        width: 3em;
+        height: auto;
+        padding-top:$medium;
+        paddingleft: $medium;
+      }
     }
     img:last-of-type{
       justify-self: end;
       padding-top: $small;
       padding-right: $small;
+      @media(max-width: 1025px) and (min-width: 700px){
+        padding-top: $medium;
+      }
     }
   }
 
@@ -230,6 +245,12 @@
           padding-top: $xsmall;
           padding-left: $xsmall;
         }
+        @media(min-width:700px)and(max-width: 1025px){
+         img{
+          width: 300px;
+          height: auto;
+         }
+        }
       }
       .mobile-exit{
         padding:0px;
@@ -255,6 +276,13 @@
         font-size: 75px;
         line-height: 68px;
       }
+
+      @media(min-width:700px)and(max-width: 1025px){
+        a{
+          font-size: 100px;
+          line-height: 90px;
+        }
+      }
   }
 
     #add-mobile-links{
@@ -275,6 +303,20 @@
           color: $black;
           text-decoration: none;
           font-size: $mobile_type2;
+        }
+        div{
+          padding-top: 0px;
+          height: $mobile_line1;
+        }
+        @media(min-width:700px)and(max-width: 1025px){
+          a{
+            font-size: $mobile_type1;
+            line-height: $mobile_line1;
+          }
+          div{
+            padding-top: 0px;
+            height: $mobile_line1;
+          }
         }
       }
       #mobile-secondary-page-links{

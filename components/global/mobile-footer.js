@@ -34,9 +34,9 @@ const MobileFooter = () => {
                   <p className="mobile-section-header">FOLLOW</p>
                   <div className="links-container">
                     <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
-                    <a href="https://twitter.com/YourModernShed" target="_blank">Twitter</a>
+                    <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
                     <a></a>
-                    <a></a>
+                    <a href="/find-a-dealer">Find A Dealer</a>
                   </div>  
                 </div>  
 

@@ -40,7 +40,36 @@
     }
   }
   
-  @media(max-width: 800px){
+  @media(max-width: 1025px) and (min-width: 700px){
+    width: calc(100vw - 50px);
+    padding: $small;
+    #tailored-image-container{
+      img{
+        width: calc(50vw - 50px);
+        height: calc(50vw - 50px);
+        object-fit: cover;
+      }
+    }
+    #tailored-right-column{
+      width: calc(50vw - 50px);
+    }
+    .button-container{
+      margin-top: $medium;
+      width: calc(50vw - 25px);
+      height: 75px;
+      border: 1px solid $midnight;
+      display: flex;
+      place-items: center;
+      place-content: center;
+
+      a{
+        font-size: $mobile_type1 !important;
+      }
+    }
+  }
+
+
+  @media(max-width: 700px){
     display: none;
     }
  
@@ -50,7 +79,7 @@
 
 
 #tailored-mobile-section{
-  @media(min-width: 800px){
+  @media(min-width: 700px){
     display: none;
   }
   width: 100vw;

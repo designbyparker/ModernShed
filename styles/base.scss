@@ -2,14 +2,14 @@
 
  .mobile-query{
     display:block ;
-    @media(min-width:768px){
+    @media(min-width:700px){
       display: none;
     }
   }
   
  .desktop-query{
     display: none; 
-    @media all and (min-width: 768px ){
+    @media all and (min-width: 700px ){
       display: block;
     }
   }
@@ -35,6 +35,22 @@
     font-family: 'Lausanne';
   }
 
+  @media(max-width: 1025px){
+    h2{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+
+    h3{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+    p{
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
+
+  }
 
   .primary-button{
     font-size: $type_1;

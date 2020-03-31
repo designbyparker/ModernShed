@@ -18,7 +18,7 @@
 
 }
 #contact-left-col{
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     display: none;
   }
   display: grid;
@@ -33,49 +33,70 @@
 .form-headline{
   margin-left: $xsmall;
   padding-bottom: 5px;
-  @media(max-width: 800px){
+  @media(max-width: 700px){
     margin: 0px;
     padding-left: $small;
+    font-size: 16px;
+  }
+  @media(min-width: 700px) and (max-width: 1025px){
+    padding-left: $tab_large;
+    margin: 0px;
   }
 }
 
 #contact-right-col{
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
   width: 100vw;
   }
 }
 
 #interest-form{
-  @media(max-width: 800px){
-    width: calc(100vw - 50px);
-    margin: 0px;
-    padding: 0px;
-    margin-left: $small;
-    margin-right: $small;
-    width: calc(100vw-50px);
-    .interest-box{
-      .mobile-label{
-        font-size: $mobile_type1;
-      }
-    }
-  
-  }
-
-
   margin-left: $xsmall;
   padding-top: $medium;
   margin-right: $medium;
   border-top: 0.08em solid $midnight;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  
+  // Tablet
+  @media(min-width: 700px) and (max-width: 1025px){
+    width: calc(100vw - 196px);
+    margin: 0px;
+    padding: 0px;
+    margin-left: $tab_large;
+    margin-right: $tab_large;
+    .interest-box{
+      .mobile-label{
+        font-size: $mobile_type1;
+      }
+    }
+
+  }
+
+  // Mobile
+  @media(max-width: 700px){
+    width: calc(100vw - 50px);
+    margin: 0px;
+    padding: 0px;
+    margin-left: $small;
+    margin-right: $small;
+
+    .interest-box{
+      .mobile-label{
+        font-size: $mobile_type1 !important;
+      }
+    }
+  
+  }
+
   .interest-box{
     .desktop-label{
-      @media(max-width: 800px){
+      @media(max-width: 1025px){
         display: none;
       }
     }
     .mobile-label{
-      @media(min-width: 800px){
+      @media(min-width: 1025px){
         display: none;
       }
     }
@@ -105,8 +126,11 @@
       position: absolute;
       right: $medium;
       width: 20px;
-      @media(max-width: 800px){
+      @media(max-width: 700px){
         right: $small;
+      }
+      @media(min-width: 700px) and (max-width: 1025px){
+        right: $tab_large;
       }
     }
     input[type=radio]:focus{
@@ -140,8 +164,24 @@
   margin-left: $xsmall;
   margin-right: $medium;
   border-top: 0.08em solid $midnight;
+  @media(min-width: 700px) and (max-width: 1025px){
+    width: calc(100vw - 196px) !important;
+    margin-left: $tab_large !important;
+  }
+
+
   div{
-    @media(max-width: 800px){
+    @media(max-width: 1025px) and (min-width: 700px){
+      padding-right: 0px;
+      grid-template-rows: 0fr;
+
+      input{
+         width:  calc(100vw - 196px);
+         padding: 0px;
+         margin:0px;
+      }
+    }
+    @media(max-width: 700px){
       padding-right: 0px;
       grid-template-rows: 0fr;
       
@@ -151,6 +191,7 @@
          margin:0px;
       }
     }
+
     width: 100%;
     margin-top: $small;
     display: grid;
@@ -167,7 +208,14 @@
       border-left-style: hidden;
       border-bottom: 1px solid $grey;
       font-size: $type_1;
-      @media(max-width: 800px){
+      @media(max-width: 1025px) and (min-width: 700px){
+        width: calc(100vw - 196px);
+        height: 65px;
+        font-size: $mobile_type1;
+        line-height: $mobile_line1;
+        border-radius: 0;
+      }
+      @media(max-width: 700px){
         width: calc(100vw - 50px);
         height: 65px;
         font-size: $mobile_type1;
@@ -189,7 +237,7 @@
       resize: none;
       height: 30vh;
       font-size: $type_1;
-      @media(max-width:800px){
+      @media(max-width:1025px){
         height: 40vh;
         border-radius: 0;
         padding:0px;
@@ -205,12 +253,21 @@
     }
   }
   button{
+    cursor: pointer;
     margin-top: 150px;
-    @media(max-width: 800px){
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0px;
+    @media(max-width: 1025px){
       margin-top: $medium;
-      font-size: 30px;
+      font-size: $mobile_type1;
     }
   }
+
+  button:focus{
+    outline: none;
+  }
+
   #label-margin{
     margin-top: 10px;
   }
@@ -219,7 +276,7 @@
     margin-top: $small;
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     width: calc(100vw - 50px);
     margin-left: $small; 
     margin-right: $small;
@@ -229,6 +286,9 @@
 #details-head{
   margin-top: 120px;
   margin-left: 0px;
+  @media(max-width: 1025px){
+    padding-left: 0px;
+  }
 }
 
 #contact-details-container{
@@ -237,6 +297,9 @@
 
 #contact-details{
 
+  @media(max-width: 1025px) and (min-width: 700px){
+    width: calc(100vw - 196px);
+  }
   .details-radio-label{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -253,7 +316,10 @@
   .radio-btn-container{
     display:flex;
     flex-direction: row;
-
+    @media(max-width: 1025px) and (min-width: 700px){
+      width: calc(100vw - 196px) !important;
+      height: 65px;
+    }
 
     .radio-box:hover{
       background-color: $sun;
@@ -270,12 +336,10 @@
 
     .radio-box{
       width: 100%;
-      height: $type_1;
       border-top: 1px solid $grey;
       border-left: 1px solid $grey;
       border-bottom: 1px solid $grey;
-      font-size: 2em;
-      line-height: $type_1;
+      font-size: $mobile_type1 !important;
       display: flex;
       justify-content: flex-start ;
  
@@ -316,7 +380,7 @@
   #details-row-3{
     margin-top: 10px;
   }
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     margin:0px;
     padding:0px;
     width: calc(100vw - 50px);
@@ -333,7 +397,7 @@
        label{
          margin-left:0px;
          padding:$xsmall;
-         font-size: $mobile_type2;
+         font-size: $mobile_type1;
        }
        input{
          width: 0px;

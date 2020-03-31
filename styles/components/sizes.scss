@@ -2,9 +2,14 @@
   margin-top: $medium;
   margin-left: $medium;
   margin-bottom: 20vh;
-  @media(max-width: 800px){
+  @media(max-width: 1025px)and(min-width: 700px){
+  margin-bottom: $small;
+  margin-left: $tab_large;
+}
+  @media(max-width: 700px){
     font-size: $mobile_type1;
     margin-bottom: $large;
+    margin-left: $small;
   }
 }
 
@@ -16,7 +21,7 @@
     border-left: 0px;
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     flex-direction: column;
     margin-left: 0px;
     margin-right: 0px;
@@ -74,7 +79,7 @@
 
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
   display:none;
 }
 }
@@ -82,7 +87,7 @@
 
 
 #mobile-size-card{
-  @media(min-width: 800px){
+  @media(min-width: 1025px){
     display: none;
   }
   border-top: 1px solid $grey;
@@ -111,5 +116,19 @@
     color: $grey;
     padding: $small $medium;
 
+  }
+
+  @media(max-width: 1025px) and (min-width: 700px){
+    margin-left: $tab_large;
+    margin-right: $tab_large;
+    width: calc(100vw - 196px);
+
+    #mobile-size-img-container{
+      width: calc(100% - 196px);
+      margin: auto;
+    }
+    p{
+      padding-top: $small;
+    }
   }
 }

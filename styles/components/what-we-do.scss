@@ -39,7 +39,7 @@
 
   }
 
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     display: none;
   }
 }
@@ -47,9 +47,10 @@
 
 
 #index-2-mobile{
-  @media(min-width: 800px){
+  @media(min-width: 1025px){
     display: none;
   }
+
   width: 100%;
   background-color: $sky;
 
@@ -74,8 +75,23 @@
     }
   }
   p{
-    padding: $medium $mobile_p $medium $mobile_p;
+    padding: $medium $mobile_p;
     font-size: $mobile_type2;
     line-height: $mobile_line2;
+  }
+
+
+
+  @media(max-width: 1025px) and (min-width: 700px){
+    h2, h3{
+      padding-left: $tab_large;
+      padding-right: $tab_large;
+    }
+    h2{
+      padding-bottom: $small;
+    }
+    p{
+      padding: $medium $tab_large;
+    }
   }
 }

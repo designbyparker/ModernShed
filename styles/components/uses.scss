@@ -6,7 +6,7 @@
 
 
 #desktop-uses-tailored-section{
-  @media(max-width: 800px){
+  @media(max-width: 1025px){
     display: none;
   }
 }
@@ -114,7 +114,7 @@
 // ****** Mobile Styling ******* //
 
 #mobile-use-tailor-section{
-  @media(min-width: 800px){
+  @media(min-width: 1025px){
     display: none;
   }
 
@@ -176,5 +176,28 @@
       object-fit: contain;
     }
   }
+
+  @media(max-width: 1025px) and (min-width: 700px){
+
+    padding: $medium $tab_large;
+    #uses-img2-container{
+      width: calc(100vw - 196px);
+    }
+
+    .mobile-button-container{
+      width: calc(100vw - 196px);
+      margin-top: $medium;
+      margin-bottom: $large;
+    }
+
+    #uses-img3-container{
+      width: calc(100vw - 196px);
+    }
+    p{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
 
 }
