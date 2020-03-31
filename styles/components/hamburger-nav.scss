@@ -164,7 +164,7 @@
 
 
 
-// Mobile Hamburger Menu
+// Mobile & Tablet Hamburger Menu
 .closeMobileMenu{
   transition: all 0.4s;
   position: fixed;
@@ -246,6 +246,12 @@
           padding-top: $xsmall;
           padding-left: $xsmall;
         }
+        @media(min-width:700px)and(max-width: 1025px){
+         img{
+          width: 300px;
+          height: auto;
+         }
+        }
       }
       .mobile-exit{
         padding:0px;
@@ -271,6 +277,13 @@
         font-size: 75px;
         line-height: 68px;
       }
+
+      @media(min-width:700px)and(max-width: 1025px){
+        a{
+          font-size: 100px;
+          line-height: 90px;
+        }
+      }
   }
 
     #add-mobile-links{
@@ -291,6 +304,21 @@
           color: $black;
           text-decoration: none;
           font-size: $mobile_type2;
+        }
+        div{
+          padding-top: 0px;
+
+          height: $mobile_line1;
+        }
+        @media(min-width:700px)and(max-width: 1025px){
+          a{
+            font-size: $mobile_type1;
+            line-height: $mobile_line1;
+          }
+          div{
+            padding-top: 0px;
+            height: $mobile_line1;
+          }
         }
       }
       #mobile-secondary-page-links{
