@@ -84,6 +84,23 @@
         padding-left: 0px;
         input{
           width: 100%;
+          font-size: $mobile_type1;
+        }
+        button{
+          font-size: $mobile_type1;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 700px){
+    #dealer-right-col{
+      margin-right: $small;
+      margin-left: $small;
+      width: calc(100vw - 50px);
+      form{
+        button{
+          margin-top: 0px;
         }
       }
     }

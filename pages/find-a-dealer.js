@@ -35,7 +35,7 @@ const FindADealer = () => {
         <form>
           <label>ZIP CODE</label>
           <input type="text" placeholder="Zip Code" required={true}/>
-          <button type="submit" className="primary-button" onClick={handleSubmit}>Find A Dealer →</button>
+          <button type="submit" className="primary-button" onClick={handleSubmit}>Search Dealers</button>
         </form>
       </section>
     </section>
