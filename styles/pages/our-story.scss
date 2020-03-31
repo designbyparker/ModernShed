@@ -15,10 +15,54 @@
     margin-bottom: $medium;
   }
 
-  #staff-slide{
-    .staff-img{
-      width: calc(32vw - 80px);
-      height: auto;
+  .staffCarousel{
+    display: flex;
+    flex-direction: row;;
+  
+    .staffSlider{
+      width: calc(100vw - 200px);
     }
   }
+
+
+
+  #staff-slide{
+    .staff-img{
+      width: calc(33vw - 80px);
+      height: auto;
+    }
+    .primary-title{
+      margin-top: $small;
+      color: $black;
+      font-size: $type_2;
+      line-height: $type_2;
+    }
+    .secondary-title{
+      padding-top: 5px;
+      color: $grey;
+      font-size: $type_2;
+      line-height: $type_2;
+    }
+  }
+
+
+
+  #staff-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    .carousel-button{
+      margin-top: $medium;
+      background-color: transparent;
+      border: 0px;
+      img{
+        width: 100px;
+        height: auto;
+      }
+    }
+    .carousel-button:focus{
+      outline:none;
+    }
+  }
+
 }
