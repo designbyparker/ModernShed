@@ -214,7 +214,6 @@
       padding-right: $small;
       @media(max-width: 1025px) and (min-width: 700px){
         padding-top: $medium;
-        padding-right: $medium;
       }
     }
   }
@@ -307,7 +306,6 @@
         }
         div{
           padding-top: 0px;
-
           height: $mobile_line1;
         }
         @media(min-width:700px)and(max-width: 1025px){

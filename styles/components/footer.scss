@@ -61,6 +61,8 @@ a:active{
 }
 @media(max-width: 1025px){
   display: grid;
+  height: auto;
+
   grid-template-columns:2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   .small-footer-col{
