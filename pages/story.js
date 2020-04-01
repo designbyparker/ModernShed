@@ -4,13 +4,13 @@ import PageHero from '../components/global/page-hero';
 import Head from 'next/head'
 import ContactCTA from '../components/global/contact-cta';
 import OurTeam from '../components/our-story/our-team';
+import OurTeamCarousel from '../components/our-story/our-team-carousel';
 import Footer from '../components/global/footer';
 import MobileFooter from '../components/global/mobile-footer';
 import '../styles/theme.css';
 import fetch from 'isomorphic-unfetch';
 
 const Story = (props) => {
-  console.log(props.staff);
   return(
     <>
       <Head>
@@ -24,6 +24,7 @@ const Story = (props) => {
       <HamburgerNav />
       <MobileHamburgerNav/>
       <OurTeam staff={props.staff}/>
+      <OurTeamCarousel staff={props.staff}/>
       <ContactCTA buttontext="Inquire →"/>
       <Footer/>
       <MobileFooter/>

@@ -1,16 +1,11 @@
-#our-team-body{
+#our-team-body-carousel{
   width: calc(100vw - 80px);
   margin: $medium;
 
   @media(max-width: 1025px){
-    width: calc(100vw - 196px);
-    margin: $tab_large;
+    display: none;
   }
-  @media(max-width: 700px){
-    width: calc(100vw - 50px);
-    margin: $small;
 
-  }
   h2{
     margin-bottom: $medium;
   }
@@ -22,6 +17,8 @@
     .staffSlider{
       width: calc(100vw - 200px);
     }
+
+
   }
 
 
@@ -65,4 +62,67 @@
     }
   }
 
+}
+
+#our-team-body{
+  @media(min-width: 1025px){
+    display: none;
+  }
+
+  width: calc(100vw - 196px);
+  margin: $medium $tab_large;
+
+  @media(max-width: 700px){
+    width: calc(100vw - 50px);
+    margin: $small;
+  }
+
+  h2{
+    margin-bottom: $medium;
+    @media(max-width: 700px){
+    padding-left: $small;
+    }
+  }
+
+  #staff-deck{
+    width: calc(100vw - 196px);
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    @media(max-width: 700px){
+      width: calc(100vw - 100px);
+      margin: 0px $small;
+    }
+  #pad-left{
+    padding-left: $xsmall;
+  }
+
+    .staff-card{
+      margin-bottom: $small;
+
+      img{
+        width: calc(50vw - 123px);
+        height: auto;
+        @media(max-width: 700px){
+          width: calc(50vw - 65px);
+        }
+      }
+      p{
+        width: calc(50vw - 123px);
+        @media(max-width: 700px){
+          width: calc(50vw - 65px);
+
+        }
+
+      }
+      .primary-title{
+        color: $black;
+        font-size: $mobile_type2;
+      }
+      .secondary-title{
+        color: $grey;
+        font-size: $mobile_type2;
+      }
+    }
+  }
 }
