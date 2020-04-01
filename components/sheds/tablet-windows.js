@@ -11,15 +11,15 @@ const Windows = () => {
       <section id="tab-windows">
         <div id="tab-windows-imgs">
           <div>
-            <img src="https://dummyimage.com/500x400/000/fff" alt="Small"/>
+            <img src="./images/sheds/A_Small.jpg" alt="Small"/>
           </div>
   
           <div>
-            <img src="https://dummyimage.com/500x400/000/fff" alt="Tall"/>
+            <img src="./images/sheds/B_Tall.jpg" alt="Tall"/>
           </div>
   
           <div>
-            <img src="https://dummyimage.com/500x400/000/fff" alt="Full"/>
+            <img src="./images/sheds/C_Full.jpg" alt="Full"/>
           </div>
         </div>
   
