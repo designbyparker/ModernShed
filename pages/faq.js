@@ -19,7 +19,6 @@ const Faq = () => {
       <section className="aux-section">
         <div className="aux-deck">
           {copy.map(item => {
-            console.log(item.question);
           return(
             <div key={item.question_id}>
               <h4>{item.question}</h4>
