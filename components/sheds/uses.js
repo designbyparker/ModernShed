@@ -7,8 +7,8 @@ const Uses = () => {
         </div>
 
         <div  className="uses-card" id="uses-list">
-          <div>
-            <img src="https://dummyimage.com/300x400/000/fff" alt="Placeholder Alt Text"/>
+          <div id="animated-scroll-container">
+            <img src="/images/sheds/Shed_Scroll.gif" alt="Placeholder Alt Text"/>
           </div>
           <a href="/contact">Inquire →</a>
         </div>
