@@ -33,7 +33,7 @@
   flex-direction: column;
   border-left: 2px solid #999999;
   justify-content: space-between;
-  padding-left:$small;
+  padding-left:10px;
 
   div{
     display: flex;
@@ -50,8 +50,9 @@ a{
   color: $white;
   text-decoration: none;
   font-family: 'Lausanne';
-  font-size: $type_2;
-  line-height: $type_2;
+  font-size: $type_3;
+  line-height: $type_3;
+  padding-top: 10px;
 }
 a:visited{
   color: $white;

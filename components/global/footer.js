@@ -28,10 +28,10 @@ const Footer = () => {
       <div className="footer-col-4 small-footer-col">
         <p className="section-header">FOLLOW</p>
         <div id="social-pages">
-        <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
-        <div></div>
-        <a href="/find-a-dealer">Find A Dealer →</a>
+          <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
+          <a href="https://twitter.com/modern_sheds?lang=en" target="_blank">Twitter</a>
+          <a href="/find-a-dealer" className="find-dealer-link">Find A Dealer →</a>
         </div>  
       </div>
 
