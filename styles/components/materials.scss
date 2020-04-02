@@ -30,8 +30,8 @@
   #materials-col-2{
     justify-items: stretch;
     object-fit: center;
-    border-left: 0.08em solid $midnight;
-    border-right: 0.08em solid $midnight;
+    border-left: 2px solid $midnight;
+    border-right: 2px solid $midnight;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 10px;
@@ -43,7 +43,7 @@
   }
 
   #materials-col-3{
-    border-right: 0.08em solid $midnight;
+    border-right: 2px solid $midnight;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;

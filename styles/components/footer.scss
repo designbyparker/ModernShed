@@ -31,7 +31,7 @@
   margin-bottom: $medium;
   display: flex;
   flex-direction: column;
-  border-left: 0.08em solid #999999;
+  border-left: 2px solid #999999;
   justify-content: space-between;
   padding-left:$small;
 
@@ -159,7 +159,7 @@ a:active{
   }
 
   .mf-col-1{
-    border-right: 1px solid $grey;
+    border-right: 2px solid $grey;
   }
   .mf-col-2{
     padding-left: $small;

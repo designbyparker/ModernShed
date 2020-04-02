@@ -31,8 +31,8 @@
   }
 
   #doors-col-2{
-    border-left: 0.08em solid $midnight;
-    border-right: 0.08em solid $midnight;
+    border-left: 2px solid $midnight;
+    border-right: 2px solid $midnight;
     justify-items: stretch;
     object-fit: center;
     display: grid;
@@ -45,7 +45,7 @@
   }
 
   #doors-col-3{
-    border-right: 0.08em solid $midnight;
+    border-right: 2px solid $midnight;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: $small;
@@ -162,7 +162,7 @@
   }
 
   .mobile-door-card{
-    border-top: 1px solid $grey;
+    border-top: 2px solid $grey;
 
     h4{
       padding-top: $small;

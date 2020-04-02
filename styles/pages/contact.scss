@@ -13,7 +13,7 @@
 
 
 #contact-right-col{
-  border-left: 0.08em solid $black;
+  border-left: 2px solid $black;
   margin-bottom: $medium;
 
 }
@@ -31,7 +31,7 @@
   .empty-div{
     grid-column: 1/2;
     grid-row: 1/3;
-    border-right: 0.08em solid $black;
+    border-right: 2px solid $black;
     margin-bottom: $medium;
   }
 

@@ -26,17 +26,18 @@ const Windows = () => {
         <div id="tab-windows-titles">
           <div>
             <h4>Small</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+            <p>In a multitude of shapes, our small-option windows come in both casement, double-casement, and awning styles.
+</p>
           </div>
 
           <div>
             <h4>Tall</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+            <p>Our tall scaled windows are easy to customize. Choose between sliding glass, a fixed window over an awning, or an awning over fixed.</p>
           </div>
 
           <div>
             <h4>Full</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+            <p>Let the outdoors in. Our full-sized windows reach up to 60” x 72”.</p>
           </div>
         </div>
       </section>
