@@ -97,9 +97,6 @@
     }
     #primary-page-links{
       font-size: 6em;
-      a{
-        height: 1em;
-      }
     }
     #secondary-page-links{
       align-self: flex-end;
@@ -264,6 +261,7 @@
       height: 50vh;
       display: flex;
       flex-direction: column;
+      flex-wrap:wrap;
       margin: 0px $xsmall;
       padding-top: $xsmall;
       padding-left: $xsmall;
