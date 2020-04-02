@@ -1,7 +1,7 @@
 
 //******** Desktop Doors *********//
 #windows-section{
-  @media(max-width: 1025px){
+  @media(max-width: 1100px){
     display: none;
   }
   background-color: $cloud;
@@ -71,7 +71,7 @@
 
 // ****** Tablet Windows Styling *****//
 #tab-windows-section{
-  @media(min-width: 1025px){
+  @media(min-width: 1100px){
     display: none;
   }
   @media(max-width:700px){

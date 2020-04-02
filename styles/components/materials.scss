@@ -64,7 +64,7 @@
     line-height: $type_2;
   }
 
-  @media(max-width: 1025px){
+  @media(max-width: 1100px){
    display: none;
   }
 
@@ -75,13 +75,13 @@
 // ****** Material Mobile Styling ******** //
 
 #mobile-materials-section{
-  @media(min-width: 1025px){
+  @media(min-width: 1100px){
     display: none;
   }
   padding: $small;
 
   #mobile-materials-head{
-    @media(max-width: 1025px) and (min-width: 700px){
+    @media(max-width: 1100px) and (min-width: 700px){
     display: grid;
     grid-template-columns: 1fr 1fr;
     }
