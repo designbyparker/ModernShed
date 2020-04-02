@@ -74,10 +74,9 @@ const Contact = (props) => {
 
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    let url = 'https://modern-shed.com/contactus/savecontact';
 
     const fields = {
         Interest: interest || null,
@@ -93,18 +92,32 @@ const Contact = (props) => {
       }
 
 
-    let c = JSON.stringify(fields);
-    console.log(c)
-    let data = await superagent.post(url)
-    .set('Access-Control-Allow-Origin', '*')
-    .send(c)
-    .then(result => {
-      console.log(result);
-    })
-    .catch(err => {
-      console.error(err);
-    })
+ 
+
+    return postContact(fields);
   }
+
+
+
+
+  const postContact = (c) => {
+    c = JSON.stringify(c);
+    let url = 'https://modern-shed.com/contactus/savecontact';
+
+    superagent.post(url)
+    .send(c)
+    .set('Content-Type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*')
+    .then(result => {
+      console.log(result)
+    })
+    .catch(error => {
+      console.log(error);
+    })
+
+  }
+
+
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
@@ -120,8 +133,13 @@ const Contact = (props) => {
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
       <section id="contact-page">
         <section id="contact-left-col">
-          <div></div>
-          <div></div>
+          <div className="contact-image" id="contact-image-a">
+            <img src="./images/contact/A_Contact.jpg" alt="Placeholder text"/>
+          </div>
+          <div className="empty-div"></div> 
+          <div className="contact-image" id="contact-image-b">
+            <img src="./images/contact/B_Contact.jpg" alt="Placeholder text"/>
+          </div>
         </section>
 
 
