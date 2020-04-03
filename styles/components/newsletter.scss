@@ -6,9 +6,12 @@
   background-color: $cloud;
 
 #newsletter-copy{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   margin-top: $small;
-  padding-right: 13em;
+  padding-right: $large;
   border-right: 2px solid $black;
   h2{
     margin-top: $small;
