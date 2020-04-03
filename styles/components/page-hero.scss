@@ -1,6 +1,6 @@
 
 .page-hero{
-  height: 500px;
+  height: 450px;
   @media(max-width: 1250px){
     height: 575px;
   }
@@ -15,10 +15,11 @@
   h1{
     font-family: 'Lausanne';
     margin-top: $small;
+    margin-bottom: 60px;
   }
   h2{
     margin-right: $medium;
-    align-self: center;
+    // align-self: center;
   }
   h3{
     align-self: start;
