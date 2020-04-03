@@ -377,9 +377,10 @@
     width: calc(100vw - 196px);
   }
   .details-radio-label{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 40px;
+    line-height: 60px;
     color: $grey;
+    padding-bottom: 0px;
   }
   
   
