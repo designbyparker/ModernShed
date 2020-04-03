@@ -9,7 +9,7 @@
     display: flex; 
     place-items: center;
     img{
-      width: calc(66vw - 80px);
+      width: calc(66vw - 40px);
       height: auto;
       object-fit: contain;
     }
@@ -17,8 +17,8 @@
   }
   
   #tailored-right-column{
-    width: calc(33vw - 80px);
-    padding-left: $small;
+    width: calc(33vw -  50px);
+    margin-left: $small;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
