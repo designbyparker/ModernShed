@@ -25,72 +25,71 @@ const Process = (props) => {
       <section id="process-layout">
         <ProcessCard
           step="Step 01"
-          subheader="Introduction"
+          subheader="Design"
           image="/images/process/A_Process_Design.jpg"
           alt="Lorem Ipsum"
-          copy="Let’s chat. Our design professionals are at your service—eager to hear your story and come up with a course of action. Permit plans and engineering are available for projects that require a building permit."
+          copy="Our design professionals are ready to be at your service—eager to hear your story and come up with a course of action."
         /> 
 
         <MobileProcessCard
           step="Step 01"
-          subheader="Introduction"
+          subheader="Design"
           image="/images/process/A_Process_Design.jpg"
           alt="Lorem Ipsum"
-          copy="Let’s chat. Our design professionals are at your service—eager to hear your story and come up with a course of action. Permit plans and engineering are available for projects that require a building permit."
+          copy="Our design professionals are ready to be at your service—eager to hear your story and come up with a course of action.."
           id="border"
         /> 
 
         <ProcessCard
         step="Step 02"
-        subheader="Design & Assessment"
+        subheader="Order"
         image="/images/process/B_Process_Order.jpg"
         alt="Lorem Ipsum"
         timeframe="4 to 6 Weeks"
-        copy="Once you’ve approved the design and we’ve fit it perfectly to your needs, your shed will be scheduled for production. Here we go!"/>   
+        copy="Once you’ve approved the design and we’ve fit it perfectly to your vision, your shed will be scheduled for production. Here we go!"/>   
 
         <MobileProcessCard
         step="Step 02"
-        subheader="Design & Assessment"
+        subheader="Order"
         image="/images/process/B_Process_Order.jpg"
         alt="Lorem Ipsum"
         timeframe="4 to 6 Weeks"
-        copy="Once you’ve approved the design and we’ve fit it perfectly to your needs, your shed will be scheduled for production. Here we go!"
+        copy="Once you’ve approved the design and we’ve fit it perfectly to your vision, your shed will be scheduled for production. Here we go!"
         id="border"
         />   
         
         <ProcessCard
         step="Step 03"
-        subheader="Fulfillment"
+        subheader="Fabricate"
         image="/images/process/C_Process_Fabricate.jpg"
         alt="Lorem Ipsum"
-        copy="The components for your shed are either loaded into one of our enclosed trailers for west coast delivery, or forklifted onto a commercial truck for shipment."/>  
+        copy="The high-quality materials of your shed are constructed in our factory by our expert team. We create in panels to make on-site assembly easy on you."/>  
 
         <MobileProcessCard
         step="Step 03"
-        subheader="Fulfillment"
+        subheader="Fabricate"
         image="/images/process/C_Process_Fabricate.jpg"
         alt="Lorem Ipsum"
-        copy="The components for your shed are either loaded into one of our enclosed trailers for west coast delivery, or forklifted onto a commercial truck for shipment."
-        id="border"
+        copy="The high-quality materials of your shed are constructed in our factory by our expert team. We create in panels to make on-site assembly easy on you."
         />    
 
         <ProcessCard
         step="Step 04"
-        subheader="Construction"
+        subheader="Install"
         image="/images/process/D_Process_Install.jpg"
         alt="Lorem Ipsum"
         timeframe="1 to 2 Weeks"
         id="last-desktop-card"
-        copy="It’s really up to you: one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame is reliant on several factors we’ll be able to communicate depending on your specific vision."
+        copy="One of our authorized installers or a contractor of your choosing will install your new Modern-Shed. Whichever you choose, we’re a phone call away to help with any part of the installation process."
         />  
 
         <MobileProcessCard
         step="Step 04"
-        subheader="Construction"
+        subheader="Install"
         image="/images/process/D_Process_Install.jpg"
         alt="Lorem Ipsum"
         timeframe="1 to 2 Weeks"
-        copy="It’s really up to you: one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame is reliant on several factors we’ll be able to communicate depending on your specific vision."
+        copy="One of our authorized installers or a contractor of your choosing will install your new Modern-Shed. Whichever you choose, we’re a phone call away to help with any part of the installation process."
         />  
 
       </section>
