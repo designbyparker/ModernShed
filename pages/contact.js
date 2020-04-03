@@ -260,7 +260,7 @@ const Contact = (props) => {
           </section>
 
 
-          <div id="label-margin">
+          <div id="label-margin" className="add-comments-section" >
             <label >ADDITIONAL COMMENTS (OPTIONAL) </label>
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
