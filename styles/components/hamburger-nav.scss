@@ -39,13 +39,14 @@
     width: 75vw;
     background-color: $sun;
     color: $black;
-    z-index: 20;
+    z-index: 200;
 
     
     #menu-col-1{
-      padding-left: $small;
+      padding-left: $xsmall;
       padding-top: $medium;
-      height: 92vh;
+      padding-right: $xsmall;
+      height: calc(100vh - 80px);
       display: grid;
       .mobile-exit{
         display: none;
@@ -63,7 +64,11 @@
       #wordmark{
         img{
           padding: 0px;
-          width: 10em;
+          width: 300px;
+          padding-right: $small;
+          @media(max-width: 1450px){
+            width: 250px;
+          }
           height: auto;
         }
       }
@@ -83,8 +88,9 @@
 
   #menu-col-2{ 
     margin-top: $medium; 
-    padding-left: $small;  
-    height: 92vh;
+    padding-right: $xsmall;  
+    padding-left: $xsmall;
+    height: calc(100vh - 80px);
     display: grid;
     border-left: 2px solid $black; 
     border-right: 2px solid $black; 
@@ -97,32 +103,44 @@
     }
     #primary-page-links{
       font-size: 6em; 
+      @media(max-width: 1350px){
+        font-size: 5em;
+      }
     }
     #secondary-page-links{
       align-self: flex-end;
-      font-size: 2em;
+      font-size: $type_3;
+      line-height: $line_3;
+      @media(max-width: 1150px){
+        font-size: $type_2;
+      }
     }
   }
 
   #menu-col-3{
-    height: 97vh;
+    margin-top: $medium; 
+    height: calc(100vh - 80px);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    padding-left: $small;
+    padding-left: $xsmall;
     
     img{
       justify-self: end;
       padding-right: $medium;
-      padding-top: $medium;
       width: 3em;
       height: auto;
+      cursor: pointer;
     }
     #social-links{
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      font-size: 2em;
+      @media(max-width: 1150px){
+        font-size: $type_2;
+      }
+      font-size: $type_3;
+      line-height: $line_3;
     }
   
   }
