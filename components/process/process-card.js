@@ -9,7 +9,7 @@ const ProcessCard = (props) => {
         </div>
 
 
-        <div id="process-image-container">
+        <div id="process-image-container" className={props.id}>
           <img src={props.image} alt={props.alt}/>
         </div> 
         <p id="timeframe">{props.timeframe}</p>

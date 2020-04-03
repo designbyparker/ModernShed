@@ -6,19 +6,19 @@ var imageIndex = 0;
 const MobileCarousel = () => {
   const imageData = [
     {
-      src: '/images/carousel/sf-studio.jpg',
-      alt: 'San Fransico Studio',
-      mobile: '/images/carousel/mobile1.jpeg'
+      src: '/images/carousel/car1.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car1_mobile.jpg'
     },
     {
-      src: '/images/carousel/sd-studio.jpg',
-      alt: 'San Diego Studio',
-      mobile: '/images/carousel/mobile2.jpeg'
+      src: '/images/carousel/car2.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car2_mobile.jpg'
     },
     {
-      src: '/images/carousel/home-office.jpg',
-      alt: 'Home Office',
-      mobile: '/images/carousel/mobile3.jpeg'
+      src: '/images/carousel/car3.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car3_mobile.jpg'
     }
   ];
 

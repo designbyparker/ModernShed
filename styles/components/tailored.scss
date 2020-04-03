@@ -27,6 +27,7 @@
     }
     p{
       line-height: $line_2;
+      font-size: $type_2;
     }
     .button-container{
       align-self: end;
@@ -40,7 +41,7 @@
     }
   }
   
-  @media(max-width: 1025px) and (min-width: 700px){
+  @media(max-width: 1100px) and (min-width: 700px){
     width: calc(100vw - 50px);
     padding: $small;
     #tailored-image-container{

@@ -11,7 +11,7 @@ import '../styles/theme.css';
 const FindADealer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log('zip code',e.target.ZipCode.value);
   }
 
   return(
@@ -32,11 +32,12 @@ const FindADealer = () => {
 
       <section id="dealer-right-col">
       <p className="form-headline" id="dealer-headline">LOCATION</p>
-        <form>
+        <form  onSubmit={handleSubmit}>
           <label>ZIP CODE</label>
-          <input type="text" placeholder="Zip Code" required={true}/>
-          <button type="submit" className="primary-button" onClick={handleSubmit}>Search Dealers</button>
+          <input type="text" id="ZipCode" placeholder="Zip Code" required={true}/>
+          <button type="submit" className="primary-button" >Search Dealers</button>
         </form>
+
       </section>
     </section>
 

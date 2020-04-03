@@ -57,7 +57,6 @@ const Contact = (props) => {
     return setSize(size);
   }
 
-
   const handleTimeChange = (e) => {
     addBackgroundColor(e, 'length');
     let time = e.target.value;
@@ -72,12 +71,8 @@ const Contact = (props) => {
     setHeard(e.target.value);
   }
 
-
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    let url = 'https://modern-shed.com/contactus/savecontact';
 
     const fields = {
         Interest: interest || null,
@@ -92,18 +87,25 @@ const Contact = (props) => {
         Timeframe: time || null,
       }
 
+    return postContact(fields);
+  }
 
-    let c = JSON.stringify(fields);
-    console.log(c)
-    let data = await superagent.post(url)
-    .set('Access-Control-Allow-Origin', '*')
+
+  const postContact = (c) => {
+    c = JSON.stringify(c);
+    let url = 'https://modern-shed.com/contactus/savecontact';
+
+    superagent.post(url)
     .send(c)
+    .set('Content-Type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*')
     .then(result => {
-      console.log(result);
+      console.log(result)
     })
-    .catch(err => {
-      console.error(err);
+    .catch(error => {
+      console.log(error);
     })
+
   }
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
@@ -120,8 +122,13 @@ const Contact = (props) => {
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
       <section id="contact-page">
         <section id="contact-left-col">
-          <div></div>
-          <div></div>
+          <div className="contact-image" id="contact-image-a">
+            <img src="./images/contact/A_Contact.jpg" alt="Placeholder text"/>
+          </div>
+          <div className="empty-div"></div> 
+          <div className="contact-image" id="contact-image-b">
+            <img src="./images/contact/B_Contact.jpg" alt="Placeholder text"/>
+          </div>
         </section>
 
 
@@ -130,14 +137,14 @@ const Contact = (props) => {
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not" className="desktop-label"> Not yet interested.</label>
+                  <label htmlFor="not" className="desktop-label"> Just Browsing.</label>
                   <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
                   <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe" className="desktop-label">I'm considering a Shed.</label>
+                <label htmlFor="maybe" className="desktop-label">Considering.</label>
                 <label htmlFor="maybe" className="mobile-label">Considering.</label> 
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
 
@@ -145,7 +152,7 @@ const Contact = (props) => {
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes" className="desktop-label">I'm ready for a Shed.</label>
+                <label htmlFor="yes" className="desktop-label">I'm Ready!</label>
                 <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
                 <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
 
@@ -230,8 +237,8 @@ const Contact = (props) => {
 
               </div>
 
-
-              {/* <div id="details-row-3">
+{/* 
+             <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
                 <select name="hear-about-us" id="hearAboutUs" onChange={handleHeard}>
@@ -243,7 +250,7 @@ const Contact = (props) => {
                   })}             
                 </select>
 
-              </div>  */}
+              </div>   */}
 
 
           </section>

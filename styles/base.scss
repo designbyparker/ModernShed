@@ -35,7 +35,7 @@
     font-family: 'Lausanne';
   }
 
-  @media(max-width: 1025px){
+  @media(max-width: 1100px){
     h2{
       font-size: $mobile_type1;
       line-height: $mobile_line1;
@@ -85,3 +85,12 @@
     }
   }
 
+
+
+  .find-dealer-link{
+    color: $grey !important;
+  }
+
+  .find-dealer-link-menu{
+    color:#a07a2f !important;
+  }
