@@ -80,6 +80,7 @@ const Process = (props) => {
         image="/images/process/D_Process_Install.jpg"
         alt="Lorem Ipsum"
         timeframe="1 to 2 Weeks"
+        id="last-desktop-card"
         copy="It’s really up to you: one of our authorized installers or a contractor of your choosing will install your new Modern-Shed. The time frame is reliant on several factors we’ll be able to communicate depending on your specific vision."
         />  
 

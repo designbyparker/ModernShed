@@ -17,15 +17,14 @@
   @media(max-width: 1100px){
     display: none;
   }
-  max-height: 90vh;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-#process-left-column{
-  height: 90vh;
 
+
+#process-left-column{
   h2{
     margin-top: $medium;
   }
@@ -49,6 +48,7 @@
     grid-area: pic;
     padding-left: $small;
     padding-right: $small;
+    padding-bottom: $large;
 
     img{
       width: 100%;
@@ -88,6 +88,8 @@
     justify-items: stretch;
     padding-left: $small;
     padding-right: $small;
+    padding-bottom: $large;
+
 
     img{
       padding-top:0px;
@@ -111,14 +113,16 @@
 
 
 .grid-div{
-  height: 90vh;
+  height: 100%;
   grid-column: 3/4;
   grid-row: 1/2;
   border-left: 2px solid $black;
   border-right: 2px solid $black;
 }
 
-
+.last-desktop-card{
+  padding-bottom: 0px !important;
+}
 
 // ********* Mobile Styling ******* //@extend
 .mobile-process-card{
