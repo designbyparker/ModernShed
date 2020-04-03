@@ -8,12 +8,14 @@
     grid-row: 2/3;
     grid-column: 1/2;
     padding-left: $medium;
+    margin-bottom: $medium;
     justify-content: stretch;
+    padding-right: $xsmall;
+    height: 500px;
     img{
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      padding-bottom: $small;
+      object-fit: cover;
     }
   }
   #whatwedo-headlines{
@@ -21,21 +23,25 @@
     grid-column:2/3;
     padding-right: $medium;
     padding-left: $small;
-    padding-top: $medium;
+    margin-top: $medium;
+    border-left: 2px solid $black;
+    height: 400px;
   }
   #whatwedo-desc{
+    height: 500px;
+    border-left: 2px solid $black;
     grid-row: 2/3;
     grid-column: 2/3;
     font-size: $type_2;
     line-height: $line_2;
     padding-right: $medium;
     padding-left: $small;
+    margin-bottom: $medium;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-     column-fill: auto;
-     padding-top: $small;
-    padding-bottom: $small;
+    column-fill: auto;
+
 
   }
 
