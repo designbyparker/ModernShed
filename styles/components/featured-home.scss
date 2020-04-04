@@ -39,9 +39,9 @@
 }
 
   @media(max-width: 700px){
-    padding: $medium $small $small $small;
+    padding: $small;
     h2{
-      margin-bottom: $medium;
+      margin-bottom: $small;
     }
     #featured-home-deck{
       display: grid;

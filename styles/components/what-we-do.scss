@@ -69,11 +69,11 @@
 
   h2, h3{
     font-size: $mobile_type1;
-    padding:0px $small $medium $small;
+    padding:0px $small $small $small;
   }
 
   h2{
-    padding-top: $medium;
+    padding-top: $small;
   }
 
   #index-2-image-container{
@@ -88,7 +88,7 @@
     }
   }
   p{
-    padding: $medium $mobile_p;
+    padding: $small $mobile_p;
     font-size: $mobile_type2;
     line-height: $mobile_line2;
   }
