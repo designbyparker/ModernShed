@@ -6,28 +6,33 @@ const Newsletter = () => {
   const [zip, setZip] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSubmit = async (e) => {
-    console.log('in submit');
+  const handleSubmit = (e) => {
+    console.log('in submit', e.target.zip.value);
     e.preventDefault();
-    setZip(e.target.zip.value);
-    setEmail(e.target.email.value);
     
-  
     let payload = {
-      zip: zip,
-      email: email
+      ZipCode: e.target.zip.value,
+      Email: e.target.email.value
     }
     payload = JSON.stringify(payload);
+    return callNewsletter(payload)
 
-    let data = await superagent.post('https://modern-shed.com/ContactUs/addNewsletter')
-    .set('Access-Control-Allow-Origin', '*')
-    .send(payload)
-    .then(result => {
-      console.log(result);
-    });
 
   }
 
+  const callNewsletter = async (payload) => {
+    console.log(payload);
+    return await superagent.post('https://www.modern-shed.com/api/newsletter')
+    .set('Access-Control-Allow-Origin', '*')
+    .set('Content-Type', 'application/json')
+    .send(payload)
+    .then(result => {
+      console.log(result.body);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
 
   return(
   <section id="newsletter">

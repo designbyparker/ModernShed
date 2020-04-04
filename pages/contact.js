@@ -93,13 +93,14 @@ const Contact = (props) => {
 
   const postContact = (c) => {
     c = JSON.stringify(c);
-    let url = 'http://www.spicyzen.com/api/data';
+    let url = 'https://www.modern-shed.com/api/contact';
 
     superagent.post(url)
     .send(c)
-    .set("Access-Control-Allow-Origin", "*")
+    .set('Access-Control-Allow-Origin', '*')
+    .set('Content-Type', 'application/json')
     .then(result => {
-      console.log(result.statusText)
+      console.log(result)
     })
     .catch(error => {
       console.log(error);
