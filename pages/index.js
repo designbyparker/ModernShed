@@ -34,7 +34,7 @@ const Index = (props) => {
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
       <WhatWeDoMobile/>
-      <FeaturedHome featured={props.sheds}/>
+      {/* <FeaturedHome featured={props.sheds}/> */}
       <Tailored/>
       <TailoredMobile/>
       <TheDifference/>
@@ -49,14 +49,14 @@ const Index = (props) => {
 }
 
 
-Index.getInitialProps = async function() {
-  const res = await fetch('https://modern-shed.com/services/homefeatured');
-  const sheds = await res.json();
+// Index.getInitialProps = async function() {
+//   const res = await fetch('https://modern-shed.com/services/homefeatured');
+//   const sheds = await res.json();
 
-  return {
-    sheds: sheds
-  }
-}
+//   return {
+//     sheds: sheds
+//   }
+// }
 
 
 export default Index;
