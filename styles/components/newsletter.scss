@@ -106,11 +106,12 @@
     padding: 0px;
     display: flex;
     flex-direction: column;
-    min-height: 500px;
+    min-height: 575px;
     #newsletter-copy{
       margin:0px;
       padding: 0px;
-      min-height: 100px;
+      min-height: 175px;
+      
       h2{
         padding-top: $medium;
         font-size: $mobile_type1;

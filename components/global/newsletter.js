@@ -32,7 +32,7 @@ const Newsletter = () => {
   return(
   <section id="newsletter">
     <div id="newsletter-copy">
-      <h2>Newsletter</h2>
+      <h2>Newsletter.</h2>
       <p>Sign up for our Quarterly Newsletter and keep up to date with all things Modern-Shed.</p>
     </div>
 
