@@ -42,7 +42,7 @@ const MobileHamburgerNav = (props) => {
           <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
           <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
           <a href="https://twitter.com/modern_sheds?lang=en" target="_blank">Twitter</a>
-          <a href="/find-a-dealer" className="find-dealer-link-menu">Find A Dealer →</a>
+          <a href="/find-a-dealer" className="find-dealer-link-menu">Find A Dealer</a>
           </div>
         </section>
   
