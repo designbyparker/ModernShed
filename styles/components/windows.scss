@@ -147,11 +147,14 @@
   @media(min-width: 700px){
     display: none;
   }
-
+  @media(max-width: 700px){
+    padding: $small $small;
+  }
   padding: $medium $small;
 
   h2{
     font-size: $mobile_type1;
+    
   }
   p{
     color: $grey;

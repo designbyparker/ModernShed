@@ -71,6 +71,9 @@
   h2{
     padding: $medium $small;
     font-size: $mobile_type1;
+    @media(max-width:700px){
+      padding: $small;
+    }
   }
   h3{
     font-size: $mobile_type1;

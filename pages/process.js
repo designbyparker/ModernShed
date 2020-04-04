@@ -71,6 +71,8 @@ const Process = (props) => {
         image="/images/process/C_Process_Fabricate.jpg"
         alt="Lorem Ipsum"
         copy="The high-quality materials of your shed are constructed in our factory by our expert team. We create in panels to make on-site assembly easy on you."
+        id="border"
+
         />    
 
         <ProcessCard

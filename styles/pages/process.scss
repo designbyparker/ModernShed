@@ -122,11 +122,12 @@
   @media(min-width: 1100px){
     display: none;
   }
-  padding-top: $medium;
+  padding-top: $small;
   padding-bottom: $medium;
   margin-left: $small;
   margin-right: $small;
   @media(min-width: 700px) and (max-width: 1100px){
+    padding-top: $medium;
     margin-left: $tab_large;
     margin-right: $tab_large;
   }

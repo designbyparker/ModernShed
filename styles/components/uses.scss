@@ -146,6 +146,9 @@
   }
 
   #uses-img2-container{
+    @media(max-width: 700px){
+      padding-top: 0px;
+    }
     padding-top: $small;
     display: flex;
     place-items: center;
@@ -161,11 +164,14 @@
   .mobile-button-container{
     margin-left:0px;
     margin-top: $small;
-    margin-bottom: $xlarge;
+    margin-bottom: $large;
   }
 
   h2{
     font-size: $mobile_type1;
+    @media(max-width: 700px){
+      margin-bottom: $small;
+    }
     margin-bottom: $medium;
   }
   p{
