@@ -106,17 +106,16 @@
     padding: 0px;
     display: flex;
     flex-direction: column;
-    min-height: auto;
-
+    min-height: 500px;
     #newsletter-copy{
       margin:0px;
       padding: 0px;
+      min-height: 100px;
       h2{
         padding-top: $medium;
         font-size: $mobile_type1;
         margin:0px;
         padding-left: $small;
-        margin-bottom: $large;
       }
       p{
         display:none;
@@ -125,7 +124,9 @@
 
   #newsletter-form{
     display: flex;
+    grid-gap: 0%;
     flex-direction: column;
+    // justify-content: space-between;
     padding: 0px;
     margin:0px;
     h5{
@@ -135,12 +136,13 @@
       display: flex;
       flex-direction: column;
       padding-left: $small;
+      height: 100px;
       input{
         padding-top: $small;
         font-size: $mobile_type1;
-        width: calc(100vw - 65px);
+        width: calc(100vw - 45px);
         border-radius: 0;
-
+        min-height: 75px;
       }
       input::placeholder{
         padding:0px;
@@ -152,12 +154,19 @@
       input:focus{
         padding-left: 0px;
       }
+      input:last-of-type{
+        margin-bottom: $small;
+      }
       button{
         margin-top: $small;
-        margin-bottom: $medium;
+        padding-top: 0px;
         width: calc(100vw - 45px);
-        height: 75px;
+        min-height: 75px;
         font-size: $mobile_type1;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 0px;
       }
     }
   }
