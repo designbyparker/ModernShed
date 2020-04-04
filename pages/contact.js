@@ -93,13 +93,13 @@ const Contact = (props) => {
 
   const postContact = (c) => {
     c = JSON.stringify(c);
-    let url = 'http://www.spicyzen.com/ContactUs/CorsTest';
+    let url = 'http://www.spicyzen.com/api/data';
 
     superagent.post(url)
     .send(c)
     .set("Access-Control-Allow-Origin", "*")
     .then(result => {
-      console.log(result)
+      console.log(result.statusText)
     })
     .catch(error => {
       console.log(error);
