@@ -94,9 +94,11 @@
     place-content: center;
     .mobile-button-anchor{
       font-family: 'Lausanne';
-      font-size: $mobile_type1;
+      font-size: $tab_type3;
+      @media(max-width:700px){
+        font-size: $mobile_type3;
+      }
       color: $black;
-      font-size: $mobile_type1;
       text-decoration: none;
       padding-top: 5px;
     }

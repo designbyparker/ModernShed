@@ -42,10 +42,6 @@
       a{
         font-size: $type_3;
         text-decoration: none;
-        @media(max-width: 700px){
-          font-size: $tab_type3;
-          line-height: $tab_line3;
-        }
       }
       a:visited{
         color: $black;
@@ -79,7 +75,7 @@
       place-content: center;
 
       a{
-        font-size: $mobile_type1 !important;
+        font-size: $tab_type3;
       }
     }
   }
@@ -106,7 +102,7 @@
     padding-right: $small;
     font-size: $tab_type1;
     line-height: $tab_line1;
-    @media(max-height: 700px){
+    @media(max-width: 700px){
       font-size: $mobile_type1;
       line-height: $mobile_line1;
     }
