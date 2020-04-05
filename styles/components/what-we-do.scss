@@ -68,10 +68,19 @@
   background-color: $sky;
 
   h2, h3{
-    font-size: $mobile_type1;
-    padding:0px $small $small $small;
+    font-size: $tab_type1;
+    line-height: $tab_line1;
+    @media(max-width: 700px){
+      padding-left: $small;
+      padding-right: $small;
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
   }
-
+  h3{
+    padding-bottom: $small;
+    padding-top: $xsmall;
+  }
   h2{
     padding-top: $small;
   }
@@ -100,11 +109,10 @@
       padding-left: $tab_large;
       padding-right: $tab_large;
     }
-    h2{
-      padding-bottom: $small;
-    }
     p{
       padding: $medium $tab_large;
+      font-size: $tab_type2;
+      line-height: $tab_line2;
     }
   }
 }
