@@ -210,18 +210,24 @@
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 10vh;
+    height: calc(3em + 60px);
+    @media(max-width: 700px){
+      height: calc(30px + 35px);
+      background-color: $cloud;
+      opacity: 0.9;
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
+
     img{
       width: 30px;
-      height: auto;
+      height: 30px;
       padding-top: $small;
       padding-left: $small;
       @media(max-width: 1100px) and (min-width: 700px){
         width: 3em;
-        height: auto;
+        height: 3em;
         padding-top:$medium;
         paddingleft: $medium;
       }
