@@ -1,53 +1,54 @@
-// Brand Colors
-$cloud : #e3e1da;
-$midnight : #222329;
-$sun : #efb546;
-$sky : #8cbdbf;
+$cloud: #e3e1da;
+$midnight: #222329;
+$sun: #efb546;
+$sky: #8cbdbf;
 
 
-
-// Type Colors
 $black: $midnight;
 $white: #fff;
 $grey: #999999;
 
 
-// Type Sizes
-$type_1 : 50px;
+$type_1: 50px;
 $line_1: 51px;
 $type_2: 20px;
-$line_2: 24px;
+$line_2: 25px;
 $type_3: 24px;
 $line_3: 26.5px;
 $type_4: 14px;
 
 
+$mobile_type1: 28px;
+$mobile_line1: 31px;
+$mobile_type2: 14px;
+$mobile_line2: 20px;
+$mobile_type3: 24px;
+$mobile_line3: 28px;
 
-$mobile_type1: 40px;
-$mobile_line1: 40px;
-$mobile_type2: 21px;
-$mobile_line2: 28px;
-$mobile_type3: 1.5em;
+
+$tab_type1: 40px;
+$tab_line1: 44px;
+$tab_type2: 18px;
+$tab_line2: 25px;
+$tab_type3: 24px;
+$tab_line3: 28px;
 
 
-
-// margins
-$xsmall : 15px;
-$small : 25px;
-$medium : 40px;
+$xsmall: 15px;
+$small: 25px;
+$medium: 40px;
 $large: 80px;
 $xlarge: 100px;
-
-
 $tab_large: 98px;
 $mobile_p: 65px;
 
-// Borders
+
 .right-border{
   margin-top: $small;
   border-right: 0.08em solid $midnight;
   margin-bottom: $small;
 }
+
 
 .left-border{
   margin-top: $small;

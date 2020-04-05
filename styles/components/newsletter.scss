@@ -38,6 +38,7 @@
       font-size: $type_1;
       font-family: 'Lausanne';
       background-color: $cloud;
+      border-radius: 0px;
     }
     input:focus{
       outline: none;
@@ -100,6 +101,7 @@
     }
     #newsletter-copy{
       padding-right: 0px;
+      height: 100px;
       p{
         display: none;
       }
@@ -107,8 +109,12 @@
     #newsletter-form{
       padding-left: $small;
       border-left: 0px;
+      height: 200px;
+
       input{
         width: calc(100vw - 50px);
+        height: 75px;
+        border-radius:0px;
       }
     }
   }

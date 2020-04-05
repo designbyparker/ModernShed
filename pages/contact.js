@@ -14,11 +14,12 @@ const Contact = (props) => {
 
   const [interest, setInterest] = useState();
   const [connect, setConnect] = useState(null);
-  const [fields, setFields] = useState({});
   const [size, setSize] = useState(null);
   const [time, setTime] = useState(null);
   const [heard, setHeard] = useState(null);
-
+  const [name, setName] = useState(false);
+  const [zip, setZip] = useState(false);
+  const [email, setEmail] = useState(false);
 
 
 
@@ -63,10 +64,6 @@ const Contact = (props) => {
     return setTime(time);
   }
 
-  const handlePdfDownload = (e) => {
-    console.log('click')
-  }
-
   const handleHeard = (e) => {
     setHeard(e.target.value);
   }
@@ -101,10 +98,39 @@ const Contact = (props) => {
     .set('Content-Type', 'application/json')
     .then(result => {
       console.log(result)
+      if(result.statusText === "OK"){
+       return allowDownload();
+      }
     })
     .catch(error => {
       console.log(error);
     })
+  }
+
+
+  const handleZipChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setZip(true) : setZip(false);
+  }
+
+  const handleNameChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setName(true) : setName(false);
+  }
+
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setEmail(true) : setEmail(false);
+  }
+
+  const allowDownload = () => {
+    console.log('allow download');
+  }
+
+  if(name && email && zip){
+    console.log('allow submit');
+  }else{
+    console.log('dont-allow submit');
 
   }
 
@@ -164,7 +190,7 @@ const Contact = (props) => {
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
             <div id="label-margin">
               <label>FIRST NAME</label>
-              <input placeholder="First Name" type="text" id="FirstName" required={true} />
+              <input placeholder="First Name" type="text" id="FirstName" required={true} onChange={handleNameChange} />
             </div>
 
             <div id="label-margin">
@@ -174,12 +200,12 @@ const Contact = (props) => {
 
             <div id="label-margin">
               <label>EMAIL ADDRESS</label>
-            <input placeholder="Email" type="text" id="Email" required={true} />
+            <input placeholder="Email" type="text" id="Email" required={true} onChange={handleEmailChange}/>
             </div>
 
             <div id="label-margin">
               <label>ZIP CODE</label>
-              <input placeholder="00000" type="text" id="ZipCode" required={true}/>
+              <input placeholder="00000" type="text" id="ZipCode" required={true} onChange={handleZipChange}/>
             </div>
 
 
@@ -265,9 +291,9 @@ const Contact = (props) => {
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
             
-          <button type="submit" className="primary-button" >Get in Contact →</button>
-          <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF ↓ </button>
-
+          <button type="submit" id="contact-submit" className="primary-button" disabled>Get in Contact →</button>
+          {/* <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button" >Download PDF ↓ </button> */}
+              <a href="./catalog/website.pdf" download>Download</a>
           </form>
         </section>
     </section>
