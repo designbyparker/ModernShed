@@ -3,6 +3,8 @@
   margin-left: $medium;
   margin-bottom: 20vh;
   @media(max-width: 1100px)and(min-width: 700px){
+  font-size: $tab_type1;
+  line-height: $tab_line1;
   margin-bottom: $small;
   margin-left: $tab_large;
 }
@@ -57,7 +59,8 @@
   li{
     border-left: 2px solid $grey;
     padding-left: $small;
-    font-size: $type_2;;
+    font-size: $type_2;
+    line-height: $line_2;
     line-height: 1.1em;
     color: $grey;
     font-family:'Lausanne';
@@ -69,6 +72,7 @@
     font-family: 'Lausanne';
     text-decoration: none;
     font-size: $type_2;
+    line-height: $line_2;
   }
   a:hover{
     color: #929292;
@@ -99,8 +103,12 @@
   margin-left: $small;
   margin-right: $small;
   h2, h3{
-    line-height: $mobile_line2;
-    font-size: $mobile_type2;
+    line-height: $tab_line2;
+    font-size: $tab_type2;
+    @media(max-width: 700px){
+      line-height: $mobile_line2;
+      font-size: $mobile_type2;
+    }
   }
   #mobile-size-img-container{
     padding-top: $small;
@@ -115,8 +123,12 @@
     }
   }
   p{
-    font-size: $mobile_type2;
-    line-height: $mobile_line2;
+    font-size: $tab_type2;
+    line-height: $tab_line2;
+    @media(max-width: 700px){
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
     color: $grey;
     padding: $small $medium;
 

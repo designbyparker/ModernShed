@@ -94,8 +94,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     p{
-      font-size: $mobile_type2;
-      line-height: $mobile_line2;
+      font-size: $tab_type2;
+      line-height: $tab_line2;
       color: $grey;
       padding-bottom: $large;
     }
@@ -137,12 +137,12 @@
 
       h4{
         font-family: 'Lausanne';
-        font-size: $mobile_type2;
+        font-size: $tab_type2;
         padding-bottom: $small;
       }
       p{
-        font-size: $mobile_type2;
-        line-height: $mobile_line2;
+        font-size: $tab_type2;
+        line-height: $tab_line2;
         color:$grey;
       }
 

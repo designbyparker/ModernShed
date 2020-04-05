@@ -97,12 +97,21 @@
     grid-template-columns: 1fr 1fr;
     }
     h2{
-      font-size: $mobile_type1;
+      font-size: $tab_type1;
+      line-height: $tab_line1;
       padding-bottom: $medium;
+      @media(max-width: 700px){
+        font-size: $mobile_type1;
+        line-height: $mobile_line1;
+      }
     }
     p{
-      font-size: $mobile_type2;
-      line-height: $mobile_line2;
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+      @media(max-width: 700px){
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
       color: $grey;
       padding-bottom: $large;
     }
@@ -151,12 +160,16 @@
       h4{
         margin-top: $small;
         font-family: 'Lausanne';
-        font-size: $mobile_type2;
+        font-size: $tab_type2;
         margin-bottom: $small;
         @media(max-width: 700px){
+        font-size: $mobile_type2;
         padding-left: $xsmall;
         margin-top: $xsmall;
         }
+      }
+      .material-desc{
+        color: $grey;
       }
       @media(max-width: 700px){
         grid-column: 2/3;
@@ -170,6 +183,12 @@
   }
   .mobile-button-container{
     margin-left: 0px;
+    .mobile-button-anchor{
+      font-size: $tab_type3;
+      @media(max-width: 700px){
+        font-size: $mobile_type3;
+      }
+    }
   }
   @media(max-width: 700px){
     background-color: $cloud;
