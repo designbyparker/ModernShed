@@ -95,7 +95,7 @@
   margin-left: $xsmall;
   padding-top: $medium;
   margin-right: $medium;
-  border-top: 0.08em solid $midnight;
+  border-top: 2px solid $midnight;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   
@@ -143,7 +143,7 @@
     }
 
     height: $line_1;
-    border-bottom: 1px solid $grey;
+    border-bottom: 2px solid $grey;
     padding-top: $small;
   }
 
@@ -167,6 +167,7 @@
       position: absolute;
       right: $medium;
       width: 20px;
+     
       @media(max-width: 700px){
         right: $small;
       }
@@ -177,13 +178,19 @@
     input[type=radio]:focus{
       outline: $sun auto 3px;
     }
-
+    input[type=radio]:hover{
+      cursor: pointer;
+      color: $black;
+    }
     input[type=radio]:focus + label{
       color: $black;
     }
 
     input[type=radio]:checked + label{
       color: $black;
+      @media(max-width: 1100px){
+        color: $black !important;
+      }
     }
 
     label{
@@ -191,6 +198,10 @@
       font-size: $type_1;
       display: flex;
       order: 1;
+      }
+      label:hover{
+        cursor: pointer;
+        color: $black;
       }
     
     }
@@ -204,7 +215,7 @@
 
   margin-left: $xsmall;
   margin-right: $medium;
-  border-top: 0.08em solid $midnight;
+  border-top: 2px solid $midnight;
   @media(min-width: 700px) and (max-width: 1100px){
     width: calc(100vw - 196px) !important;
     margin-left: $tab_large !important;
@@ -244,11 +255,12 @@
       letter-spacing: 0.75px;
     }
     input{
+      height: 70px;
       background-color: $cloud;
       border-top-style: hidden;
       border-right-style: hidden;
       border-left-style: hidden;
-      border-bottom: 1px solid $grey;
+      border-bottom: 2px solid $grey;
       font-size: $type_1;
       @media(max-width: 1100px) and (min-width: 700px){
         width: calc(100vw - 196px);
@@ -291,7 +303,7 @@
       border-top-style: hidden;
       border-right-style: hidden;
       border-left-style: hidden;
-      border-bottom: 1px solid $grey;
+      border-bottom: 2px solid $grey;
       resize: none;
       height: 350px;
       font-size: $type_1;
@@ -323,6 +335,8 @@
       color:#bab9b5;
     }
   }
+
+
   button{
     cursor: pointer;
     margin-top: $medium;
@@ -339,13 +353,89 @@
     outline: none;
   }
 
+  .enabled{
+    font-size: $type_1;
+    height: 104px;
+    width: 100%;
+    background-color: $sky;
+    @media(max-width: 1100px){
+      font-size: $tab_type1;
+    }
+    @media(max-width: 700px){
+      font-size: $mobile_type1;
+    }
+  }
+
+  .disabled{
+    cursor: not-allowed;
+    font-size: $type_1;
+    color: $grey;
+    height: 104px;
+    width: 100%;
+    background-color: $sky;
+    @media(max-width: 1100px){
+      font-size: $tab_type1;
+    }
+    @media(max-width: 700px){
+      font-size: $mobile_type1;
+    }
+  }
+
+  .enabled-download{
+    cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: calc(50vw - 96px);
+    font-size: $type_1;
+    color: $grey;
+    height: 104px;
+    background-color: $sun;
+    @media(max-width: 1100px){
+      width: calc(100vw - 196px);
+      font-size: $tab_type1;
+    }
+    @media(max-width: 700px){
+      width: calc(100vw - 50px);
+      font-size: $mobile_type1;
+    }
+    a{
+      text-decoration: none;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+
+  .disabled-download{
+    cursor: not-allowed;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: calc(50vw - 96px);
+    font-size: $type_1;
+    color: $grey;
+    height: 104px;
+    background-color: $sun;
+    @media(max-width: 1100px){
+      width: calc(100vw - 196px);
+      font-size: $tab_type1;
+    }
+    @media(max-width: 700px){
+      width: calc(100vw - 50px);
+      font-size: $mobile_type1;
+    }
+    a{
+      text-decoration: none;
+      color: $grey;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
   #label-margin{
     margin-top: 10px;
   }
   
-  #pdf-button{
-    margin-top: $small;
-  }
 
   @media(max-width: 1100px){
     width: calc(100vw - 50px);
@@ -369,7 +459,7 @@
 }
 
 #contact-details-container{
-  border-top: 1px solid $midnight;
+  border-top: 2px solid $midnight;
 }
 
 #contact-details{
@@ -406,6 +496,9 @@
 
     .radio-box:hover{
       background-color: $sun;
+      label{
+        color: $on_yellow;
+      }
     }
 
     .check-on{
@@ -420,10 +513,9 @@
     .radio-box{
       width: 100%;
       height: 80px;
-      border-top: 1px solid $grey;
-      border-left: 1px solid $grey;
-      border-bottom: 1px solid $grey;
-      // font-size: $mobile_type1 !important;
+      border-top: 2px solid $grey;
+      border-left: 2px solid $grey;
+      border-bottom: 2px solid $grey;
       display: flex;
       justify-content: flex-start ;
  
@@ -431,6 +523,13 @@
       opacity: 0;
       width: 0px;
       margin: 0px;
+    }
+    label{
+      font-size: $type_3;
+      color: #bab9b5;
+      padding-left: $xsmall;
+      padding-top: 50px;
+      cursor: pointer;
     }
 
     input[type=radio]:focus + label{
@@ -440,18 +539,16 @@
     input[type=radio]:checked + label{
       color: $black;
     }
-      label{
-        font-size: $type_3;
-        padding-left: $xsmall;
-        padding-top: 50px;
-        cursor: pointer;
-      }
+    input[type=radio]:hover + label{
+      color: $on_yellow;
+    }
+
     }
 
 
 
      .border-bottom{
-       border-bottom: 1px solid $grey;
+       border-bottom: 2px solid $grey;
      }
 
      .border-left{
@@ -459,11 +556,11 @@
      }
 
      .border-right{
-       border-right: 1px solid $grey;
+       border-right: 2px solid $grey;
      }
 
      .border-top{
-       border-top: 1px solid $grey;
+       border-top: 2px solid $grey;
      }
     
  

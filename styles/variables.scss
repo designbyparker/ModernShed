@@ -7,7 +7,8 @@ $sky: #8cbdbf;
 $black: $midnight;
 $white: #fff;
 $grey: #999999;
-
+$placeholder: #bab9b5;
+$on_yellow:#785a23;
 
 $type_1: 50px;
 $line_1: 51px;
@@ -45,13 +46,13 @@ $mobile_p: 65px;
 
 .right-border{
   margin-top: $small;
-  border-right: 0.08em solid $midnight;
+  border-right: 2px solid $midnight;
   margin-bottom: $small;
 }
 
 
 .left-border{
   margin-top: $small;
-  border-left: 0.08em solid $midnight;
+  border-left: 2px solid $midnight;
   margin-bottom: $small;
 }

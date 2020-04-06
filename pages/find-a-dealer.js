@@ -13,6 +13,7 @@ const FindADealer = () => {
     e.preventDefault();
     console.log('zip code',e.target.ZipCode.value);
     superagent.get(`https://modern-shed.com/contactus/getdealers?zipcode=${e.target.ZipCode.value}`)
+    .set('Access-Control-Allow-Origin', '*')
     .then(response => {
       console.log(response);
     })

@@ -34,11 +34,11 @@
       width: calc(50vw - 50px);
       margin: 0px;
       border: 0px;
-      border-bottom: 2px solid $grey;
       font-size: $type_1;
       font-family: 'Lausanne';
       background-color: $cloud;
       border-radius: 0px;
+      border-bottom: 2px solid $grey;
     }
     input:focus{
       outline: none;
@@ -115,6 +115,7 @@
           width: calc(100vw - 80px);
           height: 75px;
           border-radius:0px;
+          border-bottom: 2px solid $grey;
         }
       }
 

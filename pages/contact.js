@@ -7,6 +7,7 @@ import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
+import ReactDOMServer from 'react-dom/server'
 import '../styles/theme.css';
 
 
@@ -20,8 +21,10 @@ const Contact = (props) => {
   const [name, setName] = useState(false);
   const [zip, setZip] = useState(false);
   const [email, setEmail] = useState(false);
-
-
+  const [contactClass, setContactClass] = useState('disabled');
+  const [downloadClass, setDownloadClass] = useState('disabled-download');
+  const [contactState, setContactState] = useState('disabled');
+  const [contactBtnTxt, setContactBtnTxt] = useState('Get in Contact →')
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -99,7 +102,7 @@ const Contact = (props) => {
     .then(result => {
       console.log(result)
       if(result.statusText === "OK"){
-       return allowDownload();
+       return enableDownload()
       }
     })
     .catch(error => {
@@ -107,32 +110,40 @@ const Contact = (props) => {
     })
   }
 
+  const enableDownload = () => {
+    console.log('inside enabled downloadd');
+    setContactBtnTxt('Sent!');
+    setDownloadClass('enabled-download');
+  }
 
   const handleZipChange = (e) => {
     e.preventDefault();
     e.target.value.length > 0 ? setZip(true) : setZip(false);
+    return checkState();
   }
 
   const handleNameChange = (e) => {
     e.preventDefault();
     e.target.value.length > 0 ? setName(true) : setName(false);
+    return checkState();
   }
 
   const handleEmailChange = (e) => {
     e.preventDefault();
     e.target.value.length > 0 ? setEmail(true) : setEmail(false);
+    return checkState();
   }
 
-  const allowDownload = () => {
-    console.log('allow download');
+  const checkState = () => {
+    if(name && email && zip){
+      setContactState(false);
+      setContactClass('enabled');
+      }else{
+      setContactState('disabled');
+      setContactClass('disabled');
+    }
   }
-
-  if(name && email && zip){
-    console.log('allow submit');
-  }else{
-    console.log('dont-allow submit');
-
-  }
+  console.log(contactState);
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
@@ -226,17 +237,17 @@ const Contact = (props) => {
                <div className="radio-btn-container" >
                 <div className="radio-box border-bottom border-left border-top size-radio" id="radio-small">
                   <input type="radio" id="small" name="shed-size" onChange={handleSizeChange} />
-                  <label htmlFor="small">Small</label>
+                  <label htmlFor="small">SM</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-medium">
                   <input type="radio" id="medium" name="shed-size" onChange={handleSizeChange}/>
-                  <label htmlFor="medium">Medium</label>
+                  <label htmlFor="medium">MED</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-large" >
                   <input type="radio" id="large" name="shed-size" onChange={handleSizeChange}/>
-                  <label htmlFor="large">Large</label>
+                  <label htmlFor="large">LG</label>
                 </div>
               
               </div>
@@ -291,9 +302,10 @@ const Contact = (props) => {
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
           </div>
             
-          <button type="submit" id="contact-submit" className="primary-button" disabled>Get in Contact →</button>
-          {/* <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button" >Download PDF ↓ </button> */}
-              <a href="./catalog/website.pdf" download>Download</a>
+            <button type="submit" id="contact-submit" className={contactClass} disabled={contactState}>{contactBtnTxt}</button>
+          <div  className={downloadClass} >
+            <a href="./catalog/website.pdf"download>Download PDF ↓</a>
+          </div>
           </form>
         </section>
     </section>
