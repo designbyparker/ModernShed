@@ -5,6 +5,7 @@ import MobileProcessCard from '../components/process/mobile-process-card';
 import ContactCTA from '../components/global/contact-cta';
 import MobileContactCTA from '../components/global/mobile-contact-cta';
 import ProcessHero from '../components/global/page-hero';
+import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 import MobileFooter from '../components/global/mobile-footer';
 import Head from 'next/head'
@@ -97,6 +98,7 @@ const Process = (props) => {
       {/* <FeaturedShedsCarousel featured={props.sheds} />  */}
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
+      <Newsletter/>
       <Footer/>
       <MobileFooter/>
     </section>

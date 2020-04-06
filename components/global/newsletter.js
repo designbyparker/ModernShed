@@ -7,18 +7,34 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
-    console.log('in submit', e.target.zip.value);
     e.preventDefault();
     
+    let emailreg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
+    let email = e.target.email.value;
+
+    let zipreg = /^(\d{5}((|-)-\d{4})?)|([A-Za-z]\d[A-Za-z][\s\.\-]?(|-)\d[A-Za-z]\d)|[A-Za-z]{1,2}\d{1,2}[A-Za-z]? \d[A-Za-z]{2}$/
+    let zip = e.target.zip.value
+
+
     let payload = {
-      ZipCode: e.target.zip.value,
-      Email: e.target.email.value
+      ZipCode: zip,
+      Email: email
     }
     payload = JSON.stringify(payload);
-    return callNewsletter(payload)
-
-
+    email.match(emailreg) && zip.match(zipreg) ? callNewsletter(payload) : notAMatch();
   }
+
+  const notAMatch = () => {
+    alert('Either the Email or Zip Code provided was invalid');
+  }
+  
+
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    let email = e.target.value;
+    let reg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
+  }
+
 
   const callNewsletter = async (payload) => {
     console.log(payload);
@@ -44,7 +60,7 @@ const Newsletter = () => {
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Email" name="email" id="email" required={true}/>
+        <input placeholder="Email" name="email" id="email" required={true} onChange={handleEmailChange}/>
         <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
         <button type="submit" className="primary-button">Sign Up →</button>
       </form>

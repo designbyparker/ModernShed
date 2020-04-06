@@ -110,12 +110,14 @@
       padding-left: $small;
       border-left: 0px;
       height: 200px;
-
-      input{
-        width: calc(100vw - 50px);
-        height: 75px;
-        border-radius:0px;
+      form{
+        input{
+          width: calc(100vw - 80px);
+          height: 75px;
+          border-radius:0px;
+        }
       }
+
     }
   }
 }

@@ -12,7 +12,15 @@ const FindADealer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('zip code',e.target.ZipCode.value);
+    superagent.get(`https://modern-shed.com/contactus/getdealers?zipcode=${e.target.ZipCode.value}`)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
+
 
   return(
    <> 

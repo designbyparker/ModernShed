@@ -52,7 +52,7 @@ a{
   text-decoration: none;
   font-family: 'Lausanne';
   font-size: $type_3;
-  line-height: $type_3;
+  line-height: $line_3;
   padding-top: 10px;
 }
 a:visited{
@@ -71,7 +71,8 @@ a:active{
     justify-content: flex-start;
     padding-left: 7px;
     a{
-      padding-bottom: 7px;
+      font-size: $tab_type3;
+      line-height: $tab_line3;
     }
     div{
       margin-top: $medium;
@@ -142,7 +143,7 @@ a:active{
 
   .mobile-section-header{
     color: $grey;
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: $small;
   }
 
@@ -155,8 +156,9 @@ a:active{
       color: $white;
       font-family: 'Lausanne';
       text-decoration: none;
-      padding-bottom: 15px;
-      font-size: $mobile_type2;
+      padding-bottom: 6px;
+      font-size: $mobile_type3;
+      line-height: $mobile_line3;
     }
   }
 
