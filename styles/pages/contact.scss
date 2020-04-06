@@ -175,23 +175,6 @@
         right: $tab_large;
       }
     }
-    input[type=radio]:focus{
-      outline: $sun auto 3px;
-    }
-    input[type=radio]:hover{
-      cursor: pointer;
-      color: $black;
-    }
-    input[type=radio]:focus + label{
-      color: $black;
-    }
-
-    input[type=radio]:checked + label{
-      color: $black;
-      @media(max-width: 1100px){
-        color: $black !important;
-      }
-    }
 
     label{
       color: #bab9b5;
@@ -204,6 +187,22 @@
         color: $black;
       }
     
+    }
+
+
+    input[type=radio]:focus{
+      outline: $sun auto 3px;
+    }
+    input[type=radio]:hover{
+      cursor: pointer;
+      color: $black;
+    }
+    input[type=radio]:focus + label{
+      color: $black;
+    }
+
+    input[type=radio]:checked + label{
+      color: $black !important;
     }
 }
 
@@ -253,6 +252,19 @@
       font-size: $type_4;
       color: $grey;
       letter-spacing: 0.75px;
+    }
+    #zip-error{
+      color: red;
+    }
+    #no-zip-error{
+      color: $grey;
+    }
+
+    #email-error{
+      color: red;
+    }
+    #no-email-error{
+      color: $grey;
     }
     input{
       height: 70px;
@@ -432,6 +444,14 @@
     }
   }
 
+  .error{
+    margin-top: $small;
+    color: red;
+  }
+  .no-error{
+    display: none;
+  }
+
   #label-margin{
     margin-top: 10px;
   }
@@ -497,7 +517,7 @@
     .radio-box:hover{
       background-color: $sun;
       label{
-        color: $on_yellow;
+        color: $black;
       }
     }
 
@@ -537,10 +557,10 @@
     }
 
     input[type=radio]:checked + label{
-      color: $black;
+      color: $black !important;
     }
     input[type=radio]:hover + label{
-      color: $on_yellow;
+      color: $black;
     }
 
     }

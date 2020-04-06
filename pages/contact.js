@@ -25,6 +25,8 @@ const Contact = (props) => {
   const [downloadClass, setDownloadClass] = useState('disabled-download');
   const [contactState, setContactState] = useState('disabled');
   const [contactBtnTxt, setContactBtnTxt] = useState('Get in Contact →')
+  const [error, setError] = useState('no-error');
+
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -74,6 +76,9 @@ const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    let zipcode = checkZip(e.target.ZipCode.value);
+    let emailadd = checkEmail(e.target.Email.value);
+
     const fields = {
         Interest: interest || null,
         FirstName: e.target.FirstName.value,
@@ -87,12 +92,23 @@ const Contact = (props) => {
         Timeframe: time || null,
       }
 
-    return postContact(fields);
+      zipcode ? setZip('no-zip-error') : setZip('zip-error')
+      emailadd ? setEmail('no-email-error') : setEmail('email-error');
+      zipcode && emailadd ? postContact(fields)  : setError('error');
   }
 
+  const checkEmail = (email) => {
+    let reg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
+    return email.match(reg);
+  }
+  const checkZip = (zip) => {
+    let reg = /^(\d{5}((|-)-\d{4})?)|([A-Za-z]\d[A-Za-z][\s\.\-]?(|-)\d[A-Za-z]\d)|[A-Za-z]{1,2}\d{1,2}[A-Za-z]? \d[A-Za-z]{2}$/
+    return zip.match(reg);
+  }
 
   const postContact = (c) => {
     c = JSON.stringify(c);
+    setError('no-error');
     let url = 'https://www.modern-shed.com/api/contact';
 
     superagent.post(url)
@@ -210,12 +226,12 @@ const Contact = (props) => {
             </div>
 
             <div id="label-margin">
-              <label>EMAIL ADDRESS</label>
+              <label id={email}>EMAIL ADDRESS</label>
             <input placeholder="Email" type="text" id="Email" required={true} onChange={handleEmailChange}/>
             </div>
 
             <div id="label-margin">
-              <label>ZIP CODE</label>
+              <label id={zip}>ZIP CODE</label>
               <input placeholder="00000" type="text" id="ZipCode" required={true} onChange={handleZipChange}/>
             </div>
 
@@ -299,13 +315,14 @@ const Contact = (props) => {
 
           <div id="label-margin" className="add-comments-section" >
             <label >ADDITIONAL COMMENTS (OPTIONAL) </label>
-            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
+            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm" maxlength="250"></textarea>
           </div>
-            
             <button type="submit" id="contact-submit" className={contactClass} disabled={contactState}>{contactBtnTxt}</button>
-          <div  className={downloadClass} >
-            <a href="./catalog/website.pdf"download>Download PDF ↓</a>
-          </div>
+            <div  className={downloadClass} >
+             <a href="./catalog/ModernShed_Catalog.pdf" download>Download PDF ↓</a>
+            </div>
+            <p className={error}>* Either the zip code or email address provided was invalid.</p>
+
           </form>
         </section>
     </section>
