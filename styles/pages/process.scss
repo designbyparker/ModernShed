@@ -36,6 +36,9 @@
     grid-area: step;
     padding-right: $small;
     border-right: 2px solid $black;
+    h3{
+      color: $grey;
+    }
   }
   #process-image-container{
 
@@ -76,6 +79,9 @@
     margin-left: $medium;
     grid-area: step;
     border-right: 2px solid $black;
+    h3{
+      color: $grey;
+    }
   }
 
   #process-image-container{
@@ -138,6 +144,9 @@
     h2, h3{
       font-size: $mobile_type2;
       line-height: $mobile_line2;
+    }
+    h3{
+      color: $grey;
     }
     margin-bottom: $small;
 

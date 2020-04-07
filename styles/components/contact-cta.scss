@@ -23,6 +23,9 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   padding-right: $medium;
+  h3{
+    color: $on_yellow;
+  }
 
   div{
     margin-top: $medium;
