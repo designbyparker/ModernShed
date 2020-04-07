@@ -379,7 +379,7 @@
   .disabled{
     cursor: not-allowed;
     font-size: $type_1;
-    color: $grey;
+    color: #547f7f;
     height: 104px;
     width: 100%;
     background-color: $sky;
@@ -423,7 +423,7 @@
     align-items: center;
     width: calc(50vw - 96px);
     font-size: $type_1;
-    color: $grey;
+    color:  #b27e34;
     height: 104px;
     background-color: $sun;
     @media(max-width: 1100px){
