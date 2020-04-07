@@ -314,7 +314,7 @@ const Contact = (props) => {
 
           <div id="label-margin" className="add-comments-section" >
             <label >ADDITIONAL COMMENTS </label>
-            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm" maxlength="250"></textarea>
+            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm" maxLength="250"></textarea>
           </div>
             <button type="submit" id="contact-submit" className={contactClass} disabled={contactState}>{contactBtnTxt}</button>
             <div  className={downloadClass} >
