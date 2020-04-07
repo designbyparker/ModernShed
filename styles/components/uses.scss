@@ -93,7 +93,7 @@
     padding-top: $medium;
     margin-bottom: $medium;
     #tailored-h2{
-      margin-top: $medium;
+      margin-top: $small;
       font-size: $type_1;
       color: $black;
       font-family: 'Lausanne';
@@ -109,14 +109,15 @@
   #tailored-right-col{
    margin-right: $medium;
    margin-bottom: $medium;
-   padding-top: $small;
    height: auto;
    place-items: center;
+   padding-top: $medium;
    img{
      width: calc(100% - 15px);
      height: 100%;
      object-fit: contain;
      padding-left: $xsmall;
+     margin-top:$small;
    }
     
 
