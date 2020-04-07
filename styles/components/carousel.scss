@@ -30,10 +30,13 @@
 }
 
 #mobile-carousel{
-  display:block ;
+  // display:block ;
   width: 100vw;
   height: 100vh;
   place-items: center;
+  position: relative;
+  top: 0px;
+  left:0px;
   .mobile-carousel-image{ 
   object-fit: cover;
   width: 100vw;
