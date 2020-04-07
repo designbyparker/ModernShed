@@ -550,6 +550,7 @@
       color: #bab9b5;
       cursor: pointer;
       padding-left: 10px;
+
     }
 
     input[type=radio]:focus + label{
@@ -607,6 +608,10 @@
          margin-left:0px;
          padding:$xsmall;
          font-size: $mobile_type1;
+
+          padding-left:7px;
+          padding-bottom:5px;
+       
        }
        input{
          width: 0px;
