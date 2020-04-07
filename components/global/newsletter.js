@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 const Newsletter = () => {
   const [zip, setZip] = useState('');
   const [email, setEmail] = useState('');
+  const [buttonText, setButtonText] = useState('Sign Up →')
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,12 +30,6 @@ const Newsletter = () => {
   }
   
 
-  const handleEmailChange = (e) => {
-    e.preventDefault();
-    let email = e.target.value;
-    let reg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
-  }
-
 
   const callNewsletter = async (payload) => {
     console.log(payload);
@@ -43,7 +38,8 @@ const Newsletter = () => {
     .set('Content-Type', 'application/json')
     .send(payload)
     .then(result => {
-      console.log(result.body);
+      console.log('result, ', result)
+      result.statusCode === 200 ? setButtonText('Thanks!') : notAMatch();
     })
     .catch(error => {
       console.log(error);
@@ -60,9 +56,9 @@ const Newsletter = () => {
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Email" name="email" id="email" required={true} onChange={handleEmailChange}/>
+        <input placeholder="Email" name="email" id="email" required={true} />
         <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
-        <button type="submit" className="primary-button">Sign Up →</button>
+        <button type="submit" className="primary-button">{buttonText}</button>
       </form>
     </div>
   </section>

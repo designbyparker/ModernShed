@@ -4,9 +4,9 @@ const Nav = () => {
   return(
   <section id="nav-section">
     <div id="wordmark-container">
-      <Link href="/">
+      <a href="/">
           <img className="wordmark" id="nav-left" src="/graphics/small-wordmark-white.svg" alt="Modern Shed Wordmark" />
-      </Link>
+      </a>
     </div>
 
    <ul id="nav-right">

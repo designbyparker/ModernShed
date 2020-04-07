@@ -1,18 +1,22 @@
 #nav-section{
-  width: 98vw;
+  width: 100vw;
+  height: 125px;
   display: grid;
   grid-template-rows: 100px;
-  grid-template-columns: 65% auto;
+  grid-template-columns: 60% auto;
   position: absolute;
   z-index: 5;
-  margin-left: $small;
-  margin-right: $small;
+
+
+  background-color: rgba($color: #000000, $alpha: 0.08); 
   .wordmark{
     padding-top: $small;
     height: 75px;
     width: auto;
+    padding-left: $small;
   }
   ul{
+    padding-right: $small;
     cursor: pointer;
     padding-top: $small;
     font-family: 'Lausanne';
