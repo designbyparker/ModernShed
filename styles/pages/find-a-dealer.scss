@@ -37,6 +37,7 @@
         font-family: 'Lausanne';
       }
       input{
+        height: 75px;
         background-color: $cloud;
         border-top-style: hidden;
         border-right-style: hidden;
@@ -46,6 +47,7 @@
         width: calc(50vw - 60px);
         margin-bottom: $medium;
         margin-top: $xsmall;
+        border-radius:0px;
       }
       input:focus{
         outline: none;
@@ -68,8 +70,11 @@
     }
 
     .results-card{
-      border-bottom: 2px solid $grey;
-    
+     border-bottom: 2px solid $grey;
+      @media(max-width:700px){
+        border-bottom: 0px;
+      }
+
     .dealer-info{
       height: 75px;
       border-top: 2px solid $grey;
@@ -119,6 +124,9 @@
       margin-left: $small;
       width: calc(100vw - 50px);
       form{
+        input{
+          width: calc(100vw - 80px);
+        }
         button{
           margin-top: 0px;
         }
