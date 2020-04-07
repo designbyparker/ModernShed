@@ -30,7 +30,8 @@
     flex-direction: column;
     justify-content: space-between;
     input{
-      height: 100px;
+      height: 70px;
+      padding-top: 10px;
       width: calc(50vw - 50px);
       margin: 0px;
       border: 0px;
@@ -84,7 +85,9 @@
         padding-right: $small;
         input{
           width: calc(50vw - 35px);
-          font-size: $mobile_type1;
+          font-size: $tab_type1;
+          line-height: $tab_line1;
+          height: 65px;
         }
         button{
           font-size: $mobile_type1;
@@ -113,9 +116,11 @@
       form{
         input{
           width: calc(100vw - 80px);
-          height: 75px;
+          height: 60px;
           border-radius:0px;
           border-bottom: 2px solid $grey;
+          font-size: $mobile_type1;
+          line-height: $mobile_line1;
         }
       }
 
