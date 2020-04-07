@@ -5,14 +5,22 @@ import Hero from '../components/global/page-hero';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import Head from 'next/head';
 import superagent from 'superagent';
-
 import '../styles/theme.css';
 
 const FindADealer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('zip code',e.target.ZipCode.value);
+    superagent.get('https://modern-shed.com/contactus/getdealers')
+    .query({zipcode: e.target.ZipCode.value})
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
+
 
   return(
    <> 

@@ -31,14 +31,22 @@
     .primary-title{
       margin-top: $small;
       color: $black;
-      font-size: $type_2;
-      line-height: $type_2;
     }
     .secondary-title{
       padding-top: 5px;
       color: $grey;
+    }
+    p{
       font-size: $type_2;
-      line-height: $type_2;
+      line-height: $line_2;
+      @media(max-width: 1100px){
+        font-size: $tab_type2;
+        line-height: $tab_line2;
+      }
+      @media(max-width: 700px){
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
     }
   }
 
@@ -63,6 +71,9 @@
   }
 
 }
+
+
+
 
 #our-team-body{
   @media(min-width: 1100px){
@@ -104,23 +115,20 @@
         width: calc(50vw - 123px);
         height: auto;
         @media(max-width: 700px){
-          width: calc(50vw - 65px);
+          width: calc(100vw - 115px);
         }
       }
       p{
         width: calc(50vw - 123px);
         @media(max-width: 700px){
-          width: calc(50vw - 65px);
+          width: calc(100vw - 115px);
         }
-
       }
       .primary-title{
         color: $black;
-        font-size: $mobile_type2;
       }
       .secondary-title{
         color: $grey;
-        font-size: $mobile_type2;
       }
     }
   }

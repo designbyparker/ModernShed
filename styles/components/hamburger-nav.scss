@@ -83,6 +83,9 @@
     a:visited{
       color: $black;
     }
+    a:hover{
+      color:#785a23;
+    }
 
   }
 
@@ -207,18 +210,24 @@
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 10vh;
+    height: calc(3em + 60px);
+    @media(max-width: 700px){
+      height: calc(30px + 50px);
+      background-color: $cloud;
+      opacity: 0.9;
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
+
     img{
       width: 30px;
-      height: auto;
+      height: 30px;
       padding-top: $small;
       padding-left: $small;
       @media(max-width: 1100px) and (min-width: 700px){
         width: 3em;
-        height: auto;
+        height: 3em;
         padding-top:$medium;
         paddingleft: $medium;
       }
@@ -292,6 +301,9 @@
         font-size: 75px;
         line-height: 68px;
       }
+      a:hover{
+        color:#785a23;
+      }
 
       @media(min-width:700px)and(max-width: 1100px){
         a{
@@ -318,7 +330,8 @@
           font-family: 'Lausanne';
           color: $black;
           text-decoration: none;
-          font-size: $mobile_type2;
+          font-size: 25px;
+          line-height: 30px;
         }
         div{
           padding-top: 0px;

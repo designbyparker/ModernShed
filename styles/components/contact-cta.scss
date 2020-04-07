@@ -35,6 +35,9 @@
     align-self: end;
     margin-bottom: $medium;
   }
+  a:hover{
+    color:#785a23;
+  }
 
 }
 
@@ -48,7 +51,8 @@
   }
   #contact-right-column{
     a{
-      font-size: $mobile_type1;
+      font-size: $tab_type1;
+      margin-bottom: $small;
     }
   }
 }
@@ -71,6 +75,9 @@
   h2{
     padding: $medium $small;
     font-size: $mobile_type1;
+    @media(max-width:700px){
+      padding: $small;
+    }
   }
   h3{
     font-size: $mobile_type1;

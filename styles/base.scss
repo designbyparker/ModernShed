@@ -37,6 +37,23 @@
 
   @media(max-width: 1100px){
     h2{
+      font-size: $tab_type1;
+      line-height: $tab_line1;
+    }
+
+    h3{
+      font-size: $tab_type1;
+      line-height: $tab_line1;
+    }
+    p{
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+    }
+
+  }
+
+  @media(max-width: 700px){
+    h2{
       font-size: $mobile_type1;
       line-height: $mobile_line1;
     }
@@ -49,7 +66,6 @@
       font-size: $mobile_type2;
       line-height: $mobile_line2;
     }
-
   }
 
   .primary-button{
@@ -78,10 +94,13 @@
     place-content: center;
     .mobile-button-anchor{
       font-family: 'Lausanne';
-      font-size: $mobile_type1;
+      font-size: $tab_type3;
+      @media(max-width:700px){
+        font-size: $mobile_type3;
+      }
       color: $black;
-      font-size: $mobile_type1;
       text-decoration: none;
+      padding-top: 5px;
     }
   }
 

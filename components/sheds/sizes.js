@@ -109,7 +109,7 @@ const Sizes = () => {
           size="L*"
           uses={lUses}
           image={lImages}
-          desc="Living large requires a bit more stretching room--here's the shed full of opportunity. The sky's the limit: a music studio, multi-person office, home gym, recreation room, or a spacious guest studio."
+          desc="Living large requires a bit more stretching room, so here's a shed full of opportunity."
           permitting="* May require local permitting"
         />
 
@@ -129,7 +129,7 @@ const Sizes = () => {
         <MobileSizeCard
           size="Large *"
           image={lImages}
-          desc="Living large requires a bit more stretching room--here's the shed full of opportunity. The sky's the limit: a music studio, multi-person office, home gym, recreation room, or a spacious guest studio."
+          desc="Living large requires a bit more stretching room, so here's a shed full of opportunity."
           mobile_uses="Rental Unit, Guest Space, Dwelling" 
           permitting="* May require local permitting"
         />

@@ -70,6 +70,9 @@
       font-family: 'Lausanne';
       text-decoration: none;
     }
+    a:hover{
+      color:#929292;
+    }
   } 
 
 
@@ -102,7 +105,6 @@
     }
   }
   #tailored-right-col{
-  padding-left: 1px solid $black;
    margin-right: $medium;
    margin-bottom: $medium;
    padding-top: $small;
@@ -142,10 +144,13 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-    }
+    } 
   }
 
   #uses-img2-container{
+    @media(max-width: 700px){
+      padding-top: 0px;
+    }
     padding-top: $small;
     display: flex;
     place-items: center;
@@ -161,19 +166,29 @@
   .mobile-button-container{
     margin-left:0px;
     margin-top: $small;
-    margin-bottom: $xlarge;
+    margin-bottom: $large;
   }
 
   h2{
-    font-size: $mobile_type1;
+    font-size: $tab_type1;
+    line-height: $tab_line1;
+    @media(max-width: 700px){
+      margin-bottom: $small;
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
     margin-bottom: $medium;
   }
   p{
-    font-size: $mobile_type2;
-    line-height: $mobile_line2;
+    font-size: $tab_type2;
+    line-height: $tab_line2;
     padding-left: $medium;
     padding-right: $small;
     margin-bottom: $medium;
+    @media(max-width: 700px){
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
   }
 
   #uses-img3-container{

@@ -22,10 +22,10 @@
   #dealer-right-col{
     margin-right: $medium;
     margin-bottom: $medium;
-    border-left: 1px solid $black;
+    border-left:2px solid $black;
     grid-column: 2/3;
     #dealer-headline{
-      border-bottom: 1px solid $black;
+      border-bottom: 2px solid $black;
     }
     form{
       margin-top: 5px;
@@ -41,7 +41,7 @@
         border-top-style: hidden;
         border-right-style: hidden;
         border-left-style: hidden;
-        border-bottom: 1px solid $grey;
+        border-bottom: 2px solid $grey;
         font-size: $type_1;
         width: calc(50vw - 60px);
         margin-bottom: $medium;

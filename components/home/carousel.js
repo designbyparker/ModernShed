@@ -28,7 +28,6 @@ function Carousel(){
   ];
 
 
-
   let imageSet = [];
   imageData.forEach(img => {
     let display = {};
@@ -47,6 +46,7 @@ function Carousel(){
     let offset = curs.offsetWidth
     setBounds(offset)
   }, []);
+
 
 
   function setBounds(offset){
@@ -77,11 +77,14 @@ function Carousel(){
      }
     }
 
+    const handleScroll = (e) => {
+      console.log('scroll event');
+    }
 
 
 
   return(
-    <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
+    <section id="carousel" className={cursor} onMouseMove={handleMouseMove} onScroll={handleScroll}>
       <div className="carousel-image">
         <img src={image.src} alt={image.alt}  onClick={handleClick} draggable="false"/>
       </div> 

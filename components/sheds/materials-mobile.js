@@ -29,11 +29,11 @@ const Materials = () => {
           </div>
           <div>
             <h4>Metal</h4>
-            <p className="material-desc">From ceiling to wall lining--ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
+            <p className="material-desc">From ceiling to wall lining, ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
           </div>
           <div>
             <h4>Wood Paneling</h4>
-            <p className="material-desc">From ceiling to wall lining--ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
+            <p className="material-desc">From ceiling to wall lining, ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
           </div>
           <div>
             <h4>Painted Siding</h4>

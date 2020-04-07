@@ -7,6 +7,7 @@ import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
+import ReactDOMServer from 'react-dom/server'
 import '../styles/theme.css';
 
 
@@ -14,13 +15,19 @@ const Contact = (props) => {
 
   const [interest, setInterest] = useState();
   const [connect, setConnect] = useState(null);
-  const [fields, setFields] = useState({});
   const [size, setSize] = useState(null);
   const [time, setTime] = useState(null);
   const [heard, setHeard] = useState(null);
-
-
-
+  const [name, setName] = useState(false);
+  const [zip, setZip] = useState(false);
+  const [email, setEmail] = useState(false);
+  const [contactClass, setContactClass] = useState('disabled');
+  const [downloadClass, setDownloadClass] = useState('disabled-download');
+  const [contactState, setContactState] = useState('disabled');
+  const [contactBtnTxt, setContactBtnTxt] = useState('Get in Contact →')
+  const [error, setError] = useState('no-error');
+  const [emailError, setEmailError] = useState('no-email-error');
+  const [zipError, setZipError] = useState('no-zip-error');
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -63,16 +70,13 @@ const Contact = (props) => {
     return setTime(time);
   }
 
-  const handlePdfDownload = (e) => {
-    console.log('click')
-  }
-
   const handleHeard = (e) => {
     setHeard(e.target.value);
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    let zipcode = checkZip(e.target.ZipCode.value);
+    let emailadd = checkEmail(e.target.Email.value);
 
     const fields = {
         Interest: interest || null,
@@ -87,26 +91,74 @@ const Contact = (props) => {
         Timeframe: time || null,
       }
 
-    return postContact(fields);
+      zipcode ? setZipError('no-zip-error') : setZipError('zip-error')
+      emailadd ? setEmailError('no-email-error') : setEmailError('email-error');
+      zipcode && emailadd ? postContact(fields)  : setError('error');
   }
 
+  const checkEmail = (email) => {
+    let reg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
+    return email.match(reg);
+  }
+  const checkZip = (zip) => {
+    let reg = /^(\d{5}((|-)-\d{4})?)|([A-Za-z]\d[A-Za-z][\s\.\-]?(|-)\d[A-Za-z]\d)|[A-Za-z]{1,2}\d{1,2}[A-Za-z]? \d[A-Za-z]{2}$/
+    return zip.match(reg);
+  }
 
   const postContact = (c) => {
     c = JSON.stringify(c);
-    let url = 'https://modern-shed.com/contactus/savecontact';
+    setError('no-error');
+    let url = 'https://www.modern-shed.com/api/contact';
 
     superagent.post(url)
     .send(c)
-    .set('Content-Type', 'application/json')
     .set('Access-Control-Allow-Origin', '*')
+    .set('Content-Type', 'application/json')
     .then(result => {
       console.log(result)
+      if(result.statusText === "OK"){
+       return enableDownload()
+      }
     })
     .catch(error => {
       console.log(error);
     })
-
   }
+
+  const enableDownload = () => {
+    console.log('inside enabled downloadd');
+    setContactBtnTxt('Sent!');
+    setDownloadClass('enabled-download');
+  }
+
+  const handleZipChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setZip(true) : setZip(false);
+    return checkState();
+  }
+
+  const handleNameChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setName(true) : setName(false);
+    return checkState();
+  }
+
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    e.target.value.length > 0 ? setEmail(true) : setEmail(false);
+    return checkState();
+  }
+
+  const checkState = () => {
+    if(name && email && zip){
+      setContactState(false);
+      setContactClass('enabled');
+      }else{
+      setContactState('disabled');
+      setContactClass('disabled');
+    }
+  }
+  console.log(contactState);
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
@@ -163,23 +215,23 @@ const Contact = (props) => {
           <p className="form-headline" id="gen-head">GENERAL INFORMATION</p>
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
             <div id="label-margin">
-              <label>FIRST NAME</label>
-              <input placeholder="First Name" type="text" id="FirstName" required={true} />
+              <label>FIRST NAME (REQUIRED)</label>
+              <input placeholder="First Name" type="text" id="FirstName" required={true} onChange={handleNameChange} />
             </div>
 
             <div id="label-margin">
-              <label>LAST NAME (OPTIONAL)</label>
+              <label>LAST NAME </label>
               <input placeholder="Last Name" type="text" id="LastName" />
             </div>
 
             <div id="label-margin">
-              <label>EMAIL ADDRESS</label>
-            <input placeholder="Email" type="text" id="Email" required={true} />
+              <label id={emailError}>EMAIL ADDRESS (REQUIRED)</label>
+            <input placeholder="Email" type="text" id="Email" required={true} onChange={handleEmailChange}/>
             </div>
 
             <div id="label-margin">
-              <label>ZIP CODE</label>
-              <input placeholder="00000" type="text" id="ZipCode" required={true}/>
+              <label id={zipError}>ZIP CODE (REQUIRED)</label>
+              <input placeholder="00000" type="text" id="ZipCode" required={true} onChange={handleZipChange}/>
             </div>
 
 
@@ -187,7 +239,7 @@ const Contact = (props) => {
            <section id="contact-details-container"> 
 
             <div id="label-margin">
-              <label>PHONE NUMBER (OPTIONAL)</label>
+              <label>PHONE NUMBER </label>
               <input placeholder="(206) 663-7433" type="text" id="Phone" />
             </div>
 
@@ -200,23 +252,23 @@ const Contact = (props) => {
                <div className="radio-btn-container" >
                 <div className="radio-box border-bottom border-left border-top size-radio" id="radio-small">
                   <input type="radio" id="small" name="shed-size" onChange={handleSizeChange} />
-                  <label htmlFor="small">Small</label>
+                  <label htmlFor="small">SM</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-medium">
                   <input type="radio" id="medium" name="shed-size" onChange={handleSizeChange}/>
-                  <label htmlFor="medium">Medium</label>
+                  <label htmlFor="medium">MED</label>
                 </div>
 
                 <div className="radio-box border-bottom border-top size-radio" id="radio-large" >
                   <input type="radio" id="large" name="shed-size" onChange={handleSizeChange}/>
-                  <label htmlFor="large">Large</label>
+                  <label htmlFor="large">LG</label>
                 </div>
               
               </div>
 
 
-
+           
               <p className="details-radio-label">APPROX. COMPLETION DATE</p>
               <div className="radio-btn-container">
                 
@@ -260,13 +312,15 @@ const Contact = (props) => {
           </section>
 
 
-          <div id="label-margin">
-            <label >ADDITIONAL COMMENTS (OPTIONAL) </label>
-            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm"></textarea>
+          <div id="label-margin" className="add-comments-section" >
+            <label >ADDITIONAL COMMENTS </label>
+            <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm" maxlength="250"></textarea>
           </div>
-            
-          <button type="submit" className="primary-button" >Get in Contact →</button>
-          <button onClick={handlePdfDownload} className="secondary-button" id="pdf-button">Download PDF ↓ </button>
+            <button type="submit" id="contact-submit" className={contactClass} disabled={contactState}>{contactBtnTxt}</button>
+            <div  className={downloadClass} >
+             <a href="./catalog/ModernShed_Catalog.pdf" download>Download PDF ↓</a>
+            </div>
+            <p className={error}>* Either the zip code or email address provided was invalid.</p>
 
           </form>
         </section>

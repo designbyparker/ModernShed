@@ -35,7 +35,7 @@ const Materials = () => {
       <div id="materials-col-4">
         <p>Scandinavian inspired. These wood grating panels are stylish and timeless. </p>        
         <p>In utilizing Champion Metal for roofing and siding, your shed saves energy, with the promise of durable, streamlined design.</p>        
-        <p>From ceiling to wall lining--ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
+        <p>From ceiling to wall lining, ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
         <p>Modern-Shed gives you the choice between five types of painted siding, custom-colored in your favorite hue.</p>        
       </div>
     </section>

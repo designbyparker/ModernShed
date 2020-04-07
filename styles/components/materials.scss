@@ -15,7 +15,7 @@
     grid-template-rows: 0.5fr 3fr 1fr;
     p{
       font-size: $type_2;
-      line-height: $type_2;
+      line-height: $line_2;
       color: $grey;
     }
     a{
@@ -24,6 +24,9 @@
       text-decoration: none;
       font-family: 'Lausanne';
       font-size: $type_2;
+    }
+    a:hover{
+      color:#929292;
     }
   }
 
@@ -61,7 +64,15 @@
     grid-row-gap: 10px;
     color: $grey;
     font-size: $type_2;
-    line-height: $type_2;
+    line-height: $line_2;
+    @media(max-width: 1400px){
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media(max-width: 1250px){
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   @media(max-width: 1100px){
@@ -86,12 +97,21 @@
     grid-template-columns: 1fr 1fr;
     }
     h2{
-      font-size: $mobile_type1;
+      font-size: $tab_type1;
+      line-height: $tab_line1;
       padding-bottom: $medium;
+      @media(max-width: 700px){
+        font-size: $mobile_type1;
+        line-height: $mobile_line1;
+      }
     }
     p{
-      font-size: $mobile_type2;
-      line-height: $mobile_line2;
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+      @media(max-width: 700px){
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
       color: $grey;
       padding-bottom: $large;
     }
@@ -140,12 +160,16 @@
       h4{
         margin-top: $small;
         font-family: 'Lausanne';
-        font-size: $mobile_type2;
+        font-size: $tab_type2;
         margin-bottom: $small;
         @media(max-width: 700px){
+        font-size: $mobile_type2;
         padding-left: $xsmall;
         margin-top: $xsmall;
         }
+      }
+      .material-desc{
+        color: $grey;
       }
       @media(max-width: 700px){
         grid-column: 2/3;
@@ -159,6 +183,12 @@
   }
   .mobile-button-container{
     margin-left: 0px;
+    .mobile-button-anchor{
+      font-size: $tab_type3;
+      @media(max-width: 700px){
+        font-size: $mobile_type3;
+      }
+    }
   }
   @media(max-width: 700px){
     background-color: $cloud;
