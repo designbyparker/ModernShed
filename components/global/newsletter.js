@@ -5,7 +5,8 @@ import {useState, useEffect} from 'react';
 const Newsletter = () => {
   const [zip, setZip] = useState('');
   const [email, setEmail] = useState('');
-  const [buttonText, setButtonText] = useState('Sign Up →')
+  const [buttonText, setButtonText] = useState('Sign Up →');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const Newsletter = () => {
   }
 
   const notAMatch = () => {
-    alert('Either the Email or Zip Code provided was invalid');
+    setError('* The zip code or emaill address provided is invalid');
   }
   
 
@@ -39,11 +40,16 @@ const Newsletter = () => {
     .send(payload)
     .then(result => {
       console.log('result, ', result)
-      result.statusCode === 200 ? setButtonText('Thanks!') : notAMatch();
+      result.statusCode === 200 ? updateState() : notAMatch();
     })
     .catch(error => {
       console.log(error);
     })
+  }
+
+  const updateState = () => {
+    setButtonText('Thanks!');
+    setError('');
   }
 
   return(
@@ -59,6 +65,7 @@ const Newsletter = () => {
         <input placeholder="Email" name="email" id="email" required={true} />
         <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
         <button type="submit" className="primary-button">{buttonText}</button>
+        <p id="error-msg">{error}</p>
       </form>
     </div>
   </section>

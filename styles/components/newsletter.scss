@@ -68,6 +68,10 @@
       border: 0px;
       outline: none;
     }
+    #error-msg{
+      color: red;
+      padding-top: $xsmall;
+    }
   
   }
 
@@ -94,7 +98,7 @@
         button{
           font-size: $mobile_type1;
         }
-      
+
       }
   }
 
