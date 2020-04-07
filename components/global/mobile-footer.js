@@ -36,7 +36,7 @@ const MobileFooter = () => {
                     <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
                     <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
                     <a href="https://www.houzz.com/professionals/decks-patios-and-outdoor-enclosures/modern-shed-pfvwus-pf~1670352110" target="_blank">Houzz</a>
-                    <a href="/find-a-dealer" className="find-dealer-link">Find A Dealer →</a>
+                    <a href="/find-a-dealer" className="find-dealer-link">Find A Dealer</a>
                   </div>  
                 </div>  
 
