@@ -122,6 +122,7 @@
     margin-right: $small;
 
     .interest-box{
+      padding-top: 15px !important;
       .mobile-label{
         font-size: $mobile_type1 !important;
       }
@@ -275,15 +276,13 @@
       @media(max-width: 1100px) and (min-width: 700px){
         width: calc(100vw - 196px);
         height: 65px;
-        font-size: $mobile_type1;
-        line-height: $mobile_line1;
+        font-size: $tab_type1;
         border-radius: 0;
       }
       @media(max-width: 700px){
         width: calc(100vw - 50px);
-        height: 65px;
+        height: 58px;
         font-size: $mobile_type1;
-        line-height: $mobile_line1;
         border-radius: 0;
       }
     
