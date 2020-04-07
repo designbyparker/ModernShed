@@ -396,11 +396,12 @@
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: calc(50vw - 96px);
+    width: calc(50vw - 56px);
     font-size: $type_1;
     color: $grey;
     height: 104px;
     background-color: $sun;
+    padding-right: 0px;
     @media(max-width: 1100px){
       width: calc(100vw - 196px);
       font-size: $tab_type1;
@@ -417,13 +418,13 @@
   }
 
   .disabled-download{
+    padding-right: 0px;
     cursor: not-allowed;
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: calc(50vw - 96px);
+    width: calc(50vw - 56px);
     font-size: $type_1;
-    color:  #b27e34;
     height: 104px;
     background-color: $sun;
     @media(max-width: 1100px){
@@ -436,7 +437,7 @@
     }
     a{
       text-decoration: none;
-      color: $grey;
+      color:  #b27e34;
       cursor: not-allowed;
       pointer-events: none;
     }

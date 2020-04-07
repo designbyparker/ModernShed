@@ -3,8 +3,9 @@
 
 
 #process-layout{
-  margin-top: $medium;
-  margin-bottom: $medium;
+  background-color: $white;
+  padding-top: $medium;
+  padding-bottom: $medium;
   @media(max-width: 700px){
     margin: 0px;
   }
