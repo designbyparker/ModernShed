@@ -64,7 +64,7 @@
       #wordmark{
         img{
           padding: 0px;
-          width: 300px;
+          width: 225px;
           padding-right: $small;
           @media(max-width: 1450px){
             width: 250px;
@@ -270,13 +270,13 @@
         }
         @media(min-width:700px)and(max-width: 1100px){
          img{
-          width: 300px;
+          width: 225px;
           height: auto;
          }
         }
         @media(min-width:700px)and(max-width: 1100px)and(max-height: 750px){
           img{
-            width: 220px;
+            width: 115px;
             height: auto;
           }
         }
@@ -286,6 +286,7 @@
         margin:$xsmall;
         width: 30px;
         height: 30px;
+        cursor: pointer;
       }
     }
 
