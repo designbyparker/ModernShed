@@ -26,7 +26,8 @@ const Contact = (props) => {
   const [contactState, setContactState] = useState('disabled');
   const [contactBtnTxt, setContactBtnTxt] = useState('Get in Contact →')
   const [error, setError] = useState('no-error');
-
+  const [emailError, setEmailError] = useState('no-email-error');
+  const [zipError, setZipError] = useState('no-zip-error');
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -74,8 +75,6 @@ const Contact = (props) => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
     let zipcode = checkZip(e.target.ZipCode.value);
     let emailadd = checkEmail(e.target.Email.value);
 
@@ -92,8 +91,8 @@ const Contact = (props) => {
         Timeframe: time || null,
       }
 
-      zipcode ? setZip('no-zip-error') : setZip('zip-error')
-      emailadd ? setEmail('no-email-error') : setEmail('email-error');
+      zipcode ? setZipError('no-zip-error') : setZipError('zip-error')
+      emailadd ? setEmailError('no-email-error') : setEmailError('email-error');
       zipcode && emailadd ? postContact(fields)  : setError('error');
   }
 
@@ -216,22 +215,22 @@ const Contact = (props) => {
           <p className="form-headline" id="gen-head">GENERAL INFORMATION</p>
           <form className="form" id="contact-form" onSubmit={handleSubmit} >
             <div id="label-margin">
-              <label>FIRST NAME</label>
+              <label>FIRST NAME (REQUIRED)</label>
               <input placeholder="First Name" type="text" id="FirstName" required={true} onChange={handleNameChange} />
             </div>
 
             <div id="label-margin">
-              <label>LAST NAME (OPTIONAL)</label>
+              <label>LAST NAME </label>
               <input placeholder="Last Name" type="text" id="LastName" />
             </div>
 
             <div id="label-margin">
-              <label id={email}>EMAIL ADDRESS</label>
+              <label id={emailError}>EMAIL ADDRESS (REQUIRED)</label>
             <input placeholder="Email" type="text" id="Email" required={true} onChange={handleEmailChange}/>
             </div>
 
             <div id="label-margin">
-              <label id={zip}>ZIP CODE</label>
+              <label id={zipError}>ZIP CODE (REQUIRED)</label>
               <input placeholder="00000" type="text" id="ZipCode" required={true} onChange={handleZipChange}/>
             </div>
 
@@ -240,7 +239,7 @@ const Contact = (props) => {
            <section id="contact-details-container"> 
 
             <div id="label-margin">
-              <label>PHONE NUMBER (OPTIONAL)</label>
+              <label>PHONE NUMBER </label>
               <input placeholder="(206) 663-7433" type="text" id="Phone" />
             </div>
 
@@ -314,7 +313,7 @@ const Contact = (props) => {
 
 
           <div id="label-margin" className="add-comments-section" >
-            <label >ADDITIONAL COMMENTS (OPTIONAL) </label>
+            <label >ADDITIONAL COMMENTS </label>
             <textarea placeholder="Is there anything else you'd like us to know?" id="AddComm" maxlength="250"></textarea>
           </div>
             <button type="submit" id="contact-submit" className={contactClass} disabled={contactState}>{contactBtnTxt}</button>
