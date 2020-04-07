@@ -1,10 +1,29 @@
 import { useState, useEffect } from 'react';
-import imageData from '../../public/images/carousel/imageData';
 import {useSwipeable, Swipeable} from 'react-swipeable';
 
 var imageIndex = 0;
 
 const MobileCarousel = () => {
+  const imageData = [
+    {
+      src: '/images/carousel/car1.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car1_mobile.jpg'
+    },
+    {
+      src: '/images/carousel/car2.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car2_mobile.jpg'
+    },
+    {
+      src: '/images/carousel/car3.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/car3_mobile.jpg'
+    }
+  ];
+
+
+
   let imageSet = [];
   imageData.forEach(img => {
     let display = {};

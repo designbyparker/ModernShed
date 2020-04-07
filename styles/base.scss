@@ -2,14 +2,14 @@
 
  .mobile-query{
     display:block ;
-    @media(min-width:768px){
+    @media(min-width:700px){
       display: none;
     }
   }
   
  .desktop-query{
     display: none; 
-    @media all and (min-width: 768px ){
+    @media all and (min-width: 700px ){
       display: block;
     }
   }
@@ -27,6 +27,89 @@
     font-family: 'Lausanne';
   }
 
+  h5{
+    font-family: 'Lausanne';
+  }
+
   p{
     font-family: 'Lausanne';
+  }
+
+  @media(max-width: 1100px){
+    h2{
+      font-size: $tab_type1;
+      line-height: $tab_line1;
+    }
+
+    h3{
+      font-size: $tab_type1;
+      line-height: $tab_line1;
+    }
+    p{
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+    }
+
+  }
+
+  @media(max-width: 700px){
+    h2{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+
+    h3{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+    p{
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
+  }
+
+  .primary-button{
+    font-size: $type_1;
+    height: 104px;
+    width: 100%;
+    background-color: $sky;
+  }
+
+  .secondary-button{
+    font-size: $type_1;
+    height: 104px;
+    width: 100%;
+    background-color: $sun;
+  }
+
+  .mobile-button-container{
+
+    margin-top: $medium;
+    margin-left: $small;
+    width: calc(100vw - 50px);
+    height: 75px;
+    border: 1px solid $midnight;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    .mobile-button-anchor{
+      font-family: 'Lausanne';
+      font-size: $tab_type3;
+      @media(max-width:700px){
+        font-size: $mobile_type3;
+      }
+      color: $black;
+      text-decoration: none;
+      padding-top: 5px;
+    }
+  }
+
+
+
+  .find-dealer-link{
+    color: $grey !important;
+  }
+
+  .find-dealer-link-menu{
+    color:#a07a2f !important;
   }

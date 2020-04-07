@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import Link from 'next/link';
 
 const HamburgerNav = (props) => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -12,16 +11,18 @@ const HamburgerNav = (props) => {
   }
 
   return(
-   <> 
+   <section id="menu"> 
     <section id="hamburger-nav-bar" >
-      <a href="/index" id="brandmark"><img src="/branding/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
-      <img src="https://dummyimage.com/100x100/000/fff" alt="Hamburger Menu" onClick={handleMenuToggle}/>
+      <a href="/index" id="brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
+      <img src="./graphics/MS_Menu_Black.svg" alt="Hamburger Menu" onClick={handleMenuToggle}/>
     </section>
-
-    <section id="hamburger-menu"  className={menuToggle ? "openMenu" : "closeMenu"} >
+  
+    <section id="hamburger-menu"   className={menuToggle ? "openMenu" : "closeMenu"} >
       <div id="menu-col-1">
-       <a id="wordmark" href="/index"> <img src="/branding/small-wordmark.svg" alt="Modern Shed Wordmark" /></a>
+       <a id="wordmark" href="/index"> <img src="/graphics/small-wordmark.svg" alt="Modern Shed Wordmark" /></a>
         <p>(c) Modern Shed, LLC All Rights Reserved. Privacy Policy. Terms of Use.</p>
+        <img className="mobile-exit" src="./graphics/MS_X_Black.svg" alt="Menu Exit" onClick={handleMenuToggle}/>
+
       </div>
 
 
@@ -42,13 +43,13 @@ const HamburgerNav = (props) => {
       </div>
 
       <div id="menu-col-3">
-        <img src="https://dummyimage.com/100x100/000/fff" alt="Menu Exit" onClick={handleMenuToggle}/>
+        <img className="desktop-exit" src="./graphics/MS_X_Black.svg" alt="Menu Exit" onClick={handleMenuToggle}/>
 
         <div id="social-links">
-         <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
-         <a href="https://twitter.com/YourModernShed" target="_blank">Twitter</a>
-         <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
-         <a href="https://www.linkedin.com/company/modern-shed" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
+            <a href="https://www.houzz.com/professionals/decks-patios-and-outdoor-enclosures/modern-shed-pfvwus-pf~1670352110" target="_blank">Houzz</a>
+            <a href="/find-a-dealer" className="find-dealer-link-menu">Find A Dealer →</a>
         </div>
       </div>  
 
@@ -57,7 +58,7 @@ const HamburgerNav = (props) => {
 
   
       </section>
-    </>
+    </section>
   )
 }
 

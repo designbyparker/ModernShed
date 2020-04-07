@@ -3,15 +3,16 @@ const Tailored = () => {
     <section id="tailored-section" >
 
       <div id="tailored-image-container">
-        <img src="https://via.placeholder.com/762x531" alt="Tailored not configured"/>
+        <img src="/images/index-images/E_ModernShed_Detail_Tailored.jpg" alt="Tailored not configured"/>
       </div>
 
       <div id="tailored-right-column">
         <div className="headline-container">
-          <h2>Tailored...</h2>
-          <h2>not Configured.</h2>
+          <h2>Tailored to Your Rhythm</h2>
     
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+          <p>
+          Modern-Shed has become a leader in innovative, sustainable, prefabricated home structures. Units are constructed easily and efficiently in tight spaces, using the highest quality materials. We are big advocates for intelligent design, effective and potent architecture, and living well and fully in an environment that calls us to home—whether that be work, movement, creativity, or rest.
+          </p>
         </div>  
 
         <div className="button-container">

@@ -1,9 +1,32 @@
 import {useState, useEffect} from 'react';
-import imageData from '../../public/images/carousel/imageData';
 
 var ind = 0;
 
 function Carousel(){
+
+  const imageData = [
+    {
+      src: '/images/carousel/car1.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile1.jpeg'
+    },
+    {
+      src: '/images/carousel/car2.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile2.jpeg'
+    },
+    {
+      src: '/images/carousel/car3.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile3.jpeg'
+    },
+    {
+      src: '/images/carousel/car4.jpg',
+      alt: 'placeholder',
+      mobile:'/images/carousel/car4.jpg'
+    }
+  ];
+
 
   let imageSet = [];
   imageData.forEach(img => {
@@ -25,6 +48,7 @@ function Carousel(){
   }, []);
 
 
+
   function setBounds(offset){
     setLeftBound(Math.floor(offset/2));
     setRightBound(Math.floor(offset/2) + 1);
@@ -43,7 +67,7 @@ function Carousel(){
   function handleClick(e){
      e.preventDefault();
      console.log(ind);
-     if(cursor === 'right'){
+     if(cursor === 'right'){ 
       ind = (ind + 1) % imageSet.length;
       console.log(ind);
       return setImage(imageSet[ind]);
@@ -53,12 +77,17 @@ function Carousel(){
      }
     }
 
+    const handleScroll = (e) => {
+      console.log('scroll event');
+    }
 
 
 
   return(
-    <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
-      <img src={image.src} alt={image.alt} className="carousel-image" onClick={handleClick} draggable="false"/>
+    <section id="carousel" className={cursor} onMouseMove={handleMouseMove} onScroll={handleScroll}>
+      <div className="carousel-image">
+        <img src={image.src} alt={image.alt}  onClick={handleClick} draggable="false"/>
+      </div> 
       <div id="photo-data">
 
           <p id="shed-use">Home Office <br/> 142 Feet Squared</p>

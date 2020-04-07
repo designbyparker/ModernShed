@@ -1,0 +1,109 @@
+#dealer-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $cloud;
+  #dealer-left-col{
+    margin-left: $medium;
+    margin-bottom: $medium;
+    grid-column: 1/2;
+    .image-container{
+      width: calc(50vw - 60px);
+      height: auto;
+      display: flex;
+      place-items: center;
+      padding-right: $xsmall;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  #dealer-right-col{
+    margin-right: $medium;
+    margin-bottom: $medium;
+    border-left:2px solid $black;
+    grid-column: 2/3;
+    #dealer-headline{
+      border-bottom: 2px solid $black;
+    }
+    form{
+      margin-top: 5px;
+      padding-left: $xsmall;
+
+      label{
+        font-size: $type_4;
+        color: $grey;
+        font-family: 'Lausanne';
+      }
+      input{
+        background-color: $cloud;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom: 2px solid $grey;
+        font-size: $type_1;
+        width: calc(50vw - 60px);
+        margin-bottom: $medium;
+        margin-top: $xsmall;
+      }
+      input:focus{
+        outline: none;
+      }
+      button{
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 0px;
+        margin-top: $medium;
+      }
+      button:focus{
+        outline: none;
+      }
+    }
+  }
+  @media(max-width: 1100px){
+    display: flex;
+    flex-direction: column;
+    .image-container{
+      img{
+        display: none;
+      }
+    }
+    #dealer-headline{
+      padding-left: 0px;
+    }
+    #dealer-right-col{
+      margin-left: $tab_large;
+      margin-right: $tab_large;
+      width: calc(100vw - 196px);
+      display: flex;
+      flex-direction: column;
+      border: 0px;
+      form{
+        padding-left: 0px;
+        input{
+          width: 100%;
+          font-size: $mobile_type1;
+        }
+        button{
+          font-size: $mobile_type1;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 700px){
+    #dealer-right-col{
+      margin-right: $small;
+      margin-left: $small;
+      width: calc(100vw - 50px);
+      form{
+        button{
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+}

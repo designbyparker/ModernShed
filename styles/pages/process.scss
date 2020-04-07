@@ -5,34 +5,36 @@
 #process-layout{
   margin-top: $medium;
   margin-bottom: $medium;
+  @media(max-width: 700px){
+    margin: 0px;
+  }
 }
 
 
 
 // ******** CARD COMPONENT ******** //
 .process-card{
-  max-height: 90vh;
+  @media(max-width: 1100px){
+    display: none;
+  }
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-#process-left-column{
-  height: 90vh;
 
-  h2{
-    margin-top: $medium;
-  }
-}
 
 #withTimeFrame{
+  @media(max-width: 1100px){
+    display: none;
+  }
   grid-template-areas: 'step pic timeframe copy';
 
   #process-left-column{
     margin-left: $medium;
     grid-area: step;
     padding-right: $small;
-    border-right: 0.08em solid $black;
+    border-right: 2px solid $black;
   }
   #process-image-container{
 
@@ -40,6 +42,7 @@
     grid-area: pic;
     padding-left: $small;
     padding-right: $small;
+    padding-bottom: $large;
 
     img{
       width: 100%;
@@ -57,18 +60,21 @@
     padding-right: $medium;
     padding-left: $small;
     font-size: $type_2;
-    line-height: $type_2;
+    line-height: $line_2;
   }
 }
 
 #withoutTimeFrame{
+  @media(max-width: 1100px){
+    display: none;
+  }
   display: grid;
   grid-template-areas: 'step pic pic copy';
 
   #process-left-column{
     margin-left: $medium;
     grid-area: step;
-    border-right: 0.08em solid $black;
+    border-right: 2px solid $black;
   }
 
   #process-image-container{
@@ -76,8 +82,12 @@
     justify-items: stretch;
     padding-left: $small;
     padding-right: $small;
+    padding-bottom: $large;
+
 
     img{
+      padding-top:0px;
+      padding-right: 0px;
       width: 100%;
       height: auto;
       object-fit: contain;
@@ -86,20 +96,84 @@
 
   #process-copy{
     grid-area: copy;
-    margin-right: $medium;
     justify-self: start;
     padding-right: $medium;
     padding-left: $small;
     font-size: $type_2;
-    line-height: $type_2;
+    line-height: $line_2;
+
   }
 }
 
 
 .grid-div{
-  height: 90vh;
+  height: 100%;
   grid-column: 3/4;
   grid-row: 1/2;
-  border-left: 0.08em solid $black;
-  border-right: 0.08em solid $black;
+  border-left: 2px solid $black;
+  border-right: 2px solid $black;
+}
+
+.last-desktop-card{
+  padding-bottom: 0px !important;
+}
+
+// ********* Mobile Styling ******* //@extend
+.mobile-process-card{
+  @media(min-width: 1100px){
+    display: none;
+  }
+  padding-top: $small;
+  padding-bottom: $medium;
+  margin-left: $small;
+  margin-right: $small;
+  @media(min-width: 700px) and (max-width: 1100px){
+    padding-top: $medium;
+    margin-left: $tab_large;
+    margin-right: $tab_large;
+  }
+
+  #mobile-process-headline{
+    h2, h3{
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
+    margin-bottom: $small;
+  }
+
+  #mobile-process-image-container{
+    @media(min-width: 700px) and (max-width: 1100px){
+      width: calc(100vw - 196px);
+    }
+    width: calc(100vw - 50px);
+    place-items: auto;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  #mobile-timeframe{
+    font-size: $mobile_type2;
+    line-height: $mobile_line2;
+    padding: $small $medium;
+  }
+
+  #mobile-process-copy{
+      padding-top: $small;
+      padding-left: $medium;
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+
+
+      @media(min-width: 700px) and (max-width: 1100px){
+        padding: 0px;
+      }
+  }
+
+}
+
+#border{
+  border-bottom: 2px solid $grey;
 }

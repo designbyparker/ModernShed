@@ -5,34 +5,26 @@ const Nav = () => {
   <section id="nav-section">
     <div id="wordmark-container">
       <Link href="/">
-          <img className="wordmark" id="nav-left" src="/branding/small-wordmark-white.svg" alt="Modern Shed Wordmark" />
+          <img className="wordmark" id="nav-left" src="/graphics/small-wordmark-white.svg" alt="Modern Shed Wordmark" />
       </Link>
     </div>
 
    <ul id="nav-right">
 
      <li>
-        <Link href="/sheds">
-          <a> Sheds </a>      
-        </Link>
+          <a href="/sheds"> Sheds </a>      
       </li>
 
       <li>
-        <Link href="/story">
-          <a> Our Story </a>      
-        </Link>
+         <a href="/story"> Our Story </a>      
       </li>
 
       <li>
-        <Link href="/process">
-          <a> Process </a>      
-        </Link>
+          <a href="/process"> Process </a>      
       </li>
 
       <li>
-        <Link href="/contact">
-          <a> Contact </a>      
-        </Link>
+          <a href="/contact"> Contact </a>      
       </li>
 
 
