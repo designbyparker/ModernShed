@@ -49,6 +49,15 @@
         margin-bottom: $medium;
         margin-top: $xsmall;
         border-radius:0px;
+        @media(max-width: 1100px){
+          font-size: $tab_type1 !important;
+        }
+        @media(max-width: 700px){
+          height: 55px;
+          margin-top: 10px;
+          font-size: $mobile_type1;
+
+        }
       }
       input:focus{
         outline: none;
@@ -66,7 +75,7 @@
     }
 
     #results-deck{
-      margin-top: $large;
+      margin-top: $xlarge;
       padding-left: $xsmall;
     }
 
@@ -78,9 +87,15 @@
       }
 
     .dealer-info{
-      height: 75px;
+      height: 100px;
       border-top: 2px solid $grey;
       padding-top: 10px;
+      @media(max-width: 1100px){
+        height: 90px;
+      }
+      @media(max-width: 700px){
+        height: 75px;
+      }
       p{
         color: $grey;
         margin-bottom: 10px;
@@ -88,8 +103,10 @@
       h2{
         color: $black;
         font-size: $type_1;
+        padding-top: 20px;
         @media(max-width: 1100px){
           font-size: $tab_type1;
+          padding-top: 10px;
         }
         @media(max-width: 700px){
           font-size: $mobile_type1;
