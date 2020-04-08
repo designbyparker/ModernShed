@@ -64,8 +64,8 @@ const Newsletter = () => {
       <form onSubmit={handleSubmit}>
         <input placeholder="Email" name="email" id="email" required={true} />
         <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
-        <button type="submit" className="primary-button">{buttonText}</button>
         <p id="error-msg">{error}</p>
+        <button type="submit" className="primary-button">{buttonText}</button>
       </form>
     </div>
   </section>

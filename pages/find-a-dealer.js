@@ -46,7 +46,7 @@ const FindADealer = () => {
           <button type="submit" className="primary-button" >Search Dealers →</button>
         </form>
 
-
+{/* 
       <div id="results-deck">
 
         <div className="results-card">
@@ -69,7 +69,7 @@ const FindADealer = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
       </section>
     </section>

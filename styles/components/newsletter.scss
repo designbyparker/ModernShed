@@ -122,7 +122,7 @@
       height: 200px;
       form{
         input{
-          width: 100%;
+          width: calc(100vw - 75px);
           height: 58px;
           border-radius:0px;
           border-bottom: 2px solid $grey;
