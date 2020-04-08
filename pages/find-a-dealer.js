@@ -43,8 +43,33 @@ const FindADealer = () => {
         <form  onSubmit={handleSubmit}>
           <label>ZIP CODE</label>
           <input type="text" id="ZipCode" placeholder="Zip Code" required={true}/>
-          <button type="submit" className="primary-button" >Search Dealers</button>
+          <button type="submit" className="primary-button" >Search Dealers →</button>
         </form>
+
+{/* 
+      <div id="results-deck">
+
+        <div className="results-card">
+          <p>DEALER INFORMATION</p>
+          <div className="dealer-info" id="dealer-name">
+            <p>NAME</p>
+            <h2>Mike Probach</h2>
+          </div>
+          <div className="dealer-info" id="dealer-company">
+            <p>COMPANY</p>
+            <h2>Modern Shed, Inc</h2>
+          </div>
+          <div className="dealer-info" id="dealer-phone">
+            <p>PHONE NUMBER</p>
+            <h2>(206) 449-9808</h2>
+          </div>
+          <div className="dealer-info" id="dealer-email">
+            <p>EMAIL</p>
+            <h2>mike@modern-shed.com</h2>
+          </div>
+        </div>
+
+      </div> */}
 
       </section>
     </section>

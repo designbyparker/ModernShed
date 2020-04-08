@@ -40,7 +40,7 @@
     .button-container{
       align-self: end;
       a{
-        font-size: $type_3;
+        font-size: $type_1;
         text-decoration: none;
       }
       a:visited{
@@ -91,13 +91,14 @@
 
 
 #tailored-mobile-section{
+  background-color: $white;
   @media(min-width: 700px){
     display: none;
   }
   width: 100vw;
   h2{
     margin-bottom: $small;
-    margin-top: $small;
+    padding-top: $small;
     padding-left: $small;
     padding-right: $small;
     font-size: $tab_type1;
@@ -110,6 +111,8 @@
   }
   #tailored-mobile-image-container{
     width: calc(100vw - 50px);
+    background-color: $white;
+
     height: auto;
     place-items: center;
     padding-left: $small;

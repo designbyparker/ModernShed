@@ -5,6 +5,8 @@ import {useState, useEffect} from 'react';
 const Newsletter = () => {
   const [zip, setZip] = useState('');
   const [email, setEmail] = useState('');
+  const [buttonText, setButtonText] = useState('Sign Up →');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,15 +27,9 @@ const Newsletter = () => {
   }
 
   const notAMatch = () => {
-    alert('Either the Email or Zip Code provided was invalid');
+    setError('* The zip code or emaill address provided is invalid');
   }
   
-
-  const handleEmailChange = (e) => {
-    e.preventDefault();
-    let email = e.target.value;
-    let reg = /^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$/;
-  }
 
 
   const callNewsletter = async (payload) => {
@@ -43,11 +39,17 @@ const Newsletter = () => {
     .set('Content-Type', 'application/json')
     .send(payload)
     .then(result => {
-      console.log(result.body);
+      console.log('result, ', result)
+      result.statusCode === 200 ? updateState() : notAMatch();
     })
     .catch(error => {
       console.log(error);
     })
+  }
+
+  const updateState = () => {
+    setButtonText('Thanks!');
+    setError('');
   }
 
   return(
@@ -60,9 +62,10 @@ const Newsletter = () => {
     <div id="newsletter-form">
       <h5>SIGN UP</h5>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Email" name="email" id="email" required={true} onChange={handleEmailChange}/>
+        <input placeholder="Email" name="email" id="email" required={true} />
         <input placeholder="Zip Code" name="zip" id="zip" required={true}/>
-        <button type="submit" className="primary-button">Sign Up →</button>
+        <p id="error-msg">{error}</p>
+        <button type="submit" className="primary-button">{buttonText}</button>
       </form>
     </div>
   </section>

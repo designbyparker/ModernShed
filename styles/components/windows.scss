@@ -157,6 +157,7 @@
 
 // ****** Mobile Windows Styling ******//
 #mobile-windows-section{
+  background-color: $white;
   @media(min-width: 700px){
     display: none;
   }

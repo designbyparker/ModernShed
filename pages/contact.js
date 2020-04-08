@@ -75,6 +75,8 @@ const Contact = (props) => {
   }
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
     let zipcode = checkZip(e.target.ZipCode.value);
     let emailadd = checkEmail(e.target.Email.value);
 
@@ -115,7 +117,6 @@ const Contact = (props) => {
     .set('Access-Control-Allow-Origin', '*')
     .set('Content-Type', 'application/json')
     .then(result => {
-      console.log(result)
       if(result.statusText === "OK"){
        return enableDownload()
       }
@@ -126,7 +127,6 @@ const Contact = (props) => {
   }
 
   const enableDownload = () => {
-    console.log('inside enabled downloadd');
     setContactBtnTxt('Sent!');
     setDownloadClass('enabled-download');
   }
@@ -158,7 +158,6 @@ const Contact = (props) => {
       setContactClass('disabled');
     }
   }
-  console.log(contactState);
 
   const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 

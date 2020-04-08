@@ -34,8 +34,6 @@ const handleNextClick = (e) => {
   let ind = (cnt + 1) % length;
   setCnt(ind);
 }
-console.log('shed number', index);
-console.log('image count',cnt);
 
   return(
   
@@ -50,7 +48,7 @@ console.log('image count',cnt);
             
             <div key={shed.content_id} className="shed-card" id="shed.content_id">
               <div className="image-container">
-                <img src={shed.photos[0].url} alt={shed.photos[0].alt} onClick={handleModalOpen} data-img={index}/>
+                <img src={shed.photos[0].url} alt={shed.photos[0].alt} onClick={handleModalOpen} data-img={index} />
               </div>  
               <div className="shed-details-container">
                 <p>{shed.photos[0].description1}</p>
@@ -62,10 +60,9 @@ console.log('image count',cnt);
           )})} 
             <When condition={modal}>
               <div className="modal">
-                  <img className="slide" 
+                  <img className="slide close-modal" 
                       src="./graphics/MS_X_White.svg" 
                       alt="close modal" 
-                      className="close-modal" 
                       onClick={handleCloseModal}/>
 
                   <div className="home-featured-carousel">

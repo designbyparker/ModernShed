@@ -1,7 +1,7 @@
 #our-team-body-carousel{
   width: calc(100vw - 80px);
-  margin: $medium;
-
+  padding: $medium;
+  background-color: $white;
   @media(max-width: 1100px){
     display: none;
   }
@@ -51,7 +51,6 @@
   }
 
 
-
   #staff-button-container{
     display: flex;
     width: 100%;
@@ -76,16 +75,18 @@
 
 
 #our-team-body{
+  background-color: $white;
   @media(min-width: 1100px){
     display: none;
   }
 
   width: calc(100vw - 196px);
-  margin: $medium $tab_large;
+  padding: $medium $tab_large;
 
   @media(max-width: 700px){
     width: calc(100vw - 50px);
-    margin: $small;
+    // margin: $small;
+    padding: $small;
   }
 
   h2{
