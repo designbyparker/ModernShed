@@ -1,7 +1,8 @@
 // ******** Material Desktop Styling ********** // 
 
 #shed-materials-section{
-  margin: $medium;
+  padding: $medium;
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
 
@@ -86,6 +87,7 @@
 // ****** Material Mobile Styling ******** //
 
 #mobile-materials-section{
+  background-color: $white;
   @media(min-width: 1100px){
     display: none;
   }

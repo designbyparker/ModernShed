@@ -164,9 +164,11 @@ a:active{
 
   .mf-col-1{
     border-right: 2px solid $grey;
+    width: calc(50vw - 25px);
   }
   .mf-col-2{
     padding-left: $small;
+    width: calc(50vw - 25px);
   }
 
   #copyrights{

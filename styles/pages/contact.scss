@@ -122,6 +122,7 @@
     margin-right: $small;
 
     .interest-box{
+      padding-top: 15px !important;
       .mobile-label{
         font-size: $mobile_type1 !important;
       }
@@ -275,15 +276,13 @@
       @media(max-width: 1100px) and (min-width: 700px){
         width: calc(100vw - 196px);
         height: 65px;
-        font-size: $mobile_type1;
-        line-height: $mobile_line1;
+        font-size: $tab_type1;
         border-radius: 0;
       }
       @media(max-width: 700px){
         width: calc(100vw - 50px);
-        height: 65px;
+        height: 58px;
         font-size: $mobile_type1;
-        line-height: $mobile_line1;
         border-radius: 0;
       }
     
@@ -396,11 +395,12 @@
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: calc(50vw - 96px);
+    width: calc(50vw - 56px);
     font-size: $type_1;
     color: $grey;
     height: 104px;
     background-color: $sun;
+    padding-right: 0px;
     @media(max-width: 1100px){
       width: calc(100vw - 196px);
       font-size: $tab_type1;
@@ -417,13 +417,13 @@
   }
 
   .disabled-download{
+    padding-right: 0px;
     cursor: not-allowed;
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: calc(50vw - 96px);
+    width: calc(50vw - 56px);
     font-size: $type_1;
-    color:  #b27e34;
     height: 104px;
     background-color: $sun;
     @media(max-width: 1100px){
@@ -436,7 +436,7 @@
     }
     a{
       text-decoration: none;
-      color: $grey;
+      color:  #b27e34;
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -549,6 +549,7 @@
       color: #bab9b5;
       cursor: pointer;
       padding-left: 10px;
+
     }
 
     input[type=radio]:focus + label{
@@ -606,6 +607,10 @@
          margin-left:0px;
          padding:$xsmall;
          font-size: $mobile_type1;
+
+          padding-left:5px;
+          padding-bottom:3px;
+       
        }
        input{
          width: 0px;

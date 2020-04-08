@@ -1,3 +1,13 @@
+html{
+  overflow: hidden;
+  height: 100%;
+  background-color: $black;
+}
+body{
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+}
 
 
  .mobile-query{
@@ -22,8 +32,6 @@
 
   h3{
     font-size:$type_1;
-    color: $black;
-    opacity: 0.4;
     font-family: 'Lausanne';
   }
 
@@ -71,7 +79,7 @@
   .primary-button{
     font-size: $type_1;
     height: 104px;
-    width: 100%;
+    width: calc(100% + 2px);
     background-color: $sky;
   }
 

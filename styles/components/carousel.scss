@@ -6,11 +6,12 @@
 }
 
 #carousel{
+  position: absolute;
   background-color: $sky;
   display: none; 
   width: 100vw;
   height: auto;
-  position: relative;
+  position:relative;
   top: 0px;
   left:0px;
   @media all and (min-width: 1100px ){
@@ -30,10 +31,12 @@
 }
 
 #mobile-carousel{
-  display:block ;
   width: 100vw;
   height: 100vh;
   place-items: center;
+  position: relative;
+  top: 0px;
+  left:0px;
   .mobile-carousel-image{ 
   object-fit: cover;
   width: 100vw;
