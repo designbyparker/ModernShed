@@ -55,8 +55,9 @@
         @media(max-width: 700px){
           height: 55px;
           margin-top: 10px;
-          font-size: $mobile_type1;
-
+          font-size: $mobile_type1 !important;
+          padding-left: 0px;
+          padding-top: 0px;
         }
       }
       input:focus{
@@ -164,7 +165,7 @@
       width: calc(100vw - 50px);
       form{
         input{
-          width: calc(100vw - 80px);
+          width: calc(100vw - 50px);
         }
         button{
           margin-top: 0px;
