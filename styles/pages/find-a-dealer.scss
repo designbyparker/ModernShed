@@ -30,6 +30,7 @@
     form{
       margin-top: 5px;
       padding-left: $xsmall;
+      margin-top: 10px;
 
       label{
         font-size: $type_4;
@@ -48,6 +49,16 @@
         margin-bottom: $medium;
         margin-top: $xsmall;
         border-radius:0px;
+        @media(max-width: 1100px){
+          font-size: $tab_type1 !important;
+        }
+        @media(max-width: 700px){
+          height: 55px;
+          margin-top: 10px;
+          font-size: $mobile_type1 !important;
+          padding-left: 0px;
+          padding-top: 0px;
+        }
       }
       input:focus{
         outline: none;
@@ -65,23 +76,52 @@
     }
 
     #results-deck{
-      margin-top: $large;
+      margin-top: $xlarge;
       padding-left: $xsmall;
     }
 
     .results-card{
-     border-bottom: 2px solid $grey;
+      margin-top: $large;
+      border-bottom: 2px solid $grey;
       @media(max-width:700px){
         border-bottom: 0px;
       }
 
     .dealer-info{
-      height: 75px;
+      height: 100px;
       border-top: 2px solid $grey;
       padding-top: 10px;
+      @media(max-width: 1100px){
+        height: 90px;
+      }
+      @media(max-width: 700px){
+        height: 75px;
+      }
       p{
         color: $grey;
         margin-bottom: 10px;
+      }
+      h2{
+        color: $black;
+        font-size: $type_1;
+        padding-top: 20px;
+        @media(max-width: 1100px){
+          font-size: $tab_type1;
+          padding-top: 10px;
+        }
+        @media(max-width: 700px){
+          font-size: $mobile_type1;
+        }
+      }
+    }
+    #dealer-email{
+      height: auto;
+      h2{
+        margin-bottom: 5px;
+      }
+      @media(max-width: 700px){
+        border-bottom: 2px solid $grey;
+        padding-bottom: 10px;
       }
     }
   }
@@ -125,7 +165,7 @@
       width: calc(100vw - 50px);
       form{
         input{
-          width: calc(100vw - 80px);
+          width: calc(100vw - 50px);
         }
         button{
           margin-top: 0px;
