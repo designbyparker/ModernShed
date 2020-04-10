@@ -4,9 +4,20 @@ import MobileFooter from '../components/global/mobile-footer';
 import Nav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import Head from 'next/head';
+import PageTransistion from '../components/global/page-transistion';
+import {useState, useEffect} from 'react';
 import '../styles/theme.css';
 
 const Faq = () => {
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
+
+
   return (
   <>
     <Head>
@@ -16,6 +27,7 @@ const Faq = () => {
       <h1>FAQ</h1>
       <Nav/>
       <MobileHamburgerNav/>
+      <PageTransistion page="FAQ" show={transistionClass}/>
       <section className="aux-section">
         <div className="aux-deck">
           {copy.map(item => {

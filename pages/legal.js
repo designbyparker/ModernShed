@@ -2,12 +2,21 @@ import Footer from '../components/global/footer';
 import MobileFooter from '../components/global/mobile-footer';
 import Nav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
+import PageTransistion from '../components/global/page-transistion';
 import Head from 'next/head';
+import {useEffect, useState} from 'react';
 import '../styles/theme.css';
 
 
 
 const Legal = () => {
+  const [transistionClass, setTransistion] = useState('show');
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
+
   return(
   <>
     <Head>
@@ -17,6 +26,7 @@ const Legal = () => {
     <h1>LEGAL</h1>
     <Nav/>
     <MobileHamburgerNav/>
+    <PageTransistion show={transistionClass} page="Legal"/>
     <section className="aux-section">
       <div className="aux-deck">
         <div>

@@ -4,9 +4,10 @@ import Nav from '../components/global/hamburger-nav';
 import Hero from '../components/global/page-hero';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
 import Head from 'next/head';
+import PageTransistion from '../components/global/page-transistion';
 import superagent from 'superagent';
 import When from '../components/global/conditionals';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import '../styles/theme.css';
 
@@ -14,6 +15,15 @@ const FindADealer = () => {
 
   const [dealers, setDealers] = useState(null);
   const [buttonText, setButtonText] = useState('Search Dealers →')
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(typeof e.target.ZipCode.value);
@@ -38,7 +48,7 @@ const FindADealer = () => {
     <Nav/>
     <MobileHamburgerNav/>
     <Hero id="dealer-hero" page="FIND A DEALER" copy="Connect with a dealer in your area."/>
-
+    <PageTransistion page="Find A Dealer" show={PageTransistion}/>
     <section id="dealer-body">
       <section id="dealer-left-col">
         <div className="image-container">

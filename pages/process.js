@@ -1,5 +1,6 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
+import PageTransistion from '../components/global/page-transistion';
 import ProcessCard from '../components/process/process-card';
 import MobileProcessCard from '../components/process/mobile-process-card';
 import ContactCTA from '../components/global/contact-cta';
@@ -11,9 +12,18 @@ import MobileFooter from '../components/global/mobile-footer';
 import Head from 'next/head'
 import FeaturedShedsCarousel from '../components/process/featured-sheds-carousel';
 import fetch from 'isomorphic-unfetch';
+import {useEffect, useState} from 'react';
 import '../styles/theme.css';
 
 const Process = (props) => {
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
+
   return (
     <section>
       <Head>
@@ -22,7 +32,7 @@ const Process = (props) => {
       <HamburgerNav/>
       <MobileHamburgerNav/>
       <ProcessHero id="process-hero" page="PROCESS" copy="We understand you have a plan, and we’re here to turn potential into reality. Each shed is crafted intentionally to give your imagination a little room."/>
-
+      <PageTransistion show={transistionClass} page="Process" />
       <section id="process-layout">
         <ProcessCard
           step="Step 01"

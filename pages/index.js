@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import PageTransistion from '../components/global/page-transistion';
 import Nav from '../components/home/nav';
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
@@ -17,11 +18,18 @@ import MobileContactCTA from '../components/global/mobile-contact-cta';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 import MobileFooter from '../components/global/mobile-footer';
+import {useEffect, useState} from 'react';
 
 import fetch from 'isomorphic-unfetch';
 
 const Index = (props) => {
 
+  const [transistionClass, setTransistion] = useState('show');
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
   return(
     <div>
       <Head>
@@ -30,6 +38,7 @@ const Index = (props) => {
       <Nav className="desktop-query"/>
       <HamburgerNav className="mobile-query"/>
       <MobileHamburgerNav/>
+      <PageTransistion show={transistionClass} page="Modern Shed"/>
       <DesktopCarousel className="desktop-query"/>
       <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>

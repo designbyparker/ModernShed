@@ -1,5 +1,6 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
+import PageTransistion from '../components/global/page-transistion';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import MobileFooter from '../components/global/mobile-footer';
@@ -7,7 +8,6 @@ import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
-import ReactDOMServer from 'react-dom/server'
 import '../styles/theme.css';
 
 
@@ -28,6 +28,13 @@ const Contact = (props) => {
   const [error, setError] = useState('no-error');
   const [emailError, setEmailError] = useState('no-email-error');
   const [zipError, setZipError] = useState('no-zip-error');
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -171,6 +178,7 @@ const Contact = (props) => {
       <HamburgerNav/>
       <MobileHamburgerNav/>
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageTransistion page="Contact" show={transistionClass}/>
       <section id="contact-page">
         <section id="contact-left-col">
           <div className="contact-image" id="contact-image-a">
