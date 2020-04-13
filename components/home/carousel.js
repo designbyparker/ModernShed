@@ -36,18 +36,18 @@ function Carousel(){
     imageSet.push(display);
   });
 
+
   const [image, setImage] = useState(imageSet[0]);  
   const [cursor, setCursor] = useState('left');
   const [leftBound, setLeftBound] = useState();
   const [rightBound, setRightBound] = useState();
 
   useEffect(() => {
+
     let curs = document.querySelector('#carousel');
-    let offset = curs.offsetWidth
-    setBounds(offset)
+    let offset = curs.offsetWidth;
+    setBounds(offset);
   }, []);
-
-
 
   function setBounds(offset){
     setLeftBound(Math.floor(offset/2));

@@ -106,8 +106,8 @@
     margin-left: $tab_large;
     margin-right: $tab_large;
     .interest-box{
-      .mobile-label{
-        font-size: $mobile_type1;
+      .interest-label{
+        font-size: $tab_type1;
       }
     }
 
@@ -123,7 +123,7 @@
 
     .interest-box{
       padding-top: 15px !important;
-      .mobile-label{
+      .interest-label{
         font-size: $mobile_type1 !important;
       }
     }
@@ -131,17 +131,6 @@
   }
 
   .interest-box{
-    .desktop-label{
-      @media(max-width: 1100px){
-        display: none;
-      }
-    }
-    .mobile-label{
-      @media(min-width: 1100px){
-        display: none;
-      }
-    }
-
     height: $line_1;
     border-bottom: 2px solid $grey;
     padding-top: $small;
@@ -321,9 +310,12 @@
         border-radius: 0;
         padding:0px;
         margin:0px;
-        font-size: $mobile_type1;
+        font-size: $tab_type1;
         padding-top: $small;
-        font-family: 'Lausanne'
+        font-family: 'Lausanne';
+      }
+      @media(max-width: 700px){
+        font-size: $mobile_type1;
       }
     }
     textarea:focus{
@@ -506,9 +498,6 @@
       width: calc(100vw - 196px) !important;
       .radio-box{
         height: 80px;
-          label{
-            padding-top: 30px !important;
-          }
       }
     }
 
@@ -654,11 +643,13 @@
        label{
          margin-left:0px;
          padding:$xsmall;
-         font-size: $mobile_type1;
-
+         font-size: $tab_type1;
           padding-left:5px;
           padding-bottom:3px;
-       
+          @media(max-width: 700px){
+            font-size: $mobile_type1;
+          }
+
        }
        input{
          width: 0px;

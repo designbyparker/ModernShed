@@ -179,7 +179,9 @@ const Contact = (props) => {
       <MobileHamburgerNav/>
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
       <PageTransistion page="Contact" show={transistionClass}/>
+
       <section id="contact-page">
+
         <section id="contact-left-col">
           <div className="contact-image" id="contact-image-a">
             <img src="./images/contact/A_Contact.jpg" alt="Placeholder text"/>
@@ -188,32 +190,32 @@ const Contact = (props) => {
           <div className="contact-image" id="contact-image-b">
             <img src="./images/contact/B_Contact.jpg" alt="Placeholder text"/>
           </div>
+
         </section>
 
 
         <section id="contact-right-col">
+
         <p className="form-headline">INTEREST LEVEL</p>
+
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not" className="desktop-label"> Just Browsing.</label>
-                  <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
-                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
+                  <label htmlFor="not" className="interest-label"> Just Browsing.</label>
+                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe" className="desktop-label">Considering.</label>
-                <label htmlFor="maybe" className="mobile-label">Considering.</label> 
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
+                <label htmlFor="maybe" className="interest-label">Considering.</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes" className="desktop-label">I'm Ready!</label>
-                <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
+                <label htmlFor="yes" className="interest-label">I'm Ready!</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-yes"/>
 
             </div>
           </form>
