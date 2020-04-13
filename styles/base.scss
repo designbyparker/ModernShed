@@ -81,6 +81,9 @@ body{
     height: 104px;
     width: calc(100% + 2px);
     background-color: $sky;
+    @media(max-width: 1100px){
+      height: 75px;
+    }
   }
 
   .secondary-button{

@@ -105,7 +105,9 @@
   @media(max-width: 700px){
     display: flex;
     flex-direction: column;
-    height: 600px;
+    justify-content: space-between;
+    height: 500px;
+    background-color: $white;
     div{
       width: calc(100vw - 50px);
     }
@@ -117,13 +119,20 @@
       }
     }
     #newsletter-form{
+      h5{
+        display: none;
+      }
+      display: flex;
+      justify-content: flex-end;
       padding-left: $small;
       border-left: 0px;
-      height: 200px;
+      height: 300px;
       form{
         input{
+          background-color: $white;
           width: calc(100vw - 75px);
-          height: 58px;
+          height: 30px;
+          padding-top: 28px;
           border-radius:0px;
           border-bottom: 2px solid $grey;
           font-size: $mobile_type1;

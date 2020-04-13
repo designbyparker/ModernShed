@@ -48,7 +48,7 @@ const FindADealer = () => {
     <Nav/>
     <MobileHamburgerNav/>
     <Hero id="dealer-hero" page="FIND A DEALER" copy="Connect with a dealer in your area."/>
-    <PageTransistion page="Find A Dealer" show={PageTransistion}/>
+    <PageTransistion page="Find A Dealer" show={transistionClass}/>
     <section id="dealer-body">
       <section id="dealer-left-col">
         <div className="image-container">
