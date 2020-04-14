@@ -25,7 +25,7 @@ const Faq = () => {
     </Head>
     <section id="faq-page" className="aux-page">
       <h1>FAQ</h1>
-      <Nav/>
+      <Nav navClass="aux-nav"/>
       <MobileHamburgerNav/>
       <PageTransistion page="FAQ" show={transistionClass}/>
       <section className="aux-section">

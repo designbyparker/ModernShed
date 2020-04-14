@@ -24,7 +24,7 @@ const Legal = () => {
     </Head>
     <section id="legal-page" className="aux-page">
     <h1>LEGAL</h1>
-    <Nav/>
+    <Nav navClass="aux-nav"/>
     <MobileHamburgerNav/>
     <PageTransistion show={transistionClass} page="Legal"/>
     <section className="aux-section">

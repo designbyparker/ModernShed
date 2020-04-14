@@ -32,7 +32,7 @@ const Story = (props) => {
         page="OUR STORY"
         id="our-story-hero"
         />
-      <HamburgerNav />
+      <HamburgerNav navClass="story-nav"/>
       <MobileHamburgerNav/>
       <PageTransistion page="Our Story" show={transistionClass}/>
       <OurTeam staff={props.staff}/>

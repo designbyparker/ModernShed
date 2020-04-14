@@ -29,9 +29,10 @@ const Process = (props) => {
       <Head>
         <title>Modern Shed | Process</title>
       </Head>
-      <HamburgerNav/>
+
       <MobileHamburgerNav/>
       <ProcessHero id="process-hero" page="PROCESS" copy="We understand you have a plan, and we’re here to turn potential into reality. Each shed is crafted intentionally to give your imagination a little room."/>
+      <HamburgerNav navClass="process-nav"/>
       <PageTransistion show={transistionClass} page="Process" />
       <section id="process-layout">
         <ProcessCard

@@ -38,7 +38,7 @@ const Sheds = () => {
         <title>Modern Shed | Sheds</title>
       </Head>
       <PageTransistion page="Sheds" show={transistionClass}/>
-      <HamburgerNav />
+      <HamburgerNav navClass="shed-nav"/>
       <MobileHamburgerNav/>
       <ShedsHero id="sheds-hero" page="SHEDS" copy="Let’s revise your living space with abundance in mind. "/>
       <Uses/>

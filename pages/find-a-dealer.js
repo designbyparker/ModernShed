@@ -45,7 +45,7 @@ const FindADealer = () => {
     <Head>
       <title>Modern Shed | Find A Dealer</title>
     </Head>
-    <Nav/>
+    <Nav navClass="dealer-nav"/>
     <MobileHamburgerNav/>
     <Hero id="dealer-hero" page="FIND A DEALER" copy="Connect with a dealer in your area."/>
     <PageTransistion page="Find A Dealer" show={transistionClass}/>

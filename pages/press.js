@@ -27,7 +27,7 @@ const Press = () => {
       <title>Modern Shed | Press</title>
     </Head> 
     <section id="press-page" className="aux-page">
-    <Nav/>
+    <Nav navClass="aux-nav"/>
     <MobileHamburgerNav/>
     <PageTransistion page="Press" show={transistionClass}/>
       <h1>PRESS</h1>

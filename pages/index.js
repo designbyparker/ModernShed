@@ -36,7 +36,7 @@ const Index = (props) => {
         <title>Modern Shed</title>
       </Head>
       <Nav className="desktop-query"/>
-      <HamburgerNav className="mobile-query"/>
+      <HamburgerNav className="mobile-query" navClass="home-nav"/>
       <MobileHamburgerNav/>
       <PageTransistion show={transistionClass} page="Modern Shed"/>
       <DesktopCarousel className="desktop-query"/>

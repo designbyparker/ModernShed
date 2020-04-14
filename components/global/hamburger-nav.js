@@ -12,7 +12,7 @@ const HamburgerNav = (props) => {
 
   return(
    <section id="menu"> 
-    <section id="hamburger-nav-bar" >
+    <section id="hamburger-nav-bar" className={props.navClass}>
       <a href="/index" id="brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
       <img src="./graphics/MS_Menu_Black.svg" alt="Hamburger Menu" onClick={handleMenuToggle}/>
     </section>
