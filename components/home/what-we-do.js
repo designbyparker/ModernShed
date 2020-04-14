@@ -15,8 +15,7 @@ const WhatWeDo = () => {
 
           <div id="whatwedo-headlines"> 
             <h1 id="what-we-do-headline">WHAT WE DO</h1>
-            <h2>There’s a type of shed for every purpose.</h2>
-            <h3>You imagine, we’ll take care of the construction. Each space is tailored just for you.</h3>
+            <p>There’s a type of shed for every purpose.<mark>You imagine, we’ll take care of the construction. Each space is tailored just for you.</mark></p>
           </div>
        
           <div id="whatwedo-desc" >

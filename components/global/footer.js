@@ -9,7 +9,7 @@ const Footer = () => {
         <p className="section-header">SITE</p>
         <div id="internal-pages">
           <a href='/sheds'>Sheds</a>
-          <a href='/story'>About</a>
+          <a href='/story'>Our Story</a>
           <a href='/process'>Process</a>
           <a href='/contact'>Contact</a>
         </div>
