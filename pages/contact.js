@@ -1,5 +1,6 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
+import PageTransistion from '../components/global/page-transistion';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import MobileFooter from '../components/global/mobile-footer';
@@ -7,7 +8,6 @@ import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
-import ReactDOMServer from 'react-dom/server'
 import '../styles/theme.css';
 
 
@@ -28,6 +28,13 @@ const Contact = (props) => {
   const [error, setError] = useState('no-error');
   const [emailError, setEmailError] = useState('no-email-error');
   const [zipError, setZipError] = useState('no-zip-error');
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -168,10 +175,13 @@ const Contact = (props) => {
       <Head>
         <title>Modern Shed | Contact Us</title>
       </Head>
-      <HamburgerNav/>
+      <HamburgerNav navClass="contact-nav"/>
       <MobileHamburgerNav/>
       <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageTransistion page="Contact" show={transistionClass}/>
+
       <section id="contact-page">
+
         <section id="contact-left-col">
           <div className="contact-image" id="contact-image-a">
             <img src="./images/contact/A_Contact.jpg" alt="Placeholder text"/>
@@ -180,32 +190,32 @@ const Contact = (props) => {
           <div className="contact-image" id="contact-image-b">
             <img src="./images/contact/B_Contact.jpg" alt="Placeholder text"/>
           </div>
+
         </section>
 
 
         <section id="contact-right-col">
+
         <p className="form-headline">INTEREST LEVEL</p>
+
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not" className="desktop-label"> Just Browsing.</label>
-                  <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
-                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
+                  <label htmlFor="not" className="interest-label"> Just Browsing.</label>
+                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe" className="desktop-label">Considering.</label>
-                <label htmlFor="maybe" className="mobile-label">Considering.</label> 
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
+                <label htmlFor="maybe" className="interest-label">Considering.</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes" className="desktop-label">I'm Ready!</label>
-                <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
+                <label htmlFor="yes" className="interest-label">I'm Ready!</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-yes"/>
 
             </div>
           </form>

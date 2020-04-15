@@ -1,0 +1,52 @@
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+  background-color: $cloud;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeOutAnimation 2100ms ease-out;
+  cursor: default;
+  h1{
+    font-family: 'Lausanne';
+    font-size: 90px;
+    @media(max-width:800px){
+      font-size: 70px;
+    }
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  95%{
+    opacity: .6;
+  }
+  97%{
+    opacity: .4;
+  }
+  98%{
+    opacity: .2;
+  }
+  100%{
+    opacity: 0;
+  }
+}

@@ -18,7 +18,7 @@
   transition: all 0.4s;
   position: fixed;
   top: 0px;
-  right:-2000px;
+  right:-100vw;
   overflow-x: hidden;
 
  }
@@ -151,28 +151,29 @@
 
 // ***** Nav Bar Styling ***** //
 #hamburger-nav-bar{
+  z-index: 100;
   display: none;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
-  height: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
+  padding-bottom: $small;
 
   img{
     width: 3em;
-    padding-top: $medium;
-    padding-left: $medium;
+    height: 3em;
+    padding-top: 30px;
+    padding-left: 30px;
     @media(max-width:700px){
       padding-left: $small;
     }
   }
   img:last-of-type{
     justify-self: end;
-    padding-top: $medium;
-    padding-right: $medium;
+    padding-top: 30px;
+    padding-right: 30px;
     @media(max-width: 700px){
       padding-right: $small;
     }
@@ -210,34 +211,33 @@
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: calc(3em + 60px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     @media(max-width: 700px){
       height: calc(30px + 50px);
       background-color: $cloud;
     }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
 
     img{
-
-      height: 30px;
+      height: 30px !important;
       width: 30px;
       padding-top: $small;
       padding-left: $small;
       @media(max-width: 1100px) and (min-width: 700px){
         width: 3em;
-        height: 3em;
-        padding-top:$medium;
-        paddingleft: $medium;
+        height: 3em !important;
+        padding-top:$small;
+        paddingleft: $small;
       }
     }
     img:last-of-type{
+
       justify-self: end;
       padding-top: $small;
       padding-right: $small;
       @media(max-width: 1100px) and (min-width: 700px){
-        padding-top: $medium;
+        padding-top: $small;
+        height: 3em;
       }
     }
   }
@@ -389,4 +389,30 @@
   }
 
 
+}
+
+.home-nav{
+  background-color: $cloud;
+}
+
+.story-nav{
+  background-color: $cloud;
+}
+
+.process-nav{
+  background-color: $sky;
+}
+
+.shed-nav{
+  background-color: $sun;
+}
+
+.contact-nav{
+  background-color: $cloud;
+}
+.dealer-nav{
+  background-color: $cloud;
+}
+.aux-nav{
+  background-color: $cloud;
 }

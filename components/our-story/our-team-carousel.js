@@ -11,11 +11,10 @@ const OurTeamCarousel = (props) => {
 
       <CarouselProvider
           naturalSlideWidth={100}
-          naturalSlideHeight={150}
+          naturalSlideHeight={170}
           totalSlides={props.staff[1].photos.length}
           touchEnabled={true}
-          visibleSlides={3.15}
-          infinite={true}
+          visibleSlides={4.5}
           className="staff-carousel"
           >
           <Slider>
@@ -32,6 +31,7 @@ const OurTeamCarousel = (props) => {
             }
           </Slider>
           <div id="staff-button-container">
+            <ButtonBack className="carousel-button" ><img src="./graphics/MS_Arrow_Left.svg" alt="Previous Image"/></ButtonBack>
             <ButtonNext className="carousel-button"><img src="./graphics/MS_Arrow_Right.svg" alt="Next Image"/></ButtonNext>
           </div>
       </CarouselProvider>
