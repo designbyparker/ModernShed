@@ -106,7 +106,7 @@ const Process = (props) => {
         />  
 
       </section>
-      {/* <FeaturedShedsCarousel featured={props.sheds} />  */}
+     <FeaturedShedsCarousel featured={props.sheds} /> 
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
       <Newsletter/>

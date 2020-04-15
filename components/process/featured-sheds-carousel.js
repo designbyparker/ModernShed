@@ -3,25 +3,24 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 const FeaturedShedsCarousel = (props) => {
-
   return(
     <section id="featured-shed-carousel">
       <h2>Featured Sheds</h2>
 
       <section id="featured-carousel" >
         <CarouselProvider
-          naturalSlideWidth={300}
-          naturalSlideHeight={200}
-          totalSlides={props.featured.length}
+          naturalSlideWidth={220}
+          naturalSlideHeight={120}
+          totalSlides={props.featured[0].photos.length}
           touchEnabled={true}
-          visibleSlides={1.75}
+          visibleSlides={1.50}
           infinite={true}
           >
             <Slider>
               {
-                props.featured.map((shed, ind) => {
+                props.featured[0].photos.map((shed, ind) => {
                   return(
-                      <Slide className="slide" index={ind}><img src={shed.photos[0].url} alt={shed.photos[0].alt}/></Slide>
+                      <Slide className="slide" index={ind}><img src={shed.url} alt={shed.alt}/></Slide>
                   )
                 })
               }
