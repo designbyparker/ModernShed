@@ -122,6 +122,16 @@
     color: $grey;
     border-left: 2px solid $grey;
     padding-left: $xsmall;
+    font-size: $type_2;
+    line-height: $line_2;
+    @media(max-width: 1100px){
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+    }
+    @media(max-width: 700px){
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+    }
   }
   p:first-of-type{
     color: $black;
