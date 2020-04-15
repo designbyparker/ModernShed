@@ -24,9 +24,15 @@
 
 
   #staff-slide{
+    padding: $xsmall;
+    width: calc(22.5vw - 80px);
     .staff-img{
-      width: calc(33vw - 80px);
+      @media(min-width: 2000px){
+        width:calc(22.5vw - 80px);
+      }
+      width: calc(22.5vw - 40px);
       height: auto;
+      
     }
     .primary-title{
       margin-top: $small;
@@ -54,11 +60,11 @@
   #staff-button-container{
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     .carousel-button{
-      margin-top: $medium;
       background-color: transparent;
       border: 0px;
+      padding-top: $xsmall;
       img{
         width: 100px;
         height: auto;
