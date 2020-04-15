@@ -719,7 +719,7 @@
     width: calc(50vw - 25px);
   }
   @media(max-width: 1100px){
-    margin: 0px $tab_large;
+    margin: $medium $tab_large;
     padding-right: 0px;
     padding-left: 0px;
     .contact-info-columns{
@@ -735,7 +735,7 @@
     }
   }
   @media(max-width: 700px){
-    margin: 0px $small;
+    margin: $small $small;
     .contact-info-columns{
       width: calc(50vw - 25px);
       h5{
