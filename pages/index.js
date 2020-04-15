@@ -62,6 +62,7 @@ Index.getInitialProps = async function() {
   const res = await fetch('https://modern-shed.com/services/homefeatured');
   const sheds = await res.json();
 
+
   return {
     sheds: sheds
   }
