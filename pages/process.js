@@ -57,7 +57,7 @@ const Process = (props) => {
         subheader="Order"
         image="/images/process/B_Process_Order.jpg"
         alt="Lorem Ipsum"
-        timeframe="4 to 6 Weeks"
+        timeframe="5-7 Days"
         copy="Once you’ve approved the design and we’ve fit it perfectly to your vision, your shed will be scheduled for production. Here we go!"/>   
 
         <MobileProcessCard
@@ -65,7 +65,7 @@ const Process = (props) => {
         subheader="Order"
         image="/images/process/B_Process_Order.jpg"
         alt="Lorem Ipsum"
-        timeframe="4 to 6 Weeks"
+        timeframe="5-7 Days"
         copy="Once you’ve approved the design and we’ve fit it perfectly to your vision, your shed will be scheduled for production. Here we go!"
         id="border"
         />   
@@ -91,7 +91,7 @@ const Process = (props) => {
         subheader="Install"
         image="/images/process/D_Process_Install.jpg"
         alt="Lorem Ipsum"
-        timeframe="1 to 2 Weeks"
+        timeframe="3-7 Days"
         id="last-desktop-card"
         copy="One of our authorized installers or a contractor of your choosing will install your new Modern-Shed. Whichever you choose, we’re a phone call away to help with any part of the installation process."
         />  
@@ -101,7 +101,7 @@ const Process = (props) => {
         subheader="Install"
         image="/images/process/D_Process_Install.jpg"
         alt="Lorem Ipsum"
-        timeframe="1 to 2 Weeks"
+        timeframe="3-7 Days"
         copy="One of our authorized installers or a contractor of your choosing will install your new Modern-Shed. Whichever you choose, we’re a phone call away to help with any part of the installation process."
         />  
 
