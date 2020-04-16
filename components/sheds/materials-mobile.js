@@ -25,15 +25,15 @@ const Materials = () => {
         <div id="material-titles">
           <div>
             <h4>Wood Grating</h4>
-            <p className="material-desc">Scandinavian inspired. These wood grating panels are stylish and timeless. </p>
+            <p className="material-desc">Scandanavian inspired. These wood grating panels are both stylish and timeless.</p>
           </div>
           <div>
             <h4>Metal</h4>
-            <p className="material-desc">From ceiling to wall lining, ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
+            <p className="material-desc">With Champion Metal, our sheds save energy and promise a durable, streamlined design.</p>        
           </div>
           <div>
             <h4>Wood Paneling</h4>
-            <p className="material-desc">From ceiling to wall lining, ours is a double-sided wood veneer faced plywood, in birch, walnut, sapele, melamine, or recycled resin panels.</p>        
+            <p className="material-desc">From ceiling to wall lining, ours comes in a double-sided wood veneer faced plywood.</p>        
           </div>
           <div>
             <h4>Painted Siding</h4>

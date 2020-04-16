@@ -18,6 +18,7 @@
       font-size: $type_2;
       line-height: $line_2;
       color: $grey;
+      padding-right: $xsmall;
     }
     a{
       color: $black;
@@ -172,6 +173,7 @@
       }
       .material-desc{
         color: $grey;
+        padding-right: 25px;
       }
       @media(max-width: 700px){
         grid-column: 2/3;
