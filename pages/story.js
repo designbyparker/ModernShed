@@ -4,6 +4,7 @@ import PageHero from '../components/global/page-hero';
 import PageTransistion from '../components/global/page-transistion';
 import Head from 'next/head'
 import ContactCTA from '../components/global/contact-cta';
+import Founders from '../components/our-story/founders';
 import OurTeam from '../components/our-story/our-team';
 import OurTeamCarousel from '../components/our-story/our-team-carousel';
 import Footer from '../components/global/footer';
@@ -35,6 +36,7 @@ const Story = (props) => {
       <HamburgerNav navClass="story-nav"/>
       <MobileHamburgerNav/>
       <PageTransistion page="Our Story" show={transistionClass}/>
+      <Founders/>
       <OurTeam staff={props.staff}/>
       <OurTeamCarousel staff={props.staff}/>
       <ContactCTA buttontext="Inquire →"/>

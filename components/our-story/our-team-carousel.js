@@ -5,7 +5,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 const OurTeamCarousel = (props) => {
-  console.log(props.staff);
+
   return(
     <section id="our-team-body-carousel">
       <h2>Our Team</h2>

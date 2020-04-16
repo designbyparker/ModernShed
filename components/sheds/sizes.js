@@ -3,7 +3,6 @@
 const SizeCard = (props) => {
 
   const handleMouseOver = (e) => {
-    console.log('mouse over',e.target);
     let ele = e.target;
     return ele.src = props.image.gif_src;
   } 

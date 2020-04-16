@@ -1,0 +1,31 @@
+.timeline-founders{
+  background-color: $cloud;
+  padding: $medium;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  #founders-headline{
+    font-size: $type_1;
+    line-height: $line_1;
+  }
+  #founders-copy-container{
+    padding-right: $medium;
+    #founders-body-copy{
+      font-size: $type_2;
+      line-height: $line_2;
+      color: $grey;
+  }
+}
+
+@media (max-width: 1100px){
+  display: flex;
+  flex-direction: column;
+  padding: $medium $tab_large;
+  #founders-headline{
+    font-size: $tab_type1;
+    line-height: $tab_line1;
+  }
+  #founders-copy-container{
+    padding: $large $medium;
+  }
+  }
+}

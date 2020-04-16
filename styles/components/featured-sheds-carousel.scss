@@ -31,16 +31,23 @@
     button{
       border: none;
       background-color: transparent;
-      position: absolute;
-      top: 50%;
-      right: 15px;
       img{
-        height: 6em;
+        height: 5em;
         width:auto;
       }
     }
     button:focus{
       outline: none;
     }
+  }
+  .back-button{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+  }
+  .next-button{
+    position: absolute;
+    top: 50%;
+    right: 15px;
   }
 }

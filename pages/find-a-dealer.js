@@ -26,7 +26,6 @@ const FindADealer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(typeof e.target.ZipCode.value);
     superagent.get('https://modern-shed.com/api/dealer')
     .query({zipcode: e.target.ZipCode.value})
     .then(response => {
@@ -39,7 +38,6 @@ const FindADealer = () => {
     })
   }
 
-  console.log(dealers);
   return(
    <> 
     <Head>
@@ -68,7 +66,6 @@ const FindADealer = () => {
     <div id="results-deck">
       {dealers ? dealers.map(dealer => {
         let emails = dealer.email.split(',');
-        console.log('emails', emails);
        return(
         <div className="results-card">
           <p>DEALER INFORMATION</p>
