@@ -224,6 +224,7 @@
       width: 30px;
       padding-top: $small;
       padding-left: $small;
+      cursor: pointer;
       @media(max-width: 1100px) and (min-width: 700px){
         width: 3em;
         height: 3em !important;
