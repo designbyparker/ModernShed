@@ -5,7 +5,7 @@ return(
     <section id="windows-section">
       <div id="windows-col-1">
         <h2>Windows</h2>
-        <p>We’re going to let the light in, with windows in a variety of standard and custom sizes, readily available in aluminum, vinyl, and fiberglass frames. Pictured here for convenience are some of our most popular sizes.</p>
+        <p>We’re going to let the light in. Our Modern-Sheds are bright and airy even with just a few well-placed windows, all thanks to the unique transom windows below the roof line. We offer an expansive variety of window sizes and materials for any budget and particular style.</p>
         <a href="/contact">Download Catalog →</a>
       </div>
 
@@ -24,15 +24,15 @@ return(
       </div>
 
       <div id="windows-col-3">
-        <h4>Small</h4>
-        <h4>Tall</h4>
-        <h4>Full</h4>
+        <h4>Small Opening</h4>
+        <h4>Tall Combination</h4>
+        <h4>Full Picture</h4>
       </div>
 
       <div id="windows-col-4">
-        <p>In a multitude of shapes, our small-option windows come in both casement, double-casement, and awning styles.</p>
-        <p>Our tall scaled windows are easy to customize. Choose between sliding glass, a fixed window over an awning, or an awning over fixed.</p>
-        <p>Let the outdoors in. Our full-sized windows reach up to 60” x 72”.</p>
+        <p>From square to rectangular, windows can be opened to the outside breeze as awnings, sliding, or casements.</p>
+        <p>Fixed over awning, fixed under awning, fixed under sliding, fixed over sliding⏤we could go on and on. The combinations to make your shed unique are truly endless.</p>
+        <p>Let the outdoors in. We offer a multitude of sizing options between small to large.</p>
       
       </div>
   </section>

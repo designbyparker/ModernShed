@@ -18,7 +18,7 @@ const Doors = () => {
       </div>
 
       <div id="doors-col-3">
-        <h4>Traditional</h4>
+        <h4>French Swing</h4>
         <h4>Sliding</h4>
       </div>
 

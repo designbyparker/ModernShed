@@ -23,7 +23,7 @@ const TabletDoors = () => {
   
         <div id="tab-doors-titles">
           <div>
-            <h4>Traditional</h4>
+            <h4>French Swing</h4>
             <p>From windowless to French-style, and of course, with built to last, weather-defying hardware.</p>
           </div>
 
