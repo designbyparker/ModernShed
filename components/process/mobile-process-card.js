@@ -12,7 +12,8 @@ const MobileProcessCard = (props) => {
         <img src={props.image} alt={props.alt}/>
       </div> 
       <p id="mobile-timeframe">{props.timeframe}</p>
-      
+      <p id="mobile-timeframe-note">{props.timeframeNote}</p>
+
       <p id="mobile-process-copy">{props.copy}</p>
 
     </section>

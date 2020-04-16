@@ -12,8 +12,10 @@ const ProcessCard = (props) => {
         <div id="process-image-container" className={props.id}>
           <img src={props.image} alt={props.alt}/>
         </div> 
-        <p id="timeframe">{props.timeframe}</p>
-
+        <div  className="timeframe">
+          <p>{props.timeframe}</p>
+          <p className={props.id} id="timeframe-note">{props.timeframeNote}</p>
+        </div>
         
         <p id="process-copy">{props.copy}</p>
   
