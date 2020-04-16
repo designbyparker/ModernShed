@@ -48,7 +48,7 @@ const MobileFooter = () => {
     </section>
 
 
-      <p id="copyrights">(c) Modern Shed, LLC All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
+      <p id="copyrights">(c) Modern Shed, Inc All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
     </section>
   );
 } 
