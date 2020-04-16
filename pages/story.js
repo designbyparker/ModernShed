@@ -28,7 +28,7 @@ const Story = (props) => {
         <title>Modern Shed | Our Story</title>
       </Head>
       <PageHero 
-        copy="We empathize with the problem of a limited living space. Modern-Shed was born from experience, re-envisioning how we design a home to purposely reflect our natural rhythms."
+        copy="We empathize with the problem of a limited living space. Modern-Shed was born from experience, re-envisioning how we design studios to purposely reflect our natural rhythms."
         page="OUR STORY"
         id="our-story-hero"
         />
