@@ -5,9 +5,7 @@ const HamburgerNav = (props) => {
   
   const handleMenuToggle = (e) =>{
     e.preventDefault();
-    console.log('clicked');
     menuToggle ? setMenuToggle(false) : setMenuToggle(true);
-    console.log(menuToggle)
   }
 
   return(

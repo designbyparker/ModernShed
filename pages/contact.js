@@ -177,7 +177,7 @@ const Contact = (props) => {
       </Head>
       <HamburgerNav navClass="contact-nav"/>
       <MobileHamburgerNav/>
-      <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to design a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageHero page="CONTACT" copy="What would you do with more space to live? We're at the ready to design a Modern-Shed for any ambition. " id="contact-hero"/>
       <PageTransistion page="Contact" show={transistionClass}/> 
 
       <section id="contact-page">

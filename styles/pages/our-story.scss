@@ -41,6 +41,7 @@
     .secondary-title{
       padding-top: 5px;
       color: $grey;
+      padding-right: $xsmall;
     }
     p{
       font-size: $type_2;
@@ -89,44 +90,50 @@
 
   @media(max-width: 700px){
     width: calc(100vw - 50px);
-    // margin: $small;
     padding: $small;
   }
 
   h2{
     margin-bottom: $medium;
-    @media(max-width: 700px){
-    padding-left: $small;
-    }
   }
 
   #staff-deck{
-    width: calc(100vw - 196px);
+    // width: calc(100vw - 196px);
+    width: calc(100vw - 276px);
     display: flex;
     justify-content: center; 
     flex-wrap: wrap;
+    margin-left: $medium;
+    margin-right: $medium;
     @media(max-width: 700px){
-      width: calc(100vw - 100px);
-      margin: 0px $small;
+      width: calc(100vw - 130px);
     }
   #pad-left{
     padding-left: $xsmall;
+    @media(max-width: 700px){
+      padding-left: 0px;
+    }
   }
 
     .staff-card{
       margin-bottom: $small;
+      width: calc((100vw - 291px) / 2);
+      @media(max-width: 700px){
+        width: calc(100vw - 130px);
+        margin: 10px $medium;
 
+      }
       img{
-        width: calc(50vw - 123px);
+        width: calc((100vw - 291px) / 2);
         height: auto;
         @media(max-width: 700px){
-          width: calc(100vw - 115px);
+          width: calc(100vw - 130px);
         }
       }
       p{
         width: calc(50vw - 123px);
         @media(max-width: 700px){
-          width: calc(100vw - 115px);
+          width: calc(100vw - 130px);
         }
       }
       .primary-title{

@@ -1,4 +1,4 @@
-import {CarouselProvider, Slider, Slide, ButtonNext} from 'pure-react-carousel';
+import {CarouselProvider, Slider, Slide, ButtonNext, ButtonBack} from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
@@ -14,7 +14,6 @@ const FeaturedShedsCarousel = (props) => {
           totalSlides={props.featured[0].photos.length}
           touchEnabled={true}
           visibleSlides={1.50}
-          infinite={true}
           >
             <Slider>
               {
@@ -25,8 +24,9 @@ const FeaturedShedsCarousel = (props) => {
                 })
               }
             </Slider>
-            <ButtonNext className="next-button"><img src={'./images/cursors/MS_Arrow_Right.png'}/></ButtonNext>
-
+            <ButtonBack className="back-button"><img src="./images/cursors/MS_Arrow_Left.png"/></ButtonBack>
+            <ButtonNext className="next-button"><img src="./images/cursors/MS_Arrow_Right.png"/></ButtonNext>
+  
         </CarouselProvider>
       </section>
 

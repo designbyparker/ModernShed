@@ -16,7 +16,6 @@ function Carousel(props){
 
     imageSet.push(display);
   });
-  console.log('image set, ', imageSet);
 
   const [image, setImage] = useState(imageSet[0]);  
   const [cursor, setCursor] = useState('left');
@@ -56,14 +55,9 @@ function Carousel(props){
      }
     }
 
-    const handleScroll = (e) => {
-      console.log('scroll event');
-    }
-
-
 
   return(
-    <section id="carousel" className={cursor} onMouseMove={handleMouseMove} onScroll={handleScroll}>
+    <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>
       <div className="carousel-image">
         <img src={image.src} alt={image.alt}  onClick={handleClick} draggable="false"/>
       </div> 
