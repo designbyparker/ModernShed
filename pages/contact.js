@@ -249,7 +249,7 @@ const Contact = (props) => {
 
             <div id="label-margin">
               <label>PHONE NUMBER </label>
-              <input placeholder="(206) 663-7433" type="text" id="Phone" />
+              <input placeholder="(866) 279 5121" type="text" id="Phone" />
             </div>
 
 
@@ -337,7 +337,7 @@ const Contact = (props) => {
 
               <div id="contact-phone" className="contact-info-columns">
                 <h5>PHONE</h5>
-                <p>866 317 1620</p>
+                <p>866 279 5121</p>
               </div>
 
               <div id="contact-mailing" className="contact-info-columns">
