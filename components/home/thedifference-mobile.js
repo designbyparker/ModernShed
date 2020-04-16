@@ -3,7 +3,7 @@ const TheDifferenceMobile = () => {
   return(
     <section id="thedifference-mobile">
 
-        <h2>The Difference.</h2>
+        <h2>The Difference</h2>
 
         <div className="diff-image-container-mobile" id="diff-image-1-mobile" >
           <img src="/images/index-images/G_ModernShed_TheDifference_A.jpg" alt="some text about image"/>
