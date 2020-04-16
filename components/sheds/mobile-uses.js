@@ -10,7 +10,7 @@ const MobileUses = () => {
           <div className="mobile-button-container" ><a className="mobile-button-anchor" href="/contact">Inquire →</a></div>
 
 
-          <h2>Unique to you.</h2>
+          <h2>Unique to you</h2>
 
           <div id="uses-img3-container">
             <img src="./images/sheds/B_Sheds_Detail.jpg" alt="Placeholder Alt Text"/>

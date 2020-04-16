@@ -16,7 +16,7 @@ const Uses = () => {
 
       <div id="sheds-tailored-section">
         <div id="tailored-left-col">
-          <p id="tailored-h2">Unique to you.</p>
+          <p id="tailored-h2">Unique to you</p>
           <p>Modern-Shed is your own personal architect. You’ll work one-on-one with our specialists to create just the right space for your need and budget, shaping your shed to fit in with your individual purpose. Here's a cost-effective and design-conscious way to add on to your home, with care, intention, and precision. </p>
         </div>
         <div id="tailored-right-col">
