@@ -3,7 +3,7 @@ const Footer = () => {
     <section id="footer">
       <div className="footer-col-1">
         <img src="/graphics/small-wordmark-white.svg" alt="Modern Shed Wordmark"/>
-        <p>(c) Modern Shed, LLC All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
+        <p>(c) Modern Shed, Inc All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
       </div>
       <div className="footer-col-2 small-footer-col">
         <p className="section-header">SITE</p>

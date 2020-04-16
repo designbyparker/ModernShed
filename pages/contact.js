@@ -177,8 +177,8 @@ const Contact = (props) => {
       </Head>
       <HamburgerNav navClass="contact-nav"/>
       <MobileHamburgerNav/>
-      <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
-      <PageTransistion page="Contact" show={transistionClass}/>
+      <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to design a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageTransistion page="Contact" show={transistionClass}/> 
 
       <section id="contact-page">
 
@@ -332,6 +332,22 @@ const Contact = (props) => {
             <p className={error}>* Either the zip code or email address provided was invalid.</p>
 
           </form>
+
+           <div id="contact-info">
+
+              <div id="contact-phone" className="contact-info-columns">
+                <h5>PHONE</h5>
+                <p>866 317 1620</p>
+              </div>
+
+              <div id="contact-mailing" className="contact-info-columns">
+                <h5>MAILING</h5>
+                <p>4616 25TH AVE NE</p>
+                <p>PMB 364</p>
+                <p>SEATTLE, WA 98105</p>
+              </div>
+
+          </div>
         </section>
     </section>
     <Footer/>

@@ -8,7 +8,7 @@ const ContactCTA = (props) => {
       <div id="contact-right-column">
         <div>
           <h2>Interested in a shed?</h2>
-          <h3>Get in contact with our team or browse more.</h3>
+          <h3>Get in contact with our team.</h3>
         </div>
         <a href="/contact">{props.buttontext}</a>
       </div>

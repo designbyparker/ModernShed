@@ -478,7 +478,7 @@
     width: calc(100vw - 196px);
   }
   .details-radio-label{
-    height: 40px;
+    height: 45px;
     line-height: 60px;
     color: $grey;
     padding-bottom: 0px;
@@ -519,7 +519,7 @@
 
     .radio-box{
       width: 100%;
-      height: 80px;
+      height: 95px;
       border-top: 2px solid $grey;
       border-left: 2px solid $grey;
       border-bottom: 2px solid $grey;
@@ -689,4 +689,63 @@
     outline:none;
   }
 
+}
+
+
+#contact-info{
+  display: flex; 
+  flex-direction : row;
+  margin-left: $xsmall;
+  padding-top: $small;
+  margin-right: $medium;
+  margin-top: $small;
+  border-top: 2px solid $grey;
+  
+  .contact-info-columns{
+    h5{
+      font-size: $type_2;
+      line-height: $line_2;
+    }
+    p{
+     color: $grey; 
+     line-height: $type_2;
+     font-size: $type_2;
+    }
+  }
+  #contact-phone{
+    width: calc(50vw - 25px);
+  }
+  #contact-mailing{
+    width: calc(50vw - 25px);
+  }
+  @media(max-width: 1100px){
+    margin: $medium $tab_large;
+    padding-right: 0px;
+    padding-left: 0px;
+    .contact-info-columns{
+      width: calc((100vw - 196px) / 3);
+      h5{
+        font-size: $tab_type2;
+        line-height: $tab_line2;
+      }
+      p{
+        font-size: $tab_type2;
+        line-height: $tab_line2;
+      }
+    }
+  }
+  @media(max-width: 700px){
+    margin: $small $small;
+    .contact-info-columns{
+      width: calc(50vw - 25px);
+      h5{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+      p{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+    }
+  }
 }

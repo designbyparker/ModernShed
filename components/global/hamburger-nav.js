@@ -20,7 +20,7 @@ const HamburgerNav = (props) => {
     <section id="hamburger-menu"   className={menuToggle ? "openMenu" : "closeMenu"} >
       <div id="menu-col-1">
        <a id="wordmark" href="/index"> <img src="/graphics/small-wordmark.svg" alt="Modern Shed Wordmark" /></a>
-        <p>(c) Modern Shed, LLC All Rights Reserved. Privacy Policy. Terms of Use.</p>
+        <p>(c) Modern Shed, Inc All Rights Reserved. Privacy Policy. Terms of Use.</p>
         <img className="mobile-exit" src="./graphics/MS_X_Black.svg" alt="Menu Exit" onClick={handleMenuToggle}/>
 
       </div>

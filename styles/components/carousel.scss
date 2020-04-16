@@ -67,10 +67,13 @@
   z-index: 100;     
   
   #shed-use{
+    width: 300px;
     grid-area: use;
+    margin-right: $small;
   }
   #shed-location{
     grid-area: location;
+    width: 175px;
   }
       
 }

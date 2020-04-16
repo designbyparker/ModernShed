@@ -5,21 +5,22 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 const OurTeamCarousel = (props) => {
+  console.log(props.staff);
   return(
     <section id="our-team-body-carousel">
       <h2>Our Team</h2>
-
+ 
       <CarouselProvider
           naturalSlideWidth={100}
           naturalSlideHeight={170}
-          totalSlides={props.staff[1].photos.length}
+          totalSlides={props.staff[0].photos.length}
           touchEnabled={true}
           visibleSlides={4.5}
           className="staff-carousel"
           >
           <Slider>
             {
-              props.staff[1].photos.map((staff, index) => {
+              props.staff[0].photos.map((staff, index) => {
                 return(
                   <Slide id="staff-slide" index={index}>
                     <img className="staff-img" src={staff.url} alt={staff.alt}/>
@@ -34,7 +35,7 @@ const OurTeamCarousel = (props) => {
             <ButtonBack className="carousel-button" ><img src="./graphics/MS_Arrow_Left.svg" alt="Previous Image"/></ButtonBack>
             <ButtonNext className="carousel-button"><img src="./graphics/MS_Arrow_Right.svg" alt="Next Image"/></ButtonNext>
           </div>
-      </CarouselProvider>
+      </CarouselProvider> 
     </section>
   )
 }
