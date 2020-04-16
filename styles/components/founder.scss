@@ -26,6 +26,25 @@
   }
   #founders-copy-container{
     padding: $large $medium;
+    #founders-body-copy{
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+    }
   }
+  }
+
+  @media(max-width: 700px){
+    padding: $small;
+    #founders-headline{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+    #founders-copy-container{
+      padding: $medium;
+      #founders-body-copy{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+    }
   }
 }
