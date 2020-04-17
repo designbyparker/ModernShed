@@ -20,12 +20,17 @@
     }
   }
   #whatwedo-headlines{
-    h3{
+    color: $black;
+    p{
+      font-size: $type_1;
+    }
+    mark{
       color: $on_blue;
+      background-color: $sky;
     }
     #what-we-do-headline{
       align-self: start;
-      padding-bottom: $medium;
+      padding-bottom: 70px;
       font-family: 'Lausanne';
     }
     grid-row:1/2;

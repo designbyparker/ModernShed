@@ -1,0 +1,52 @@
+.timeline-founders{
+  height: 500px;
+  background-color: $cloud;
+  padding: $medium;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  #founders-headline{
+    font-size: $type_1;
+    line-height: $line_1;
+  }
+  #founders-copy-container{
+    padding-right: $medium;
+    #founders-body-copy{
+      font-size: $type_2;
+      line-height: $line_2;
+      color: $grey;
+  }
+}
+
+@media (max-width: 1100px){
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: $medium $tab_large;
+  #founders-headline{
+    font-size: $tab_type1;
+    line-height: $tab_line1;
+  }
+  #founders-copy-container{
+    padding: $large $medium;
+    #founders-body-copy{
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+    }
+  }
+  }
+
+  @media(max-width: 700px){
+    padding: $small;
+    #founders-headline{
+      font-size: $mobile_type1;
+      line-height: $mobile_line1;
+    }
+    #founders-copy-container{
+      padding: $medium;
+      #founders-body-copy{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+    }
+  }
+}

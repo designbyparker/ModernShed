@@ -11,7 +11,7 @@ const TabletDoors = () => {
       <section id="tab-doors">
         <div id="tab-doors-imgs">
           <div>
-            <img src="./images/sheds/G_Doors_Traditional.jpg" alt="Traditional Door"/>
+            <img src="./images/sheds/G_Doors_Traditional.jpg" alt="French Swing Door"/>
           </div>
   
           <div>
@@ -23,7 +23,7 @@ const TabletDoors = () => {
   
         <div id="tab-doors-titles">
           <div>
-            <h4>Traditional</h4>
+            <h4>French Swing</h4>
             <p>From windowless to French-style, and of course, with built to last, weather-defying hardware.</p>
           </div>
 

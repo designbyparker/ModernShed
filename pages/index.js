@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import PageTransistion from '../components/global/page-transistion';
 import Nav from '../components/home/nav';
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
@@ -17,21 +18,29 @@ import MobileContactCTA from '../components/global/mobile-contact-cta';
 import Newsletter from '../components/global/newsletter';
 import Footer from '../components/global/footer';
 import MobileFooter from '../components/global/mobile-footer';
+import {useEffect, useState} from 'react';
 
 import fetch from 'isomorphic-unfetch';
 
 const Index = (props) => {
 
+  const [transistionClass, setTransistion] = useState('show');
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
   return(
     <div>
       <Head>
         <title>Modern Shed</title>
       </Head>
       <Nav className="desktop-query"/>
-      <HamburgerNav className="mobile-query"/>
+      <HamburgerNav className="mobile-query" navClass="home-nav"/>
       <MobileHamburgerNav/>
-      <DesktopCarousel className="desktop-query"/>
-      <MobileCarousel className="mobile-query"/>
+      <PageTransistion show={transistionClass} page="Modern Shed"/>
+      <DesktopCarousel className="desktop-query" sheds={props.carousel}/>
+      <MobileCarousel className="mobile-query" sheds={props.carousel}/>
       <WhatWeDo/>
       <WhatWeDoMobile/>
       <FeaturedHome featured={props.sheds}/>
@@ -53,8 +62,12 @@ Index.getInitialProps = async function() {
   const res = await fetch('https://modern-shed.com/services/homefeatured');
   const sheds = await res.json();
 
+  const response = await fetch('https://modern-shed.com/services/home');
+  const carousel = await response.json();
+
   return {
-    sheds: sheds
+    sheds: sheds,
+    carousel: carousel
   }
 }
 

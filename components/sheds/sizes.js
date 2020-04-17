@@ -3,7 +3,6 @@
 const SizeCard = (props) => {
 
   const handleMouseOver = (e) => {
-    console.log('mouse over',e.target);
     let ele = e.target;
     return ele.src = props.image.gif_src;
   } 
@@ -54,30 +53,30 @@ const MobileSizeCard = (props) => {
 const sUses = ["Home Office", "Storage", "Shed"];
 const sImages = {
                   src: "./images/sheds/Small-ShedStill.jpg",
-                  alt: "Placeholder Text",
+                  alt: "Home Office, Storage, Shed",
                   key: "0",
                   gif_src: "./images/sheds/small.gif",
-                  gif_alt: "Placeholder Text"
+                  gif_alt: "Home Office, Storage, Shed"
                 };
 
 
 const mUses = ["Home Office", "Guest Space", "Gym"];                
 const mImages = {
                   src: "./images/sheds/Medium-ShedStill.jpg",
-                  alt: "Placeholder Text",
+                  alt: "Home Office Guest Space Gym",
                   key: "1",
                   gif_src:"./images/sheds/medium.gif",
-                  gif_alt: "Placeholder Text",
+                  gif_alt: "Home Office Guest Space Gym",
                   mobile_uses: "Home Office, Guest Space, Gym"
                 };
 
 const lUses = ["Rental Unit", "Guest Space", "Dwelling"];        
 const lImages = {
                   src: "./images/sheds/Large-ShedStill.jpg",
-                  alt: "Placeholder Text",
+                  alt: "Rental Unit Guest Space Dwelling",
                   key: "2",
                   gif_src: "./images/sheds/large.gif",
-                  gif_alt: "Placeholder Text",
+                  gif_alt: "Rental Unit Guest Space Dwelling",
                   mobile_uses: "Rental Unit, Guest Space, Dwelling"
                 };
 

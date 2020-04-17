@@ -14,6 +14,7 @@
   position:relative;
   top: 0px;
   left:0px;
+  z-index: 200;
   @media all and (min-width: 1100px ){
     display: block;
   }
@@ -66,10 +67,13 @@
   z-index: 100;     
   
   #shed-use{
+    width: 300px;
     grid-area: use;
+    margin-right: $small;
   }
   #shed-location{
     grid-area: location;
+    width: 175px;
   }
       
 }

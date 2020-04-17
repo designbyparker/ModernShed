@@ -106,8 +106,8 @@
     margin-left: $tab_large;
     margin-right: $tab_large;
     .interest-box{
-      .mobile-label{
-        font-size: $mobile_type1;
+      .interest-label{
+        font-size: $tab_type1;
       }
     }
 
@@ -123,7 +123,7 @@
 
     .interest-box{
       padding-top: 15px !important;
-      .mobile-label{
+      .interest-label{
         font-size: $mobile_type1 !important;
       }
     }
@@ -131,17 +131,6 @@
   }
 
   .interest-box{
-    .desktop-label{
-      @media(max-width: 1100px){
-        display: none;
-      }
-    }
-    .mobile-label{
-      @media(min-width: 1100px){
-        display: none;
-      }
-    }
-
     height: $line_1;
     border-bottom: 2px solid $grey;
     padding-top: $small;
@@ -239,6 +228,8 @@
          width:  calc(100vw - 50px);
          padding: 0px;
          margin:0px;
+         height: 40px;
+         padding-top: 15px;
       }
     }
 
@@ -321,9 +312,12 @@
         border-radius: 0;
         padding:0px;
         margin:0px;
-        font-size: $mobile_type1;
+        font-size: $tab_type1;
         padding-top: $small;
-        font-family: 'Lausanne'
+        font-family: 'Lausanne';
+      }
+      @media(max-width: 700px){
+        font-size: $mobile_type1;
       }
     }
     textarea:focus{
@@ -486,7 +480,7 @@
     width: calc(100vw - 196px);
   }
   .details-radio-label{
-    height: 40px;
+    height: 45px;
     line-height: 60px;
     color: $grey;
     padding-bottom: 0px;
@@ -506,9 +500,6 @@
       width: calc(100vw - 196px) !important;
       .radio-box{
         height: 80px;
-          label{
-            padding-top: 30px !important;
-          }
       }
     }
 
@@ -530,14 +521,16 @@
 
     .radio-box{
       width: 100%;
-      height: 80px;
+      height: 95px;
       border-top: 2px solid $grey;
       border-left: 2px solid $grey;
       border-bottom: 2px solid $grey;
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
-
+      @media(max-width: 700px){
+        height: 80px;
+      }
  
     input[type=radio]{
       opacity: 0;
@@ -587,8 +580,56 @@
   }
 
   #details-row-3{
+    border-bottom: 2px solid $grey;
     margin-top: 10px;
+    height: 89px;
+    width: calc(50vw - 95px);
+    select{
+      padding-right: 80px;
+      padding-bottom: 0px;
+      height: 70px;
+      padding-left: 0px;
+      padding-top: 0px;
+      width: calc(50vw - 50px);
+      border-bottom: 0px;
+      display: block;
+      box-sizing: border-box;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: $cloud;
+      background-image: url('/graphics/MS_Dropdown.png');
+      background-repeat: no-repeat;
+      background-position: right .5em top 50%;
+      background-size: .65em auto;
+      font-size: $type_1;
+      option{
+        font-size: $type_1;
+        width: calc(50vw - 100px);
+      }
   }
+  @media(max-width: 1100px){
+    width: calc(100vw - 196px);
+    height: 80px;
+    select{
+      width: calc(100vw - 196px);
+      font-size: $tab_type1;
+      height: 65px;
+      padding-bottom: 0px;
+    }
+  }
+  @media(max-width: 700px){
+    width:calc(100vw - 50px);
+    height: 72px;
+    select{
+      height: 58px;
+      width:calc(100vw - 50px);
+      font-size: $mobile_type1;
+    }
+  }
+}
+
+
   @media(max-width: 1100px){
     margin:0px;
     padding:0px;
@@ -606,11 +647,13 @@
        label{
          margin-left:0px;
          padding:$xsmall;
-         font-size: $mobile_type1;
-
+         font-size: $tab_type1;
           padding-left:5px;
           padding-bottom:3px;
-       
+          @media(max-width: 700px){
+            font-size: $mobile_type1;
+          }
+
        }
        input{
          width: 0px;
@@ -632,7 +675,6 @@
   }
   select{
     height: 50px;
-    // min-width: 100%;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -646,12 +688,68 @@
     border-left: none;
     border-right: none;
     border-top: none;
-    option{
-      min-width: 100%;
-    }
   }
   select:focus{
     outline:none;
   }
 
+}
+
+
+#contact-info{
+  display: flex; 
+  flex-direction : row;
+  margin-left: $xsmall;
+  padding-top: $small;
+  margin-right: $medium;
+  margin-top: $small;
+  border-top: 2px solid $grey;
+  
+  .contact-info-columns{
+    h5{
+      font-size: $type_2;
+      line-height: $line_2;
+    }
+    p{
+     color: $grey; 
+     line-height: $type_2;
+     font-size: $type_2;
+    }
+  }
+  #contact-phone{
+    width: calc(50vw - 25px);
+  }
+  #contact-mailing{
+    width: calc(50vw - 25px);
+  }
+  @media(max-width: 1100px){
+    margin: $medium $tab_large;
+    padding-right: 0px;
+    padding-left: 0px;
+    .contact-info-columns{
+      width: calc((100vw - 196px) / 3);
+      h5{
+        font-size: $tab_type2;
+        line-height: $tab_line2;
+      }
+      p{
+        font-size: $tab_type2;
+        line-height: $tab_line2;
+      }
+    }
+  }
+  @media(max-width: 700px){
+    margin: $small $small;
+    .contact-info-columns{
+      width: calc(50vw - 25px);
+      h5{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+      p{
+        font-size: $mobile_type2;
+        line-height: $mobile_line2;
+      }
+    }
+  }
 }

@@ -54,10 +54,20 @@
       object-fit: contain;
     }
   };
-  #timeframe{
+  .timeframe{
     grid-area: timeframe;
     font-size: $type_2;
     padding-left: $small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #timeframe-note{
+      padding-bottom: $large;
+      color: $grey;
+      font-size: $type_2;
+      line-height: $line_2;
+      padding-right: $xsmall;
+    }
   }
   #process-copy{
     grid-area: copy;
@@ -123,6 +133,7 @@
 
 .last-desktop-card{
   padding-bottom: 0px !important;
+
 }
 
 // ********* Mobile Styling ******* //@extend
@@ -175,11 +186,25 @@
     @media(min-width: 700px) and (max-width: 1100px){
     font-size: $tab_type2;
     line-height: $tab_line2;
-    padding: $small $medium;
+    padding: $small $medium 0px $medium;
     }
     font-size: $mobile_type2;
     line-height: $mobile_line2;
-    padding: $small 0px;
+    padding: $small 0px 0px 0px;
+  }
+
+  #mobile-timeframe-note{
+    @media(max-width: 1100px){
+      padding: 0px $medium $small $medium; 
+      color: $grey;
+      font-size: $tab_type2;
+      line-height: $tab_type2;
+    }
+    @media(max-width: 700px){
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+      padding: 0px;
+    }
   }
 
   #mobile-process-copy{

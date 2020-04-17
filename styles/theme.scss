@@ -11,6 +11,7 @@
 @import './components/contact-cta.scss';
 @import './components/newsletter.scss';
 @import './components/footer.scss';
+@import './components/page-transistion.scss';
 
 // Index Component styling
 @import './components/carousel.scss';
@@ -29,6 +30,10 @@
 
 // Process Component styling
 @import './components/featured-sheds-carousel.scss';
+
+
+// Our Story Component styling
+@import './components/founder.scss';
 
 // Page styling
 @import './pages/process.scss';

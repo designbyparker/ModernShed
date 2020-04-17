@@ -33,17 +33,14 @@ const Newsletter = () => {
 
 
   const callNewsletter = async (payload) => {
-    console.log(payload);
     return await superagent.post('https://www.modern-shed.com/api/newsletter')
     .set('Access-Control-Allow-Origin', '*')
     .set('Content-Type', 'application/json')
     .send(payload)
     .then(result => {
-      console.log('result, ', result)
       result.statusCode === 200 ? updateState() : notAMatch();
     })
     .catch(error => {
-      console.log(error);
     })
   }
 
@@ -55,7 +52,7 @@ const Newsletter = () => {
   return(
   <section id="newsletter">
     <div id="newsletter-copy">
-      <h2>Newsletter.</h2>
+      <h2>Newsletter</h2>
       <p>Sign up for our Quarterly Newsletter and keep up to date with all things Modern-Shed.</p>
     </div>
 

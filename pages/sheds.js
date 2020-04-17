@@ -1,4 +1,5 @@
 import ShedsHero from '../components/global/page-hero';
+import PageTransistion from '../components/global/page-transistion';
 import ContactCTA from '../components/global/contact-cta';
 import MobileContactCTA from '../components/global/mobile-contact-cta'; 
 import HamburgerNav from '../components/global/hamburger-nav';
@@ -18,15 +19,26 @@ import Newsletter from '../components/global/newsletter';
 import MobileFooter from '../components/global/mobile-footer'
 import Footer from '../components/global/footer';
 import Head from 'next/head'
+import {useState, uesEffect, useEffect} from 'react';
 import '../styles/theme.css';
 
 const Sheds = () => {
+
+  const [transistionClass, setTransistion] = useState('show');
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
+
+
   return(
     <section>
       <Head>
         <title>Modern Shed | Sheds</title>
       </Head>
-      <HamburgerNav />
+      <PageTransistion page="Sheds" show={transistionClass}/>
+      <HamburgerNav navClass="shed-nav"/>
       <MobileHamburgerNav/>
       <ShedsHero id="sheds-hero" page="SHEDS" copy="Let’s revise your living space with abundance in mind. "/>
       <Uses/>

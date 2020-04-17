@@ -10,7 +10,7 @@ const MobileFooter = () => {
               <p className="mobile-section-header">SITE</p>
               <div className="links-container">
                 <a href='/sheds'>Sheds</a>
-                <a href='/story'>About</a>
+                <a href='/story'>Our Story</a>
                 <a href='/process'>Process</a>
                 <a href='/contact'>Contact</a>
               </div>
@@ -48,7 +48,7 @@ const MobileFooter = () => {
     </section>
 
 
-      <p id="copyrights">(c) Modern Shed, LLC All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
+      <p id="copyrights">(c) Modern Shed, Inc All Rights Reserved. <br/>Privacy Policy. Terms of Use.</p>
     </section>
   );
 } 

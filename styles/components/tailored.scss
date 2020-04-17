@@ -32,6 +32,7 @@
     p{
       line-height: $line_2;
       font-size: $type_2;
+      color: $grey;
       @media(max-width: 1100px){
         font-size: $tab_type2;
         line-height: $tab_line2;
@@ -112,7 +113,6 @@
   #tailored-mobile-image-container{
     width: calc(100vw - 50px);
     background-color: $white;
-
     height: auto;
     place-items: center;
     padding-left: $small;

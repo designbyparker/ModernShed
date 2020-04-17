@@ -6,7 +6,7 @@
   }
 
   .modal{
-    z-index: 200;
+    z-index: 3000;
     position: fixed;
     left:0;
     top:0;
@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-          
+      align-items: center;
       .modal-img-container{
         width: 50vw;
         height: auto;
@@ -41,6 +41,7 @@
 
       .carousel-button{
         background-color: transparent;
+        height: 3em;
         border: 0px;
         outline: none;
         cursor: pointer;
@@ -95,6 +96,12 @@
   flex-direction: column;
   justify-items: stretch;
   margin-bottom: $medium;
+  .image-container{
+    cursor: pointer;
+    @media(max-width: 1100px){
+      cursor: auto;
+    }
+  }
   img{
     width: 100%;
     height: auto;
@@ -115,6 +122,23 @@
     color: $grey;
     border-left: 2px solid $grey;
     padding-left: $xsmall;
+    font-size: $type_2;
+    line-height: $line_2;
+    @media(max-width: 1100px){
+      font-size: $tab_type2;
+      line-height: $tab_line2;
+      padding-left: 7px;
+      padding-right: 7px;
+      height: 60px;
+
+    }
+    @media(max-width: 700px){
+      font-size: $mobile_type2;
+      line-height: $mobile_line2;
+      padding-left: 7px;
+      padding-right: 7px;
+      height: 45px;
+    }
   }
   p:first-of-type{
     color: $black;

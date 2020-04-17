@@ -1,5 +1,6 @@
 import HamburgerNav from '../components/global/hamburger-nav';
 import MobileHamburgerNav from '../components/global/mobile-hamburger-nav';
+import PageTransistion from '../components/global/page-transistion';
 import PageHero from '../components/global/page-hero';
 import When from '../components/global/conditionals';
 import MobileFooter from '../components/global/mobile-footer';
@@ -7,7 +8,6 @@ import Footer from '../components/global/footer';
 import Head from 'next/head'
 import superagent from 'superagent';
 import {useState, useEffect} from 'react';
-import ReactDOMServer from 'react-dom/server'
 import '../styles/theme.css';
 
 
@@ -28,6 +28,13 @@ const Contact = (props) => {
   const [error, setError] = useState('no-error');
   const [emailError, setEmailError] = useState('no-email-error');
   const [zipError, setZipError] = useState('no-zip-error');
+  const [transistionClass, setTransistion] = useState('show');
+  
+  useEffect(() => {
+    setTimeout(() => {
+      return setTransistion('hide');
+    }, 2000);
+  })
 
   const addBackgroundColor = (e, type) => {
     let boxes = document.getElementsByClassName(`${type}-radio`);
@@ -159,7 +166,7 @@ const Contact = (props) => {
     }
   }
 
-  const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "Country Club Directory Eastside", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
+  const options = ["","Alaska Airlines", "Bainbridge Islander", "Bing", "Country Club Directory Eastside", "Country Club Directory Seattle", "DesignGuide", "Dwell Magazine", "Dwell On Design", "Everyday Home Magazine", "Facebook", "Facebook Ad", "Gig Harbor Life", "Google", "Houzz.com", "Internet Ad", "Instagram", "Kitsap Home and Garden Show", "KPBJ", "Local Ad", "Modern Shed Blog", "Other Publication", "Oregon Home Magazine", "Pintrest", "Seattle Magazine", "Seattle Times", "WestSound Home & Garden", "Word of Mouth", "Youtube"];
 
   let cnt=0;
 
@@ -168,10 +175,13 @@ const Contact = (props) => {
       <Head>
         <title>Modern Shed | Contact Us</title>
       </Head>
-      <HamburgerNav/>
+      <HamburgerNav navClass="contact-nav"/>
       <MobileHamburgerNav/>
-      <PageHero page="CONTACT" copy="What could you do with a little more space to move? We're at the ready to engineer a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageHero page="CONTACT" copy="What would you do with more space to live? We're at the ready to design a Modern-Shed for any ambition. " id="contact-hero"/>
+      <PageTransistion page="Contact" show={transistionClass}/> 
+
       <section id="contact-page">
+
         <section id="contact-left-col">
           <div className="contact-image" id="contact-image-a">
             <img src="./images/contact/A_Contact.jpg" alt="Placeholder text"/>
@@ -180,32 +190,32 @@ const Contact = (props) => {
           <div className="contact-image" id="contact-image-b">
             <img src="./images/contact/B_Contact.jpg" alt="Placeholder text"/>
           </div>
+
         </section>
 
 
         <section id="contact-right-col">
+
         <p className="form-headline">INTEREST LEVEL</p>
+
         <form className="form" id="interest-form">
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
-                  <label htmlFor="not" className="desktop-label"> Just Browsing.</label>
-                  <label htmlFor="not" className="mobile-label">Just Browsing.</label> 
-                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-not"/>
+                  <label htmlFor="not" className="interest-label"> Just Browsing.</label>
+                  <img src='./graphics/MS_Radio_Off.svg' alt="Just Browsing Button" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
-                <label htmlFor="maybe" className="desktop-label">Considering.</label>
-                <label htmlFor="maybe" className="mobile-label">Considering.</label> 
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-maybe"/>
+                <label htmlFor="maybe" className="interest-label">Considering.</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="Considering Button" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
-                <label htmlFor="yes" className="desktop-label">I'm Ready!</label>
-                <label htmlFor="yes" className="mobile-label">I'm Ready!</label>
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button off" className="interest-radio" id="radio-yes"/>
+                <label htmlFor="yes" className="interest-label">I'm Ready!</label>
+                <img src='./graphics/MS_Radio_Off.svg' alt="Ready button" className="interest-radio" id="radio-yes"/>
 
             </div>
           </form>
@@ -239,11 +249,11 @@ const Contact = (props) => {
 
             <div id="label-margin">
               <label>PHONE NUMBER </label>
-              <input placeholder="(206) 663-7433" type="text" id="Phone" />
+              <input placeholder="(866) 279 5121" type="text" id="Phone" />
             </div>
 
 
-     <When condition={connect}>  
+    <When condition={connect}> 
 
             <section id="contact-details">
  
@@ -288,7 +298,7 @@ const Contact = (props) => {
 
               </div>
 
-{/* 
+
              <div id="details-row-3">
 
                 <label>HOW DID YOU HEAR ABOUT US?</label>
@@ -301,12 +311,12 @@ const Contact = (props) => {
                   })}             
                 </select>
 
-              </div>   */}
+              </div>  
 
 
           </section>
 
-       </When>  
+      </When>  
 
           </section>
 
@@ -322,6 +332,22 @@ const Contact = (props) => {
             <p className={error}>* Either the zip code or email address provided was invalid.</p>
 
           </form>
+
+           <div id="contact-info">
+
+              <div id="contact-phone" className="contact-info-columns">
+                <h5>PHONE</h5>
+                <p>866 279 5121</p>
+              </div>
+
+              <div id="contact-mailing" className="contact-info-columns">
+                <h5>MAILING</h5>
+                <p>4616 25TH AVE NE</p>
+                <p>PMB 364</p>
+                <p>SEATTLE, WA 98105</p>
+              </div>
+
+          </div>
         </section>
     </section>
     <Footer/>

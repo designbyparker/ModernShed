@@ -3,31 +3,12 @@ import {useSwipeable, Swipeable} from 'react-swipeable';
 
 var imageIndex = 0;
 
-const MobileCarousel = () => {
-  const imageData = [
-    {
-      src: '/images/carousel/car1.jpg',
-      alt: 'placeholder',
-      mobile: '/images/carousel/car1_mobile.jpg'
-    },
-    {
-      src: '/images/carousel/car2.jpg',
-      alt: 'placeholder',
-      mobile: '/images/carousel/car2_mobile.jpg'
-    },
-    {
-      src: '/images/carousel/car3.jpg',
-      alt: 'placeholder',
-      mobile: '/images/carousel/car3_mobile.jpg'
-    }
-  ];
-
-
-
+const MobileCarousel = (props) => {
+  
   let imageSet = [];
-  imageData.forEach(img => {
+  props.sheds[1].photos.forEach(img => {
     let display = {};
-    display.mobile = img.mobile;
+    display.url = img.url;
     display.alt = img.alt;
     imageSet.push(display);
   });
@@ -55,7 +36,7 @@ const MobileCarousel = () => {
   return(
   <section className="carousel" id="mobile-carousel">
     <Swipeable onSwipedLeft={handleLeftSwipe} onSwipedRight={handleRightSwipe} >
-      <img src={image.mobile} alt={image.alt} className="mobile-carousel-image" draggable="false"/>
+      <img src={image.url} alt={image.alt} className="mobile-carousel-image" draggable="false"/>
     </Swipeable>
   </section>
   )
