@@ -28,17 +28,17 @@ const HamburgerNav = (props) => {
 
       <div id="menu-col-2">
         <div id="primary-page-links">
-            <a href="/sheds"> Sheds </a>      
-            <a href="/story"> Our Story </a>      
-            <a href="/process"> Process </a>      
-            <a href="/contact"> Contact </a>      
+            <a href="/sheds.html"> Sheds </a>      
+            <a href="/story.html"> Our Story </a>      
+            <a href="/process.html"> Process </a>      
+            <a href="/contact.html"> Contact </a>      
         </div>
 
         <div id="secondary-page-links">
            <a href="https://modernshedblog.com" target="_blank"> Blog </a>   
-           <a href="/legal"> Legal </a>    
-           <a href="/faq"> Faq </a> 
-           <a href="/press"> Press </a> 
+           <a href="/legal.html"> Legal </a>    
+           <a href="/faq.html"> Faq </a> 
+           <a href="/press.html"> Press </a> 
         </div>
       </div>
 
@@ -49,7 +49,7 @@ const HamburgerNav = (props) => {
             <a href="https://www.instagram.com/modern_shed" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/ModernShedInc" target="_blank">Facebook</a>
             <a href="https://www.houzz.com/professionals/decks-patios-and-outdoor-enclosures/modern-shed-pfvwus-pf~1670352110" target="_blank">Houzz</a>
-            <a href="/find-a-dealer" className="find-dealer-link-menu">Find A Dealer →</a>
+            <a href="/find-a-dealer.html" className="find-dealer-link-menu">Find A Dealer →</a>
         </div>
       </div>  
 

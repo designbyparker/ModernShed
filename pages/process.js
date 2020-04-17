@@ -40,7 +40,7 @@ const Process = (props) => {
           subheader="Design"
           image="/images/process/A_Process_Design.jpg"
           alt="Modern Shed design pro"
-          copy="Our design professionals are ready to be at your service—eager to hear your story and come up with a course of action."
+          copy="Our design professionals are ready to be at your service — eager to hear your story and come up with a course of action."
         /> 
 
         <MobileProcessCard
@@ -48,7 +48,7 @@ const Process = (props) => {
           subheader="Design"
           image="/images/process/A_Process_Design.jpg"
           alt="Modern Shed design pro"
-          copy="Our design professionals are ready to be at your service—eager to hear your story and come up with a course of action.."
+          copy="Our design professionals are ready to be at your service — eager to hear your story and come up with a course of action.."
           id="border"
         /> 
 
