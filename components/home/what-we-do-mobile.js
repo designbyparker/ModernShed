@@ -7,7 +7,7 @@ const WhatWeDoMobile = () => {
             <h3>You imagine, we’ll take care of the construction. Each space is tailored just for you.</h3>
  
             <div  id="index-2-image-container">
-              <img src="/images/index-images/E_Home_Shed.jpg" alt="some text about image"/>
+              <img src="/images/index-images/E_Home_Shed.jpg" alt="Home Office"/>
             </div>
        
          

@@ -7,7 +7,7 @@ const MobileWindows = () => {
       </p>
 
       <div id="mobile-windows-img-container">
-        <img src="./images/sheds/Windows.gif" alt="Placeholder image"/>
+        <img src="./images/sheds/Windows.gif" alt="Windows come in a variety of sizes"/>
       </div>
 
       <div className="mobile-button-container" id="materials-button"><a className="mobile-button-anchor" href="/contact">Catalog →</a></div>

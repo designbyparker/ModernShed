@@ -50,7 +50,7 @@ const FindADealer = () => {
     <section id="dealer-body">
       <section id="dealer-left-col">
         <div className="image-container">
-          <img src="https://dummyimage.com/570x450/000/fff" alt="some placeholder text"/>
+          <img src="./images/find-a-dealer/MS_FindADealer_Image.jpg" alt="Home Office"/>
         </div>
       </section>
 

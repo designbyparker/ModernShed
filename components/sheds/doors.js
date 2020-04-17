@@ -9,7 +9,7 @@ const Doors = () => {
 
       <div id="doors-col-2">
         <div>
-          <img src="./images/sheds/G_Doors_Traditional.jpg" alt="Traditional Door"/>
+          <img src="./images/sheds/G_Doors_Traditional.jpg" alt="French Swing Door"/>
         </div>
 
         <div>

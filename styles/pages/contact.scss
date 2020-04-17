@@ -228,6 +228,8 @@
          width:  calc(100vw - 50px);
          padding: 0px;
          margin:0px;
+         height: 40px;
+         padding-top: 15px;
       }
     }
 
@@ -526,7 +528,9 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
-
+      @media(max-width: 700px){
+        height: 80px;
+      }
  
     input[type=radio]{
       opacity: 0;

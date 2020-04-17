@@ -12,7 +12,7 @@ const MobileHamburgerNav = (props) => {
    <section id="mobile-menu"> 
     <section id="mobile-hamburger-nav-bar" >
       <a href="/index" id="mobile-brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
-      <img src="./graphics/MS_Menu_Black.svg" alt="Hamburger Menu" onClick={handleMenuToggle}/>
+      <img src="./graphics/MS_Menu_Black.svg" alt="Open Menu Icon" onClick={handleMenuToggle}/>
     </section>
 
     <section id="mobile-hamburger-menu"  className={menuToggle ? "openMobileMenu" : "closeMobileMenu"} >

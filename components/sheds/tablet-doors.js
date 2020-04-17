@@ -11,7 +11,7 @@ const TabletDoors = () => {
       <section id="tab-doors">
         <div id="tab-doors-imgs">
           <div>
-            <img src="./images/sheds/G_Doors_Traditional.jpg" alt="Traditional Door"/>
+            <img src="./images/sheds/G_Doors_Traditional.jpg" alt="French Swing Door"/>
           </div>
   
           <div>
