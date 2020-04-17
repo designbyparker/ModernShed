@@ -14,13 +14,13 @@ const TheDifference = () => {
       
         <div className="diff-image-container">
           <h5>(A)</h5>
-          <img src="/images/index-images/G_ModernShed_TheDifference_A.jpg" alt="some text about image"/>
+          <img src="/images/index-images/G_ModernShed_TheDifference_A.jpg" alt="Typical Construction"/>
         </div>
       </div>
 
       <div id="col-3">
         <div className="diff-image-container">
-          <img src="/images/index-images/H_ModernShed_TheDifference_B.jpg" alt="some text about image" />
+          <img src="/images/index-images/H_ModernShed_TheDifference_B.jpg" alt="Modern Shed pre-fabricated studio" />
           <h5>(B)</h5>
         </div>
       </div>

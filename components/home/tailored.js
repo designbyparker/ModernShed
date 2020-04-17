@@ -3,7 +3,7 @@ const Tailored = () => {
     <section id="tailored-section" >
 
       <div id="tailored-image-container">
-        <img src="/images/index-images/E_ModernShed_Detail_Tailored.jpg" alt="Tailored not configured"/>
+        <img src="/images/index-images/E_ModernShed_Detail_Tailored.jpg" alt="Modern Sheds are tailored to your needs"/>
       </div>
 
       <div id="tailored-right-column">

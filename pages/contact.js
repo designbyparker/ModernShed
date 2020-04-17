@@ -202,20 +202,20 @@ const Contact = (props) => {
              <div className="interest-box">
                   <input type="radio" id="not" value="not interested" name="interest" onChange={handleInterestChange} />
                   <label htmlFor="not" className="interest-label"> Just Browsing.</label>
-                  <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-not"/>
+                  <img src='./graphics/MS_Radio_Off.svg' alt="Just Browsing Button" className="interest-radio" id="radio-not"/>
              </div>
 
             <div className="interest-box">  
                 <input type="radio" id="maybe" value="general information" name="interest" onChange=  {handleInterestChange}/>
                 <label htmlFor="maybe" className="interest-label">Considering.</label>
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-maybe"/>
+                <img src='./graphics/MS_Radio_Off.svg' alt="Considering Button" className="interest-radio" id="radio-maybe"/>
 
             </div>
 
             <div className="interest-box">
                 <input type="radio" id="yes" value="contact me" name="interest" onChange={handleInterestChange}/>
                 <label htmlFor="yes" className="interest-label">I'm Ready!</label>
-                <img src='./graphics/MS_Radio_Off.svg' alt="radio button" className="interest-radio" id="radio-yes"/>
+                <img src='./graphics/MS_Radio_Off.svg' alt="Ready button" className="interest-radio" id="radio-yes"/>
 
             </div>
           </form>

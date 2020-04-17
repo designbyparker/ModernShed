@@ -8,7 +8,7 @@ const WhatWeDo = () => {
 
 
       <div  id="index-2-image-container">
-          <img src="/images/index-images/E_Home_Shed.jpg" alt="some text about image"/>
+          <img src="/images/index-images/E_Home_Shed.jpg" alt="Home Office"/>
       </div>
 
 
