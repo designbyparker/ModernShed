@@ -11,8 +11,10 @@ const HamburgerNav = (props) => {
   return(
    <section id="menu"> 
     <section id="hamburger-nav-bar" className={props.navClass}>
-      <a href="/index" id="brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern Shed Brandmark" /></a>
-      <img src="./graphics/MS_Menu_Black.svg" alt="Open Menu Icon" onClick={handleMenuToggle}/>
+
+      <a href="/index" id="brandmark"><img src="/graphics/small-brandmark.svg" alt="Modern-Shed Homepage Link" /></a>
+      <img src="./graphics/MS_Menu_Black.svg" alt="Navigation Menu" onClick={handleMenuToggle}/>
+
     </section>
   
     <section id="hamburger-menu"   className={menuToggle ? "openMenu" : "closeMenu"} >
