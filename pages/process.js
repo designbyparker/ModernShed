@@ -110,7 +110,7 @@ const Process = (props) => {
         />  
 
       </section>
-     <FeaturedShedsCarousel featured={props.sheds} /> 
+     {/* <FeaturedShedsCarousel />  */}
       <ContactCTA buttontext="Inquire →"/>
       <MobileContactCTA buttontext="Inquire →"/>
       <Newsletter/>
@@ -118,17 +118,6 @@ const Process = (props) => {
       <MobileFooter/>
     </section>
   );
-}
-
-
-
-Process.getInitialProps = async function(){
-  const res = await fetch('https://modern-shed.com/services/shedfeatured');
-  const sheds = await res.json();
-
-  return{
-    sheds: sheds
-  }
 }
 
 export default Process;

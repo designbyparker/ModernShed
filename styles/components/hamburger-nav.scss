@@ -165,7 +165,8 @@
     width: 3em;
     height: 3em;
     padding-top: 30px;
-    padding-left: 30px;
+    padding-left:30px;
+    padding-right: 40px;
     @media(max-width:700px){
       padding-left: $small;
     }
@@ -173,7 +174,7 @@
   img:last-of-type{
     justify-self: end;
     padding-top: 30px;
-    padding-right: 30px;
+    padding-right: 40px;
     cursor: pointer;
     @media(max-width: 700px){
       padding-right: $small;
@@ -393,28 +394,24 @@
 
 }
 
-.home-nav{
-  background-color: $cloud;
-}
+// .story-nav{
+//   background-color: $sky;
+// }
 
-.story-nav{
-  background-color: $sky;
-}
+// .process-nav{
+//   background-color: $sky;
+// }
 
-.process-nav{
-  background-color: $sky;
-}
+// .shed-nav{
+//   background-color: $sun;
+// }
 
-.shed-nav{
-  background-color: $sun;
-}
-
-.contact-nav{
-  background-color: $cloud;
-}
-.dealer-nav{
-  background-color: $cloud;
-}
-.aux-nav{
-  background-color: $cloud;
-}
+// .contact-nav{
+//   background-color: $cloud;
+// }
+// .dealer-nav{
+//   background-color: $cloud;
+// }
+// .aux-nav{
+//   background-color: $cloud;
+// }

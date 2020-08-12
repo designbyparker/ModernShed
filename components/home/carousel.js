@@ -4,23 +4,48 @@ var ind = 0;
 
 function Carousel(props){
 
+  const sheds = [
+    {
+      src: '/images/carousel/car1.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile1.jpeg'
+    },
+    {
+      src: '/images/carousel/car2.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile2.jpeg'
+    },
+    {
+      src: '/images/carousel/car3.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile3.jpeg'
+    },
+    {
+      src: '/images/carousel/car4.jpg',
+      alt: 'placeholder',
+      mobile:'/images/carousel/car4.jpg'
+    }
+  ]
+
+
   let imageSet = [];
-  props.sheds[0].photos.forEach(img => {
+  sheds.forEach(img => {
     let display = {};
-    display.src = img.url;
+    display.src = img.src;
     display.alt = img.alt;
-    display.desc1 = img.description1;
-    display.desc2 = img.description2;
-    display.desc3 = img.description3;
-    display.desc4 = img.description4;
+    // display.desc1 = img.description1;
+    // display.desc2 = img.description2;
+    // display.desc3 = img.description3;
+    // display.desc4 = img.description4;
 
     imageSet.push(display);
   });
-
   const [image, setImage] = useState(imageSet[0]);  
   const [cursor, setCursor] = useState('left');
   const [leftBound, setLeftBound] = useState();
   const [rightBound, setRightBound] = useState();
+
+  console.log(image)
 
   useEffect(() => {
 
@@ -54,7 +79,6 @@ function Carousel(props){
       return setImage(imageSet[ind]);
      }
     }
-
 
   return(
     <section id="carousel" className={cursor} onMouseMove={handleMouseMove}>

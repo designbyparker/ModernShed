@@ -4,11 +4,35 @@ import {useSwipeable, Swipeable} from 'react-swipeable';
 var imageIndex = 0;
 
 const MobileCarousel = (props) => {
-  
+  const sheds = [
+    {
+      src: '/images/carousel/car1.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile1.jpeg'
+    },
+    {
+      src: '/images/carousel/car2.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile2.jpeg'
+    },
+    {
+      src: '/images/carousel/car3.jpg',
+      alt: 'placeholder',
+      mobile: '/images/carousel/mobile3.jpeg'
+    },
+    {
+      src: '/images/carousel/car4.jpg',
+      alt: 'placeholder',
+      mobile:'/images/carousel/car4.jpg'
+    }
+  ]
+
+
+
   let imageSet = [];
-  props.sheds[1].photos.forEach(img => {
+  sheds.forEach(img => {
     let display = {};
-    display.url = img.url;
+    display.url = img.mobile;
     display.alt = img.alt;
     imageSet.push(display);
   });

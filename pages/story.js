@@ -37,8 +37,8 @@ const Story = (props) => {
       <MobileHamburgerNav/>
       <PageTransistion page="Our Story" show={transistionClass}/>
       <Founders/>
-      <OurTeam staff={props.staff}/>
-      <OurTeamCarousel staff={props.staff}/>
+      {/* <OurTeam staff={props.staff}/> */}
+      {/* <OurTeamCarousel staff={props.staff}/> */}
       <ContactCTA buttontext="Inquire →"/>
       <Footer/>
       <MobileFooter/>
@@ -49,12 +49,12 @@ const Story = (props) => {
 export default Story;
 
 
-Story.getInitialProps = async function(){
+// Story.getInitialProps = async function(){
 
-  const res = await fetch('https://modern-shed.com/services/staff');
-  const staff = await res.json();
+//   const res = await fetch('https://modern-shed.com/services/staff');
+//   const staff = await res.json();
 
-  return {
-    staff:staff
-  }
-}
+//   return {
+//     staff:staff
+//   }
+// }

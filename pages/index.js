@@ -23,7 +23,6 @@ import {useEffect, useState} from 'react';
 import fetch from 'isomorphic-unfetch';
 
 const Index = (props) => {
-
   const [transistionClass, setTransistion] = useState('show');
   useEffect(() => {
     setTimeout(() => {
@@ -39,11 +38,11 @@ const Index = (props) => {
       <HamburgerNav className="mobile-query" navClass="home-nav"/>
       <MobileHamburgerNav/>
       <PageTransistion show={transistionClass} page="Modern Shed"/>
-      <DesktopCarousel className="desktop-query" sheds={props.carousel}/>
-      <MobileCarousel className="mobile-query" sheds={props.carousel}/>
+      <DesktopCarousel className="desktop-query"/>
+      <MobileCarousel className="mobile-query"/>
       <WhatWeDo/>
       <WhatWeDoMobile/>
-      <FeaturedHome featured={props.sheds}/>
+      {/* <FeaturedHome featured={props.sheds}/> */}
       <Tailored/>
       <TailoredMobile/>
       <TheDifference/>
@@ -56,20 +55,5 @@ const Index = (props) => {
     </div> 
   );
 }
-
-
-Index.getInitialProps = async function() {
-  const res = await fetch('https://modern-shed.com/services/homefeatured');
-  const sheds = await res.json();
-
-  const response = await fetch('https://modern-shed.com/services/home');
-  const carousel = await response.json();
-
-  return {
-    sheds: sheds,
-    carousel: carousel
-  }
-}
-
 
 export default Index;
